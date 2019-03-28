@@ -4,7 +4,7 @@ Deployment link: [midaslab-bu.github.io/website](https://midaslab-bu.github.io/w
 
 ## Instructions
 
-The website is built in a way that enables easy updates on changing data.
+The website is built in a way that enables easy updates of dynamic data.
 
 ### How to add / update / remove a person profile
 
@@ -59,7 +59,7 @@ The `year` will be used to sort the list of publications and display the latest.
 
 `links` are *optional*.
 **If a paper has no link(s), just do not include them.**
-**Do not leave fields empty.**
+**Do not put empty strings.**
 PDF link is supposed to immediately download PDF file.
 Abstract link will be displayed as "External" and is supposed to lead to a paper webpage, e.g. ePrint, arxiv, ACM.
 One or both of them may not be included, then the links will not be displayed.
