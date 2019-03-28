@@ -1,0 +1,11 @@
+Dockerfile
+.gitlab-ci.yml
+.editorconfig
+README.md
+.git
+bower.json
+.bowerrc
+.gitignore
+build.sh
+package.json
+node_modules/

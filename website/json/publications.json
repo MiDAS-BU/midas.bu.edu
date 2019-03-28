@@ -1,0 +1,277 @@
+[{
+		"title": "A Comparative Evaluation of Order-Preserving and Order-Revealing Schemes and Protocols",
+		"authors": "D. Bogatov, G. Kollios and L. Reyzin",
+		"venue": "VLDB",
+		"date": {
+			"year": 2019
+		},
+		"links": {
+			"pdf": "https://dbogatov.org/assets/custom/docs/ore-benchmark.pdf",
+			"abstract": "https://ia.cr/2018/953"
+		}
+	},
+	{
+		"title": "Recommendations for optimizing the collective user experience",
+		"authors": "B. Golshan, E. Terzi, P. Tsaparas",
+		"venue": "SIAM SDM",
+		"date": {
+			"year": 2019
+		},
+		"links": {
+			"pdf": "",
+			"abstract": ""
+		}
+	},
+	{
+		"title": "A team-formation algorithm for faultline minimization",
+		"authors": "S. Bahargam, B. Golshan, T. Lappas, E. Terzi",
+		"venue": "Expert Syst. Appl.",
+		"date": {
+			"year": 2019
+		},
+		"links": {
+			"pdf": "https://arxiv.org/pdf/1811.05015.pdf",
+			"abstract": "https://www.sciencedirect.com/science/article/pii/S0957417418307048"
+		}
+	},
+	{
+		"title": "Optimal Bloom Filters and Adaptive Merging for LSM-Trees",
+		"authors": "N. Dayan, M. Athanassoulis, S. Idreos",
+		"venue": "ACM TODS",
+		"date": {
+			"year": 2018
+		},
+		"links": {
+			"pdf": "http://dl.acm.org/authorize?N37408",
+			"abstract": "https://dl.acm.org/citation.cfm?id=3276980"
+		}
+	},
+	{
+		"title": "The Periodic Table of Data Structures",
+		"authors": "S. Idreos, K. Zoumpatianos, M. Athanassoulis, N. Dayan, B. Hentschel, M. S. Kester, D. Guo, L. Maas, W. Qin, A. Wasay, Y. Sun",
+		"venue": "IEEE Data Eng. Bull.",
+		"date": {
+			"year": 2018
+		},
+		"links": {
+			"pdf": "http://sites.computer.org/debull/A18sept/p64.pdf",
+			"abstract": "https://www.semanticscholar.org/paper/The-Periodic-Table-of-Data-Structures-Idreos-Zoumpatianos/67296e6cd0084c301339889c4ef1f71a04406b3d"
+		}
+	},
+	{
+		"title": "Top-k Query Processing on Encrypted Databases with Strong Security Guarantees",
+		"authors": "X. Meng, H. Zhu, G. Kollios",
+		"venue": "IEEE ICDE",
+		"date": {
+			"year": 2018
+		},
+		"links": {
+			"pdf": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8509261",
+			"abstract": "https://www.semanticscholar.org/paper/Top-k-Query-Processing-on-Encrypted-Databases-with-Meng-Zhu/c84fdc7dbc59f27ada6601f93cbb6aa98dba2122"
+		}
+	},
+	{
+		"title": "Algorithms for Hiring and Outsourcing in the Online Labor Market",
+		"authors": "A. Anagnostopoulos, C. Castillo, A. Fazzone, S. Leonardi, E. Terzi",
+		"venue": "ACM KDD",
+		"date": {
+			"year": 2018
+		},
+		"links": {
+			"pdf": "http://chato.cl/papers/anagnostopoulos_castillo_fazzone_leonardi_terzi_2017_outsourcing_hiring_online_algorithms.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=3220056"
+		}
+	},
+	{
+		"title": "Markov Chain Monitoring",
+		"authors": "H. A. Chaudhari, M. Mathioudakis, E. Terzi",
+		"venue": "SIAM SDM",
+		"date": {
+			"year": 2018
+		},
+		"links": {
+			"pdf": "https://arxiv.org/pdf/1801.07722.pdf",
+			"abstract": "https://arxiv.org/abs/1801.07722"
+		}
+	},
+	{
+		"title": "Putting Data in the Driver’s Seat: Optimizing Earnings for On-Demand Ride-Hailing",
+		"authors": "H. A. Chaudhari, J. W. Byers, E. Terzi",
+		"venue": "ACM WSDM",
+		"date": {
+			"year": 2018
+		},
+		"links": {
+			"pdf": "http://delivery.acm.org/10.1145/3160000/3159721/p90-chaudhari.pdf?ip=155.41.101.120&id=3159721&acc=TRUSTED&key=73B3886B1AEFC4BB%2E786B8A3DF006C606%2E4D4702B0C3E38B35%2EE47D41B086F0CDA3&__acm__=1551985199_20dc54cf3d048686818d48bd55820e60",
+			"abstract": "https://dl.acm.org/citation.cfm?id=3159721"
+		}
+	},
+	{
+		"title": "Mining Tours and Paths in Activity Networks",
+		"authors": "S. M. Nikolakaki, C. Mavroforakis, A. Ene, E. Terzi",
+		"venue": "ACM WWW",
+		"date": {
+			"year": 2018
+		},
+		"links": {
+			"pdf": "http://www.smnikolakaki.com/mining_tours_and_paths.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=3178876.3186112"
+		}
+	},
+	{
+		"title": "Slalom: Coasting Through Raw Data via Adaptive Partitioning and Indexing",
+		"authors": "M. Olma, M. Karpathiotakis, I. Alagiannis, M. Athanassoulis, A. Ailamaki",
+		"venue": "VLDB",
+		"date": {
+			"year": 2017
+		},
+		"links": {
+			"pdf": "http://www.vldb.org/pvldb/vol10/p1106-olma.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=3115415"
+		}
+	},
+	{
+		"title": "NED: An Inter-Graph Node Metric Based On Edit Distance",
+		"authors": "H. Zhu, X. Meng, G. Kollios",
+		"venue": "VLDB",
+		"date": {
+			"year": 2017
+		},
+		"links": {
+			"pdf": "http://www.vldb.org/pvldb/vol10/p697-zhu.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=3055330.3055336"
+		}
+	},
+	{
+		"title": "Accessing Data while Preserving Privacy",
+		"authors": "G. Kellaris, G. Kollios, K. Nissim, A. O’Neill",
+		"venue": "arXiV",
+		"date": {
+			"year": 2017
+		},
+		"links": {
+			"pdf": "https://arxiv.org/pdf/1706.01552.pdf",
+			"abstract": "https://arxiv.org/abs/1706.01552"
+		}
+	},
+	{
+		"title": "UpBit: Scalable In-Memory Updatable Bitmap Indexing",
+		"authors": "M. Athanassoulis, Z. Yan, S. Idreos",
+		"venue": "ACM SIGMOD",
+		"date": {
+			"year": 2016
+		},
+		"links": {
+			"pdf": "http://dl.acm.org/authorize?N24518",
+			"abstract": "https://dl.acm.org/citation.cfm?id=2915964"
+		}
+	},
+	{
+		"title": "Generic Attacks on Secure Outsourced Databases",
+		"authors": "G. Kellaris, G. Kollios, K. Nissim, A. O’Neill",
+		"venue": "ACM CCS",
+		"date": {
+			"year": 2016
+		},
+		"links": {
+			"pdf": "https://privacytools.seas.harvard.edu/files/privacytools/files/generic.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=2976749.2978386"
+		}
+	},
+	{
+		"title": "The K-clique Densest Subgraph Problem",
+		"authors": "C. Tsourakakis",
+		"venue": "WWW",
+		"date": {
+			"year": 2015
+		},
+		"links": {
+			"pdf": "http://people.seas.harvard.edu/~babis/kcliqueDSP.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=2736277.2741098"
+		}
+	},
+	{
+		"title": "Provably Fast Inference of Latent Features from Networks",
+		"authors": "C. Tsourakakis",
+		"venue": "WWW",
+		"date": {
+			"year": 2015
+		},
+		"links": {
+			"pdf": "http://people.seas.harvard.edu/~babis/latent.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=2741128"
+		}
+	},
+	{
+		"title": "Space- and Time-Efficient Algorithm for Maintaining Dense Subgraphs on One-Pass Dynamic Streams",
+		"authors": "S. Bhattacharya, M. Henzinger, D. Nanongkai, C. Tsourakakis",
+		"venue": "ACM STOC",
+		"date": {
+			"year": 2015
+		},
+		"links": {
+			"pdf": "http://people.seas.harvard.edu/~babis/stoc15.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?doid=2746539.2746592"
+		}
+	},
+	{
+		"title": "Scalable Large Near-Clique Detection in Large-Scale Networks via Sampling",
+		"authors": "M. Mitzenmacher, J. Pachocki, R. Peng, C. Tsourakakis, S. C. Xu",
+		"venue": "ACM KDD",
+		"date": {
+			"year": 2015
+		},
+		"links": {
+			"pdf": "http://people.seas.harvard.edu/~babis/scalable-large-near-cliques.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=2783385"
+		}
+	},
+	{
+		"title": "Scalable motif-aware graph clustering",
+		"authors": "C. Tsourakakis, J. Pachocki, M. Mitzenmacher",
+		"venue": "WWW",
+		"date": {
+			"year": 2017
+		},
+		"links": {
+			"pdf": "https://lastinggems.files.wordpress.com/2017/03/www17-motif-clustering.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=3038912.3052653"
+		}
+	},
+	{
+		"title": "Minimizing Polarization and Disagreement in Social Networks",
+		"authors": "C. Musco, Ch. Musco, C. Tsourakakis",
+		"venue": "WWW",
+		"date": {
+			"year": 2018
+		},
+		"links": {
+			"pdf": "https://lastinggems.files.wordpress.com/2017/12/polarization-disagreement-www18.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=3186103"
+		}
+	},
+	{
+		"title": "Risk-Averse Matchings over Uncertain Graph Databases",
+		"authors": "C. Tsourakakis, S. Sekar, J. Lam, L. Yang",
+		"venue": "ECML-PKDD",
+		"date": {
+			"year": 2018
+		},
+		"links": {
+			"pdf": "https://arxiv.org/pdf/1801.03190.pdf",
+			"abstract": "https://arxiv.org/abs/1801.03190"
+		}
+	},
+	{
+		"title": "Learning Networks from Random Walk-Based Node Similarities",
+		"authors": "J. Hoskins, C. Musco, Ch. Musco, C. Tsourakakis",
+		"venue": "NeurIPS",
+		"date": {
+			"year": 2018
+		},
+		"links": {
+			"pdf": "https://arxiv.org/pdf/1801.07386.pdf",
+			"abstract": "https://arxiv.org/abs/1801.07386"
+		}
+	}
+]

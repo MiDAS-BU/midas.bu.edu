@@ -1,0 +1,208 @@
+{
+	"categories": [{
+			"name": "Faculty",
+			"id": "faculty",
+			"hidden": false
+		},
+		{
+			"name": "Postdocs and Graduate Students",
+			"id": "students",
+			"hidden": false
+		},
+		{
+			"name": "Alumni",
+			"id": "alumni",
+			"hidden": true
+		}
+	],
+	"people": [{
+			"name": "Konstantinos Ameranis",
+			"image": "images/people/ameranis.jpeg",
+			"position": "PhD Researcher",
+			"website": "http://cs-people.bu.edu/ameranis/",
+			"category": "students"
+		},
+		{
+			"name": "Dmytro Bogatov",
+			"image": "images/people/dmytro.jpg",
+			"position": "PhD Researcher",
+			"website": "https://dbogatov.org/",
+			"category": "students"
+		},
+		{
+			"name": "Harshal Chaudhari",
+			"image": "images/people/harshal.jpg",
+			"position": "PhD Researcher",
+			"website": "http://cs-people.bu.edu/harshal/",
+			"category": "students"
+		},
+		{
+			"name": "Sofia Maria Nikolakaki",
+			"image": "images/people/sofia.jpg",
+			"position": "PhD Researcher",
+			"website": "http://www.smnikolakaki.com//",
+			"category": "students"
+		},
+		{
+			"name": "Bashir Rastegarpanah",
+			"image": "images/people/bashir.jpg",
+			"position": "PhD Researcher",
+			"website": "http://cs-people.bu.edu/bashir/",
+			"category": "students"
+		},
+		{
+			"name": "Konstantinos Sotiropoulos",
+			"image": "images/people/sotiropoulos.jpg",
+			"position": "PhD Researcher",
+			"website": "http://cs-people.bu.edu/ksotirop/",
+			"category": "students"
+		},
+		{
+			"name": "Isidora Tourni",
+			"image": "images/people/isidora.jpg",
+			"position": "PhD Researcher",
+			"website": "http://cs-people.bu.edu/isidora/",
+			"category": "students"
+		},
+		{
+			"name": "Subhadeep Sarkar",
+			"image": "images/people/subjadeep.jpeg",
+			"position": "Postdoctoral Researcher",
+			"website": "https://subhadeepsarkar.bitbucket.io/",
+			"category": "students"
+		},
+		{
+			"name": "Evimaria Terzi",
+			"image": "images/people/evimaria.jpg",
+			"position": "Associate Professor",
+			"website": "https://www.cs.bu.edu/~evimaria/",
+			"category": "faculty"
+		},
+		{
+			"name": "George Kollios",
+			"image": "images/people/kollios.jpg",
+			"position": "Professor",
+			"website": "http://www.cs.bu.edu/fac/gkollios/",
+			"category": "faculty"
+		},
+		{
+			"name": "Manos Athanassoulis",
+			"image": "images/people/manos.jpg",
+			"position": "Assistant Professor",
+			"website": "http://manos.athanassoulis.net/",
+			"category": "faculty"
+		},
+		{
+			"name": "Charalampos Tsourakakis",
+			"image": "images/people/babis.jpg",
+			"position": "Assistant Professor",
+			"website": "https://tsourakakis.com/",
+			"category": "faculty"
+		},
+		{
+			"name": "Charalampos Mavroforakis",
+			"image": "images/people/harry.png",
+			"position": "PhD (Next: Facebook)",
+			"website": "https://www.linkedin.com/in/harrymvr",
+			"category": "alumni"
+		},
+		{
+			"name": "Sanaz Bahargam",
+			"image": "images/people/sanaz.jpg",
+			"position": "PhD (Next: Twitter)",
+			"website": "http://cs-people.bu.edu/bahargam/",
+			"category": "alumni"
+		},
+		{
+			"name": "Natali Ruchansky",
+			"image": "images/people/natali.jpg",
+			"position": "PhD (Next: Postdoc at UCLA)",
+			"website": "http://natalir.space/",
+			"category": "alumni"
+		},
+		{
+			"name": "Behzad Golshan",
+			"image": "images/people/behzad.jpeg",
+			"position": "PhD (Next: Megagon Labs)",
+			"website": "http://behzad.io/",
+			"category": "alumni"
+		},
+		{
+			"name": "Xianrui Meng",
+			"image": "images/people/xianrui.jpg",
+			"position": "PhD (Next: Amazon)",
+			"website": "http://www.xianruimeng.org/",
+			"category": "alumni"
+		},
+		{
+			"name": "Haohan Zhu",
+			"image": "images/people/haohan.jpg",
+			"position": "PhD (Next: Facebook)",
+			"website": "http://zhuhaohan.com/",
+			"category": "alumni"
+		},
+		{
+			"name": "Dora Erdos",
+			"image": "images/people/dori.jpg",
+			"position": "PhD (Next: Postdoc at Brown University)",
+			"website": "http://cs-people.bu.edu/edori/",
+			"category": "alumni"
+		},
+		{
+			"name": "Esther Galbrun",
+			"image": "images/people/esther.jpg",
+			"position": "Postdoc (Next: Postdoc at INRIA Nancy)",
+			"website": "https://members.loria.fr/EGalbrun/",
+			"category": "alumni"
+		},
+		{
+			"name": "Theodoros Lappas",
+			"image": "images/people/ted.jpg",
+			"position": "Postdoc (Next: Faculty at Stevens Institute of Technology)",
+			"website": "http://tedlappas.com/",
+			"category": "alumni"
+		},
+		{
+			"name": "Vassilis Athitsos",
+			"image": "images/people/vassilis.jpg",
+			"position": "Postdoc (Next: Faculty at UT Arlington)",
+			"website": "http://vlm1.uta.edu/~athitsos/",
+			"category": "alumni"
+		},
+		{
+			"name": "Marios Hadjieleftheriou",
+			"image": "images/people/marios.gif",
+			"position": "Postdoc (Next: AT&T Labs)",
+			"website": "http://hadjieleftheriou.com/",
+			"category": "alumni"
+		},
+		{
+			"name": "Feifei Li",
+			"image": "images/people/feifei.jpg",
+			"position": "PhD (Next: Faculty at Florida State University)",
+			"website": "http://www.cs.utah.edu/~lifeifei/",
+			"category": "alumni"
+		},
+		{
+			"name": "Panagiotis Papapetrou",
+			"image": "images/people/panagiotis.jpg",
+			"position": "PhD (Next: Postdoc at Aalto University)",
+			"website": "https://papapetrou.blogs.dsv.su.se/",
+			"category": "alumni"
+		},
+		{
+			"name": "Michalis Potamias",
+			"image": "images/people/michalis.jpg",
+			"position": "PhD (Next: Groupon)",
+			"website": "https://www.linkedin.com/in/mpotamias/",
+			"category": "alumni"
+		},
+		{
+			"name": "Georgios Kellaris",
+			"image": "images/people/kellaris.jpeg",
+			"position": "Postdoc (Next: Co-Founder at Kalepso)",
+			"website": "https://www.linkedin.com/in/gkellaris/",
+			"category": "alumni"
+		}
+	]
+}

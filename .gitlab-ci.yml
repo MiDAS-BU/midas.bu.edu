@@ -1,0 +1,76 @@
+stages:
+- build
+- test
+- build-review
+- review
+- quality-security
+- cleanup
+- release
+- deploy
+
+variables:
+  URL: "budata.dbogatov.org" # if you include 'website-deploy'
+  INDEX: "index.html"
+  DIST: "website"
+  REPO: "bu/data-lab/website"
+  AUTHPASSWORD: ""
+
+include:
+  # BEFORE SCRIPT
+  - project: 'templates/ci-snippets'
+    file: 'simple-website/before-script.yml'
+
+  # BUILD
+  - project: 'templates/ci-snippets'
+    file: 'empty-build.yml'
+
+  # TEST
+  # - project: 'templates/ci-snippets'
+  #   file: 'simple-website/tidy.yml'
+
+  # - project: 'templates/ci-snippets'
+  #   file: 'simple-website/blc.yml'
+
+  # BUILD-REVIEW
+  - project: 'templates/ci-snippets'
+    file: 'simple-website/review/build-review.yml'
+
+  # REVIEW
+  - project: 'templates/ci-snippets'
+    file: 'simple-website/review/review.yml'
+
+  - project: 'templates/ci-snippets'
+    file: 'simple-website/review/stop-review.yml'
+
+  # CODE QUALITY
+  # - project: 'templates/ci-snippets'
+  #   file: 'quality-security/code-quality.yml'
+
+  # - project: 'templates/ci-snippets'
+  #   file: 'quality-security/sast.yml'
+
+  # - project: 'templates/ci-snippets'
+  #   file: 'quality-security/deps-scan.yml'
+
+  # - project: 'templates/ci-snippets'
+  #   file: 'quality-security/container-scan.yml'
+
+  # - project: 'templates/ci-snippets'
+  #   file: 'quality-security/dast.yml'
+
+  # - project: 'templates/ci-snippets'
+  #   file: 'quality-security/license-check.yml'
+
+  # - project: 'templates/ci-snippets'
+  #   file: 'quality-security/performance.yml'
+
+  # RELEASE
+  - project: 'templates/ci-snippets'
+    file: 'simple-website/release-docker.yml'
+
+  - project: 'templates/ci-snippets'
+    file: 'simple-website/pages.yml'
+
+  # DEPLOY
+  - project: 'templates/ci-snippets'
+    file: 'trigger-websites-deploy.yml'
