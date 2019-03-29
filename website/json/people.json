@@ -37,6 +37,13 @@
 			"category": "students"
 		},
 		{
+			"name": "Andy Huynh",
+			"image": "images/people/andy.jpg",
+			"position": "PhD Researcher",
+			"website": "http://cs-people.bu.edu/ndhuynh/",
+			"category": "students"
+		},
+		{
 			"name": "Sofia Maria Nikolakaki",
 			"image": "images/people/sofia.jpg",
 			"position": "PhD Researcher",
