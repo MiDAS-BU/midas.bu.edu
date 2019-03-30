@@ -114,7 +114,7 @@ $(document).ready(function () {
 				<div class=\"team-member-box-2\"> \
 					<div class=\"team-image-wrapper rotateTopReveal\"> \
 						<a target=\"_blank\" href=\"<%= website %>\"> \
-							<img src=\"<%= image %>\" alt=\"<%= name %>\" class=\"img-responsive img-circle team-member-img text-center\"> \
+							<img <%= hidden ? 'data-' : '' %>src=\"<%= image %>\" alt=\"<%= name %>\" class=\"img-responsive img-circle team-member-img text-center image-people-toggle-<%= category %> <%= !hidden ? 'image-shown' : '' %> \"> \
 						</a> \
 					</div> \
 					<h3><%= name %></h3> \
@@ -153,7 +153,11 @@ $(document).ready(function () {
 
 						return (prefix(a) + lastName(a)).localeCompare(prefix(b) + lastName(b));
 					})
-					.map(person => peopleTemplate(person));
+					.map(person => {
+						person.hidden = category.hidden;
+						person.category = category.id;
+						return peopleTemplate(person)
+					});
 
 				category.content = "";
 
@@ -198,6 +202,11 @@ $(document).ready(function () {
 					$("#section-" + id).hide();
 				} else {
 					$(this).data('shown', "true");
+					var height = $(".image-shown").first().height();
+					$(".image-" + id).each(function () {
+						$(this).attr("src", $(this).data("src"));
+						$(this).height(height);
+					});
 					$("#section-" + id).show();
 				}
 			}
