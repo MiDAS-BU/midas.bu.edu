@@ -124,7 +124,7 @@ $(document).ready(function () {
 		");
 
 		var categoryTemplate = _.template(" \
-			<h2 class=\"text-center mt40 mb40\"> <%= hidden ? '<a style=\"cursor: pointer; user-select: none;\" class=\"people-toggle\" data-shown=\"false\" id=\"people-toggle-'+id+'\">' : '' %> <%= name %>  <%= hidden ? '</a>' : '' %> </h2> \
+			<h2 class=\"text-center mt40 mb40\"> <%= hidden ? '<a class=\"btn btn-default btn-lg active people-toggle\" style=\"cursor: pointer; user-select: none;\" data-shown=\"false\" id=\"people-toggle-'+id+'\">' : '' %> <%= name %>  <%= hidden ? '</a>' : '' %> </h2> \
 			<div id=\"section-people-toggle-<%= id %>\" class=\"row <%= hidden ? 'people-hidden' : '' %>\"> \
 				<%= content %> \
 			</div> \
