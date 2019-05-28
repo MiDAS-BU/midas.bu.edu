@@ -1,6 +1,6 @@
 # MiDAS website
 
-Deployment link: [midaslab-bu.github.io/website](https://midaslab-bu.github.io/website/).
+Deployment link: [midas.bu.edu](https://midas.bu.edu).
 
 ## Instructions
 

@@ -7,19 +7,7 @@
 		<link rel="icon" href="images/logos/midas-favicon.png">
 		<title>MiDAS Group</title>
 
-		<link href="css/royal_preloader.css" rel="stylesheet">
-
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-		<script type="text/javascript" src="js/royal_preloader.min.js"></script>
-		<script type="text/javascript">
-			Royal_Preloader.config({
-				mode: 'number',
-				showProgress: false,
-				background: '#1d1d1d'
-			});
-
-		</script>
 
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/ionicons.min.css" rel="stylesheet">
@@ -28,6 +16,20 @@
 
 		<link href="css/style.css" rel="stylesheet" title="main-css">
 		<link href="css/custom.css?ver=1" rel="stylesheet">
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137493170-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-137493170-1');
+
+		</script>
 
 	</head>
 
@@ -69,16 +71,9 @@
 			<div class="container center-vertically-holder">
 				<div class="center-vertically">
 					<div class="col-sm-8 col-sm-offset-2 col-lg-10 col-lg-offset-1 text-center">
-						<!-- <h1 class="scaleReveal">
-							<strong>M</strong>ass<strong>i</strong>ve
-							<strong>D</strong>ata <br />
-							<strong>A</strong>lgorithms &amp; <br />
-							<strong>S</strong>ystems
-						</h1> -->
 						<div><img src="images/logos/midas-logo-head.png" class="big-logo-img-center"></div>
 						<hr class="bottomReveal">
 						<h2 style="color:white; margin-bottom: 1em;"> Massive Data, Algorithms, and Systems Group @ BU</h2>
-						<!-- <h3 style="color:white; margin-bottom: 1em;">@ Boston University </h3> -->
 						<p class="bottomReveal"></p>
 						<a href="#ideology" data-id="ideology" class="scroll-link btn btn-default btn-lg">
 							Explore
@@ -97,7 +92,7 @@
 						</div>
 						<div class="col-lg-10 col-sm-9 mt30-xs">
 							<h3 class="no-margin rightReveal">
-								MiDAS @ BU is a team of faculty and students that work on the research challenges of converting data to knowledge: from foundational algorithmic and systems challenges to the development of practical applications with domain scientists.
+								MiDAS @ <a href="http://www.bu.edu/cs">BU CS</a> is a team of faculty and students that work on the research challenges of converting data to knowledge: from foundational algorithmic and systems challenges to the development of practical applications with domain scientists.
 							</h3>
 						</div>
 					</div>
@@ -229,27 +224,12 @@
 		<footer class="footer-padding">
 			<div class="container">
 				<div class="row">
-					<!-- <div class="col-sm-2 col-sm-offset-4 text-center"> -->
-						<!-- <div> -->
-							<!-- <img src="images/logos/midas-logo.png" class="logo-img-center"> -->
-							<!-- <img src="images/logos/BU-logo.png" class="BU-logo-img-center"> -->
-						<!-- </div> -->
-						<!-- <h2 style="text-transform: none" class="theme-title">MiDAS<span class="theme-title-smaller">Lab</span></h2> -->
-					<!-- </div> -->
 					<div class="col-sm-4 col-sm-offset-4 text-center">
-							<div>
-								<!-- <img src="images/logos/midas-logo.png" class="logo-img-center"> -->
-								<img src="images/logos/BU-logo.png" class="BU-logo-img-center">
-							</div>
-							<!-- <h2 style="text-transform: none" class="theme-title">MiDAS<span class="theme-title-smaller">Lab</span></h2> -->
-						</div>	
+						<div>
+							<a href="http://www.bu.edu"><img src="images/logos/BU-logo.png" class="BU-logo-img-center"></a>
+						</div>
+					</div>
 				</div>
-				<!-- <div class="row"> -->
-					<!-- <div class="col-sm-8 col-sm-offset-2 text-center"> -->
-						<!-- <div><img src="images/logos/BU-logo.png" class="BU-logo-img-center"></div> -->
-						<!-- <h2 style="text-transform: none" class="theme-title">MiDAS<span class="theme-title-smaller">Lab</span></h2> -->
-					<!-- </div> -->
-				<!-- </div> -->
 				<div class="row">
 					<div class="col-sm-8 col-sm-offset-2 text-small text-center">
 						<hr>
@@ -363,6 +343,7 @@
 		<script type="text/javascript" src="js/particlesRun.js"></script>
 		<script type="text/javascript" src="js/underscore.min.js"></script>
 		<script type="text/javascript" src="js/scrollreveal.min.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> -->
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 
