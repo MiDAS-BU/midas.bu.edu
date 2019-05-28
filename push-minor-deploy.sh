@@ -2,7 +2,6 @@
 # This scripts commits a minor change and deploys
 
 git pull 
-
 if [ $? -ne 0 ]; then
     echo "Could not pull. Exiting!"
     exit
