@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+echo "Pulling ... (should pull nothing)"
+git pull
+
+if [ $? -ne 0 ]; then
+	echo "Something went wrong with pulling, please investigate. Exiting ..."
+	exit
+fi
+
+
 git subtree push --prefix website origin gh-pages
 
 if [ $? -ne 0 ]; then
