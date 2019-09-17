@@ -1,80 +1,82 @@
 <!DOCTYPE html>
-<html>
-
-<style>
-.bold {
-  font-weight:bold;
-}
-p {
-  max-width: 800px;
-}
-li:not(:last-child) {
-    margin: 10px;
-}
-</style>
-
+<html lang="en" >
 <head>
-	<title> MiDAS seminar </title>
+  <meta charset="UTF-8">
+  <title>MiDAS seminars</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./seminar.css">
 </head>
-	
 <body>
-<div>
-<a href="https://midas.bu.edu"><img src="images/logos/midas-favicon.png" width="82" height="86" title="MiDAS group @ BU" align="left"></a>
-<h1 style="color:#99334D;font-family:calibri;"><span style="display:inline-block; width: 30px;"></span> MiDAS GROUP @ BU </br> <span style="display:inline-block; width: 30px;"></span> FALL 2019 CALENDAR</h1>
+<div class="header">
+  <h1>MiDAS Group Seminars</h1>
+  <h5>Massive Data, Algorithms, and Systems Group @ BU</h5>
 </div>
-<hr>
+<!-- partial:index.partial.html -->
+<div class="table-users">
+   <div class="calendar">Fall 2019 Calendar </div>
+   <div class="room-time"> All seminars are held in the old MCS B33 at 11.00 am [unless otherwise notified], with lunch available afterwards</div>
+   
+   <table cellspacing="0">
+      <tr>
+         <th>Date</th>
+         <th>Speaker</th>
+         <th width="600">Title and Abstract</th>
+      </tr>
+<!-- WEEK 1 -->
+<tr><td>Friday, September 13</td><td>Tianyi Chen and Konstantinos Sotiropoulos</td><td>Novel Dense Subgraph Discovery Primitives: Risk Aversion and Exclusion Queries and TwitterMancer: Predicting User Interactions on Twitter</br><details>
+        <summary>Click for abstract</summary>
+        <p>
+        <span class="bold">Title:</span> Novel Dense Subgraph Discovery Primitives: Risk Aversion and Exclusion Queries </br>
+        <span class="bold">Speaker:</span> Tianyi Chen </br>
 
-<ul>
-	<li style="color:#800020;font-family:calibri;font-size:20px"> Friday, September 13 </li>
-	<span class="bold">Speakers:</span> Tianyi Chen and Konstantinos Sotiropoulos </br>
-	<span class="bold">Location:</span> OLD MCS B33 </br>
-	<span class="bold">Time:</span> 2.00 p.m. </br>
-	<details>
-  	<summary>Title and Abstract</summary>
-	<p>
-  	<span class="bold">Title:</span> Novel Dense Subgraph Discovery Primitives: Risk Aversion and Exclusion Queries </br>
-	<span class="bold">Speaker:</span> Tianyi Chen </br>
-
-	<span class="bold">Abstract:</span> </br> 
-	In the densest subgraph problem, given an undirected graph G(V;E;w) with non-negative edge weights we are asked to find a subset of nodes S from V that maximizes the degree density w(S)=|S|. </br>
-	This problem is solvable in polynomial time, and in general is well studied. But what happens when we are asked questions such as "how can we find a dense subgraph in Twitter with lots of replies and mentions but no follows?", "how do we extract a dense subgraph with high expected reward and low risk from an uncertain graph"? </br>
-	In this work, specifically, we formulate both problems mathematically as special instances of dense subgraph discovery in graphs with negative weights. We prove that the problem in general is NP-hard, but we also provide sufficient conditions under which it is poly-time solvable. We design an efficient approximation algorithm that works best in the presence of small negative weights, and an effective heuristic for the more general case. Finally, we perform experiments on various real-world datasets that verify the value of the proposed primitives, and the effectiveness of our proposed algorithms. </br>
-	</p>
-	</br>
-	<p>
+        <span class="bold">Abstract:</span> </br>
+        In the densest subgraph problem, given an undirected graph G(V;E;w) with non-negative edge weights we are asked to find a subset of nodes S from V that maximizes the degree density w(S)=|S|. </br>
+        This problem is solvable in polynomial time, and in general is well studied. But what happens when we are asked questions such as "how can we find a dense subgraph in Twitter with lots of replies and mentions but no follows?", "how do we extract a dense subgraph with high expected reward and low risk from an uncertain graph"? </br>
+        In this work, specifically, we formulate both problems mathematically as special instances of dense subgraph discovery in graphs with negative weights. We prove that the problem in general is NP-hard, but we also provide sufficient conditions under which it is poly-time solvable. We design an efficient approximation algorithm that works best in the presence of small negative weights, and an effective heuristic for the more general case. Finally, we perform experiments on various real-world datasets that verify the value of the proposed primitives, and the effectiveness of our proposed algorithms. </br>
+        </p>
+        </br>
+        <p>
         <span class="bold">Title:</span> TwitterMancer: Predicting User Interactions on Twitter </br>
         <span class="bold">Speaker:</span> Konstantinos Sotiropoulos </br>
 
-        <span class="bold">Abstract:</span> </br>   
-	This work investigates the interplay between different types of user interactions on Twitter, with respect to predicting missing or unseen interactions. For example, given a set of retweet interactions between Twitter users, how accurately can we predict reply interactions? Is it more difficult to predict retweet or quote interactions between a pair of accounts? Also, which features of interaction patterns are most important to enable accurate prediction of specific Twitter interactions? </br>
-	Our empirical study of Twitter interactions contributes initial answers to these questions. We have crawled an extensive dataset of Twitter accounts and their follow, quote, retweet, reply interactions over a period of a month. Using a machine learning framework, we find we can accurately predict many interactions of Twitter users. Interestingly, the most predictive features vary with the user profiles, and are not the same across all users. For example, for a pair of users that interact with a large number of other Twitter users, we find that certain "higher-dimensional" triads, i.e., triads that involve multiple types of interactions, are very informative, whereas for less active Twitter users, certain in-degrees and out-degrees play a major role. Finally, we provide various other insights on Twitter user behavior. </br>
-	</p>
-	</details>
-	
-	<li style="color:#800020;font-family:calibri;font-size:20px"> Friday, September 20 </li>
-        <span class="bold">Speaker:</span> <a href="https://tsourakakis.com">Charalampos (Babis) Tsourakakis</a> </br>
-        <span class="bold">Location:</span> TBA </br>
-        <span class="bold">Time:</span> 11.00 a.m. </br>
-	<details>
-        <summary>Title and Abstract</summary>
-        <p>
-        <span class="bold">Title:</span> TBA </br>
-	<span class="bold">Abstract:</span> TBA </br>
-	</p>
-	</details>
-
-	<li style="color:#800020;font-family:calibri;font-size:20px"> Friday, October 25 </li>
-	<span class="bold">Speaker:</span> <a href="http://matteo.rionda.to">Matteo Riondato</a> </br>
-	<span class="bold">Location:</span> TBA </br>
-        <span class="bold">Time:</span> 11.00 a.m. </br>
-	<details>
-        <summary>Title and Abstract</summary>
-        <p>
-        <span class="bold">Title:</span> TBA </br>
-        <span class="bold">Abstract:</span> TBA </br>
+        <span class="bold">Abstract:</span> </br>
+        This work investigates the interplay between different types of user interactions on Twitter, with respect to predicting missing or unseen interactions. For example, given a set of retweet interactions between Twitter users, how accurately can we predict reply interactions? Is it more difficult to predict retweet or quote interactions between a pair of accounts? Also, which features of interaction patterns are most important to enable accurate prediction of specific Twitter interactions? </br>
+        Our empirical study of Twitter interactions contributes initial answers to these questions. We have crawled an extensive dataset of Twitter accounts and their follow, quote, retweet, reply interactions over a period of a month. Using a machine learning framework, we find we can accurately predict many interactions of Twitter users. Interestingly, the most predictive features vary with the user profiles, and are not the same across all users. For example, for a pair of users that interact with a large number of other Twitter users, we find that certain "higher-dimensional" triads, i.e., triads that involve multiple types of interactions, are very informative, whereas for less active Twitter users, certain in-degrees and out-degrees play a major role. Finally, we provide various other insights on Twitter user behavior. </br>
         </p>
-	</details>
+        </details></td></tr>
 
-<ul>
+ <!-- WEEK 2-->
+ <tr><td>Friday, September 20</td><td>Charalampos (Babis) Tsourakakis</td><td>TBA</td></tr>
+ 
+ <tr><td>Friday, September 27</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ 
+ <tr><td>Friday, October 4</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ 
+ <tr><td>Friday, October 11</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ 
+ <tr><td>Friday, October 18</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ 
+ <tr><td>Friday, October 25</td><td>Matteo Riondato</td><td>TBA</td></tr>
+ 
+ <tr><td>Friday, November 1</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ 
+ <tr><td>Friday, November 8</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ 
+ <tr><td>Friday, November 15</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ 
+ <tr><td>Friday, November 22</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ 
+ <tr><td>Friday, November 29</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ 
+ <tr><td>Friday, December 6</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ 
+ <tr><td>Friday, December 13</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ 
+ <tr><td>Friday, December 20</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ 
+  </table>
+</div>
+<!-- partial -->
+<div class="responsible"> Responsible for Fall 2019: Konstantinos Sotiropoulos, e-mail: ksotirop at bu.edu </div> 
 </body>
 </html>
