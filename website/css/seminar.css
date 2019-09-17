@@ -11,7 +11,7 @@ body * {
   background: #D84141;
   background-image: url("../images/logos/midas-logo-head.png"), url("../images/logos/BU-logo.png");
   background-repeat: no-repeat;
-  background-size: 75px 125px, 125px 75px;
+  background-size: 125px 125px, 111px 50px;
   background-position: 10% 48%, 90% 45%;
   color: white;
   font-size: 30px;
@@ -44,14 +44,13 @@ body * {
    font-family: "Courier New", Courier, monospace;
    font-style: italic;
    color: 778899;
-   margin-left: 120px;
 }
 
-img {
+/* img {
   border-radius: 50%;
   height: 60px;
   width: 60px;
-}
+} */
 
 .table-users {
   border: 1px solid #327a81;

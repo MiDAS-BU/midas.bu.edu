@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # This scripts commits a minor change and deploys
 
-MESSAGE="$1"
+MESSAGE="$@"
 
-echo "Attempting to commit with message $MESSAGE"
+echo "Attempting to commit with message \"$MESSAGE\""
 echo "git status:"
 git status
 

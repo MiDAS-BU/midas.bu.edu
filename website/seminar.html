@@ -1,87 +1,188 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>MiDAS seminars</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="css/seminar.css">
-</head>
-<body>
-<div class="header">
-  <h1>MiDAS Group Seminars</h1>
-  <h5>Massive Data, Algorithms, and Systems Group @ BU</h5>
-</div>
-<!-- partial:index.partial.html -->
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="icon" href="images/logos/midas-favicon.png">
+		<title>MiDAS Group</title>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/ionicons.min.css" rel="stylesheet">
+		<link href="css/pe-icon-7-stroke.css" rel="stylesheet">
+		<link href="css/logoiconfont.css" rel="stylesheet">
+
+		<link href="css/style.css" rel="stylesheet" title="main-css">
+		<link href="css/custom.css?ver=1" rel="stylesheet">
+
+		<link href="css/seminar.css" rel="stylesheet">
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137493170-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-137493170-1');
+
+		</script>
+
+	</head>
+
+	<body class="royal_preloader" data-spy="scroll" data-target=".navbar" data-offset="70">
+		<div id="royal_preloader"></div>
+
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="index.html">
+								<div><img src="images/logos/midas-logo.png" class="logo-img-navbar-center"></div>
+							</a>
+						</div>
+
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="index.html#ideology">Research</a></li>
+								<li><a href="index.html#services">Publications</a></li>
+								<li><a href="index.html#team">People</a></li>
+								<li class="active"><a href="#" data-id="seminar">Seminar</a></li>
+								<li><a href="index.html#contact">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<section id="seminar" class="background2 section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 section-title text-center">
+						<h2>MiDAS Seminar</h2>
+
+						<!-- partial:index.partial.html -->
 <div class="table-users">
-   <div class="calendar">Fall 2019 Calendar </div>
-   <div class="room-time"> All seminars are held in the old MCS B33 at 11.00 am [unless otherwise notified], with lunch available afterwards</div>
-   
-   <table cellspacing="0">
-      <tr>
-         <th>Date</th>
-         <th>Speaker</th>
-         <th width="600">Title and Abstract</th>
-      </tr>
-<!-- WEEK 1 -->
-<tr><td>Friday, September 13</td><td>Tianyi Chen and Konstantinos Sotiropoulos</td><td>Novel Dense Subgraph Discovery Primitives: Risk Aversion and Exclusion Queries and TwitterMancer: Predicting User Interactions on Twitter</br><details>
-        <summary>Click for abstract</summary>
-        <p>
-        <span class="bold">Title:</span> Novel Dense Subgraph Discovery Primitives: Risk Aversion and Exclusion Queries </br>
-        <span class="bold">Speaker:</span> Tianyi Chen </br>
+	<div class="calendar">Fall 2019 Calendar </div>
+	<div class="room-time"> Seminars are held in the old MCS B33 at 11.00 am [unless otherwise notified], followed by lunch.</div>
+	
+	<table cellspacing="0">
+	   <tr>
+		  <th class="text-center">Date</th>
+		  <th class="text-center">Speaker</th>
+		  <th class="text-center" width="600">Title and Abstract</th>
+	   </tr>
+ <!-- WEEK 1 -->
+ <tr><td>Friday, Sep 13</td><td>Tianyi Chen and Konstantinos Sotiropoulos</td><td>Novel Dense Subgraph Discovery Primitives: Risk Aversion and Exclusion Queries and TwitterMancer: Predicting User Interactions on Twitter</br><details>
+		 <summary>Click for abstract</summary>
+		 <p>
+		 <span class="bold">Title:</span> Novel Dense Subgraph Discovery Primitives: Risk Aversion and Exclusion Queries </br>
+		 <span class="bold">Speaker:</span> Tianyi Chen </br>
+ 
+		 <span class="bold">Abstract:</span> </br>
+		 In the densest subgraph problem, given an undirected graph G(V;E;w) with non-negative edge weights we are asked to find a subset of nodes S from V that maximizes the degree density w(S)=|S|. </br>
+		 This problem is solvable in polynomial time, and in general is well studied. But what happens when we are asked questions such as "how can we find a dense subgraph in Twitter with lots of replies and mentions but no follows?", "how do we extract a dense subgraph with high expected reward and low risk from an uncertain graph"? </br>
+		 In this work, specifically, we formulate both problems mathematically as special instances of dense subgraph discovery in graphs with negative weights. We prove that the problem in general is NP-hard, but we also provide sufficient conditions under which it is poly-time solvable. We design an efficient approximation algorithm that works best in the presence of small negative weights, and an effective heuristic for the more general case. Finally, we perform experiments on various real-world datasets that verify the value of the proposed primitives, and the effectiveness of our proposed algorithms. </br>
+		 </p>
+		 </br>
+		 <p>
+		 <span class="bold">Title:</span> TwitterMancer: Predicting User Interactions on Twitter </br>
+		 <span class="bold">Speaker:</span> Konstantinos Sotiropoulos </br>
+ 
+		 <span class="bold">Abstract:</span> </br>
+		 This work investigates the interplay between different types of user interactions on Twitter, with respect to predicting missing or unseen interactions. For example, given a set of retweet interactions between Twitter users, how accurately can we predict reply interactions? Is it more difficult to predict retweet or quote interactions between a pair of accounts? Also, which features of interaction patterns are most important to enable accurate prediction of specific Twitter interactions? </br>
+		 Our empirical study of Twitter interactions contributes initial answers to these questions. We have crawled an extensive dataset of Twitter accounts and their follow, quote, retweet, reply interactions over a period of a month. Using a machine learning framework, we find we can accurately predict many interactions of Twitter users. Interestingly, the most predictive features vary with the user profiles, and are not the same across all users. For example, for a pair of users that interact with a large number of other Twitter users, we find that certain "higher-dimensional" triads, i.e., triads that involve multiple types of interactions, are very informative, whereas for less active Twitter users, certain in-degrees and out-degrees play a major role. Finally, we provide various other insights on Twitter user behavior. </br>
+		 </p>
+		 </details></td></tr>
+ 
+  <!-- WEEK 2-->
+  <tr><td>Friday, Sep 20</td><td>Charalampos (Babis) Tsourakakis</td><td>TBA</td></tr>
+  
+  <tr><td>Friday, Sep 27</td><td> Loqman Salamatian </td><td> Monitoring the Internet through Riemannian Geometry </br>
+ <details>
+ <summary>Click for abstract</summary>
+ <p>
+  In this work, we tackle the problem of real-time monitoring of dynamic variations of global Internet using topology changes information provided by combining several BGP feeds. We develop a geometric approach that leverages notions of geometric curvature and recent development in graph embedding using Ollivier-Ricci curvature. In particular, we use our method to detect major events and changes via the geometry of the embedding of the graph, where a major event is defined as an incident that either impacts a substantial number of prefixes or can be observed by numerous route monitors within a given period of time. We first describe the Ricci curvature approach to characterize the AS level graph. The key idea is to detect changes in between consecutive snapshots and to separate events that result in considerable geometric alterations, from those that remain local. The variations of curvature are evaluated through a set of landmarks as reference points. We then introduce an anomaly tracking mechanism to detect large variations of curvature that translate into major variations in the geometry of the graph. These changes are then considered as major BGP-level events. We describe a mechanism for identifying the network elements responsible for the set of coordinated changes and isolate their implications in the geometric space. We finally evaluate this system in operational setting.
+ </p>
+ </details>
+ </td></tr>
+  
+  <tr><td>Friday, Oct 4</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  
+  <tr><td>Friday, Oct 11</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  
+  <tr><td>Friday, Oct 18</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  
+  <tr><td>Friday, Oct 25</td><td>Matteo Riondato</td><td>TBA</td></tr>
+  
+  <tr><td>Friday, Nov 1</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  
+  <tr><td>Friday, Nov 8</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  
+  <tr><td>Friday, Nov 15</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  
+  <tr><td>Friday, Nov 22</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  
+  <tr><td>Friday, Dec 6</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  
+  <tr><td>Friday, Dec 13</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  
+  <tr><td>Friday, Dec 20</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  
+   </table>
+ </div>
+ <!-- partial -->
+ <div class="responsible text-center"> Responsible for Fall 2019: Konstantinos Sotiropoulos, e-mail: ksotirop at bu.edu </div> 
 
-        <span class="bold">Abstract:</span> </br>
-        In the densest subgraph problem, given an undirected graph G(V;E;w) with non-negative edge weights we are asked to find a subset of nodes S from V that maximizes the degree density w(S)=|S|. </br>
-        This problem is solvable in polynomial time, and in general is well studied. But what happens when we are asked questions such as "how can we find a dense subgraph in Twitter with lots of replies and mentions but no follows?", "how do we extract a dense subgraph with high expected reward and low risk from an uncertain graph"? </br>
-        In this work, specifically, we formulate both problems mathematically as special instances of dense subgraph discovery in graphs with negative weights. We prove that the problem in general is NP-hard, but we also provide sufficient conditions under which it is poly-time solvable. We design an efficient approximation algorithm that works best in the presence of small negative weights, and an effective heuristic for the more general case. Finally, we perform experiments on various real-world datasets that verify the value of the proposed primitives, and the effectiveness of our proposed algorithms. </br>
-        </p>
-        </br>
-        <p>
-        <span class="bold">Title:</span> TwitterMancer: Predicting User Interactions on Twitter </br>
-        <span class="bold">Speaker:</span> Konstantinos Sotiropoulos </br>
+					</div>
+				</div>
 
-        <span class="bold">Abstract:</span> </br>
-        This work investigates the interplay between different types of user interactions on Twitter, with respect to predicting missing or unseen interactions. For example, given a set of retweet interactions between Twitter users, how accurately can we predict reply interactions? Is it more difficult to predict retweet or quote interactions between a pair of accounts? Also, which features of interaction patterns are most important to enable accurate prediction of specific Twitter interactions? </br>
-        Our empirical study of Twitter interactions contributes initial answers to these questions. We have crawled an extensive dataset of Twitter accounts and their follow, quote, retweet, reply interactions over a period of a month. Using a machine learning framework, we find we can accurately predict many interactions of Twitter users. Interestingly, the most predictive features vary with the user profiles, and are not the same across all users. For example, for a pair of users that interact with a large number of other Twitter users, we find that certain "higher-dimensional" triads, i.e., triads that involve multiple types of interactions, are very informative, whereas for less active Twitter users, certain in-degrees and out-degrees play a major role. Finally, we provide various other insights on Twitter user behavior. </br>
-        </p>
-        </details></td></tr>
+			</div>
+		</section>
 
- <!-- WEEK 2-->
- <tr><td>Friday, September 20</td><td>Charalampos (Babis) Tsourakakis</td><td>TBA</td></tr>
- 
- <tr><td>Friday, September 27</td><td> Loqman Salamatian </td><td> Monitoring the Internet through Riemannian Geometry </br>
-<details>
-<summary>Click for abstract</summary>
-<p>
- In this work, we tackle the problem of real-time monitoring of dynamic variations of global Internet using topology changes information provided by combining several BGP feeds. We develop a geometric approach that leverages notions of geometric curvature and recent development in graph embedding using Ollivier-Ricci curvature. In particular, we use our method to detect major events and changes via the geometry of the embedding of the graph, where a major event is defined as an incident that either impacts a substantial number of prefixes or can be observed by numerous route monitors within a given period of time. We first describe the Ricci curvature approach to characterize the AS level graph. The key idea is to detect changes in between consecutive snapshots and to separate events that result in considerable geometric alterations, from those that remain local. The variations of curvature are evaluated through a set of landmarks as reference points. We then introduce an anomaly tracking mechanism to detect large variations of curvature that translate into major variations in the geometry of the graph. These changes are then considered as major BGP-level events. We describe a mechanism for identifying the network elements responsible for the set of coordinated changes and isolate their implications in the geometric space. We finally evaluate this system in operational setting.
-</p>
-</details>
-</td></tr>
- 
- <tr><td>Friday, October 4</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- 
- <tr><td>Friday, October 11</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- 
- <tr><td>Friday, October 18</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- 
- <tr><td>Friday, October 25</td><td>Matteo Riondato</td><td>TBA</td></tr>
- 
- <tr><td>Friday, November 1</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- 
- <tr><td>Friday, November 8</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- 
- <tr><td>Friday, November 15</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- 
- <tr><td>Friday, November 22</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- 
- <tr><td>Friday, December 6</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- 
- <tr><td>Friday, December 13</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- 
- <tr><td>Friday, December 20</td><td>&nbsp;</td><td>&nbsp;</td></tr>
- 
-  </table>
-</div>
-<!-- partial -->
-<div class="responsible"> Responsible for Fall 2019: Konstantinos Sotiropoulos, e-mail: ksotirop at bu.edu </div> 
-</body>
+
+
+
+		<footer class="footer-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-sm-offset-4 text-center">
+						<div>
+							<a href="http://www.bu.edu"><img src="images/logos/BU-logo.png" class="BU-logo-img-center"></a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 text-small text-center">
+						<hr>
+						<button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">Back to top</button>
+						<p class="no-margin">&copy; MiDAS Group @ BU</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="js/underscore.min.js"></script>
+		<script type="text/javascript" src="js/scrollreveal.min.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> -->
+		<!-- <script type="text/javascript" src="js/main.js"></script> -->
+		<script type="text/javascript" src="js/seminar.js"></script>
+	</body>
+
 </html>
