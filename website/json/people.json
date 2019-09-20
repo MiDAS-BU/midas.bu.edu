@@ -1,5 +1,6 @@
 {
-	"categories": [{
+	"categories": [
+		{
 			"name": "Faculty",
 			"id": "faculty",
 			"hidden": false
@@ -15,13 +16,7 @@
 			"hidden": true
 		}
 	],
-	"people": [{
-			"name": "Konstantinos Ameranis",
-			"image": "images/people/ameranis.jpeg",
-			"position": "PhD Researcher",
-			"website": "http://cs-people.bu.edu/ameranis/",
-			"category": "students"
-		},
+	"people": [
 		{
 			"name": "Dmytro Bogatov",
 			"image": "images/people/dmytro.jpeg",
