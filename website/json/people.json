@@ -72,6 +72,41 @@
 			"category": "students"
 		},
 		{
+			"name": "Tarikul Islam Papon",
+			"image": "images/people/papon.jpg",
+			"position": "PhD Researcher",
+			"website": "https://cs-people.bu.edu/papon/",
+			"category": "students"
+		},
+		{
+			"name": "Zichen Zhu",
+			"image": "images/people/zichen.jpg",
+			"position": "PhD Researcher",
+			"website": "https://cs-people.bu.edu/zczhu/",
+			"category": "students"
+		},
+		{
+			"name": "Ju Hyoung Mun",
+			"image": "images/people/juhyoung.jpg",
+			"position": "",
+			"website": "",
+			"category": "students"
+		},
+		{
+			"name": "Lina Qiu",
+			"image": "",
+			"position": "PhD Researcher",
+			"website": "https://cs-people.bu.edu/qlina/",
+			"category": "students"
+		},
+		{
+			"name": "",
+			"image": "",
+			"position": "",
+			"website": "",
+			"category": "students"
+		},
+		{
 			"name": "Subhadeep Sarkar",
 			"image": "images/people/subjadeep.jpeg",
 			"position": "Postdoctoral Researcher",
