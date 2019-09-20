@@ -89,15 +89,15 @@
 		},
 		{
 			"name": "Lina Qiu",
-			"image": "",
+			"image": "images/people/lina.jpg",
 			"position": "PhD Researcher",
 			"website": "https://cs-people.bu.edu/qlina/",
 			"category": "students"
 		},
 		{
-			"name": "",
-			"image": "",
-			"position": "",
+			"name": "Aneesh Raman",
+			"image": "images/people/aneesh.jpg",
+			"position": "MSc Researcher",
 			"website": "",
 			"category": "students"
 		},
