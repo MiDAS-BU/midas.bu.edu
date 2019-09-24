@@ -1,5 +1,6 @@
 {
-	"categories": [{
+	"categories": [
+		{
 			"name": "Faculty",
 			"id": "faculty",
 			"hidden": false
@@ -15,13 +16,7 @@
 			"hidden": true
 		}
 	],
-	"people": [{
-			"name": "Konstantinos Ameranis",
-			"image": "images/people/ameranis.jpeg",
-			"position": "PhD Researcher",
-			"website": "http://cs-people.bu.edu/ameranis/",
-			"category": "students"
-		},
+	"people": [
 		{
 			"name": "Dmytro Bogatov",
 			"image": "images/people/dmytro.jpeg",
@@ -69,6 +64,41 @@
 			"image": "images/people/isidora.jpg",
 			"position": "PhD Researcher",
 			"website": "http://cs-people.bu.edu/isidora/",
+			"category": "students"
+		},
+		{
+			"name": "Tarikul Islam Papon",
+			"image": "images/people/papon.jpg",
+			"position": "PhD Researcher",
+			"website": "https://cs-people.bu.edu/papon/",
+			"category": "students"
+		},
+		{
+			"name": "Dimitris Staratzis ",
+			"image": "images/people/dimitris.jpg",
+			"position": "PhD Researcher",
+			"website": "https://cs-people.bu.edu/dstara/",
+			"category": "students"
+		},
+		{
+			"name": "Zichen Zhu",
+			"image": "images/people/zichen.png",
+			"position": "PhD Researcher",
+			"website": "https://cs-people.bu.edu/zczhu/",
+			"category": "students"
+		},
+		{
+			"name": "Lina Qiu",
+			"image": "images/people/lina.jpg",
+			"position": "PhD Researcher",
+			"website": "https://cs-people.bu.edu/qlina/",
+			"category": "students"
+		},
+		{
+			"name": "Ju Hyoung Mun",
+			"image": "images/people/juhyoung.jpg",
+			"position": "Postdoctoral Researcher",
+			"website": "http://cs-people.bu.edu/jmun",
 			"category": "students"
 		},
 		{
