@@ -1,7 +1,7 @@
 [{
 		"title": "A Comparative Evaluation of Order-Preserving and Order-Revealing Schemes and Protocols",
 		"authors": "D. Bogatov, G. Kollios and L. Reyzin",
-		"venue": "VLDB",
+		"venue": "PVLDB",
 		"date": {
 			"year": 2019
 		},
@@ -117,7 +117,7 @@
 	{
 		"title": "Slalom: Coasting Through Raw Data via Adaptive Partitioning and Indexing",
 		"authors": "M. Olma, M. Karpathiotakis, I. Alagiannis, M. Athanassoulis, A. Ailamaki",
-		"venue": "VLDB",
+		"venue": "PVLDB",
 		"date": {
 			"year": 2017
 		},
@@ -129,7 +129,7 @@
 	{
 		"title": "NED: An Inter-Graph Node Metric Based On Edit Distance",
 		"authors": "H. Zhu, X. Meng, G. Kollios",
-		"venue": "VLDB",
+		"venue": "PVLDB",
 		"date": {
 			"year": 2017
 		},
@@ -273,7 +273,7 @@
 	{
 		"title": "Optimal Column Layout for Hybrid Workloads",
 		"authors": "M. Athanassoulis, K. Bøgh, S. Idreos",
-		"venue": "VLDB",
+		"venue": "PVLDB",
 		"date": {
 			"year": 2019
 		}
