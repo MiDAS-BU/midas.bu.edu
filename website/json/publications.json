@@ -1,4 +1,13 @@
-[{
+[
+	{
+		"title": "Optimal Column Layout for Hybrid Workloads",
+		"authors": "M. Athanassoulis, K. Bøgh, S. Idreos",
+		"venue": "PVLDB",
+		"date": {
+			"year": 2019
+		}
+	},
+    {
 		"title": "A Comparative Evaluation of Order-Preserving and Order-Revealing Schemes and Protocols",
 		"authors": "D. Bogatov, G. Kollios and L. Reyzin",
 		"venue": "PVLDB",
@@ -268,14 +277,6 @@
 		"links": {
 			"pdf": "https://arxiv.org/pdf/1801.07386.pdf",
 			"abstract": "https://arxiv.org/abs/1801.07386"
-		}
-	},
-	{
-		"title": "Optimal Column Layout for Hybrid Workloads",
-		"authors": "M. Athanassoulis, K. Bøgh, S. Idreos",
-		"venue": "PVLDB",
-		"date": {
-			"year": 2019
 		}
 	}
 ]
