@@ -28,7 +28,10 @@
 		"venue": "SIAM SDM",
 		"date": {
 			"year": 2019
-		}
+		},
+        "links": {
+            "pdf": "https://epubs.siam.org/doi/pdf/10.1137/1.9781611975673.89"
+        }
 	},
 	{
 		"title": "A team-formation algorithm for faultline minimization",
