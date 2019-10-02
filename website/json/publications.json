@@ -5,6 +5,9 @@
 		"venue": "PVLDB",
 		"date": {
 			"year": 2019
+		},
+		"links": {
+			"pdf": "http://cs-people.bu.edu/mathan/publications/vldb19-athanassoulis.pdf"
 		}
 	},
     {
