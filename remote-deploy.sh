@@ -2,7 +2,7 @@
 # This is to be used only if something is wrong with current gh-pages
 # It first deletes current gh-pages branch and then pushing everything anew
 
-USERNAME=dstara
+USERNAME=`whoami`
 SERVER="csa1.bu.edu"
 REMOTESSH="ssh -F /dev/null ${USERNAME}@${SERVER} -o PasswordAuthentication=no"
 
