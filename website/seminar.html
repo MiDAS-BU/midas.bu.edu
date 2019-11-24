@@ -211,7 +211,15 @@ Stella is a senior distributed systems software engineer at Vertica, chair of th
   
 <!--  <tr><td>Friday, Nov 22</td><td>Ioannis Demertzis</td><td>TBA</td></tr> -->
   
-  <tr><td>Friday, Dec 6</td><td>Brian Hentschel</td><td>TBA</td></tr>
+  <tr><td>Friday, Dec 6</td><td>Brian Hentschel <details>
+<summary> Bio </summary>
+Brian is a PhD student at Harvard University in the Data Systems Laboratory. His work focuses on the usage of statistics and machine learning in making better data structures and algorithms, and conversely in the creation of data management solutions for better machine learning. Previous work of his has won the ACM SIGMOD Research Highlight Award as well as the Best Paper Award at EDBT.
+</details></td><td>Temporally Biased Sampling & Online Model Management <details> <summary> Click for abstract </summary>
+<p>
+To maintain the accuracy of supervised learning models in the presence of evolving data streams, we provide temporally-biased sampling schemes that weight recent data most heavily, with inclusion probabilities for a given data item decaying over time according to a specified ``decay function’’. We then periodically retrain the models on the current sample. Time-biasing lets the models adapt to recent changes in the data while---unlike in a sliding-window approach---still keeping some old data to ensure robustness in the face of temporary fluctuations and periodicities in the data values. In addition, the sampling-based approach allows existing analytic algorithms for static data to be applied to dynamic streaming data essentially without change. We provide and analyze both a simple sampling scheme (T-TBS) that probabilistically maintains a target sample size and a novel reservoir-based scheme (R-TBS) that is the first to provide both control over the decay rate and a guaranteed upper bound on the sample size. The R-TBS and T-TBS schemes are of independent interest, extending the known set of unequal-probability sampling schemes. We discuss distributed implementation strategies; experiments in Spark illuminate the performance and scalability of the algorithms, and show that our approach can increase machine learning robustness in the face of evolving data.
+</p>
+</details>
+</td></tr>
   
   <tr><td>Friday, Dec 13</td><td>&nbsp;</td><td>&nbsp;</td></tr>
   
