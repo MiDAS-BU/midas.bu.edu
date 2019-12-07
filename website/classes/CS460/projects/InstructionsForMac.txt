@@ -1,0 +1,14 @@
+Instructions for mac
+
+1. 
+If you haven't done yet, first install homebrew. 
+
+2. 
+Execute the following commands
+brew tap mongodb/brew
+brew install mongodb-community
+brew services start mongodb-community (Execute the same command with stop when you want to stop mongodb from running).
+
+3. To open the mongodb terminal just type mongo in terminal.
+
+
