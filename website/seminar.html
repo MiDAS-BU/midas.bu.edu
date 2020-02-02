@@ -87,11 +87,41 @@
 		  <th class="text-center" width="600">Title and Abstract</th>
 	   </tr>
 <tr><td>Friday, Jan 31</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>Friday, Feb 7</td><td>Ju Hyoung Mun (BU)<details>
-	<summary> Bio </summary> Juhyoung is currently a postdoctoral associate in the Department of Computer Science at Boston University, working with Prof. Manos Athanassoulis. Her research interest lies in the fields of Data Systems and Networking; particularly, in enhancing the lookup performance. She received her Ph.D. in Electronic and Electrical Engineering at Ewha w. University in Seoul, Korea, under the supervision of Prof. Hyesook Lim. Her doctoral research was focused on how to retrieve the data efficiently by using Bloom filters in Information Centric Networking (ICN).</details> </td>
-	<td><center>Reducing Hash Overhead of Bloom Filters in LSM-trees</center></td>
+
+<tr>
+	<td>Friday, Feb 7</td>
+	<td>Ju Hyoung Mun (BU)
+		<details>
+			<summary> Bio </summary> 
+			Juhyoung is currently a postdoctoral associate in the Department of Computer Science at Boston University, working with Prof. Manos Athanassoulis. Her research interest lies in the fields of Data Systems and Networking; particularly, in enhancing the lookup performance. She received her Ph.D. in Electronic and Electrical Engineering at Ewha w. University in Seoul, Korea, under the supervision of Prof. Hyesook Lim. Her doctoral research was focused on how to retrieve the data efficiently by using Bloom filters in Information Centric Networking (ICN).
+		</details> 
+	</td>
+
+	<td>Reducing Hash Overhead of Bloom Filters in LSM-trees</br> 
+		<details>
+ 			<summary>Click for abstract</summary> 
+ 			<p> A log-structured merge-tree (LSM-tree) is widely used in modern key-value stores. To balance the read performance and ingestion rate, LSM-trees maintain sorted runs in multiple levels so that the lookup may require multiple I/Os. To accelerate the performance of point lookups, LSM-trees often employ Bloom filters in the main memory to avoid unnecessary I/Os for levels that do not contain the matching key. Using Bloom filters is useful when there is a vast gap in the cost of accessing Bloom filters, hashing and probing the memory, and the storage. As the access latency of the modern storage device like NVMe is getting comparable with hashing, the CPU cost for hashing becomes the performance bottleneck of lookups and hinders other CPU intensive tasks. Hashing is crucial for LSM-trees since, by design, they have increased read amplification to mitigate the insertion cost. To alleviate the hashing overhead, we propose to share the hash calculation for multiple levels and re-use it across the tree hierarchy. Furthermore, by sharing the hash calculation, which sections of Bloom filters are going be searched along with the different hierarchy are acquired in advance. Using this property, we also propose to prefetch the necessary Bloom filter sections to improve the lookup performance further. The simulation results show that our proposal can achieve almost the same false-positive ratio as the state-of-the-art while keeping the hashing overhead constant. </p>
+ 		</details>
+ 	</td>
 </tr>
-<tr><td>Friday, Feb 14</td><td>Showan Esmail Asyabi (BU)</td><td>&nbsp;</td></tr>
+
+<tr>
+	<td>Friday, Feb 14</td>
+	<td>Showan Esmail Asyabi 
+		(BU)<details>
+			<summary> Bio </summary> 
+			Showan Esmail Asyabi is a research assistant and a Ph.D. student at Boston University. He is advised by Prof. Azer Bestavros.  His research focuses on designing and building system software for emerging computing models (e.g., cloud computing and stream processing). He has designed several CPU schedulers for virtualized and non-virtualized data centers to mitigate power consumption or raise the performance of IO-bound workloads. He is mainly interested in distributed systems, operating systems, cloud computing, and big data.
+		</details>
+	</td>
+
+	<td>Peafowl:  In-application CPU  Scheduling to Reduce Power Consumption of In-memory Key-Value Stores</br> 
+		<details>
+	 	<summary>Click for abstract</summary> 
+	 	<p> The traffic load sent to key-value (KV) stores vary over long timescales of hours to short timescales of a few microseconds. Long-term variations present the opportunity to save power during low or medium periods of utilization. Several techniques exist to save power in servers, including feedback-based controllers that right-size the number of allocated CPU cores,  dynamic voltage and frequency scaling (DVFS), and c-state (idle-state) mechanisms. In this talk, we demonstrate that existing power-saving techniques are not effective for KV stores. This is because of the high rate of traffic even under low load prevents the system from entering low power states for extended periods of time. To achieve power savings, we must unbalance the load among the CPU cores so that some of them can enter low power states during periods of low load. We accomplish this by introducing the notion of in-application CPU scheduling. Instead of relying on the kernel to schedule threads, we pin threads to bypass the kernel CPU scheduler and then perform the scheduling within the KV store application. Our design, Peafowl, is a KV store that features an in-application CPU scheduler that monitors the load to learn the workload characteristics and then scales the number of active CPU cores when the load drops, leading to notable power savings during low or medium periods of utilization. Our experiments demonstrate that Peafowl outperforms state of the art approaches such as Rubik and µDPM by up to 6x and 4x respectively.</p> 
+	 </details> 
+	</td>
+</tr>
+
 <tr><td>Friday, Feb 21</td><td>Dimitris Staratzis (BU)</td><td>&nbsp;</td></tr>
 <tr><td>Friday, Feb 28</td><td>Andy Huynh (BU)</td><td>&nbsp;</td></tr>
 <tr><td>Friday, Mar 6</td><td>Jialin Ding (MIT)</td><td>&nbsp;</td></tr>
