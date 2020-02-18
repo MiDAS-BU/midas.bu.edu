@@ -386,11 +386,19 @@
                         <li><a target="_blank" style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./student_slides/4.FishStore_BenjaminBorden.pdf" >Discussion Slides by Benjamin Borden</a> </li>
                          <li><strong>(P)</strong> <a href="https://dl.acm.org/doi/10.1145/3299869.3319896">FishStore: Faster Ingestion with Subset Hashing</a>, SIGMOD 2019 (paper for <strong class="red">TECHNICAL QUESTION</strong>) </li>
                          <li><small><strong>Technical Question:</strong> <em>
-                                 Both UCB and UpBit employ extra bitvector(s)
-                                 to indicate the corresponding row is updated,
-                                 how the UpBit can achieve the fast read
-                                 performance compared to UCB and UpBit-FP?
-                            </em></small></li>
+                             In order for FISHSTORE to efficiently achieves
+                             records within a PSF, it builds an index over the
+                             possible items that satisfy the PSF.  However, if
+                             items that are qualified reside on disk, FISHSTORE
+                             spends an expensive random I/O. To reduce the cost
+                             the authors propose adaptive prefetching as a
+                             tunable policy in the system in order to reduce
+                             the cost of following the hash chain down into the
+                             slower levels of memory. How does this strategy
+                             compare to other indexing methods (like an LSM
+                             tree) and when might we want to use one over the
+                             other?
+                         </em></small></li>
                          <li>(B) <a href="https://dl.acm.org/citation.cfm?id=3196898">FASTER: A Concurrent Key-Value Store with In-Place Updates</a>, SIGMOD 2018 [<a href="https://www.youtube.com/watch?v=68YBpitMrMI" target="_blank">conference presentation video</a>]</li> 
                         </ul>
                      </p>
@@ -436,17 +444,12 @@
                      <ul class="mylist">
                          <li><a target="_blank" style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./student_slides/6.UpBit_DimitrisStaratzis.pdf" >Discussion Slides by Dimitris Staratzis (TBA) </a> </li>
                          <li><strong>(P)</strong> <a href="https://dl.acm.org/citation.cfm?id=2915964">UpBit: Scalable In-Memory Updatable Bitmap Indexing</a>, SIGMOD 2016 (paper for <strong class="red">TECHNICAL QUESTION</strong>)</li>
-                         <li><small><strong>Technical Question:</strong> <em>In order for FISHSTORE to
-                            efficiently achieves records within a PSF, it builds an
-                            index over the possible items that satisfy the PSF.
-                            However, if items that are qualified reside on disk,
-                            FISHSTORE spends an expensive random I/O. To reduce the
-                            cost the authors propose adaptive prefetching as a tunable
-                            policy in the system in order to reduce the cost of
-                            following the hash chain down into the slower levels of
-                            memory. How does this strategy compare to other indexing
-                            methods (like an LSM tree) and when might we want to use
-                            one over the other?</em></small></li>
+                         <li><small><strong>Technical Question:</strong> <em>
+                             Both UCB and UpBit employ extra bitvector(s) to
+                             indicate the corresponding row is updated, how the
+                             UpBit can achieve the fast read performance
+                             compared to UCB and UpBit-FP?
+                        </em></small></li>
                          <li> (B) <a href="https://dl.acm.org/citation.cfm?id=276336">Bitmap Index Design and Evaluation</a>, SIGMOD 1998</li>
                      </ul>                        
                      </p>
