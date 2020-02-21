@@ -113,8 +113,10 @@ background: #E0E0E0;
 {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 17px;
+  font-size: 18px;
+  color: #000;
 }
+
 
 
 .post-content {
@@ -133,6 +135,14 @@ background: #E0E0E0;
   font-style: italic;
   margin-top: 0;
   margin-bottom: 0;   
+}
+
+.alert >.post-meta {
+  color: #777777 !important;
+  font-size: 18px !important;
+  font-style: italic !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;   
 }
 
 .no-margin
