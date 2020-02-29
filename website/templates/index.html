@@ -156,7 +156,7 @@
 								<div class="team-image-wrapper rotateTopReveal">
 									{% if "website" in person %}
 										<a target="_blank" href="{{ person.website }}">
-											<img {{ data-src" if category.hidden else "src" }}="/assets/images/people/{{ person.image }}" alt="{{ person.name }}" class="img-responsive img-circle team-member-img text-center image-people-toggle-{{ category.id }} {{ 'image-shown' if not category.hidden }}">
+											<img {{ "data-src" if category.hidden else "src" }}="/assets/images/people/{{ person.image }}" alt="{{ person.name }}" class="img-responsive img-circle team-member-img text-center image-people-toggle-{{ category.id }} {{ 'image-shown' if not category.hidden }}">
 										</a>
 									{% else %}
 										<img {{ "data-src" if category.hidden else "src" }}="/assets/images/people/{{ person.image }}" alt="{{ person.name }}" class="img-responsive img-circle team-member-img text-center image-people-toggle-{{ category.id }} {{ 'image-shown' if not category.hidden }}">
