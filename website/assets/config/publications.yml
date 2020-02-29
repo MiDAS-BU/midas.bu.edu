@@ -222,3 +222,11 @@ publications:
     links:
       pdf: https://arxiv.org/pdf/1801.07386.pdf
       abstract: https://arxiv.org/abs/1801.07386
+
+  # - title: Anonymous Transactions with Revocation and Auditing in Hyperledger Fabric
+  #   authors: D. Bogatov , A. De Caro , K. Elkhiyaoui , B. Tackmann
+  #   venue: USENIX Security
+  #   date:
+  #     year: 2020
+  #   links:
+  #     pdf: https://dbogatov.org/assets/docs/dac-fabric.pdf
