@@ -108,7 +108,7 @@
 
 		<div class="row" id="publications">
 			
-			{% for publication in publications.publications|sort(attribute="year")|limit(n=publications.view.total) %}
+			{% for publication in publications.publications|sort(attribute="date.year")|limit(n=publications.view.total) %}
 				<div class="clearfix {{ 'visible-sm' if (loop.index - 1) % publications.view.publicationsPerSmall == 0 }} {{ 'visible-md' if (loop.index - 1) % publications.view.publicationsPerMedium == 0 }} {{ 'visible-lg' if (loop.index - 1) % publications.view.publicationsPerLarge == 0 }}"></div>
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					<h3>{{ publication.title }}</h3>

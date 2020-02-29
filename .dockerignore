@@ -9,3 +9,4 @@ bower.json
 build.sh
 package.json
 node_modules/
+website/
