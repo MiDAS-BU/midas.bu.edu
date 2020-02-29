@@ -137,7 +137,6 @@ people:
   - name: Sanaz Bahargam
     image: sanaz.jpg
     position: "PhD (Next: Twitter)"
-    website: http://cs-people.bu.edu/bahargam/
     category: alumni
 
   - name: Natali Ruchansky
@@ -149,7 +148,6 @@ people:
   - name: Behzad Golshan
     image: behzad.jpeg
     position: "PhD (Next: Megagon Labs)"
-    website: http://behzad.io/
     category: alumni
 
   - name: Xianrui Meng
@@ -190,7 +188,7 @@ people:
 
   - name: Marios Hadjieleftheriou
     image: marios.jpg
-    position: "Postdoc (Next: AT&T Labs)"
+    position: "Postdoc (Next: AT&amp;T Labs)"
     website: http://hadjieleftheriou.com/
     category: alumni
 

@@ -22,9 +22,6 @@ include:
 
   # TEST
   - project: 'templates/ci-snippets'
-    file: 'simple-website/tidy.yml'
-
-  - project: 'templates/ci-snippets'
     file: 'simple-website/blc.yml'
 
   # BUILD-REVIEW
