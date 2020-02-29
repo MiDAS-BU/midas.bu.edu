@@ -106,7 +106,26 @@
 			</div>
 		</div>
 
-		<div class="row" id="publications"></div>
+		<div class="row" id="publications">
+			
+			{% for publication in publications.publications|sort(attribute="year")|limit(n=publications.view.total) %}
+				<div class="clearfix {{ 'visible-sm' if (loop.index - 1) % publications.view.publicationsPerSmall == 0 }} {{ 'visible-md' if (loop.index - 1) % publications.view.publicationsPerMedium == 0 }} {{ 'visible-lg' if (loop.index - 1) % publications.view.publicationsPerLarge == 0 }}"></div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<h3>{{ publication.title }}</h3>
+					<p>
+						{{ publication.authors }}
+						<br>
+						{{ publication.venue }}, {{ publication.date.year }}
+						{% if "pdf" in publication.links %}
+							| <a target="_blank" href="{{ publication.links.pdf }}">Download PDF</a>
+						{% endif %}
+						{% if "abstract" in publication.links %}
+							| <a target="_blank" href="{{ publication.links.abstract }}">External link</a>
+						{% endif %}
+					</p>
+				</div>
+			{% endfor %}
+		</div>
 	</div>
 </section>
 
@@ -119,7 +138,35 @@
 			</div>
 		</div>
 
-		<div class="mt40" id="people"></div>
+		<div class="mt40" id="people">
+			{% for category in people.categories|sort(attribute="sort") %}
+				<h2 class="text-center mt40 mb40">
+					{% if category.hidden %}
+						<a class="btn btn-default btn-lg active people-toggle" style="cursor: pointer; user-select: none;" data-shown="false" id="people-toggle-{{ category.id }}">{{ category.name }}</a>
+					{% else %}
+						{{ category.name }}
+					{% endif %}
+				</h2>
+				<div id="section-people-toggle-{{ category.id }}" class="row {{ 'people-hidden' if category.hidden }}">
+					
+					{% for person in people.people|selectattr("category", "equalto", category.id)|sortByLastName %}
+						<div class="clearfix {{ 'visible-xs' if (loop.index - 1) % people.view.profilesPerXSmall == 0 }} {{ 'visible-sm' if (loop.index - 1) % people.view.profilesPerSmall == 0 }} {{ 'visible-md' if (loop.index - 1) % people.view.profilesPerMedium == 0 }} {{ 'visible-lg' if (loop.index - 1) % people.view.profilesPerLarge == 0 }}"></div>
+						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center topReveal">
+							<div class="team-member-box-2">
+								<div class="team-image-wrapper rotateTopReveal">
+									<a target="_blank" href="{{ person.website }}">
+										<img {{ "data-src" if category.hidden else "src" }}="/assets/images/people/{{ person.image }}" alt="{{ person.name }}" class="img-responsive img-circle team-member-img text-center image-people-toggle-{{ category.id }} {{ 'image-shown' if not category.hidden }}">
+									</a>
+								</div>
+								<h3>{{ person.name }}</h3>
+								<p class="mb15">{{ person.position }}</p>
+							</div>
+						</div>
+					{% endfor %}
+					
+				</div>
+			{% endfor %}
+		</div>
 
 		<div class="row mb50 mt50">
 			<div class="col-lg-8 col-lg-offset-2 text-center">
@@ -147,10 +194,6 @@
 				<h4 class="mb15">111 Cummington Mall <br> Boston MA • 02215</h4>
 			</div>
 			<div class="col-sm-4 col-md-4 col-lg-4 text-center">
-				<!-- <p class="text-xs-small mb5"><strong class="text-switch">Email:</strong> cs@bu.edu</p> -->
-				<!-- <p class="text-xs-small mb5"><strong class="text-switch">Phone:</strong> +1 (617) 353-8919</p> -->
-				<!-- <p>Sign up to our mailing list to get notifications of events and announcements. -->
-				<!-- </p> -->
 				<a href="https://cs-mailman.bu.edu/mailman/listinfo/dmbu-l" target="_blank" class="btn btn-primary btn-lg">Sign up to our mailing list</a>
 			</div>
 			<div class="col-sm-4 col-md-4 col-lg-4 text-center">
@@ -266,5 +309,27 @@
 <script type="text/javascript" src="assets/js/particles.min.js"></script>
 <script type="text/javascript" src="assets/js/particlesRun.js"></script>
 <script type="text/javascript" src="assets/js/main.js"></script>
+<script>
+	
+	$(".people-toggle").click(
+		function () {
+			var id = $(this).attr('id');
+			if ($(this).data('shown') === "true") {
+				$(this).data('shown', "false");
+				$("#section-" + id).hide();
+			} else {
+				$(this).data('shown', "true");
+				var height = $(".image-shown").first().height();
+				$(".image-" + id).each(function () {
+					$(this).attr("src", $(this).data("src"));
+					$(this).height(height);
+				});
+				$("#section-" + id).show();
+			}
+		}
+	);
+	$(".people-hidden").hide();
+	
+</script>
 
 {% endblock %}

@@ -1,4 +1,5 @@
 - name: Spring 2020
+  when: 02/01/20
   where: |
     Seminars are held in the old MCS B33 at 11.00 am [unless otherwise notified], followed by lunch.
   responsible:
@@ -119,6 +120,7 @@
     - when: 05/29/20
 
 - name: Fall 2019
+  when: 09/01/19
   where: |
     Seminars are held in the old MCS B33 at 11.00 am [unless otherwise notified], followed by lunch.
   responsible:

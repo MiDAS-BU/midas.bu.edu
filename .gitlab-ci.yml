@@ -11,7 +11,7 @@ stages:
 variables:
   URL: "budata.dbogatov.org" # if you include 'website-deploy'
   INDEX: "index.html"
-  DIST: "website"
+  DIST: "dist"
   REPO: "bu/data-lab/website"
   AUTHPASSWORD: ""
 
@@ -20,16 +20,12 @@ include:
   - project: 'templates/ci-snippets'
     file: 'simple-website/before-script.yml'
 
-  # BUILD
-  - project: 'templates/ci-snippets'
-    file: 'empty-build.yml'
-
   # TEST
-  # - project: 'templates/ci-snippets'
-  #   file: 'simple-website/tidy.yml'
+  - project: 'templates/ci-snippets'
+    file: 'simple-website/tidy.yml'
 
-  # - project: 'templates/ci-snippets'
-  #   file: 'simple-website/blc.yml'
+  - project: 'templates/ci-snippets'
+    file: 'simple-website/blc.yml'
 
   # BUILD-REVIEW
   - project: 'templates/ci-snippets'
@@ -42,35 +38,23 @@ include:
   - project: 'templates/ci-snippets'
     file: 'simple-website/review/stop-review.yml'
 
-  # CODE QUALITY
-  # - project: 'templates/ci-snippets'
-  #   file: 'quality-security/code-quality.yml'
-
-  # - project: 'templates/ci-snippets'
-  #   file: 'quality-security/sast.yml'
-
-  # - project: 'templates/ci-snippets'
-  #   file: 'quality-security/deps-scan.yml'
-
-  # - project: 'templates/ci-snippets'
-  #   file: 'quality-security/container-scan.yml'
-
-  # - project: 'templates/ci-snippets'
-  #   file: 'quality-security/dast.yml'
-
-  # - project: 'templates/ci-snippets'
-  #   file: 'quality-security/license-check.yml'
-
-  # - project: 'templates/ci-snippets'
-  #   file: 'quality-security/performance.yml'
-
   # RELEASE
   - project: 'templates/ci-snippets'
     file: 'simple-website/release-docker.yml'
 
-  - project: 'templates/ci-snippets'
-    file: 'simple-website/pages.yml'
-
   # DEPLOY
   - project: 'templates/ci-snippets'
     file: 'trigger-websites-deploy.yml'
+
+build:
+  image: dbogatov/docker-images:python-extras-latest
+  stage: build
+  script:
+  - pip3 install -r requirements.txt
+  - ./scripts/build.py
+  artifacts:
+    expire_in: 30 min
+    paths:
+    - dist
+  tags:
+  - docker
