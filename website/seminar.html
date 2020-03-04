@@ -124,7 +124,22 @@
 
 <tr><td>Friday, Feb 28</td><td>&nbsp;</td><td><font color="grey">CS Department Seminar</font></td></tr>
 
-<tr><td>Friday, Mar 6</td><td><a href=https://cs-people.bu.edu/dstara/ target="_blank"> Dimitris Staratzis</a> (BU)&nbsp;</td><td></td></tr>
+<tr><td>Friday, Mar 6</td>
+	<td><a href=https://cs-people.bu.edu/dstara/ target="_blank"> Dimitris Staratzis</a> 
+		(BU)<details>
+			<summary> Bio </summary> 
+			Dimitris Staratzis is a first year PhD student at the Computer Science Department of Boston University. He is a member of the MiDAS group@BU, advised by Professor Manos Athanassoulis. His research interests broadly include Database and Big Data Management. Prior to joining Boston University, he received his BSc in Informatics from Athens University of Economics and Business.
+		</details>
+	</td>
+
+	<td>Efficient Range Deletes in LSM Engines</br> 
+		<details>
+	 	<summary>Click for abstract</summary> 
+	 	<p> Modern data systems process enormous amount of data and selecting the appropriate data structure can have major im- plications in the responsiveness, availability and scalability of such systems. Traditional systems have certain limitations and thus more advanced Key-Value systems are used in most applications today. During updates, inserts and deletes, LSM trees utilise the main memory of the system to achieve bet- ter performance. Values are not deleted or updated in place. Each delete requires a new entry refered as a ‘tombstone’ that marks all previous entries with the same key as deleted. In our knowledge, none of the major Key-Value store developers have implemented range deletes except RocksDB. Their implementation use the so called ‘range tombstones’ which altogether consist a data-structure that can answer whether a requested key is deleted by a range delete or not. For the database to construct such a response multiple I/Os are needed. Our method tries to reduce these I/Os by efficiently storing past results in memory in an opportunistic way, thus increasing responsiveness, since I/Os majorly affect performance.</p> 
+	 </details> 
+	</td>
+</tr>
+
 <tr><td>Thursday, Mar 19</td><td><a href=https://www.linkedin.com/in/stavrospap/ target="_blank"> Stavros Papadopoulos</a> (TileDB)</td><td><font color ="navy">MiDAS Seminar/CS591A1 Guest Lecture <b>(MCS B37@12:30 PM)</b></font></td></tr>
 <tr><td>Thursday, Mar 26</td><td> <a href=https://www.csail.mit.edu/person/ryan-marcus/ target="_blank"> Ryan Marcus</a> (MIT)</td><td><font color ="navy">MiDAS Seminar/CS591A1 Guest Lecture <b>(MCS B37@12:30 PM)</b></font></td></tr>
 <tr><td>Friday, Apr 3</td><td>&nbsp;</td></td><td>&nbsp;</td></tr>
