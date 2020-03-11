@@ -13,7 +13,7 @@ variables:
   AUTHPASSWORD: ""
   DOCKER_TLS_CERTDIR: ""
 
-  CI_REF: &ref 439cec9548425401680cbc2b56b1e79525bd64d4
+  CI_REF: &ref dd82e158b2eb3cabfa591e735e60f7dc1c4f571b
 
 include:
   # BEFORE SCRIPT
@@ -33,6 +33,11 @@ include:
 
   - project: "templates/ci-snippets"
     file: "simple-website/review/stop-review.yml"
+    ref: *ref
+
+  # TEST
+  - project: "templates/ci-snippets"
+    file: "simple-website/blc.yml"
     ref: *ref
 
   # RELEASE
