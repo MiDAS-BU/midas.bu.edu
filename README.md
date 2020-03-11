@@ -9,6 +9,11 @@ Simply use `./scripts/build.py` to assemble the website.
 You may need to install dependencies `pip3 install -r requirements.txt`.
 Upon completion, the script will put the website in `./dist` directory.
 
+Alternatively, if you have Docker installed, use the following one-liner:
+```bash
+docker run -it -v ${PWD}:/code dbogatov/docker-images:python-extras-latest /code/scripts/build.py
+```
+
 ### How to change dynamic data
 
 Look at [configs](./website/assets/config).
