@@ -1,57 +1,63 @@
 stages:
-- build
-- test
-- build-review
-- review
-- quality-security
-- cleanup
-- release
-- deploy
+  - pre-build
+  - build
+  - build-review
+  - review
+  - test
+  - release
+  - deploy
 
 variables:
-  URL: "budata.dbogatov.org" # if you include 'website-deploy'
-  INDEX: "index.html"
   DIST: "dist"
   REPO: "bu/data-lab/website"
   AUTHPASSWORD: ""
+  DOCKER_TLS_CERTDIR: ""
+
+  CI_REF: &ref 439cec9548425401680cbc2b56b1e79525bd64d4
 
 include:
   # BEFORE SCRIPT
-  - project: 'templates/ci-snippets'
-    file: 'simple-website/before-script.yml'
-
-  # TEST
-  - project: 'templates/ci-snippets'
-    file: 'simple-website/blc.yml'
+  - project: "templates/ci-snippets"
+    file: "simple-website/before-script.yml"
+    ref: *ref
 
   # BUILD-REVIEW
-  - project: 'templates/ci-snippets'
-    file: 'simple-website/review/build-review.yml'
+  - project: "templates/ci-snippets"
+    file: "simple-website/review/build-review.yml"
+    ref: *ref
 
   # REVIEW
-  - project: 'templates/ci-snippets'
-    file: 'simple-website/review/review.yml'
+  - project: "templates/ci-snippets"
+    file: "simple-website/review/review.yml"
+    ref: *ref
 
-  - project: 'templates/ci-snippets'
-    file: 'simple-website/review/stop-review.yml'
+  - project: "templates/ci-snippets"
+    file: "simple-website/review/stop-review.yml"
+    ref: *ref
 
   # RELEASE
-  - project: 'templates/ci-snippets'
-    file: 'simple-website/release-docker.yml'
+  - project: "templates/ci-snippets"
+    file: "simple-website/release-docker.yml"
+    ref: *ref
+
+  - project: "templates/ci-snippets"
+    file: "simple-website/pages.yml"
+    ref: *ref
 
   # DEPLOY
-  - project: 'templates/ci-snippets'
-    file: 'trigger-websites-deploy.yml'
+  - project: "templates/ci-snippets"
+    file: "trigger-websites-deploy.yml"
+    ref: *ref
 
 build:
   image: dbogatov/docker-images:python-extras-latest
   stage: build
   script:
-  - pip3 install -r requirements.txt
-  - ./scripts/build.py
+    - pip3 install -r requirements.txt
+    - ./scripts/build.py
   artifacts:
     expire_in: 30 min
     paths:
-    - dist
+      - dist
   tags:
-  - docker
+    - docker
