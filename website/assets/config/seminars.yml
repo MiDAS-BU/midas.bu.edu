@@ -1,3 +1,23 @@
+# top-level array contains semesters and in semester there is an array of talks
+
+# - name: name of the semester
+#   when: any date within semester (needed for correct ordering); date in format MM/DD/YY, e.g 02/15/19
+#   where: text saying how to attend the talks (e.g. typically held at [SOME OFFICE] at [SOME TIME])
+#   responsible:
+#     name: full name of person responsible for seminars in the semester
+#     username: BU ID (username) of the responsible person; used for BU email (e.g. username@bu.edu)
+#   talks:
+#     - when: date of the talk; date in format MM/DD/YY, e.g 02/15/19
+#       presenter: entire presenter block is OPTIONAL
+#         url: OPTIONAL. URL to presenter's homepage.
+#         name: presenter's full name
+#         affiliation: OPTIONAL. Presenter's affiliation.
+#         bio: OPTIONAL. Possibly big text piece, presenter's bio.
+#       title: OPTIONAL. Talk's title. (Ignored if "departmental" or "special")
+#       abstract: Possibly big text piece, talk's abstract. LaTeX snippets supported.
+#       departmental: OPTIONAL. If set, title and abstract are ignored and will be rendered "CS Department Seminar".
+#       special: OPTIONAL. If set, this text is rendered (HTML markup, like bold / italic / anchor allowed) as is in navy blue.
+
 - name: Spring 2020
   when: 02/01/20
   where: |

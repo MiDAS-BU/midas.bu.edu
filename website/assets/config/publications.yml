@@ -1,10 +1,22 @@
+# controls how many publications in line are rendered for different screens (bootstrap IDs)
+# total controls how many most recent publications are rendered
 view:
   publicationsPerSmall: 1
   publicationsPerMedium: 2
   publicationsPerLarge: 2
   total: 12
 
+# sorted by publication year (within a year order in undefined)
 publications:
+  # - title: full publication title
+  #   authors: authors list; initials and last name per author
+  #   venue: conference / journal title
+  #   date:
+  #     year: publication year (when it was actually published / presented, can be future year)
+  #   links:
+  #     pdf: direct URL to PDF file
+  #     abstract: OPTIONAL. URL to publication page (not PDF); can be researchgate, dbpl, iacr, archive, etc
+  
   - title: Optimal Column Layout for Hybrid Workloads
     authors: M. Athanassoulis, K. Bøgh, S. Idreos
     venue: PVLDB
@@ -50,8 +62,7 @@ publications:
 
   - title: The Periodic Table of Data Structures
     authors:
-      S. Idreos, K. Zoumpatianos, M. Athanassoulis, N. Dayan, B. Hentschel, M.
-      S. Kester, D. Guo, L. Maas, W. Qin, A. Wasay, Y. Sun
+      S. Idreos, K. Zoumpatianos, M. Athanassoulis, N. Dayan, B. Hentschel, M. S. Kester, D. Guo, L. Maas, W. Qin, A. Wasay, Y. Sun
     venue: IEEE Data Eng. Bull.
     date:
       year: 2018
@@ -168,8 +179,7 @@ publications:
       abstract: https://dl.acm.org/citation.cfm?id=2741128
 
   - title:
-      Space- and Time-Efficient Algorithm for Maintaining Dense Subgraphs on One-Pass
-      Dynamic Streams
+      Space- and Time-Efficient Algorithm for Maintaining Dense Subgraphs on One-Pass Dynamic Streams
     authors: S. Bhattacharya, M. Henzinger, D. Nanongkai, C. Tsourakakis
     venue: ACM STOC
     date:
