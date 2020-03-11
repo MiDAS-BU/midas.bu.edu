@@ -13,7 +13,7 @@ variables:
   AUTHPASSWORD: ""
   DOCKER_TLS_CERTDIR: ""
 
-  CI_REF: &ref dd82e158b2eb3cabfa591e735e60f7dc1c4f571b
+  CI_REF: &ref 9452801422f44f0ec61ebe2179a6a7473ffd6d3d
 
 include:
   # BEFORE SCRIPT
