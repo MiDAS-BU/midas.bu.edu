@@ -30,12 +30,20 @@ def main():
 
 	def recreateDir(path, ignore_errors=False):
 		shutil.rmtree(path, ignore_errors=ignore_errors)
-		os.mkdir(path)
+		Path(path).mkdir(parents=True, exist_ok=True)
 
 	def loadData(file):
 		with open(Path(src) / "assets" / "config" / f"{file}.yml") as dataFile:
 			data = yaml.load(dataFile, Loader=yaml.FullLoader)
 			return data
+
+	def generateClasses(templates):
+		classes = loadData("classes")
+		for _class in classes:
+			(Path(dist) / "classes" / _class["code"]).mkdir(parents=True, exist_ok=True)
+			templates.get_template("class.html").stream(_class=_class).dump(
+				str(Path(dist) / "classes" / _class["code"] / "index.html" )
+			)
 
 	# filters
 	def formatDate(input):
@@ -65,17 +73,17 @@ def main():
 	templates.filters['sortByDate'] = sortByDate
 	templates.filters['limit'] = limit
 
-
-	# create sit structure
+	# create dist structure
 	recreateDir(dist, ignore_errors=True)
 
 	shutil.copytree(Path(src) / "assets", Path(dist) / "assets")
-	shutil.copytree(Path(src) / "classes", Path(dist) / "classes")
-	os.mkdir(Path(dist) / "assets" / "unminified")
+	(Path(dist) / "assets" / "unminified").mkdir(parents=True, exist_ok=True)
+
+	generateClasses(templates)
 
 	# render templates
 	for path in (Path(src) / "templates").glob('*.html'):
-		if "layout" not in str(path):
+		if not any(page in str(path) for page in ["layout", "class"]):
 			templates.get_template(path.name).stream(
 				seminars=loadData("seminars"),
 				people=loadData("people"),
