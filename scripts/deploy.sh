@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# if -f supplied, will force-recreate gh-pages branch
+
 set -e
 
 # Ensure that the CWD is set to script's location
@@ -14,10 +16,17 @@ echo "Pulling / pushing ... (should pull nothing)"
 git pull
 git push
 
+./scripts/build.py
+
 # https://stackoverflow.com/a/40178818/1644554
 # https://unix.stackexchange.com/a/155077/219051
 if output=$(git status --porcelain) && [ -z "$output" ]
 then
+	if [ $# -eq 1 ] && [ $1 = "-f" ]
+	then
+		git push origin --delete gh-pages
+	fi
+
 	sed -i "" '/dist/d' ./.gitignore
 	git add .
 	git commit -m "Edit .gitignore to publish"
@@ -27,15 +36,3 @@ then
 else
 	echo "Need clean working directory to publish"
 fi
-
-# if [ $? -ne 0 ]; then
-# 	echo "Something went wrong"
-# 	echo "Re-deploying by force deleting gh-page are and re-creating it."
-# 	./scripts/redeploy.sh -f
-# fi
-
-
-
-
-
-
