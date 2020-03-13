@@ -16,6 +16,7 @@ if [ $? -ne 0 ]; then
 	exit
 fi
 
+# https://stackoverflow.com/a/40178818/1644554
 # https://unix.stackexchange.com/a/155077/219051
 if output=$(git status --porcelain) && [ -z "$output" ]
 then
