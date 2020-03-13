@@ -1,0 +1,1 @@
+cp ../../../../Classes/CS591/Slides/*.pdf ./slides

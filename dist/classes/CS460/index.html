@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://midas.bu.edu/images/logos/midas-favicon.png" rel="shortcut icon" type="image/x-icon" />
+
+    <title>CAS CS 460 - Introduction to Database Systems @ BU</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <script type="text/javascript"> 
+      function classDay(d){ 
+        // var dates = ["January 23","January 25","January 30","February 1","February 6","February 8","February 13","February 15","February 22","February 23 (Thursday)","February 27","March 1","March 6","March 8","March 13","March 15","March 27","March 29","April 3","April 5","April 10","April 12","April 19","April 24","April 26","May 1"]                
+                
+        var dates = ["September 4","September 9","September 11","September 16","September 18","September 23","September 25","September 30","October 2","October 7","October 9","October 15 (note: Tuesday)","October 16","October 21","October 23","October 28","October 30","November 4","November 6","November 11","November 13","November 18","November 20","November 25","December 2","December 4","December 9","December 11"]
+        if (d>=0 && d<28)
+          return dates[d];
+        else 
+          return "TBA";
+       } 
+       var cday=0;
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">CS460</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="labs.html">Labs</a>
+                    </li>    
+                    <li>
+                        <a href="project.html">Assignments</a>
+                    </li>
+                    <li>
+                        <a href="syllabus.html">Syllabus</a>
+                    </li>
+                    <li>
+                        <a href="https://tinyurl.com/CS460-f19-notes" target="_blank">Notes</a>
+                    </li>
+                    <li>
+                        <a href="https://piazza.com/bu/fall2019/cs460" target="_blank">Piazza</a>
+                    </li>
+                    <li>
+                        <a href="https://www.gradescope.com/courses/61157" target="_blank">Gradescope</a>
+                    </li>                   
+                    <li>
+                        <a href="http://midas.bu.edu" target="_blank">Database Research @ BU</a>
+                    </li>
+<!--                     <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+ -->
+    <!--                 <li>
+                        <a href="#first">1st</a>
+                    </li>
+                    <li>
+                        <a href="#second">2nd</a>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <!-- <header class="intro-header" style="background-image: url('img/home-bg.jpg')"> -->
+    <header class="intro-header" style="background-color: #cc0000">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>CAS CS 460</h1>
+                        <h2>Introduction to Database Systems</h2>
+                        <hr class="small">
+                        <!-- <span class="subheading">Understanding the internals of database systems</span> -->
+                <p class="text-center">
+                    <a class="btn btn-xl" href="syllabus.html">Syllabus</a>&nbsp;&nbsp;&nbsp;
+                    <a class="btn btn-xl" href="project.html">Assignments</a>&nbsp;&nbsp;&nbsp;
+                    <a class="btn btn-xl" href="labs.html">Labs</a>&nbsp;&nbsp;&nbsp;
+                    <a class="btn btn-xl" href="#announcements">Announcements</a>
+                </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!--            <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+              <div class="alert alert-danger" role="alert">
+                <p><strong>Note: </strong> The material of the website is currently updated. Please visit periodically to monitor updates as the beginning of the semester approaches.
+                </p>
+              </div>
+            </div>
+          </div>
+ -->
+
+    <!-- Main Content -->
+    <div class="" id="first">
+        <div class="row">
+        	<div class="col-lg-12 col-md-12">
+        		<h1 class="text-center">Class at a glance</h1>
+        	</div>
+			
+			<div class="col-lg-6 col-md-6 text-center">
+				<p>Class: M/W 4:30-5:45pm, <a href="http://www.bu.edu/maps/?id=3690" target="_blank">EPC</a> <a href="http://www.bu.edu/classrooms/classroom/epc-207/" target="_blank">207</a>  
+				<br>
+				Instructor: <a href="http://cs-people.bu.edu/mathan" target="_blank">Manos Athanassoulis</a>&nbsp;<a href="mailto:mathan@bu.edu?subject=[CS460]"><i class="fa fa-envelope"></i></a></p>
+                <p> Teaching Assistant: <a href="http://cs-people.bu.edu/dstara" target="_blank">Dimitris Staratzis</a>   <a href="mailto:dstara@bu.edu?subject=[CS460]"><i class="fa fa-envelope"></i></a>
+                    <br>Dimitris Office Hours: M 1:30–2:30pm/Th 4:30–5:30pm</p>
+			</div>
+			<div class="col-lg-6 col-md-6 text-center">
+				<p> Office: <a href="http://www.bu.edu/maps/?id=757" target="_blank">MCS</a> 106<br>
+                Manos Office Hours: M/W 3-4:15pm 
+              </p>
+				<p> 
+                Discussion on <a href="https://piazza.com/bu/fall2019/cs460" target="_blank">Piazza</a>
+                /<a href="hhttps://tinyurl.com/CS460-f19-notes" target="_blank">Notes</a>
+                /<a href="https://www.gradescope.com/courses/61157" target="_blank">Gradescope</a>
+                <br>Labs: Tue 9:30am/10:20am, FAB341 / 12:30pm, FCB 104</a>
+                </p>
+			</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="alternate" id="announcements">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <h1 class="text-center">Announcements</h1>
+            </div>
+            
+            <div class="col-lg-8 col-lg-offset-2">
+                <ul>
+                    <li> The third <a style="text-decoration: underline;" href="project.html">Programming Assignment is available</a>! <font color="red">(NEW)</font></li>
+
+                    <li> The fourth <a style="text-decoration: underline;" href="project.html">Written Assignment is available</a>! <font color="red">(NEW)</font></li>
+
+                    <li> The second <a style="text-decoration: underline;" href="project.html">Programming Assignment is available</a>!
+
+                    <li> The third <a style="text-decoration: underline;" href="project.html">Written Assignment is available</a>!
+
+                    <li> We will have a <a style="text-decoration: underline;" href="#guest-lecture-pantela">guest lecture on Novermber 18th from Stella Pantella</a>, from Vertica, Microfocus.</li>
+
+                    <li> The second <a style="text-decoration: underline;" href="project.html">Written Assignment is available</a>! 
+
+                    <li> The first <a style="text-decoration: underline;" href="project.html">Programming Assignment is available</a>! 
+
+                    <li> The first <a style="text-decoration: underline;" href="project.html">Written Assignment is available</a></li>
+
+                    <li> Lab A4 moved to FCB 104.</li>
+
+                    <li> Dimitris Staratzis will be the TA of the class.</li>
+
+                    <li> First lab session will take place on 9/10.</li>
+
+                    <li> Class starts on 9/4!</li>
+                </ul>
+                <br>
+                <br>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="" id="schedule">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+            	<h1 class="text-center">Class Schedule</h1>
+
+                <p>
+                Here you can find the <em><strong>tentative</strong></em> schedule of the class (which might change as the semester progresses). The textbook we use is also referred to as the <a href="http://pages.cs.wisc.edu/~dbbook/" target="_blank">"cow book"</a> (see more details in the <a href="syllabus.html">syllabus</a>).
+                </p>
+                <p>
+                The slides will be uploaded here after each class, but they <em>cannot</em> be used as a replacement of the lectures, and will <em>not</em> be sufficient on their own. Some lectures might deviate from the textbook (in presentation, order, and content). Hence, attendance during the lecturing and during the class discussion is <em>mandatory</em> and an integral part of the class.
+                </p>
+
+                <div class="post-preview">
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Introduction
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In our first class we introduce the concept of database systems, which store data and offer a declarative interface to access the data. We introduce the basic building blocks of database systems that are used to offer the expressive and efficient declarative interface to the data, and we discuss the aspects of everyday life, business operation, and scientific discovery for which database systems play a crucial role. 
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class1.pdf">Slides</a></li>
+                    <li style="font-size:18px;">Textbook, Chapter 1</li>
+                    </ul>
+                    </p>
+                    
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Database Systems Architectures
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we discuss the fundamental components that comprise a database system. We will see the commonalities and the differences of the main database system architectures and we will discuss why we have several different ones. We will go over the key characteristics of relational systems (row-stores and column-stores), and we will introduce different designs like key-value stores and graph stores. Finally, we will introduce the class projects and we will discuss in detail course logistics.
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class2.pdf">Slides</a></li>
+                    <li style="font-size:18px;">"The Design and Implementation of Modern Column-Oriented Database Systems", Chapters 1, 2, 3</li>
+                    <li style="font-size:18px;">"Architecture of a Database System", Chapter 1</li>
+
+                    </ul>
+
+                    </p>
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: ER Model
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we discuss the process of conceptually design our database. We will discuss how we can take specific requirements and transform them to a conceptual database schema using the Entity-Relationship Model (ER-Model). We will cover this process with examples.
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class3.pdf">Slides</a></li>
+                    <li style="font-size:18px;">Textbook, Chapter 2</li>
+                    <!-- <li style="font-size:18px;">Homeworks</li> -->
+                    </ul>
+                    </p>
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Relational Model
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we introduce the Relational Model, the most widely used model by vendors, institutions, and organizations to represent and store data. We connect this discussion with ER Model and we show how to build the relational model of an application when starting from the ER Model. This serves as a first get-to-know to SQL focusing on the DDL commands. 
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class4.pdf">Slides</a></li>
+                    <li style="font-size:18px;">Textbook, Chapter 3</li>
+                    <!-- <li style="font-size:18px;">Homeworks</li> -->
+                    </ul>
+                    </p>
+
+                    <h3 class="post-subtitle">
+                            Class <script type="text/javascript">document.write(cday+1)</script>: Relational Algebra
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we introduce Relational Algebra, a query language used to express the implementation of queries. Relational Algebra is applied directly on relational data and can describe multiple ways of implementing the same "logical" query. We discuss the fundamental operations, their properties and the operations we can define using them (compound operations).
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class5.pdf">Slides</a></li>
+                    <li style="font-size:18px;">Textbook, Chapter 4.1, 4.2</li>
+                    <!-- <li style="font-size:18px;">Homeworks</li> -->
+                    </ul>
+                    </p>
+     
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Functional Dependencies
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we introduce redundancy as one of the main problems in a relational schema. We introduce Functional Dependencies (FD) as generalized keys in order to help us identify a bad schema. We discuss how to reason for FD.
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class6.pdf">Slides</a></li>
+                    <li style="font-size:18px;">Textbook, Chapter 19.1-19.3</li>
+                    <!-- <li style="font-size:18px;">Homeworks</li> -->
+                    </ul>
+
+                    </p>
+
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Decomposition &amp; Schema Normalization
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we use functional dependencies to identify bad schemata and to propose how to decompose relations to avoid problems from redundancy. We further discuss how to get good decompositions, that is, having lossless-joins and being (functional) dependency preserving. We discuss several normal forms that we can achieve with a varying degree of "how much" we decompose.
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class7.pdf">Slides</a></li>
+                    <li style="font-size:18px;">Textbook, Chapter 19.4-19.7</li>
+                    <!-- <li style="font-size:18px;">Homeworks</li> -->
+                    </ul>
+                    </p>
+
+
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: SQL I
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we first introduce the basic constructs of an SQL query and then we continue thoroughly over several examples for SQL queries, slowly building increasingly complex queries. We discuss the basic SQL query, union-compatible operations, nested queries, aggregate operators, and the GROUP BY and HAVING keywords.
+                    <h4>Readings</h4>
+                    <ul>
+                        <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class8.pdf">Slides</a></li>
+                    <li style="font-size:18px;">Textbook, Chapter 5.1-5.5</li>
+                    <!-- <li style="font-size:18px;">Homeworks</li> -->
+                    </ul>
+
+                    </p>
+
+                    <h3 class="post-subtitle">
+                    Class <script type="text/javascript">document.write(cday+1)</script>: SQL II
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> Continued.
+                    <h4>Readings</h4>
+                    <ul>
+                        <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class9.pdf">Slides</a></li>
+                    <li style="font-size:18px;">Textbook, Chapter 5.1-5.5</li>
+                    <!-- <li style="font-size:18px;">Homeworks</li> -->
+                    </ul>
+
+                    </p>
+     
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: File Organization &amp; Introduction to Indexing
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we introduce the main concepts needs to start working with the internals of database systems. We lay the groundwork needed for the memory hierarchy, file organization, page organization, and indexing.
+                    <h4>Readings</h4>
+                    <ul>
+                        <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class10.pdf">Slides</a></li> 
+                        <li style="font-size:18px;">Textbook, Chapter 8 &amp; 9.1, 9.5-9.7</li>
+                        <li style="font-size:18px;">"<a style="font-size:18px; text-decoration: underline;"  href="https://link.springer.com/article/10.1007%2Fs00778-002-0074-9">Data page layouts for relational databases on deep memory hierarchies</a>", The VLDB Journal, 2002 (Sections 1, 2, 3, 4)</li>
+                    </ul>                        
+                    </p>
+
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Storage Layer
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we dive into the details of the storage hierarchy. We discuss in detail the tradeoffs between different levels of the hierarchy. We provide details for the internals of hard disks and flash disks. We further discuss the specifics of buffer management and, specifically, of buffer replacement policies.
+                    <h4>Readings</h4>
+                    <ul>
+                        <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class11.pdf">Slides</a>
+                        <li style="font-size:18px;">Textbook, Chapter 9.1-9.4</li>
+                        <li style="font-size:18px;">"<a style="font-size:18px; text-decoration: underline;"  href="https://www.usenix.org/legacy/events/fast05/tech/schlosser/schlosser.pdf">On Multidimensional Data and Modern Disks</a>", FAST 2005 (Sections 1, 2, 3, 4)</li>
+                        <li style="font-size:18px;">"<a style="font-size:18px; text-decoration: underline;"  href="https://www.usenix.org/legacy/events/usenix08/tech/full_papers/agrawal/agrawal_html/index.html">Design Tradeoffs for SSD Performance</a>", USENIX ATC 2008 (Sections 1, 2, 3)</li>
+                    </ul>  </p>
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Indexing with B+ Trees
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content">  In this class we dive into the details of indexing. We discuss in detail the internals of the most popular tree index in database management systems, the B+ Tree. We describe the search algorithm, the insert algorithm, and the delete algorithm. We further discuss aspects of key compression and bulk loading, two important performance optimizations.
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class12.pdf">Slides</a>
+                    <li style="font-size:18px;">Textbook, Chapter 10.1, 10.3-10.8</li>
+                    <!-- <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./exercises/Comp115-Class12-Ex-B-Trees.pdf">Exercises</a> (<a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./exercises/Comp115-Class12-ExSol-B-Trees.pdf">with Solutions</a>)</li> -->
+                    </ul> </p>
+
+
+                    <h3 class="post-subtitle">
+                        Class <script type="text/javascript">document.write(cday+1)</script>: External Sorting
+                     </h3>
+                     <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                     <p class="post-content"> In this class we discuss the problem of sorting in the context of database systems. Sorting is a virtually ubiquitous operation in data management, and frequently we have to sort data that do not fit in memory. To that end external sorting algorithms are developed (that minimize number of disk accesses as opposed to number of comparisons). We discuss different sorting paradigms including external sorting and sorting with B+ Trees.
+                     <h4>Readings</h4>
+                     <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class13.pdf">Slides</a>
+                     <li style="font-size:18px;">Textbook, Chapter 13</li>
+                     <!-- <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./exercises/Comp115-Class13-Ex-External-Sorting.pdf">Exercises</a> (<a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./exercises/Comp115-Class13-ExSol-External-Sorting.pdf">with Solutions</a>)</li> -->
+                     </ul> </p>
+ 
+
+                    <h3 class="post-subtitle">
+                    Class <script type="text/javascript">document.write(cday+1)</script>: Log-structured Merge Trees
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content">  In this class we introduce an alternative indexing and storage organization named 
+                        Log-Structured Merge Trees (LSM-Trees). 
+                        We discuss in detail the internals of LSM-Trees. We describe the ingestion and the search routines, as well as, how to update and delete.
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class14.pdf">Slides</a>
+                    <!-- <li style="font-size:18px;">Textbook, Chapter 10.1, 10.3-10.8</li> -->
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="https://dl.acm.org/citation.cfm?id=3276980">Optimal Bloom Filters and Adaptive Merging for LSM-Trees</a></li></li>
+                    
+                    <!-- <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./exercises/Comp115-Class12-Ex-B-Trees.pdf">Exercises</a> (<a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./exercises/Comp115-Class12-ExSol-B-Trees.pdf">with Solutions</a>)</li> -->
+                    </ul> </p>
+     
+
+
+                    <h3 class="post-subtitle">
+                        <!-- Class <script type="text/javascript">document.write(cday+1)</script>: Review -->
+                        Review
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> This is a review class. We will go over open questions in previous subjects and also discuss subtle details on exercises, mostly on the ones that have not been part of the Homework assignments.
+
+                        <h4>Readings</h4>
+                        <ul>
+                        <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./labs.html#lab6">Exercises covered in Review are available in Lab 6</a>
+                        <!-- <li style="font-size:18px;">Textbook, Chapter 10.1, 10.3-10.8</li> -->
+                        
+                        <!-- <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./exercises/Comp115-Class12-Ex-B-Trees.pdf">Exercises</a> (<a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./exercises/Comp115-Class12-ExSol-B-Trees.pdf">with Solutions</a>)</li> -->
+                        </ul>
+
+                    </p>
+
+                    <h3 class="post-subtitle">
+                        <!-- Class <script type="text/javascript">document.write(cday+1)</script>: Midterm 1 -->
+                        Midterm 1
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> You can bring with you <strong>two pages of any notes</strong> you want. No more material will be available. No laptops, tablets or phones are allowed.</p>
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Hash-based Indexing
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we discuss the different approaches for hash-based indexing. We first introduce static hashing, which has the problem of long chains of overflow pages. Then we discuss two different ways to address this problem with dynamic hashing: extendible hashing which used a directory and has no chains, and
+                    linear hashing which uses multiple different hash functions and allows overflows pages which are split (and re-hashed frequently).
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class17.pdf">Slides</a></li>
+                    <li style="font-size:18px;">Textbook, Chapter 11</li>
+                    </ul> </p>
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Query Processing with Relational Operators
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we discuss the implementation of relational operators. We start by discussing the implementations of selections and projections. And then we will continue discussing the implementations of joins: nested loop joins, sort-merge joins, and hash joins.
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class18.pdf">Slides (for Classes 18-20)</a></li>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="https://web.archive.org/web/20070718223542/http://www.noncombatant.org/trove/fitzpatrick-anecdotes.pdf">More on the Haloween Problem</a></li>
+                    <li style="font-size:18px;">Textbook, Chapters 12 &amp; 14.1-14.3</li>
+                    </ul> </p>
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Joins I: Nested-Loop Joins and Sort-Merge Joins
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we continue the discussion about the implementation of relational operators. In particular we discuss Nested Loop Joins and Sort-Merge Joins. 
+                    <h4>Readings</h4>
+                    <ul>
+                    <li style="font-size:18px;">Textbook, Chapter 14.4.1-14.4.2</li>
+                    </ul> </p>
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Joins II: Hash Joins &amp; the remaining relational operators
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we continue the discussion about the implementation of relational operators. In particular we discuss Hash Joins, General Joins, Union/Intersection, and Aggregates. 
+                    <h4>Readings</h4>
+                    <ul>
+                    <li style="font-size:18px;">Textbook, Chapter 14.4.3-14.4.4, 14.6-14.7</li>
+                    </ul> </p>
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Query Optimization
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we put together all the knowledge about the SQL operators evaluation costs in order to understand how to choose how to implement a whole SQL query. We discuss the basic properties needed for query rewriting, pruning the decision search space, and the interesting orders. 
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class21.pdf">Slides</a></li>
+                    <li style="font-size:18px;">Textbook, Chapter 15</li>
+                    </ul> </p>
+
+                    <h3 class="post-subtitle" id="guest-lecture-pantela">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Guest Lecture by Stella Pantela
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                     <p class="post-content"> In this lecture we talk about
+                     Vertica, one of the leading Big Data Analytics DBMs and how
+                     Vertica deals with the handling of metadata, which is data
+                     about the data that a database stores, including table
+                     names, projection information, encoding, min, max values
+                     and many more. How does the database store, maintain and
+                     modify that metadata in a safe and efficient way? What does
+                     the metadata handling have to do with the Add Column
+                     Operation?
+                    <br>
+                         <strong>Bio</strong>: Stella is a senior distributed
+                         systems software engineer at Vertica, chair of the
+                         Vertica DataGals and a member of the Vertica patent
+                         committee. At Vertica, Stella builds powerful
+                         infrastructure used by big data analytics companies
+                         including Uber, Etsy, Wayfair, Philps. Her focus is on
+                         improving the distributed systems protocols for more
+                         efficient maintenance and transfer of metadata in both
+                         the cloud and enterprise environments. Stella’s work
+                         has been featured at SIGMOD and North East Database
+                         Day. Before Vertica, Stella completed her B.A. with
+                         Honors in Computer Science at Harvard University in
+                         2015, where she also conducted research in the area of
+                         column stores with Professor Stratos Idreos. In her
+                         free time she maintains a blog on distributed systems
+                         and technology at <a href="http://stylianipantela.com" target="_blank">stylianipantela.com</a>.
+                    <!-- <h4>Readings</h4> -->
+                    <ul>
+                    <!-- <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/Comp115-Guest-Lecture-LSM-Trees.pdf">Slides</a></li> -->
+                    </ul>                        
+                    </p>
+
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Overview of Transaction Management
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we present an overview of the transactional part of a database system.
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class23.pdf">Slides</a></li>
+                    <li style="font-size:18px;">Textbook, Chapter 16</li>
+                    </ul> </p>
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Concurrency Control
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we discuss in detail how Concurrency Control can achieve Consistency and Isolation. We discuss two-phase locking (2PL), serializability, recoverability, and deadlocks.
+                    <h4>Readings</h4>
+                    <ul>
+                    <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class24.pdf">Slides</a></li>
+                    <li style="font-size:18px;">Textbook, Chapter 17.1-17.5</li>
+                    </ul> </p>
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Concurrency Control (cont.)
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> </p>
+
+                    <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Recovery
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> In this class we discuss in detail how the system can achieve Atomicity and Durability, and also ensure crash recovery. We cover in detail the Write-Ahead Logging (WAL) Protocol.
+                    <h4>Readings</h4>
+                    <ul>
+                        <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class26.pdf">Slides</a></li>
+                        <li style="font-size:18px;">Textbook, Chapter 18</li>
+                    </ul> </p>
+
+                    <h3 class="post-subtitle">
+                        Class <script type="text/javascript">document.write(cday+1)</script>: NoSQL Systems and Topics in Databases
+                     </h3>
+                     <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                     <p class="post-content"> In the last class of the semester we will discuss about NoSQL systems and  active research directions in data management, and current opportunities and needs in the data management industry.
+
+                        <h4>Readings</h4>
+                        <ul>
+                            <li><a style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CS460-Fall2019-Class27.pdf">Slides</a></li>
+                        </ul> </p>
+    
+                     <h3 class="post-subtitle">
+                       Class <script type="text/javascript">document.write(cday+1)</script>: Midterm 2
+                    </h3>
+                    <p class="post-meta"><script type="text/javascript"> document.write(classDay(cday));cday++;</script></p>
+                    <p class="post-content"> You can bring with you <strong>two pages (in one sheet) of any notes</strong> you want. No more material will be available. No laptops, tablets or phones are allowed.</p>
+
+
+
+
+
+                    <br>
+                    <br>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- 
+    <hr> -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <!--   <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul> -->
+                    <p class="copyright text-muted">Copyright &copy; Manos Athanassoulis, MiDAS Group 2019</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+    var sc_project=11287352; 
+    var sc_invisible=1; 
+    var sc_security="41f1ccc3"; 
+    var scJsHost = (("https:" == document.location.protocol) ?
+    "https://secure." : "http://www.");
+    document.write("<sc"+"ript type='text/javascript' src='" +
+    scJsHost+
+    "statcounter.com/counter/counter.js'></"+"script>");
+    </script>
+    <noscript><div class="statcounter"><a title="real time web
+    analytics" href="http://statcounter.com/"
+    target="_blank"><img class="statcounter"
+    src="//c.statcounter.com/11287352/0/41f1ccc3/1/" alt="real
+    time web analytics"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+
+</body>
+
+</html>

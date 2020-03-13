@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="icon" href="assets/images/logos/midas-favicon.png">
+		<title>MiDAS Group</title>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/ionicons.min.css" rel="stylesheet">
+		<link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet">
+		<link href="assets/css/logoiconfont.css" rel="stylesheet">
+
+		<link href="assets/css/style.css" rel="stylesheet" title="main-css">
+		<link href="assets/css/custom.css?ver=1" rel="stylesheet">
+		
+		
+
+<link href="assets/css/seminar.css?ver=1" rel="stylesheet">
+
+
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137493170-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-137493170-1');
+
+		</script>
+
+	</head>
+
+	<body class="royal_preloader" data-spy="scroll" data-target=".navbar" data-offset="70">
+		<div id="royal_preloader"></div>
+
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand scroll-link" href="/#home" data-id="home">
+								<div><img src="assets/images/logos/midas-logo.png" alt="logo" class="logo-img-navbar-center"></div>
+							</a>
+						</div>
+
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="/#home" data-id="home" class="scroll-link">Home</a></li>
+								<li><a href="/#ideology" data-id="ideology" class="scroll-link">Research</a></li>
+								<li><a href="/#services" data-id="services" class="scroll-link">Publications</a></li>
+								<li><a href="/#team" data-id="team" class="scroll-link">People</a></li>
+								<li><a href="seminar.html" data-id="seminar">Seminar</a></li>
+								<li><a href="/#contact" data-id="contact" class="scroll-link">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		
+		
+
+<section id="seminar" class="background2 section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 section-title text-center">
+				<h2>MiDAS Seminar</h2>
+
+				
+					<div class="table-users">
+						<div class="calendar">Spring 2020 Calendar </div>
+						<div class="room-time">Seminars are held in the old MCS B33 at 11.00 am [unless otherwise notified], followed by lunch.
+</div>
+
+						<table cellspacing="0">
+							<tr>
+								<th class="text-center">Date</th>
+								<th class="text-center">Speaker</th>
+								<th class="text-center" width="600">Title and Abstract</th>
+							</tr>
+							
+								<tr>
+									<td>Friday, Feb 07</td>
+									<td>
+										
+											
+											
+												<a href=https://sites.google.com/view/juhyoungmun/ target="_blank"> Ju Hyoung Mun</a>
+											
+											
+											
+												(BU)
+											
+											
+											
+												<details>
+													<summary> Bio </summary>
+													<p class="text-justify">
+														Juhyoung is currently a postdoctoral associate in the Department of Computer Science at Boston University, working with Prof. Manos Athanassoulis.
+Her research interest lies in the fields of Data Systems and Networking;particularly, in enhancing the lookup performance.
+She received her Ph.D. in Electronic and Electrical Engineering at Ewha w. University in Seoul, Korea, under the supervision of Prof. Hyesook Lim.
+Her doctoral research was focused on how to retrieve the data efficiently by using Bloom filters in Information Centric Networking (ICN).
+
+													</p>
+												</details>
+											
+											
+										
+									</td>
+									<td>
+										
+											Reducing Hash Overhead of Bloom Filters in LSM-trees
+											</br>
+											<details>
+												<summary>Click for abstract</summary>
+												<p class="text-justify">
+													A log-structured merge-tree (LSM-tree) is widely used in modern key-value stores.
+To balance the read performance and ingestion rate, LSM-trees maintain sorted runs in multiple levels so that the lookup may require multiple I/Os.
+To accelerate the performance of point lookups, LSM-trees often employ Bloom filters in the main memory to avoid unnecessary I/Os for levels that do not contain the matching key.
+Using Bloom filters is useful when there is a vast gap in the cost of accessing Bloom filters, hashing and probing the memory, and the storage.
+As the access latency of the modern storage device like NVMe is getting comparable with hashing, the CPU cost for hashing becomes the performance bottleneck of lookups and hinders other CPU intensive tasks.
+Hashing is crucial for LSM-trees since, by design, they have increased read amplification to mitigate the insertion cost.
+To alleviate the hashing overhead, we propose to share the hash calculation for multiple levels and re-use it across the tree hierarchy.
+Furthermore, by sharing the hash calculation, which sections of Bloom filters are going be searched along with the different hierarchy are acquired in advance.
+Using this property, we also propose to prefetch the necessary Bloom filter sections to improve the lookup performance further.
+The simulation results show that our proposal can achieve almost the same false-positive ratio as the state-of-the-art while keeping the hashing overhead constant.
+
+												</p>
+											</details>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Feb 14</td>
+									<td>
+										
+									</td>
+									<td>
+										
+											CS Department Seminar
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Feb 21</td>
+									<td>
+										
+											
+											
+												<a href=https://www.bu.edu/cs/profiles/esmail-asyabi/ target="_blank"> Showan Esmail Asyabi</a>
+											
+											
+											
+												(BU)
+											
+											
+											
+												<details>
+													<summary> Bio </summary>
+													<p class="text-justify">
+														Showan Esmail Asyabi is a research assistant and a Ph.D. student at Boston University.
+He is advised by Prof. Azer Bestavros.
+His research focuses on designing and building system software for emerging computing models (e.g., cloud computing and stream processing).
+He has designed several CPU schedulers for virtualized and non-virtualized data centers to mitigate power consumption or raise the performance of IO-bound workloads.
+He is mainly interested in distributed systems, operating systems, cloud computing, and big data.
+
+													</p>
+												</details>
+											
+											
+										
+									</td>
+									<td>
+										
+											In-application CPU Scheduling to Reduce Power Consumption of In-memory Key-Value Stores
+											</br>
+											<details>
+												<summary>Click for abstract</summary>
+												<p class="text-justify">
+													The traffic load sent to key-value (KV) stores vary over long timescales of hours to short timescales of a few microseconds.
+Long-term variations present the opportunity to save power during low or medium periods of utilization.
+Several techniques exist to save power in servers, including feedback-based controllers that right-size the number of allocated CPU cores, dynamic voltage and frequency scaling (DVFS), and c-state (idle-state) mechanisms.
+In this talk, we demonstrate that existing power-saving techniques are not effective for KV stores.
+This is because of the high rate of traffic even under low load prevents the system from entering low power states for extended periods of time.
+To achieve power savings, we must unbalance the load among the CPU cores so that some of them can enter low power states during periods of low load.
+We accomplish this by introducing the notion of in-application CPU scheduling.
+Instead of relying on the kernel to schedule threads, we pin threads to bypass the kernel CPU scheduler and then perform the scheduling within the KV store application.
+Our design is a KV store that features an in-application CPU scheduler that monitors the load to learn the workload characteristics and then scales the number of active CPU cores when the load drops, leading to notable power savings during low or medium periods of utilization.
+Our experiments demonstrate that our system outperforms state of the art approaches such as Rubik and µDPM by up to 6x and 4x respectively.
+
+												</p>
+											</details>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Feb 28</td>
+									<td>
+										
+									</td>
+									<td>
+										
+											CS Department Seminar
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Mar 06</td>
+									<td>
+										
+											
+											
+												<a href=https://cs-people.bu.edu/dstara/ target="_blank"> Dimitris Staratzis</a>
+											
+											
+											
+												(BU)
+											
+											
+											
+												<details>
+													<summary> Bio </summary>
+													<p class="text-justify">
+														Dimitris Staratzis is a first year PhD student at the Computer Science Department of Boston University.
+He is a member of the MiDAS group@BU, advised by Professor Manos Athanassoulis.
+His research interests broadly include Database and Big Data Management.
+Prior to joining Boston University, he received his BSc in Informatics from Athens University of Economics and Business.
+
+													</p>
+												</details>
+											
+											
+										
+									</td>
+									<td>
+										
+											Efficient Range Deletes in LSM Engines
+											</br>
+											<details>
+												<summary>Click for abstract</summary>
+												<p class="text-justify">
+													Modern data systems process enormous amount of data and selecting the appropriate data structure can have major implications in the responsiveness, availability and scalability of such systems.
+Traditional systems have certain limitations and thus more advanced Key-Value systems are used in most applications today.
+During updates, inserts and deletes, LSM trees utilise the main memory of the system to achieve better performance.
+Values are not deleted or updated in place.
+Each delete requires a new entry referred as a 'tombstone' that marks all previous entries with the same key as deleted.
+In our knowledge, none of the major Key-Value store developers have implemented range deletes except RocksDB.
+Their implementation use the so called 'range tombstones' which altogether consist a data-structure that can answer whether a requested key is deleted by a range delete or not.
+For the database to construct such a response multiple I/Os are needed.
+Our method tries to reduce these I/Os by efficiently storing past results in memory in an opportunistic way, thus increasing responsiveness, since I/Os majorly affect performance.
+
+												</p>
+											</details>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Thursday, Mar 19</td>
+									<td>
+										
+											
+											
+												<a href=https://www.linkedin.com/in/stavrospap/ target="_blank"> Stavros Papadopoulos</a>
+											
+											
+											
+												(TileDB)
+											
+											
+											
+											
+										
+									</td>
+									<td>
+										
+											<font color="navy">
+												MiDAS Seminar/CS591A1 Guest Lecture <b>(MCS B37@12:30 PM)</b>
+
+											</font>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Thursday, Mar 26</td>
+									<td>
+										
+											
+											
+												<a href=https://www.csail.mit.edu/person/ryan-marcus/ target="_blank"> Ryan Marcus</a>
+											
+											
+											
+												(MIT)
+											
+											
+											
+											
+										
+									</td>
+									<td>
+										
+											<font color="navy">
+												MiDAS Seminar/CS591A1 Guest Lecture <b>(MCS B37@12:30 PM)</b>
+
+											</font>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Apr 03</td>
+									<td>
+										
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Apr 10</td>
+									<td>
+										
+											
+											
+												<a href=https://jialinding.github.io/ target="_blank"> Jialin Ding</a>
+											
+											
+											
+												(MIT)
+											
+											
+											
+											
+										
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Apr 17</td>
+									<td>
+										
+											
+											
+												<a href=https://cs-people.bu.edu/ndhuynh/ target="_blank"> Andy Huynh</a>
+											
+											
+											
+												(BU)
+											
+											
+											
+											
+										
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Apr 24</td>
+									<td>
+										
+											
+											
+												<a href=https://chatterjeesubarna.github.io/ target="_blank"> Subarna Chatterjee</a>
+											
+											
+											
+												(Harvard)
+											
+											
+											
+											
+										
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, May 01</td>
+									<td>
+										
+											
+											
+												<a href=https://cs-people.bu.edu/papon target="_blank"> Tarikul Islam Papon</a>
+											
+											
+											
+												(BU)
+											
+											
+											
+											
+										
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, May 08</td>
+									<td>
+										
+											
+											
+												<a href=https://people.csail.mit.edu/tatbul target="_blank"> Nesime Tatbul</a>
+											
+											
+											
+												(Intel Labs & MIT)
+											
+											
+											
+											
+										
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, May 15</td>
+									<td>
+										
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, May 22</td>
+									<td>
+										
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, May 29</td>
+									<td>
+										
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+							
+						</table>
+					</div>
+
+					<div class="responsible text-center"> Spring 2020: <a href=https://cs-people.bu.edu/papon>Tarikul Islam Papon</a>, e-mail: papon at bu dot edu </div>
+				
+					<div class="table-users">
+						<div class="calendar">Fall 2019 Calendar </div>
+						<div class="room-time">Seminars are held in the old MCS B33 at 11.00 am [unless otherwise notified], followed by lunch.
+</div>
+
+						<table cellspacing="0">
+							<tr>
+								<th class="text-center">Date</th>
+								<th class="text-center">Speaker</th>
+								<th class="text-center" width="600">Title and Abstract</th>
+							</tr>
+							
+								<tr>
+									<td>Tuesday, Sep 03</td>
+									<td>
+										
+											
+											
+												Tianyi Chen and Konstantinos Sotiropoulos
+											
+											
+											
+											
+											
+											
+										
+									</td>
+									<td>
+										
+											Novel Dense Subgraph Discovery Primitives: Risk Aversion and Exclusion Queries and TwitterMancer: Predicting User Interactions on Twitter
+
+											</br>
+											<details>
+												<summary>Click for abstract</summary>
+												<p class="text-justify">
+													<b>Novel Dense Subgraph Discovery Primitives: Risk Aversion and Exclusion Queries.</b>
+In the densest subgraph problem, given an undirected graph \( G(V;E;w) \) with non-negative edge weights we are asked to find a subset of nodes \( S \) from \( V \) that maximizes the degree density \( w(S)=|S| \).
+This problem is solvable in polynomial time, and in general is well studied.
+But what happens when we are asked questions such as "how can we find a dense subgraph in Twitter with lots of replies and mentions but no follows?", "how do we extract a dense subgraph with high expected reward and low risk from an uncertain graph"?
+In this work, specifically, we formulate both problems mathematically as special instances of dense subgraph discovery in graphs with negative weights.
+We prove that the problem in general is NP-hard, but we also provide sufficient conditions under which it is poly-time solvable.
+We design an efficient approximation algorithm that works best in the presence of small negative weights, and an effective heuristic for the more general case.
+Finally, we perform experiments on various real-world datasets that verify the value of the proposed primitives, and the effectiveness of our proposed algorithms.
+<br>
+<b>TwitterMancer: Predicting User Interactions on Twitter.</b>
+This work investigates the interplay between different types of user interactions on Twitter, with respect to predicting missing or unseen interactions.
+For example, given a set of retweet interactions between Twitter users, how accurately can we predict reply interactions?
+Is it more difficult to predict retweet or quote interactions between a pair of accounts?
+Also, which features of interaction patterns are most important to enable accurate prediction of specific Twitter interactions?
+Our empirical study of Twitter interactions contributes initial answers to these questions.
+We have crawled an extensive dataset of Twitter accounts and their follow, quote, retweet, reply interactions over a period of a month.
+Using a machine learning framework, we find we can accurately predict many interactions of Twitter users.
+Interestingly, the most predictive features vary with the user profiles, and are not the same across all users.
+For example, for a pair of users that interact with a large number of other Twitter users, we find that certain "higher-dimensional" triads, i.e., triads that involve multiple types of interactions, are very informative, whereas for less active Twitter users, certain in-degrees and out-degrees play a major role.
+Finally, we provide various other insights on Twitter user behavior.
+
+												</p>
+											</details>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Sep 20</td>
+									<td>
+										
+											
+											
+												Charalampos (Babis) Tsourakakis
+											
+											
+											
+											
+											
+											
+										
+									</td>
+									<td>
+										
+											Optimal learning of joint alignments
+											</br>
+											<details>
+												<summary>Click for abstract</summary>
+												<p class="text-justify">
+													We consider the following problem, which is useful in applications such as joint image and shape alignment.
+The goal is to recover \( n \) discrete variables \( g_i \in \{0, \ldots, k-1\} \) (up to some global offset) given noisy observations of a set of their pairwise differences \( \{g_i - g_j \bmod k\} \); specifically, with probability \( \frac{1}{k}+\delta \) for some \( \delta > 0 \) one obtains the correct answer, and with the remaining probability one obtains a uniformly random incorrect answer.
+We consider a learning-based formulation where one can perform a query to observe a pairwise difference, and the goal is to perform as few queries as possible while obtaining the exact joint alignment.
+We provide an easy-to-implement, time efficient algorithm that performs \( O(n \lg n/\delta^2 k) \) queries, and recovers the joint alignment with high probability.
+We also show that our algorithm is optimal.
+This work improves significantly work of Chen and Candes, who view the problem as a constrained principal components analysis problem that can be solved using the power method.
+Our approach is simpler both in the algorithm and the analysis, and provides additional insights into the problem structure.
+Finally, experimentally our algorithm performs well compared to the algorithm of Chen and Candes both in terms of accuracy and running time.
+
+												</p>
+											</details>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Sep 27</td>
+									<td>
+										
+											
+											
+												Loqman Salamatian
+											
+											
+											
+											
+											
+												<details>
+													<summary> Bio </summary>
+													<p class="text-justify">
+														Loqman is a Master student in mathematics at Sorbonne University.
+His main interests lie at the crossroad between Complex Networks, Differential Geometry and Optimal Transport.
+He is currently working at CAIDA on understanding the topology of the Internet and its relationship with geography.
+
+													</p>
+												</details>
+											
+											
+										
+									</td>
+									<td>
+										
+											Monitoring the Internet through Riemannian Geometry
+											</br>
+											<details>
+												<summary>Click for abstract</summary>
+												<p class="text-justify">
+													In this work, we tackle the problem of real-time monitoring of dynamic variations of global Internet using topology changes information provided by combining several BGP feeds.
+We develop a geometric approach that leverages notions of geometric curvature and recent development in graph embedding using Ollivier-Ricci curvature.
+In particular, we use our method to detect major events and changes via the geometry of the embedding of the graph, where a major event is defined as an incident that either impacts a substantial number of prefixes or can be observed by numerous route monitors within a given period of time.
+We first describe the Ricci curvature approach to characterize the AS level graph.
+The key idea is to detect changes in between consecutive snapshots and to separate events that result in considerable geometric alterations, from those that remain local.
+The variations of curvature are evaluated through a set of landmarks as reference points.
+We then introduce an anomaly tracking mechanism to detect large variations of curvature that translate into major variations in the geometry of the graph.
+These changes are then considered as major BGP-level events.
+We describe a mechanism for identifying the network elements responsible for the set of coordinated changes and isolate their implications in the geometric space.
+We finally evaluate this system in operational setting.
+
+												</p>
+											</details>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Oct 18</td>
+									<td>
+										
+											
+											
+												Kiran Garimella
+											
+											
+											
+											
+											
+												<details>
+													<summary> Bio </summary>
+													<p class="text-justify">
+														Kiran Garimella is the Michael Hammer postdoc at the MIT Institute for Data, Systems, and Society (IDSS).
+Before joining MIT, he was a postdoc at EPFL, Switzerland.
+His research focuses on using digital data for social good, including areas like polarization, misinformation and human migration.
+His work on studying and mitigating polarization on social media won the best student paper awards at WSDM 2017 and WebScience 2017.
+Kiran received his PhD at Aalto University, Finland, and Masters & Bachelors from IIIT Hyderabad, India.
+Prior to his PhD, he worked as a Research Engineer at Yahoo Research, Barcelona, and QCRI, Doha.
+
+													</p>
+												</details>
+											
+											
+										
+									</td>
+									<td>
+										
+											A first look at WhatsApp data — Problems, and Challenges
+											</br>
+											<details>
+												<summary>Click for abstract</summary>
+												<p class="text-justify">
+													In this work, I will talk about our on going efforts to collect and analyze large amounts of public Whatsapp data from political groups in Brazil, India, and Indonesia.
+I will discuss our efforts in monitoring a large number of whatsapp groups and provide insights on various problems arising from such data.
+I will specifically give examples of novel ways in which misinformation, hate speech and coordination are being spread through whatsapp.
+I will briefly discuss some of the technical challenges that arise from data, specifically related to identifying image based misinformation.
+Finally, I will mention our efforts on collecting data across platforms for the Indian election and why such a cross platform analysis is required to understand the spread of issues like misinformation.
+
+												</p>
+											</details>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Oct 25</td>
+									<td>
+										
+											
+											
+												Matteo Riondato
+											
+											
+											
+											
+											
+												<details>
+													<summary> Bio </summary>
+													<p class="text-justify">
+														Matteo Riondato is an assistant professor of computer science at Amherst College, and a visiting faculty at Brown University.
+Previously he was a research scientist at Two Sigma, and a postdoc at Stanford and Brown.
+He obtained his PhD in computer science from Brown.
+His research focuses on algorithms for knowledge discovery, data mining, and machine learning: he develops methods to analyze rich datasets, including graphs and time series, as fast as possible and in a statistically sound way.
+His works received best-of-conference awards at the 2014 SIAM International Conference on Data Mining (SDM), the 2016 ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD), and the 2018 IEEE International Conference on Data Mining (ICDM).
+He tweets @teorionda and lives at http://matteo.rionda.to.
+
+													</p>
+												</details>
+											
+											
+										
+									</td>
+									<td>
+										
+											SPuManTe: Significant Pattern Mining with Unconditional Testing
+
+											</br>
+											<details>
+												<summary>Click for abstract</summary>
+												<p class="text-justify">
+													We present SPuManTE, an efficient algorithm for mining significant patterns from a transactional dataset.
+SPuManTE controls the Family-wise Error Rate: it ensures that the probability of reporting one or more false discoveries is less than an user-specified threshold.
+A key ingredient of SPuManTE is UT, our novel unconditional statistical test for evaluating the significance of a pattern, that requires fewer assumptions on the data generation process and is more appropriate for a knowledge discovery setting than classical conditional tests, such as the widely used Fisher's exact test.
+Computational requirements have limited the use of unconditional tests in significant pattern discovery, but ut overcomes this issue by obtaining the required probabilities in a novel efficient way.
+SPuManTE combines UT with recent results on the supremum of the deviations of pattern frequencies from their expectations, grounded in statistical learning theory.
+Joint work with Leonardo Pellegrina (UniPD) and Fabio Vandin (UniPD), presented at KDD'19.
+
+												</p>
+											</details>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Nov 01</td>
+									<td>
+										
+											
+											
+												Leonardo Torres
+											
+											
+											
+											
+											
+												<details>
+													<summary> Bio </summary>
+													<p class="text-justify">
+														Leo is a 4th year PhD student at the Network Science Institute at Northeastern University, under the advisement of Tina Eliassi-Rad.
+He is broadly interested in the intersection of Network Science, Machine Learning, and Mathematics, focusing on metric aspects of complex networks and graph mining.
+He specializes in introducing novel mathematical and computational tools to the network science toolbox, usually coming from differential geometry, algebraic topology, spectral linear algebra, and unsupervised techniques.
+Leo has a B.S. in Mathematics from Pontificia Universidad Católica del Perú.
+He has taught mathematics and Spanish at the undergraduate level and he was a Research Programmer at Wolfram Research South America, working on the Wolfram|Alpha knowledge engine.
+
+													</p>
+												</details>
+											
+											
+										
+									</td>
+									<td>
+										
+											Non-Backtracking Cycles: Length Spectrum Theory and Graph Mining Applications
+
+											</br>
+											<details>
+												<summary>Click for abstract</summary>
+												<p class="text-justify">
+													Two basic tasks in graph analysis are: (1) computing the distance between two graphs and (2) embedding of the graph elements (i.e., nodes or links) into a lower-dimensional space.
+The former task has numerous applications from k-nearest neighbor search, to clustering a collection of graphs, to transfer learning.
+Unfortunately, there exists no canonical way of computing the distance between two finite graphs because the dissimilarity problem is ill-defined.
+Despite this fact, the relevant literature contains many methods for measuring graph distance with different heuristics, computational efficiency, interpretability, and theoretical soundness.
+We introduce a graph distance, called the Non-Backtracking Spectral Distance (NBD), which is theoretically sound and interpretable.
+NBD is based on a mathematical construct from algebraic topology (in particular, homotopy theory) called the length spectrum.
+The length spectrum of a graph is a function defined on the graph's first homotopy group (a.k.a. the fundamental group); and it uniquely characterizes a graph's 2-core up to isometry.
+Thus, if two graphs have the same length spectra, then their 2-cores are isometric.
+We show the relationship between a graph's length spectrum and its non-backtracking cycles; and present a method based on computing the eigenvalues of a graph's non-backtracking matrix.
+For the second task (i.e., graph embedding), most existing methods are stochastic and depend on black-box models such as deep networks.
+Both of these characteristics make their output difficult to analyze.
+We propose the Non-Backtracking Embedding Dimensions (NBED) for finding a graph embedding in low-dimensional space by computing the eigenvectors of the non-backtracking matrix.
+Both NBD and NBED are interpretable in terms of features of complex networks such as hubs, triangles, edge centrality, and communities.
+We showcase the usefulness of both NBD and NBED in experiments on synthetic and real-world networks.
+
+												</p>
+											</details>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Nov 08</td>
+									<td>
+										
+											
+											
+												Shreyas Sekar
+											
+											
+											
+											
+											
+												<details>
+													<summary> Bio </summary>
+													<p class="text-justify">
+														Shreyas Sekar is a Postdoctoral Fellow at the Laboratory for Innovation Science at the Harvard Business School.
+Shreyas received his Ph.D. in Computer Science from Rensselaer Polytechnic Institute in 2017, where he was awarded the Robert McNaughton Prize for the best dissertation in CS.
+His dissertation was on Non-Discriminative Algorithmic Pricing.
+Broadly speaking, his research is centered around online decision making and learning in dynamic and strategic environment, with applications to e-commerce, transportation, and the digital marketplaces.
+Currently, he is excited by questions pertaining to information design---i.e., how can digital firms leverage information as a tool for revenue management.
+Shreyas has also collaborated with industry partners such as Wayfair and Freelancer to help develop prescriptive strategies for optimizing core metrics.
+
+													</p>
+												</details>
+											
+											
+										
+									</td>
+									<td>
+										
+											Learning to Rank an Assortment of Products
+											</br>
+											<details>
+												<summary>Click for abstract</summary>
+												<p class="text-justify">
+													We consider the product ranking challenge that online retailers face when their customers typically behave as "window shoppers": they form an impression of the assortment after browsing products ranked in the initial positions and then decide whether to continue browsing.
+Further, customers' product preferences and attention spans are correlated and unknown to the retailer.
+We develop a class of online explore-then-exploit algorithms that prescribe a ranking to offer each customer, learning from preceding customers' clickstream data to offer better rankings to subsequent customers.
+Our algorithms balance product popularity with diversity: the notion of appealing to a large variety of heterogeneous customers.
+We prove that our learning algorithms rapidly converge to a ranking that matches the best-known approximation factors for the offline, complete information setting.
+Finally, we partner with Wayfair - a multi-billion dollar home goods online retailer - to estimate the impact of our algorithm in practice via simulations using actual clickstream data, and we find that our algorithm yields a significant increase (5-30%) in the number of customers that engage with the site.
+
+												</p>
+											</details>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Monday, Nov 18</td>
+									<td>
+										
+											
+											
+												Stella Pantela
+											
+											
+											
+											
+											
+												<details>
+													<summary> Bio </summary>
+													<p class="text-justify">
+														Stella is a senior distributed systems software engineer at Vertica, chair of the Vertica DataGals and a member of the Vertica patent committee.
+At Vertica, Stella builds powerful infrastructure used by big data analytics companies including Uber, Etsy, Wayfair, Philps.
+Her focus is on improving the distributed systems protocols for more efficient maintenance and transfer of metadata in both the cloud and enterprise environments.
+Stella's work has been featured at SIGMOD and North East Database Day.
+Before Vertica, Stella completed her B.A. with Honors in Computer Science at Harvard University in 2015, where she also conducted research in the area of column stores with Professor Stratos Idreos.
+In her free time she maintains a blog on distributed systems and technology at stylianipantela.com.
+
+													</p>
+												</details>
+											
+											
+										
+									</td>
+									<td>
+										
+											<font color="navy">
+												<a href="https://midas.bu.edu/classes/CS460/#guest-lecture-pantela" target="_blank">Guest lecture for CS460: Introduction to Databases [4:30-5:45pm, EPC 207]</a>
+
+											</font>
+										
+									</td>
+								</tr>
+							
+								<tr>
+									<td>Friday, Dec 06</td>
+									<td>
+										
+											
+											
+												Brian Hentschel
+											
+											
+											
+											
+											
+												<details>
+													<summary> Bio </summary>
+													<p class="text-justify">
+														Brian is a PhD student at Harvard University in the Data Systems Laboratory.
+His work focuses on the usage of statistics and machine learning in making better data structures and algorithms, and conversely in the creation of data management solutions for better machine learning.
+Previous work of his has won the ACM SIGMOD Research Highlight Award as well as the Best Paper Award at EDBT.
+
+													</p>
+												</details>
+											
+											
+										
+									</td>
+									<td>
+										
+											Temporally Biased Sampling & Online Model Management
+											</br>
+											<details>
+												<summary>Click for abstract</summary>
+												<p class="text-justify">
+													To maintain the accuracy of supervised learning models in the presence of evolving data streams, we provide temporally-biased sampling schemes that weight recent data most heavily, with inclusion probabilities for a given data item decaying over time according to a specified "decay function".
+We then periodically retrain the models on the current sample.
+Time-biasing lets the models adapt to recent changes in the data while - unlike in a sliding-window approach - still keeping some old data to ensure robustness in the face of temporary fluctuations and periodicities in the data values.
+In addition, the sampling-based approach allows existing analytic algorithms for static data to be applied to dynamic streaming data essentially without change.
+We provide and analyze both a simple sampling scheme (T-TBS) that probabilistically maintains a target sample size and a novel reservoir-based scheme (R-TBS) that is the first to provide both control over the decay rate and a guaranteed upper bound on the sample size.
+The R-TBS and T-TBS schemes are of independent interest, extending the known set of unequal-probability sampling schemes.
+We discuss distributed implementation strategies; experiments in Spark illuminate the performance and scalability of the algorithms, and show that our approach can increase machine learning robustness in the face of evolving data.
+
+												</p>
+											</details>
+										
+									</td>
+								</tr>
+							
+						</table>
+					</div>
+
+					<div class="responsible text-center"> Fall 2019: <a href=https://cs-people.bu.edu/ksotirop>Konstantinos Sotiropoulos</a>, e-mail: ksotirop at bu dot edu </div>
+				
+			</div>
+		</div>
+
+	</div>
+</section>
+
+
+
+		<footer class="footer-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-sm-offset-4 text-center">
+						<div>
+							<a href="http://www.bu.edu"><img src="assets/images/logos/BU-logo.png" class="BU-logo-img-center"></a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 text-small text-center">
+						<hr>
+						<button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">Back to top</button>
+						<p class="no-margin">&copy; MiDAS Group @ BU</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+<script type="text/javascript">
+
+	/* ---- nav smooth scroll ---- */
+	$(document).ready(function () {
+		$('.scroll-top').on('click', function (event) {
+			event.preventDefault();
+			$('html, body').animate({
+				scrollTop: 0
+			}, 1200);
+		});
+	});
+
+</script>
+
+
+		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/js/scrollreveal.min.js"></script>
+		<script type="text/javascript" src="assets/js/underscore.min.js"></script>
+		<!-- TODO -->
+		
+	</body>
+
+</html>

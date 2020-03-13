@@ -1,0 +1,230 @@
+# controls how many profiles in line are rendered for different screens (bootstrap IDs)
+view:
+  profilesPerXSmall: 1
+  profilesPerSmall: 2
+  profilesPerMedium: 4
+  profilesPerLarge: 4
+
+categories:
+  # - name: category title
+  #   id: ID to refer to this category
+  #   hidden: controls if this category is initially hidden on the webpage
+  #   sort: order of this category (lower number -> higher on the webpage)
+
+  - name: Faculty
+    id: faculty
+    hidden: false
+    sort: 1
+
+  - name: Postdocs
+    id: postdocs
+    hidden: false
+    sort: 2
+
+  - name: Graduate Students
+    id: students
+    hidden: false
+    sort: 3
+
+  - name: Alumni
+    id: alumni
+    hidden: true
+    sort: 4
+
+# people are sorted by the last name within a category
+people:
+  # - name: full name
+  #   image: image file name (with extension) from website/assets/images/people
+  #   position: position title
+  #   website: OPTIONAL. Full URL to personal page.
+  #   category: ID of the category
+
+  - name: Dmytro Bogatov
+    image: dmytro.jpeg
+    position: PhD Researcher
+    website: https://dbogatov.org/
+    category: students
+
+  - name: Harshal Chaudhari
+    image: harshal.jpg
+    position: PhD Researcher
+    website: http://cs-people.bu.edu/harshal/
+    category: students
+
+  - name: Andy Huynh
+    image: andy.jpg
+    position: PhD Researcher
+    website: http://cs-people.bu.edu/ndhuynh/
+    category: students
+
+  - name: Sofia Maria Nikolakaki
+    image: sofia.jpg
+    position: PhD Researcher
+    website: http://www.smnikolakaki.com//
+    category: students
+
+  - name: Bashir Rastegarpanah
+    image: bashir.jpg
+    position: PhD Researcher
+    website: http://cs-people.bu.edu/bashir/
+    category: students
+
+  - name: Konstantinos Sotiropoulos
+    image: sotiropoulos.jpg
+    position: PhD Researcher
+    website: http://cs-people.bu.edu/ksotirop/
+    category: students
+
+  - name: Isidora Tourni
+    image: isidora.jpg
+    position: PhD Researcher
+    website: http://cs-people.bu.edu/isidora/
+    category: students
+
+  - name: Tarikul Islam Papon
+    image: papon.jpg
+    position: PhD Researcher
+    website: https://cs-people.bu.edu/papon/
+    category: students
+
+  - name: Dimitris Staratzis
+    image: dimitris.jpg
+    position: PhD Researcher
+    website: https://cs-people.bu.edu/dstara/
+    category: students
+
+  - name: Zichen Zhu
+    image: zichen.png
+    position: PhD Researcher
+    website: https://cs-people.bu.edu/zczhu/
+    category: students
+
+  - name: Lina Qiu
+    image: lina.jpg
+    position: PhD Researcher
+    website: https://cs-people.bu.edu/qlina/
+    category: students
+
+  - name: Ju Hyoung Mun
+    image: juhyoung.jpg
+    position: Postdoctoral Researcher
+    website: http://cs-people.bu.edu/jmun
+    category: postdocs
+
+  - name: Subhadeep Sarkar
+    image: subjadeep.jpeg
+    position: Postdoctoral Researcher
+    website: https://subhadeepsarkar.bitbucket.io/
+    category: postdocs
+
+  - name: Evimaria Terzi
+    image: evimaria.jpg
+    position: Professor
+    website: https://www.cs.bu.edu/~evimaria/
+    category: faculty
+
+  - name: George Kollios
+    image: kollios.jpg
+    position: Professor
+    website: http://www.cs.bu.edu/fac/gkollios/
+    category: faculty
+
+  - name: Manos Athanassoulis
+    image: manos.jpg
+    position: Assistant Professor
+    website: https://cs-people.bu.edu/mathan/
+    category: faculty
+
+  - name: Charalampos Tsourakakis
+    image: babis.jpg
+    position: Assistant Professor
+    website: https://tsourakakis.com/
+    category: faculty
+
+  - name: Charalampos Mavroforakis
+    image: harry.png
+    position: "PhD (Next: Facebook)"
+    website: https://www.linkedin.com/in/harrymvr
+    category: alumni
+
+  - name: Sanaz Bahargam
+    image: sanaz.jpg
+    position: "PhD (Next: Twitter)"
+    category: alumni
+
+  - name: Natali Ruchansky
+    image: natali.jpg
+    position: "PhD (Next: Postdoc at UCLA)"
+    website: http://natalir.space/
+    category: alumni
+
+  - name: Behzad Golshan
+    image: behzad.jpeg
+    position: "PhD (Next: Megagon Labs)"
+    category: alumni
+
+  - name: Xianrui Meng
+    image: xianrui.jpg
+    position: "PhD (Next: Amazon)"
+    website: http://www.xianruimeng.org/
+    category: alumni
+
+  - name: Haohan Zhu
+    image: haohan.jpg
+    position: "PhD (Next: Facebook)"
+    website: http://zhuhaohan.com/
+    category: alumni
+
+  - name: Dora Erdos
+    image: dori.jpg
+    position: "PhD (Next: Postdoc at Brown University)"
+    website: http://cs-people.bu.edu/edori/
+    category: alumni
+
+  - name: Esther Galbrun
+    image: esther.jpg
+    position: "Postdoc (Next: Postdoc at INRIA Nancy)"
+    website: https://members.loria.fr/EGalbrun/
+    category: alumni
+
+  - name: Theodoros Lappas
+    image: ted.jpg
+    position: "Postdoc (Next: Faculty at Stevens Institute of Technology)"
+    website: http://tedlappas.com/
+    category: alumni
+
+  - name: Vassilis Athitsos
+    image: vassilis.jpg
+    position: "Postdoc (Next: Faculty at UT Arlington)"
+    website: http://vlm1.uta.edu/~athitsos/
+    category: alumni
+
+  - name: Marios Hadjieleftheriou
+    image: marios.jpg
+    position: "Postdoc (Next: AT&amp;T Labs)"
+    website: http://hadjieleftheriou.com/
+    category: alumni
+
+  - name: Feifei Li
+    image: feifei.jpg
+    position: "PhD (Next: Faculty at Florida State University)"
+    website: http://www.cs.utah.edu/~lifeifei/
+    category: alumni
+
+  - name: Panagiotis Papapetrou
+    image: panagiotis.jpg
+    position: "PhD (Next: Postdoc at Aalto University)"
+    website: https://papapetrou.blogs.dsv.su.se/
+    category: alumni
+
+  - name: Michalis Potamias
+    image: michalis.jpg
+    position: "PhD (Next: Groupon)"
+    website: https://www.linkedin.com/in/mpotamias/
+    category: alumni
+
+  - name: Georgios Kellaris
+    image: kellaris.jpeg
+    position: "Postdoc (Next: Co-Founder at Kalepso)"
+    website: https://www.linkedin.com/in/gkellaris/
+    category: alumni

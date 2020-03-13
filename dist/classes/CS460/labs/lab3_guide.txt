@@ -1,0 +1,9 @@
+-to launch postgres from terminal type the following two commands:
+1. sudo su - postgres (The password is 'cs460')
+2. psql
+
+-guide for postgres on terminal
+http://postgresguide.com/utilities/psql.html
+
+-guide for dbeaver
+https://dbeaver.com/files/documentation.pdf
