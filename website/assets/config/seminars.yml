@@ -30,7 +30,7 @@
       presenter:
         url: https://sites.google.com/view/juhyoungmun/
         name: Ju Hyoung Mun
-        affiliation: MIT
+        affiliation: BU
         bio: |
           Juhyoung is currently a postdoctoral associate in the Department of Computer Science at Boston University, working with Prof. Manos Athanassoulis.
           Her research interest lies in the fields of Data Systems and Networking;particularly, in enhancing the lookup performance.
@@ -84,6 +84,22 @@
         url: https://cs-people.bu.edu/dstara/
         name: Dimitris Staratzis
         affiliation: BU
+        bio: |
+          Dimitris Staratzis is a first year PhD student at the Computer Science Department of Boston University.
+          He is a member of the MiDAS group@BU, advised by Professor Manos Athanassoulis.
+          His research interests broadly include Database and Big Data Management.
+          Prior to joining Boston University, he received his BSc in Informatics from Athens University of Economics and Business.
+      title: Efficient Range Deletes in LSM Engines
+      abstract: |
+        Modern data systems process enormous amount of data and selecting the appropriate data structure can have major implications in the responsiveness, availability and scalability of such systems.
+        Traditional systems have certain limitations and thus more advanced Key-Value systems are used in most applications today.
+        During updates, inserts and deletes, LSM trees utilise the main memory of the system to achieve better performance.
+        Values are not deleted or updated in place.
+        Each delete requires a new entry referred as a 'tombstone' that marks all previous entries with the same key as deleted.
+        In our knowledge, none of the major Key-Value store developers have implemented range deletes except RocksDB.
+        Their implementation use the so called 'range tombstones' which altogether consist a data-structure that can answer whether a requested key is deleted by a range delete or not.
+        For the database to construct such a response multiple I/Os are needed.
+        Our method tries to reduce these I/Os by efficiently storing past results in memory in an opportunistic way, thus increasing responsiveness, since I/Os majorly affect performance.
 
     - when: 03/19/20
       presenter:
@@ -182,7 +198,7 @@
         We consider the following problem, which is useful in applications such as joint image and shape alignment.
         The goal is to recover \( n \) discrete variables \( g_i \in \{0, \ldots, k-1\} \) (up to some global offset) given noisy observations of a set of their pairwise differences \( \{g_i - g_j \bmod k\} \); specifically, with probability \( \frac{1}{k}+\delta \) for some \( \delta > 0 \) one obtains the correct answer, and with the remaining probability one obtains a uniformly random incorrect answer.
         We consider a learning-based formulation where one can perform a query to observe a pairwise difference, and the goal is to perform as few queries as possible while obtaining the exact joint alignment.
-        We provide an easy-to-implement, time efficient algorithm that performs \( O(n \lg n/\delta^2 k) \) queries, and recovers the joint alignment with high probability. 
+        We provide an easy-to-implement, time efficient algorithm that performs \( O(n \lg n/\delta^2 k) \) queries, and recovers the joint alignment with high probability.
         We also show that our algorithm is optimal.
         This work improves significantly work of Chen and Candes, who view the problem as a constrained principal components analysis problem that can be solved using the power method.
         Our approach is simpler both in the algorithm and the analysis, and provides additional insights into the problem structure.
@@ -241,10 +257,10 @@
       abstract: |
         We present SPuManTE, an efficient algorithm for mining significant patterns from a transactional dataset.
         SPuManTE controls the Family-wise Error Rate: it ensures that the probability of reporting one or more false discoveries is less than an user-specified threshold.
-        A key ingredient of SPuManTE is UT, our novel unconditional statistical test for evaluating the significance of a pattern, that requires fewer assumptions on the data generation process and is more appropriate for a knowledge discovery setting than classical conditional tests, such as the widely used Fisher’s exact test.
+        A key ingredient of SPuManTE is UT, our novel unconditional statistical test for evaluating the significance of a pattern, that requires fewer assumptions on the data generation process and is more appropriate for a knowledge discovery setting than classical conditional tests, such as the widely used Fisher's exact test.
         Computational requirements have limited the use of unconditional tests in significant pattern discovery, but ut overcomes this issue by obtaining the required probabilities in a novel efficient way.
         SPuManTE combines UT with recent results on the supremum of the deviations of pattern frequencies from their expectations, grounded in statistical learning theory.
-        Joint work with Leonardo Pellegrina (UniPD) and Fabio Vandin (UniPD), presented at KDD’19.
+        Joint work with Leonardo Pellegrina (UniPD) and Fabio Vandin (UniPD), presented at KDD'19.
 
     - when: 11/01/19
       presenter:
@@ -286,7 +302,7 @@
       title: Learning to Rank an Assortment of Products
       abstract: |
         We consider the product ranking challenge that online retailers face when their customers typically behave as "window shoppers": they form an impression of the assortment after browsing products ranked in the initial positions and then decide whether to continue browsing.
-        Further, customers’ product preferences and attention spans are correlated and unknown to the retailer.
+        Further, customers' product preferences and attention spans are correlated and unknown to the retailer.
         We develop a class of online explore-then-exploit algorithms that prescribe a ranking to offer each customer, learning from preceding customers' clickstream data to offer better rankings to subsequent customers.
         Our algorithms balance product popularity with diversity: the notion of appealing to a large variety of heterogeneous customers.
         We prove that our learning algorithms rapidly converge to a ranking that matches the best-known approximation factors for the offline, complete information setting.
