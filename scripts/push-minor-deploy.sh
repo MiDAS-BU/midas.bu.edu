@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 # This scripts commits a minor change and deploys
 
+# Ensure that the CWD is set to script's location
+cd "${0%/*}"
+CWD=$(pwd)
+cd ..
+
+#######
+
 git pull
 if [ $? -ne 0 ]; then
 	echo "Could not pull. Exiting!"
@@ -20,7 +27,7 @@ if [ $? -ne 0 ]; then
 fi
 
 if [ $? -eq 0 ]; then
-	./deploy.sh
+	./scripts/deploy.sh
 fi
 
 

@@ -2,6 +2,13 @@
 # This is to be used only if something is wrong with current gh-pages
 # It first deletes current gh-pages branch and then pushing everything anew
 
+# Ensure that the CWD is set to script's location
+cd "${0%/*}"
+CWD=$(pwd)
+cd ..
+
+#######
+
 USERNAME=`whoami`
 SERVER="csa1.bu.edu"
 REMOTESSH="ssh -F /dev/null ${USERNAME}@${SERVER} -o PasswordAuthentication=no"
@@ -11,7 +18,7 @@ REDERROR="\033[31mERROR\033[0m"
 
 if [ $# -eq 1 ] && [ $1 = "-f" ]; then
 	echo "Remote re-deploying ..."
-	REMOTELS=`$REMOTESSH "ls ~/Repos/midas.bu.edu/redeploy.sh"`
+	REMOTELS=`$REMOTESSH "ls ~/Repos/midas.bu.edu/scripts/redeploy.sh"`
 	REMOTE_RET=$?
 	if [ ${REMOTE_RET} -eq 255 ]; then
 		echo "***************************************************"
@@ -31,7 +38,7 @@ if [ $# -eq 1 ] && [ $1 = "-f" ]; then
 			echo "***************************************************"
 			echo -e "${GREENOK} Clean remote pull. Redeploying ..."
 			echo "**********************"
-			REMOTEREDEPLOY=`$REMOTESSH "cd ~/Repos/midas.bu.edu/; ./redeploy.sh -f"`
+			REMOTEREDEPLOY=`$REMOTESSH "cd ~/Repos/midas.bu.edu/; ./scripts/redeploy.sh -f"`
 			echo "**********************"
 			echo -e "${GREENOK} Navigate to https://midas.bu.edu to verify the page is working."
 		fi

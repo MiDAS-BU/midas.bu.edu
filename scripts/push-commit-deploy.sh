@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 # This scripts commits a minor change and deploys
 
+# Ensure that the CWD is set to script's location
+cd "${0%/*}"
+CWD=$(pwd)
+cd ..
+
+#######
+
 MESSAGE="$@"
 
 echo "Attempting to commit with message \"$MESSAGE\""
@@ -26,7 +33,7 @@ if [ $? -ne 0 ]; then
 fi
 
 if [ $? -eq 0 ]; then
-	./deploy.sh
+	./scripts/deploy.sh
 fi
 
 
