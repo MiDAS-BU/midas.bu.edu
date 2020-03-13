@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Ensure that the CWD is set to script's location
 cd "${0%/*}"
 CWD=$(pwd)
@@ -7,14 +9,10 @@ cd ..
 
 #######
 
-echo "Pulling ... (should pull nothing)"
+echo "Pulling / pushing ... (should pull nothing)"
 
 git pull
-
-if [ $? -ne 0 ]; then
-	echo "Something went wrong with pulling, please investigate. Exiting ..."
-	exit
-fi
+git push
 
 # https://stackoverflow.com/a/40178818/1644554
 # https://unix.stackexchange.com/a/155077/219051
