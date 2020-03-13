@@ -37,8 +37,8 @@ then
 	git push origin `git subtree split --prefix dist master`:gh-pages --force
 	git reset HEAD~
 	git checkout .gitignore
+	echo "Done!"
 else
-	echo "Need clean working directory to publish"
+	echo "Need clean working directory to publish -- WILL NOT PUBLISH!!"
 fi
 
-echo "Done!"
