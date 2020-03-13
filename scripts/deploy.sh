@@ -16,9 +16,8 @@ if [ $? -ne 0 ]; then
 	exit
 fi
 
-STATUS="$(git status)"
-
-if [[ $STATUS == *"nothing to commit, working directory clean"* ]]
+# https://unix.stackexchange.com/a/155077/219051
+if output=$(git status --porcelain) && [ -z "$output" ]
 then
 	sed -i "" '/dist/d' ./.gitignore
 	git add .
