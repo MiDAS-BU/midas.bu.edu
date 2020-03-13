@@ -20,15 +20,13 @@ Look at [configs](./website/assets/config).
 You need to modify these files according to commented instructions and using examples in these files.
 Afterwards use `./scripts/build.py` to assemble the website, and open HTML from `./dist` directory.
 
-<!-- ### Small edits and deployment
-
 It is possible to make slight text changes to the HTML page, just be sure it does not break the layout.
 
 The deployment is done through GitHub pages.
 GitHub hosts a content of `gh-pages` branch.
 To push to this branch we have a convenient script [deploy.sh](./deploy.sh).
-What it does is it pushes a subtree (the `website` directory) to the branch.
-Run this script to publish the latest commit (note that you need to commit to master first). -->
+What it does is it pushes a subtree (the `dist` directory) to the branch.
+Run this script to publish the latest commit (note that you need to commit to master first).
 
 ### Template and files in the root
 

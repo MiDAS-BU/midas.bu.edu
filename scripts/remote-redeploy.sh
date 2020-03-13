@@ -10,33 +10,33 @@ GREENOK="\033[32mOK!\033[0m"
 REDERROR="\033[31mERROR\033[0m"
 
 if [ $# -eq 1 ] && [ $1 = "-f" ]; then
-    echo "Remote re-deploying ..."
-    REMOTELS=`$REMOTESSH "ls ~/Repos/midas.bu.edu/redeploy.sh"`
-    REMOTE_RET=$?
-    if [ ${REMOTE_RET} -eq 255 ]; then
-        echo "***************************************************"
-        echo -e "$REDERROR: Cannot connect using ${USERNAME}@${SERVER}"
-    elif [ ${REMOTE_RET} -ne 0 ]; then
-        echo "***************************************************"
-        echo -e "$REDERROR: Something went wrong when searching MiDAS repo in the remote server"
-        echo -e "$REDERROR: Make sure you have MiDAS repo at: ~/Repos/midas.bu.edu in the remote server: $SERVER"
-    else
-        echo "***************************************************"
-        echo -e "${GREENOK} Found remote repo. Will try to git pull remotely ..."
-        REMOTEGITPULL=`$REMOTESSH "cd ~/Repos/midas.bu.edu/; git pull"`
-        if [ "${REMOTEGITPULL}" != "Already up-to-date." ]; then
-            echo "***************************************************"
-            echo -e "$REDERROR: Remote git pull was not clean (message was: \"$REMOTEGITPULL\")"
-        else
-            echo "***************************************************"
-            echo -e "${GREENOK} Clean remote pull. Redeploying ..."
-            echo "**********************"
-            REMOTEREDEPLOY=`$REMOTESSH "cd ~/Repos/midas.bu.edu/; ./redeploy.sh -f"`
-            echo "**********************"
-            echo -e "${GREENOK} Navigate to https://midas.bu.edu to verify the page is working."
-        fi
-    fi
+	echo "Remote re-deploying ..."
+	REMOTELS=`$REMOTESSH "ls ~/Repos/midas.bu.edu/redeploy.sh"`
+	REMOTE_RET=$?
+	if [ ${REMOTE_RET} -eq 255 ]; then
+		echo "***************************************************"
+		echo -e "$REDERROR: Cannot connect using ${USERNAME}@${SERVER}"
+	elif [ ${REMOTE_RET} -ne 0 ]; then
+		echo "***************************************************"
+		echo -e "$REDERROR: Something went wrong when searching MiDAS repo in the remote server"
+		echo -e "$REDERROR: Make sure you have MiDAS repo at: ~/Repos/midas.bu.edu in the remote server: $SERVER"
+	else
+		echo "***************************************************"
+		echo -e "${GREENOK} Found remote repo. Will try to git pull remotely ..."
+		REMOTEGITPULL=`$REMOTESSH "cd ~/Repos/midas.bu.edu/; git pull"`
+		if [ "${REMOTEGITPULL}" != "Already up-to-date." ]; then
+			echo "***************************************************"
+			echo -e "$REDERROR: Remote git pull was not clean (message was: \"$REMOTEGITPULL\")"
+		else
+			echo "***************************************************"
+			echo -e "${GREENOK} Clean remote pull. Redeploying ..."
+			echo "**********************"
+			REMOTEREDEPLOY=`$REMOTESSH "cd ~/Repos/midas.bu.edu/; ./redeploy.sh -f"`
+			echo "**********************"
+			echo -e "${GREENOK} Navigate to https://midas.bu.edu to verify the page is working."
+		fi
+	fi
 else
-    echo "Are you sure? If yes call using \"$0 -f\""
+	echo "Are you sure? If yes call using \"$0 -f\""
 fi
 
