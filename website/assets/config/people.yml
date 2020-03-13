@@ -10,7 +10,7 @@ categories:
   #   id: ID to refer to this category
   #   hidden: controls if this category is initially hidden on the webpage
   #   sort: order of this category (lower number -> higher on the webpage)
-  
+
   - name: Faculty
     id: faculty
     hidden: false
@@ -20,7 +20,7 @@ categories:
     id: postdocs
     hidden: false
     sort: 2
-    
+
   - name: Graduate Students
     id: students
     hidden: false
@@ -38,7 +38,7 @@ people:
   #   position: position title
   #   website: OPTIONAL. Full URL to personal page.
   #   category: ID of the category
-  
+
   - name: Dmytro Bogatov
     image: dmytro.jpeg
     position: PhD Researcher
@@ -119,7 +119,7 @@ people:
 
   - name: Evimaria Terzi
     image: evimaria.jpg
-    position: Associate Professor
+    position: Professor
     website: https://www.cs.bu.edu/~evimaria/
     category: faculty
 
