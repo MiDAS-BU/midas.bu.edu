@@ -12,7 +12,7 @@ def main():
 	from pathlib import Path
 	from jinja2 import Template, Environment, FileSystemLoader
 	from datetime import datetime
-	
+
 	abspath = os.path.abspath(__file__)
 	dname = os.path.dirname(abspath)
 	os.chdir(f"{dname}/..")
@@ -31,28 +31,28 @@ def main():
 	def recreateDir(path, ignore_errors=False):
 		shutil.rmtree(path, ignore_errors=ignore_errors)
 		os.mkdir(path)
-		
+
 	def loadData(file):
 		with open(Path(src) / "assets" / "config" / f"{file}.yml") as dataFile:
 			data = yaml.load(dataFile, Loader=yaml.FullLoader)
 			return data
-			
+
 	# filters
 	def formatDate(input):
 		date = datetime.strptime(input, "%m/%d/%y")
 		return date.strftime('%A, %b %d')
-		
+
 	def sortByLastName(input):
-		def sortFunc(person): 
+		def sortFunc(person):
 			names = person["name"].split()
 			return names[len(names) - 1]
-		return sorted(input, key = sortFunc) 
-		
+		return sorted(input, key = sortFunc)
+
 	def sortByDate(input):
-		def sortFunc(obj): 
+		def sortFunc(obj):
 			return datetime.timestamp(datetime.strptime(obj["when"], "%m/%d/%y"))
 		return sorted(input, key = sortFunc)
-	
+
 	def limit(input, n):
 		return input[:n]
 
@@ -64,14 +64,14 @@ def main():
 	templates.filters['sortByLastName'] = sortByLastName
 	templates.filters['sortByDate'] = sortByDate
 	templates.filters['limit'] = limit
-	
+
 
 	# create sit structure
 	recreateDir(dist, ignore_errors=True)
 
 	shutil.copytree(Path(src) / "assets", Path(dist) / "assets")
+	shutil.copytree(Path(src) / "classes", Path(dist) / "classes")
 	os.mkdir(Path(dist) / "assets" / "unminified")
-
 
 	# render templates
 	for path in (Path(src) / "templates").glob('*.html'):
