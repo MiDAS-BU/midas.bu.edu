@@ -77,6 +77,7 @@ def main():
 	recreateDir(dist, ignore_errors=True)
 
 	shutil.copytree(Path(src) / "assets", Path(dist) / "assets")
+	shutil.copy(Path(src) / "CNAME", Path(dist) / "CNAME")
 	(Path(dist) / "assets" / "unminified").mkdir(parents=True, exist_ok=True)
 
 	generateClasses(templates)
