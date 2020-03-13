@@ -1,0 +1,339 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-main" id="home">
+	<div id="particles-js"></div>
+	<div class="container center-vertically-holder">
+		<div class="center-vertically">
+			<div class="col-sm-8 col-sm-offset-2 col-lg-10 col-lg-offset-1 text-center">
+				<div><img src="assets/images/logos/midas-logo-head.png" alt="logo" class="big-logo-img-center"></div>
+				<hr class="bottomReveal">
+				<h2 style="color:white; margin-bottom: 1em;"> Massive Data, Algorithms, and Systems Group @ BU</h2>
+				<p class="bottomReveal"></p>
+				<a href="#ideology" data-id="ideology" class="scroll-link btn btn-default btn-lg">
+					Explore
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<section id="ideology">
+	<div id="hello-intro" class="pt60 pb60">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-sm-3">
+					<h2 class="no-margin rotateLeftReveal">MiDAS.</h2>
+				</div>
+				<div class="col-lg-10 col-sm-9 mt30-xs">
+					<h3 class="no-margin rightReveal">
+						MiDAS @ <a href="http://www.bu.edu/cs">BU CS</a> is a team of faculty and students that work on the research challenges of converting data to knowledge: from foundational algorithmic and systems challenges to the development of practical applications with domain scientists.
+					</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="our-process-title" class="pt30 pb30">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h4 class="no-margin">Research directions</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="our-process">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50">
+					<div class="leftReveal">
+						<div class="process-intro">
+							<h3 class="process-number"></h3>
+							<div><span class="process-icons pe-7s-graph rotateBottomReveal"></span></div>
+							<h2>Data Analytics</h2>
+						</div>
+						<div class="process-content">
+							<div><span class="process-icons pe-7s-graph"></span></div>
+							<h2 class="mt15 mb20">Data Analytics</h2>
+							<p class="no-margin">data-driven algorithmics, scalable algorithmics, systems for data analytics, harnessing and modeling networks, machine learning</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50">
+					<div class="bottomReveal">
+						<div class="process-intro">
+							<h3 class="process-number"></h3>
+							<div><span class="process-icons pe-7s-graph1 rotateBottomReveal"></span></div>
+							<h2>Data Mining</h2>
+						</div>
+						<div class="process-content">
+							<div><span class="process-icons pe-7s-graph1"></span></div>
+							<h2 class="mt15 mb20">Data Mining</h2>
+							<p class="no-margin">mining uncertain graphs, social network analysis, team formation, matrix completion, entity selection</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50 no-border-right">
+					<div class="rightReveal">
+						<div class="process-intro">
+							<h3 class="process-number"></h3>
+							<div><span class="process-icons pe-7s-config rotateBottomReveal"></span></div>
+							<h2>Data Systems</h2>
+						</div>
+						<div class="process-content">
+							<div><span class="process-icons pe-7s-config"></span></div>
+							<h2 class="mt15 mb20">Data Systems</h2>
+							<p class="no-margin">cloud data systems, secure data systems, spatial data systems, indexing, approximate query processing, uncertain graph management</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="services" class="background2 section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 section-title text-center">
+				<h2>Selected Publications</h2>
+				<br />
+				<h4>For more publications please visit our <a href="#team" data-id="team" class="scroll-link">personal webpages</a>.</h4>
+				<span class="section-divider"></span>
+			</div>
+		</div>
+
+		<div class="row" id="publications">
+			
+			{% for publication in publications.publications|sort(attribute="date.year", reverse=True)|limit(n=publications.view.total) %}
+				<div class="clearfix {{ 'visible-sm' if (loop.index - 1) % publications.view.publicationsPerSmall == 0 }} {{ 'visible-md' if (loop.index - 1) % publications.view.publicationsPerMedium == 0 }} {{ 'visible-lg' if (loop.index - 1) % publications.view.publicationsPerLarge == 0 }}"></div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<h3>{{ publication.title }}</h3>
+					<p>
+						{{ publication.authors }}
+						<br>
+						{{ publication.venue }}, {{ publication.date.year }}
+						{% if "pdf" in publication.links %}
+							| <a target="_blank" href="{{ publication.links.pdf }}">Download PDF</a>
+						{% endif %}
+						{% if "abstract" in publication.links %}
+							| <a target="_blank" href="{{ publication.links.abstract }}">External link</a>
+						{% endif %}
+					</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section id="team" class="background1 section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 section-title text-center">
+				<h2>People</h2>
+				<span class="section-divider mb15"></span>
+			</div>
+		</div>
+
+		<div class="mt40" id="people">
+			{% for category in people.categories|sort(attribute="sort") %}
+				<h2 class="text-center mt40 mb40">
+					{% if category.hidden %}
+						<a class="btn btn-default btn-lg active people-toggle" style="cursor: pointer; user-select: none;" data-shown="false" id="people-toggle-{{ category.id }}">{{ category.name }}</a>
+					{% else %}
+						{{ category.name }}
+					{% endif %}
+				</h2>
+				<div id="section-people-toggle-{{ category.id }}" class="row {{ 'people-hidden' if category.hidden }}">
+					
+					{% for person in people.people|selectattr("category", "equalto", category.id)|sortByLastName %}
+						<div class="clearfix {{ 'visible-xs' if (loop.index - 1) % people.view.profilesPerXSmall == 0 }} {{ 'visible-sm' if (loop.index - 1) % people.view.profilesPerSmall == 0 }} {{ 'visible-md' if (loop.index - 1) % people.view.profilesPerMedium == 0 }} {{ 'visible-lg' if (loop.index - 1) % people.view.profilesPerLarge == 0 }}"></div>
+						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center topReveal">
+							<div class="team-member-box-2">
+								<div class="team-image-wrapper rotateTopReveal">
+									{% if "website" in person %}
+										<a target="_blank" href="{{ person.website }}">
+											<img {{ "data-src" if category.hidden else "src" }}="/assets/images/people/{{ person.image }}" alt="{{ person.name }}" class="img-responsive img-circle team-member-img text-center image-people-toggle-{{ category.id }} {{ 'image-shown' if not category.hidden }}">
+										</a>
+									{% else %}
+										<img {{ "data-src" if category.hidden else "src" }}="/assets/images/people/{{ person.image }}" alt="{{ person.name }}" class="img-responsive img-circle team-member-img text-center image-people-toggle-{{ category.id }} {{ 'image-shown' if not category.hidden }}">
+									{% endif %}
+								</div>
+								<h3>{{ person.name }}</h3>
+								<p class="mb15">{{ person.position }}</p>
+							</div>
+						</div>
+					{% endfor %}
+					
+				</div>
+			{% endfor %}
+		</div>
+
+		<div class="row mb50 mt50">
+			<div class="col-lg-8 col-lg-offset-2 text-center">
+				<h2 class="heading-3 mt10 scaleReveal">Sponsors</h2>
+				<img src="assets/images/logos/NSF.png" alt="NSF" class="img-responsive pricing-clients mr15 maxh100 topReveal">
+				<img src="assets/images/logos/google.png" alt="Google" class="img-responsive pricing-clients mr15 bottomReveal">
+				<img src="assets/images/logos/microsoft.png" alt="Microsoft" class="img-responsive pricing-clients mr15 topReveal">
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<section id="contact" class="background2 section-padding">
+	<div class="container">
+		<div class="row mb30">
+			<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 section-title text-center">
+				<h2>Contact</h2>
+				<span class="section-divider mb15"></span>
+				<p class="no-margin scaleReveal">How to find us</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4 col-md-4 col-lg-4 text-center">
+				<h4 class="mb15">111 Cummington Mall <br> Boston MA • 02215</h4>
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 text-center">
+				<a href="https://cs-mailman.bu.edu/mailman/listinfo/dmbu-l" target="_blank" class="btn btn-primary btn-lg">Sign up to our mailing list</a>
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 text-center">
+				<a href="https://www.bu.edu/cas/admissions/" target="_blank" class="btn btn-primary btn-lg">Apply</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div id="map"></div>
+{% endblock %}
+
+{% block scripts %}
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_qmSmLWwX3IvNN4iyNJYEiyX71MAQGq4&amp;callback=initMap" async defer></script>
+<script type="text/javascript">
+	/* ---- Google Maps ---- */
+	function initMap() {
+		var mapOptions = {
+			zoom: 15,
+			zoomControl: false,
+			scaleControl: false,
+			scrollwheel: false,
+			disableDoubleClickZoom: true,
+			center: new google.maps.LatLng(42.349020, -71.103540),
+			styles: [{
+				"featureType": "landscape",
+				"stylers": [{
+					"saturation": -100
+				}, {
+					"lightness": 65
+				}, {
+					"visibility": "on"
+				}]
+			}, {
+				"featureType": "poi",
+				"stylers": [{
+					"saturation": -100
+				}, {
+					"lightness": 51
+				}, {
+					"visibility": "simplified"
+				}]
+			}, {
+				"featureType": "road.highway",
+				"stylers": [{
+					"saturation": -100
+				}, {
+					"visibility": "simplified"
+				}]
+			}, {
+				"featureType": "road.arterial",
+				"stylers": [{
+					"saturation": -100
+				}, {
+					"lightness": 30
+				}, {
+					"visibility": "on"
+				}]
+			}, {
+				"featureType": "road.local",
+				"stylers": [{
+					"saturation": -100
+				}, {
+					"lightness": 40
+				}, {
+					"visibility": "on"
+				}]
+			}, {
+				"featureType": "transit",
+				"stylers": [{
+					"saturation": -100
+				}, {
+					"visibility": "simplified"
+				}]
+			}, {
+				"featureType": "administrative.province",
+				"stylers": [{
+					"visibility": "off"
+				}]
+			}, {
+				"featureType": "water",
+				"elementType": "labels",
+				"stylers": [{
+					"visibility": "on"
+				}, {
+					"lightness": -25
+				}, {
+					"saturation": -100
+				}]
+			}, {
+				"featureType": "water",
+				"elementType": "geometry",
+				"stylers": [{
+					"hue": "#ffff00"
+				}, {
+					"lightness": -25
+				}, {
+					"saturation": -97
+				}]
+			}]
+		};
+		var mapElement = document.getElementById('map');
+		var map = new google.maps.Map(mapElement, mapOptions);
+		var marker = new google.maps.Marker({
+			position: new google.maps.LatLng(42.349020, -71.103540),
+			map: map,
+			title: 'Our Lab!'
+		});
+	}
+
+</script>
+<script type="text/javascript" src="assets/js/particles.min.js"></script>
+<script type="text/javascript" src="assets/js/particlesRun.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script>
+	
+	$(".people-toggle").click(
+		function () {
+			var id = $(this).attr('id');
+			if ($(this).data('shown') === "true") {
+				$(this).data('shown', "false");
+				$("#section-" + id).hide();
+			} else {
+				$(this).data('shown', "true");
+				var height = $(".image-shown").first().height();
+				$(".image-" + id).each(function () {
+					$(this).attr("src", $(this).data("src"));
+					$(this).height(height);
+				});
+				$("#section-" + id).show();
+			}
+		}
+	);
+	$(".people-hidden").hide();
+	
+</script>
+
+{% endblock %}

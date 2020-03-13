@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+
+<link href="assets/css/seminar.css?ver=1" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+<section id="seminar" class="background2 section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 section-title text-center">
+				<h2>MiDAS Seminar</h2>
+
+				{% for semester in seminars|sortByDate|reverse %}
+					<div class="table-users">
+						<div class="calendar">{{ semester.name }} Calendar </div>
+						<div class="room-time">{{ semester.where }}</div>
+
+						<table cellspacing="0">
+							<tr>
+								<th class="text-center">Date</th>
+								<th class="text-center">Speaker</th>
+								<th class="text-center" width="600">Title and Abstract</th>
+							</tr>
+							{% for talk in semester.talks|sortByDate %}
+								<tr>
+									<td>{{ talk.when | formatDate }}</td>
+									<td>
+										{% if "presenter" in talk %}
+											
+											{% if "url" in talk.presenter %}
+												<a href={{ talk.presenter.url }} target="_blank"> {{ talk.presenter.name }}</a>
+											{% else %}
+												{{ talk.presenter.name }}
+											{% endif %}
+											
+											{% if "affiliation" in talk.presenter %}
+												({{ talk.presenter.affiliation }})
+											{% endif %}
+											
+											{% if "bio" in talk.presenter %}
+												<details>
+													<summary> Bio </summary>
+													<p class="text-justify">
+														{{ talk.presenter.bio }}
+													</p>
+												</details>
+											{% endif %}
+											
+										{% endif %}
+									</td>
+									<td>
+										{% if talk.departmental %}
+											CS Department Seminar
+										{% elif "special" in talk %}
+											<font color="navy">
+												{{ talk.special }}
+											</font>
+										{% elif "title" in talk %}
+											{{ talk.title }}
+											</br>
+											<details>
+												<summary>Click for abstract</summary>
+												<p class="text-justify">
+													{{ talk.abstract }}
+												</p>
+											</details>
+										{% endif %}
+									</td>
+								</tr>
+							{% endfor %}
+						</table>
+					</div>
+
+					<div class="responsible text-center"> {{ semester.name }}: <a href=https://cs-people.bu.edu/{{ semester.responsible.username }}>{{ semester.responsible.name }}</a>, e-mail: {{ semester.responsible.username }} at bu dot edu </div>
+				{% endfor %}
+			</div>
+		</div>
+
+	</div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+<script type="text/javascript">
+
+	/* ---- nav smooth scroll ---- */
+	$(document).ready(function () {
+		$('.scroll-top').on('click', function (event) {
+			event.preventDefault();
+			$('html, body').animate({
+				scrollTop: 0
+			}, 1200);
+		});
+	});
+
+</script>
+
+{% endblock %}

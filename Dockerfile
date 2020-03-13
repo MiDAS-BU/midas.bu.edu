@@ -5,7 +5,7 @@ LABEL maintainer="Dmytro Bogatov <dmytro@dbogatov.org>"
 WORKDIR /srv
 
 # Copy the source
-COPY website .
+COPY dist .
 
 # Copy the NGINX config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
