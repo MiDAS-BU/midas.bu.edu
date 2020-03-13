@@ -16,7 +16,11 @@ echo "Pulling / pushing ... (should pull nothing)"
 git pull
 git push
 
+echo "Assembling the site..."
+
 ./scripts/build.py
+
+echo "Pushing gh-pages..."
 
 # https://stackoverflow.com/a/40178818/1644554
 # https://unix.stackexchange.com/a/155077/219051
@@ -36,3 +40,5 @@ then
 else
 	echo "Need clean working directory to publish"
 fi
+
+echo "Done!"
