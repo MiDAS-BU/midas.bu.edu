@@ -22,8 +22,9 @@ publications:
     venue: PVLDB
     date:
       year: 2019
-    links:
+    links: 
       pdf: http://cs-people.bu.edu/mathan/publications/vldb19-athanassoulis.pdf
+      abstract: http://www.vldb.org/pvldb/vol12/p2393-athanassoulis.pdf
 
   - title: A Comparative Evaluation of Order-Preserving and Order-Revealing Schemes and Protocols
     authors: D. Bogatov, G. Kollios and L. Reyzin
