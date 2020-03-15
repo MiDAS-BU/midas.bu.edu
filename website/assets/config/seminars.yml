@@ -107,12 +107,21 @@
         name: Stavros Papadopoulos
         affiliation: TileDB
         bio: |
-          Dr. Stavros Papadopoulos is the founder and CEO of TileDB, Inc. Prior to founding TileDB, Inc. in February 2017, Dr. Papadopoulos was a Senior Research Scientist at the Intel Parallel Computing Lab, and a member of the Intel Science and Technology Center for Big Data at MIT CSAIL for three years. He also spent about two years as a Visiting Assistant Professor at the Department of Computer Science and Engineering of the Hong Kong University of Science and Technology (HKUST). Stavros received his PhD degree in Computer Science at HKUST under the supervision of Prof. Dimitris Papadias, and held a postdoc fellow position at the Chinese University of Hong Kong with Prof. Yufei Tao.
-      title: <font color ="navy">MiDAS Seminar/CS591A1 Guest Lecture <b>(MCS B37@12:30 PM)</b><font> <br/>
+          Dr. Stavros Papadopoulos is the founder and CEO of TileDB, Inc.
+          Prior to founding TileDB, Inc. in February 2017, Dr. Papadopoulos was a Senior Research Scientist at the Intel Parallel Computing Lab, and a member of the Intel Science and Technology Center for Big Data at MIT CSAIL for three years.
+          He also spent about two years as a Visiting Assistant Professor at the Department of Computer Science and Engineering of the Hong Kong University of Science and Technology (HKUST).
+          Stavros received his PhD degree in Computer Science at HKUST under the supervision of Prof. Dimitris Papadias, and held a postdoc fellow position at the Chinese University of Hong Kong with Prof. Yufei Tao.
+      title: |
+        <font color ="navy">MiDAS Seminar/CS591A1 Guest Lecture <b>(MCS B37@12:30 PM)</b></font>
+        <br/>
         The TileDB array data storage engine
       abstract: |
-        In this talk I will present TileDB, a storage engine for multi-dimensional dense and sparse arrays. TileDB is open-source (MIT License) and built as a C++ embeddable library. It comes with 6 APIs (C, C++, Python, R, Java, Go), and integrates with Spark, Dask, MariaDB, PrestoDB, PDAL and GDAL. I will first explain the TileDB data format, the internal engine mechanics (parallelism, filters, integrations), and its applicability to data science and analytics. I will then describe TileDB’s value in application domains such as Genomics and Geospatial. Finally, I will show a demo of our recently launched product that offers access control, logging and serverless SQL and UDFs on the cloud.
-
+        In this talk I will present TileDB, a storage engine for multi-dimensional dense and sparse arrays.
+        TileDB is open-source (MIT License) and built as a C++ embeddable library.
+        It comes with 6 APIs (C, C++, Python, R, Java, Go), and integrates with Spark, Dask, MariaDB, PrestoDB, PDAL and GDAL.
+        I will first explain the TileDB data format, the internal engine mechanics (parallelism, filters, integrations), and its applicability to data science and analytics.
+        I will then describe TileDB’s value in application domains such as Genomics and Geospatial.
+        Finally, I will show a demo of our recently launched product that offers access control, logging and serverless SQL and UDFs on the cloud.
 
     - when: 03/26/20
       presenter:
