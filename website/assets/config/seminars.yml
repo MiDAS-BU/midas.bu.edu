@@ -128,8 +128,23 @@
         url: https://www.csail.mit.edu/person/ryan-marcus/
         name: Ryan Marcus
         affiliation: MIT
-      special: |
-        MiDAS Seminar/CS591A1 Guest Lecture <b>(MCS B37@12:30 PM)</b>
+        bio: |
+          Ryan Marcus is a postdoc researcher at MIT, working under Tim Kraska. 
+          Ryan recently graduated from Brandeis University, where he studied applications of machine learning to cloud databases under Olga Papaemmanouil. 
+          Before that, Ryan took courses in gender studies and mathematics at the University of Arizona, while banging his head against supercomputers at Los Alamos National Laboratory. 
+          He enjoys long walks down steep gradients, and shorter walks down gentler ones. 
+          He’s also looking for a job! 
+          You can find Ryan online at https://rmarcus.info.
+      title: |
+        <font color ="navy">MiDAS Seminar/CS591A1 Guest Lecture <b>(MCS B37@12:30 PM)</b></font>
+        <br/>
+        Machine Learning for Query Optimization: A Few Interesting Results & Thousands of Practical Barriers
+      abstract: |
+        Query optimization is one of the most well-studied problems in database management systems. 
+        Because of the exponential problem space and the heuristic nature of current solutions, researchers have recently applied machine learning techniques to this challenging problem domain. 
+        Various approaches range from using machine learning to perform cardinality estimation to outright replacing the query optimizer with deep reinforcement learning. 
+        Each of these approaches comes with their own unique sets of advantages and constraints. 
+        This talk will lay out these recent advancements in a skeptical light (my own work included), highlighting both potential advantages and the myriad of challenges that still need to be overcome to achieve a fully autonomous query optimizer.
 
     - when: 04/03/20
 
