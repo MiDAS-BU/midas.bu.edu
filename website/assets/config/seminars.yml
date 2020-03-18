@@ -147,6 +147,10 @@
         This talk will lay out these recent advancements in a skeptical light (my own work included), highlighting both potential advantages and the myriad of challenges that still need to be overcome to achieve a fully autonomous query optimizer.
 
     - when: 04/03/20
+      presenter:
+        url: https://cs-people.bu.edu/zczhu/
+        name: Zichen Zhu
+        affiliation: BU
 
     - when: 04/10/20
       presenter:
@@ -179,6 +183,10 @@
         affiliation: Intel Labs & MIT
 
     - when: 05/15/20
+      presenter:
+        url: https://subhadeepsarkar.bitbucket.io
+        name: Subhadeep Sarkar
+        affiliation: BU
 
     - when: 05/22/20
 
