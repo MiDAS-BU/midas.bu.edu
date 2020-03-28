@@ -21,7 +21,7 @@
 - name: Spring 2020
   when: 02/01/20
   where: |
-    Seminars are held online through Zoom at 11.00 am [unless otherwise notified].
+    Because of COVID-19, seminars are held online through Zoom at 11.00 AM [unless otherwise notified].
   responsible:
     name: Tarikul Islam Papon
     username: papon
@@ -157,6 +157,8 @@
         url: https://jialinding.github.io/
         name: Jialin Ding
         affiliation: MIT
+      special: |
+        <font color ="navy">MiDAS Seminar <b>(Online@11:00 AM)</b></font>
 
     - when: 04/17/20
       presenter:
