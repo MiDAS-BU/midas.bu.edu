@@ -21,7 +21,7 @@
 - name: Spring 2020
   when: 02/01/20
   where: |
-    Seminars are held in the old MCS B33 at 11.00 am [unless otherwise notified], followed by lunch.
+    Seminars are held online through Zoom at 11.00 am [unless otherwise notified].
   responsible:
     name: Tarikul Islam Papon
     username: papon
@@ -112,7 +112,7 @@
           He also spent about two years as a Visiting Assistant Professor at the Department of Computer Science and Engineering of the Hong Kong University of Science and Technology (HKUST).
           Stavros received his PhD degree in Computer Science at HKUST under the supervision of Prof. Dimitris Papadias, and held a postdoc fellow position at the Chinese University of Hong Kong with Prof. Yufei Tao.
       title: |
-        <font color ="navy">MiDAS Seminar/CS591A1 Guest Lecture <b>(MCS B37@12:30 PM)</b></font>
+        <font color ="navy">MiDAS Seminar/CS591A1 Guest Lecture <b>(Online@12:30 PM)</b></font>
         <br/>
         The TileDB array data storage engine
       abstract: |
@@ -136,7 +136,7 @@
           He’s also looking for a job! 
           You can find Ryan online at https://rmarcus.info.
       title: |
-        <font color ="navy">MiDAS Seminar/CS591A1 Guest Lecture <b>(MCS B37@12:30 PM)</b></font>
+        <font color ="navy">MiDAS Seminar/CS591A1 Guest Lecture <b>(Online@12:30 PM)</b></font>
         <br/>
         Machine Learning for Query Optimization: A Few Interesting Results & Thousands of Practical Barriers
       abstract: |
@@ -146,13 +146,13 @@
         Each of these approaches comes with their own unique sets of advantages and constraints. 
         This talk will lay out these recent advancements in a skeptical light (my own work included), highlighting both potential advantages and the myriad of challenges that still need to be overcome to achieve a fully autonomous query optimizer.
 
-    - when: 04/03/20
-      presenter:
-        url: https://cs-people.bu.edu/zczhu/
-        name: Zichen Zhu
-        affiliation: BU
+    - departmental: true
+      when: 04/03/20
 
-    - when: 04/10/20
+    - departmental: true
+      when: 04/10/20
+    
+    - when: 04/13/20
       presenter:
         url: https://jialinding.github.io/
         name: Jialin Ding
