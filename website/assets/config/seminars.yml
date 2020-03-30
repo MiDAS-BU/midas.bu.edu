@@ -149,16 +149,11 @@
     - departmental: true
       when: 04/03/20
 
-    - departmental: true
-      when: 04/10/20
-    
-    - when: 04/13/20
+    - when: 04/10/20
       presenter:
         url: https://jialinding.github.io/
         name: Jialin Ding
         affiliation: MIT
-      special: |
-        <font color ="navy">MiDAS Seminar <b>(Online@11:00 AM)</b></font>
 
     - when: 04/17/20
       presenter:
