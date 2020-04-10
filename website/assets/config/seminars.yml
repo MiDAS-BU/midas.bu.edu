@@ -190,9 +190,9 @@
 
     - when: 05/08/20
       presenter:
-        url: https://people.csail.mit.edu/tatbul
-        name: Nesime Tatbul
-        affiliation: Intel Labs & MIT
+        url: https://cs-people.bu.edu/zczhu/
+        name: Zichen Zhu
+        affiliation: BU
 
     - when: 05/15/20
       presenter:
