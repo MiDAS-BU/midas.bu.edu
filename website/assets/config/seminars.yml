@@ -175,6 +175,21 @@
         url: https://cs-people.bu.edu/ndhuynh/
         name: Andy Huynh
         affiliation: BU
+        bio: |
+          Andy is a third-year PhD student in the MiDaS group at Boston University where he is advised by Professor Manos Athanassoulis. 
+          His research focuses on novel design concepts in hybrid analytical/transaction processing systems. 
+          He is currently working on an open source column-storage called OakDB, a DBMS that focuses on auto tuning with input uncertainty. 
+          Prior to Boston University Andy attended the University of Minnesota, Twin Cities earning a Bachelors in Computer Engineering.
+      title: |
+          Tuning Data Systems Under Uncertainty in Workload
+      abstract: |
+        Modern hybrid analytical/transactional processing (HTAP) systems are generally tuned with assumptions on the expected workload, however, often times workload knowledge may be inaccurate. 
+        Deploying systems tuned on inaccurate knowledge can result in unexpected latency increases of up to 2X from the optimal. 
+        Additionally expected workloads may "drift" overtime, effectively acting as uncertainty in the workload leading to frequent and unnecessary retuning. 
+        This work focuses on exploring a new robust design paradigm for column stores, a popular layout for modern HTAP storage engines. 
+        We explore how much these uncertainties affect performance by benchmarking current systems and how well they handle workload drift. 
+        We then introduce some intuitive notions of workload drift and explore different heuristic strategies to combat drift. 
+        Additionally we demonstrate these strategies in OakDB, an open source column store engine to demonstrate robust tuning.
 
     - when: 04/24/20
       presenter:
