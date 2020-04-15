@@ -215,6 +215,21 @@
         url: https://cs-people.bu.edu/papon
         name: Tarikul Islam Papon
         affiliation: BU
+        bio: |
+          Papon is a first-year Ph.D. student, part of MiDAS group at BU, advised by Prof. Athanassoulis. 
+          His research interests broadly include Data Systems, specifically on hardware-aware data management challenges, stemming from the evolution of storage and memory devices. 
+          Currently, he is working on proposing a new design paradigm for interacting with durable storage that takes into account performance asymmetry between read and write operations, as well as the variable access concurrency that different devices may support.<br/>
+          Prior to joining BU, Papon served as a lecturer for 4 years at the Department of Computer Science & Engineering (CSE) in Bangladesh University of Engineering & Technology (BUET). 
+          He completed his MSc and BSc degree from the same department where he worked on medical informatics using various machine learning and embedded system techniques.
+      title: |
+          The Case for A Parameterized I/O Model
+      abstract: |
+        The traditional I/O model (EM Model) was developed based on the properties of HDDs, and has not evolved accordingly while it is still widely used. 
+        The EM Model assumes that read and write accesses have the same cost (symmetric cost) whereas most modern flash devices and emerging non-volatile memory (NVM) technologies show asymmetric cost - writes are significantly slower compared to reads. 
+        In addition, these devices provide some degree of access concurrency which cannot be modeled with the EM Model because it considers only one I/O at a time. 
+        The EM Model cannot capture these key properties of modern memory technologies, thus unable to exploit the full benefits of contemporary devices.<br/>
+        We propose a new Parameterized I/O Model PIO(M, k, α) that can interact with present-day storage devices that considers read/write asymmetry (α) as well as the variable access concurrency (k) that different devices may support.
+        In addition, we aim to propose a new database buffer pool page eviction algorithm for flash devices and compare its performance with the traditional algorithms with respect to our new PIO (α, k) model.
 
     - when: 05/08/20
       presenter:
