@@ -196,6 +196,19 @@
         url: https://chatterjeesubarna.github.io/
         name: Subarna Chatterjee
         affiliation: Harvard
+        bio: |
+          Subarna Chatterjee is a post-doc at the Data Systems Lab (DASLab) at Harvard University since January 2019. 
+          Prior to this, she was also a post-doc with the Myriads team at Inria, Rennes in France. 
+          She completed her Ph.D. from Indian Institute of Technology Kharagpur, India from 2013-2017. 
+          Her current research interests are NoSQL storage engines and reasoning about their cost and performance on cloud.
+      title: |
+          Cosine: A Cloud-Cost Optimized NoSQL Storage Engine
+      abstract: |
+        We present a key-value storage engine, Cosine, that guarantees an optimal cost- performance trade-off, given a workload and a budget. 
+        Cosine creates a massive search space comprising of the entire data structure design and hardware space of (LSM-tree/B-tree) key-value stores over diverse cloud pricing policies for the top three cloud providers – AWS, GCP, and Azure. 
+        In order to prune configurations from this massive search space, we present distribution-aware cost models that precisely estimate I/O costs of each possible data structure design, which in turn, helps in comparing pairs of designs. 
+        By using the cost models, Cosine reduces the massive dimensionality of the search space into a continuum of holistically optimal configurations. 
+        Cosine also enables decision makers in applications to quickly answer rich what- if questions about the changes in workload performance and cost as any of the design, hardware, or cloud provider change.
 
     - when: 05/01/20
       presenter:
