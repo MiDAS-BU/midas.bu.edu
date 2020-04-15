@@ -41,3 +41,11 @@
 	margin-right: auto !important;
 	margin-bottom: 1em;
 }
+
+.alert-strong {
+	color: #000;
+	background-color: #db625e;
+	border-color: #000000;
+	border-radius: 10px;
+}
+
