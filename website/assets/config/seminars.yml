@@ -233,9 +233,23 @@
 
     - when: 05/08/20
       presenter:
-        url: https://cs-people.bu.edu/zczhu/
-        name: Zichen Zhu
+        url: https://sites.google.com/view/juhyoungmun/
+        name: Ju Hyoung Mun
         affiliation: BU
+        bio: |
+          Ju Hyoung Mun is currently a postdoctoral associate in the Department of Computer Science at Boston University, working with Prof. Manos Athanassoulis. 
+          She received her Ph.D. in Electronic and Electrical Engineering at Ewha w. University in Seoul, Korea, under the supervision of Prof. Hyesook Lim. 
+          Her doctoral research was focused on how to retrieve the data efficiently by using Bloom filters in Named Data Networking (NDN). 
+          Her research interest lies in the fields of Data Systems and Networking; particularly, in enhancing the lookup performance.
+      title: |
+          FIB Sharing and Cache Sharing using Bloom filters in NDN
+      abstract: |
+        The major portion of the Internet bandwidth is now being used for content distribution like  video  streaming.  
+        The  conventional  Internet  infrastructure,  which  is  based  on  a host-to-host communication model, is not efficient for content distribution. 
+        In order to accommodate  today's  communication  needs,  Named  Data  Networking  (NDN)  has been  introduced  as  a  future  Internet  architecture.  
+        NDN  technology  has  two  main characteristics: name-based content retrieval and in-network caching. 
+        There are many research  challenges  for  the  realization  of  NDN.  
+        This  talk  presents  two  methods  of information sharing using Bloom filters in NDN: (1) Content Store sharing, which shares cache summaries with neighboring routers to increase the diversity of cached contents in  a  network  as  a  whole,  and  (2)  FIB  table  sharing,  which  reduces  the  traffic  and  the size of the FIB tables. 
 
     - when: 05/15/20
       presenter:
