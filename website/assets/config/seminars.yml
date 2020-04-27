@@ -258,6 +258,12 @@
         affiliation: BU
 
     - when: 05/22/20
+      presenter:
+        url: https://cs-people.bu.edu/zczhu/
+        name: Zichen Zhu
+        affiliation: BU
+
+    - when: 05/22/20
 
     - when: 05/29/20
 
