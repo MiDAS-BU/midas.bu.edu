@@ -229,7 +229,7 @@
         In addition, these devices provide some degree of access concurrency which cannot be modeled with the EM Model because it considers only one I/O at a time. 
         The EM Model cannot capture these key properties of modern memory technologies, thus unable to exploit the full benefits of contemporary devices.<br/>
         We propose a new Parameterized I/O Model PIO(M, k, α) that can interact with present-day storage devices that considers read/write asymmetry (α) as well as the variable access concurrency (k) that different devices may support.
-        In addition, we aim to propose a new database buffer pool page eviction algorithm for flash devices and compare its performance with the traditional algorithms with respect to our new PIO (α, k) model.
+        In addition, we aim to propose a new database buffer pool page eviction algorithm for flash devices and compare its performance with the traditional algorithms with respect to our proposed PIO(M, k, α) model.
 
     - when: 05/08/20
       presenter:
