@@ -66,3 +66,6 @@ build:
       - dist
   tags:
     - docker
+
+blc:
+  allow_failure: true
