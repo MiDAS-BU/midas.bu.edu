@@ -30,17 +30,17 @@
 									<td>{{ talk.when | formatDate }}</td>
 									<td>
 										{% if "presenter" in talk %}
-											
+
 											{% if "url" in talk.presenter %}
 												<a href={{ talk.presenter.url }} target="_blank"> {{ talk.presenter.name }}</a>
 											{% else %}
 												{{ talk.presenter.name }}
 											{% endif %}
-											
+
 											{% if "affiliation" in talk.presenter %}
 												({{ talk.presenter.affiliation }})
 											{% endif %}
-											
+
 											{% if "bio" in talk.presenter %}
 												<details>
 													<summary> Bio </summary>
@@ -49,7 +49,7 @@
 													</p>
 												</details>
 											{% endif %}
-											
+
 										{% endif %}
 									</td>
 									<td>
@@ -88,18 +88,5 @@
 {% block scripts %}
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
-<script type="text/javascript">
-
-	/* ---- nav smooth scroll ---- */
-	$(document).ready(function () {
-		$('.scroll-top').on('click', function (event) {
-			event.preventDefault();
-			$('html, body').animate({
-				scrollTop: 0
-			}, 1200);
-		});
-	});
-
-</script>
 
 {% endblock %}

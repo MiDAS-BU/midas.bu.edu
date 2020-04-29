@@ -9,8 +9,9 @@ def main():
 	import yaml
 	import contextlib
 	import sys
+	import markdown
 	from pathlib import Path
-	from jinja2 import Template, Environment, FileSystemLoader
+	from jinja2 import Template, Environment, FileSystemLoader, Markup
 	from datetime import datetime
 
 	abspath = os.path.abspath(__file__)
@@ -46,9 +47,6 @@ def main():
 			)
 
 	# filters
-	def formatDate(input):
-		date = datetime.strptime(input, "%m/%d/%y")
-		return date.strftime('%A, %b %d')
 
 	def sortByLastName(input):
 		def sortFunc(person):
@@ -61,17 +59,16 @@ def main():
 			return datetime.timestamp(datetime.strptime(obj["when"], "%m/%d/%y"))
 		return sorted(input, key = sortFunc)
 
-	def limit(input, n):
-		return input[:n]
-
 	dist = "./dist"
 	src = "./website"
 
+	md = markdown.Markdown()
 	templates = Environment(loader=FileSystemLoader(searchpath=str(Path(src) / "templates")))
-	templates.filters['formatDate'] = formatDate
 	templates.filters['sortByLastName'] = sortByLastName
 	templates.filters['sortByDate'] = sortByDate
-	templates.filters['limit'] = limit
+	templates.filters['formatDate'] = lambda input: datetime.strptime(input, "%m/%d/%y").strftime('%A, %b %d')
+	templates.filters['limit'] = lambda input, n: input[:n]
+	templates.filters['markdown'] = lambda input, style: f"<div class=\"markdown\" style=\"{style}\"> {Markup(md.convert(input))} </div>"
 
 	# create dist structure
 	recreateDir(dist, ignore_errors=True)
@@ -88,7 +85,8 @@ def main():
 			templates.get_template(path.name).stream(
 				seminars=loadData("seminars"),
 				people=loadData("people"),
-				publications=loadData("publications")
+				publications=loadData("publications"),
+				exam=loadData("depth-exam")
 			).dump(str(Path(dist) / path.name))
 
 if __name__ == '__main__':

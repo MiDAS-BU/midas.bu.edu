@@ -1,0 +1,155 @@
+categories:
+  - name: Data Management
+    papers:
+      - authors: Barzan Mozafari, Eugene Zhen Ye Goh, Dong Young Yoon
+        title: |
+          CliffGuard: A Principled Framework for Finding Robust Database Designs
+        venue: SIGMOD
+        year: 2015
+        url: https://web.eecs.umich.edu/~mozafari/papers/sigmod_2015.pdf
+
+      - authors: Stratos Idreos, Martin L. Kersten, Stefan Manegold
+        title: Updating a cracked database
+        venue: SIGMOD
+        year: 2007
+        url: https://stratos.seas.harvard.edu/files/IKM_SIGMOD07.pdf
+
+      - authors: Chen Luo, Michael J. Carey
+        title: |
+          LSM-based storage techniques: a survey
+        venue: VLDB
+        year: 2020
+        url: https://arxiv.org/pdf/1812.07527.pdf
+
+      - authors: Joy Arulraj, Andrew Pavlo, Prashanth Menon
+        title: Bridging the Archipelago between Row-Stores and Column-Stores for Hybrid Workloads
+        venue: SIGMOD
+        year: 2016
+        url: https://db.cs.cmu.edu/papers/2016/arulraj-sigmod2016.pdf
+
+      - authors: Daniel Abadi, Peter A. Boncz, Stavros Harizopoulos, Stratos Idreos, Samuel Madden
+        title: The Design and Implementation of Modern Column-Oriented Database Systems
+        venue: Foundations and Trends in Databases
+        year: 2013
+        url: http://db.csail.mit.edu/pubs/abadi-column-stores.pdf
+
+      - authors: Per-Åke Larson, Spyros Blanas, Cristian Diaconu, Craig Freedman, Jignesh M. Patel, Mike Zwilling
+        title: High-Performance Concurrency Control Mechanisms for Main-Memory Databases
+        venue: PVLDB
+        year: 2011
+        url: https://vldb.org/pvldb/vol5/p298_per-akelarson_vldb2012.pdf
+
+      - authors: Bruno Becker, Stephan Gschwind, Thomas Ohler, Bernhard Seeger, Peter Widmayer
+        title: An Asymptotically Optimal Multiversion B-Tree
+        venue: VLDB
+        year: 1996
+        url: http://www.cs.bu.edu/faculty/gkollios/ada17/LectNotes/mvbt.pdf
+
+      - authors: Raluca A. Popa, Catherine M. S. Redfield, Nickolai Zeldovich, Hari Balakrishnan
+        title: |
+          CryptDB: protecting confidentiality with encrypted query processing
+        venue: SOSP
+        year: 2011
+        url: https://web.cs.ucdavis.edu/~franklin/ecs228/2013/popa_etal_sosp_2011.pdf
+
+      - authors: Eamonn J. Keogh, CA Ratanamahatana
+        title: Exact indexing of dynamic time warping
+        venue: Knowledge and information systems
+        year: 2005
+        url: https://www.cs.ucr.edu/~eamonn/KAIS_2004_warping.pdf
+
+      - authors: Christopher Re, Nilesh N. Dalvi, Dan Suciu
+        title: Efficient Top-k Query Evaluation on Probabilistic Data
+        venue: ICDE
+        year: 2007
+        url: https://homes.cs.washington.edu/~suciu/Multisimulation_ICDE07.pdf
+
+      - authors: Hakan Hacigümüs, Balakrishna R. Iyer, Chen Li, Sharad Mehrotra
+        title: Executing SQL over encrypted data in the database-service-provider model
+        venue: SIGMOD
+        year: 2002
+        url: https://www.ics.uci.edu/~chenli/pub/sigmod02.pdf
+
+      - authors: Michael Hay, Vibhor Rastogi, Gerome Miklau, Dan Suciu
+        title: Boosting the Accuracy of Differentially Private Histograms Through Consistency
+        venue: VLDB
+        year: 2010
+        url: https://www.vldb.org/pvldb/vldb2010/pvldb_vol3/R91.pdf
+
+  - name: Data Mining
+    papers:
+      - authors: Mina Ghashami, Edo Liberty, Jeff M. Phillips
+        title: Efficient Frequent Directions Algorithm for Sparse Matrices
+        venue: KDD
+        year: 2016
+        url: https://www.kdd.org/kdd2016/papers/files/rfp1039-ghashamiA.pdf
+
+      - authors: Nikhil Bansal, Avrim Blum, Shuchi Chawla
+        title: Correlation Clustering
+        venue: Machine Learning
+        year: 2004
+        url: http://pages.cs.wisc.edu/~shuchi/papers/corrclusteringFOCS.pdf
+
+      - authors: Nir Ailon, Moses Charikar, Alantha Newman
+        title: |
+          Aggregating inconsistent information: Ranking and clustering
+        venue: ACM
+        year: 2008
+        url: http://dimacs.rutgers.edu/~alantha/papers2/aggregating_journal.pdf
+
+      - authors: Sreenivas Gollapudi, Aneesh Sharma
+        title: An axiomatic approach for result diversification
+        venue: WWW
+        year: 2009
+        url: http://theory.stanford.edu/~aneeshs/papers/diversification.pdf
+
+      - authors: Jon M. Kleinberg
+        title: An Impossibility Theorem for Clustering
+        venue: NIPS
+        year: 2002
+        url: https://www.cs.cornell.edu/home/kleinber/nips15.pdf
+
+      - authors: Kiran Garimella, Aristides Gionis, Nikos Parotsidis, Nikolaj Tatti
+        title: Balancing Information Exposure in Social Networks
+        venue: NIPS
+        year: 2017
+        url: https://arxiv.org/pdf/1709.01491.pdf
+
+      - authors: Andrei Z. Broder, Moses Charikar, Alan M. Frieze, Michael Mitzenmacher
+        title: Min-Wise Independent Permutations
+        venue: Journal of Computer and System Sciences
+        year: 2000
+        url: https://www.math.cmu.edu/~af1p/Texfiles/mw0.pdf
+
+      - authors: Jon M. Kleinberg
+        title: Authoritative Sources in a Hyperlinked Environment
+        venue: SODA
+        year: 1998
+        url: https://www.cs.cornell.edu/home/kleinber/auth.pdf
+
+      - authors: Kook Jin Ahn, Sudipto Guha, Andrew McGregor
+        title: Analyzing graph structure via linear measurements
+        venue: SODA
+        year: 2012
+        url: https://people.cs.umass.edu/~mcgregor/papers/12-dynamic.pdf
+
+      - authors: Grzegorz Malewicz, Matthew H. Austern, Aart J. C. Bik, James C. Dehnert, Ilan Horn, Naty Leiser, Grzegorz Czajkowski
+        title: |
+          Pregel: a system for large-scale graph processing
+        venue: SIGMOD
+        year: 2010
+        url: https://kowshik.github.io/JPregel/pregel_paper.pdf
+
+      - authors: Edith Cohen
+        title: |
+          All-distances sketches, revisited: HIP estimators for massive graphs analysis
+        venue: PODS
+        year: 2014
+        url: https://www.microsoft.com/en-us/research/wp-content/uploads/2014/06/distancesD1.pdf
+
+      - authors: David Arthur, Sergei Vassilvitskii
+        title: |
+          k-means++: the advantages of careful seeding
+        venue: SODA
+        year: 2007
+        url: https://theory.stanford.edu/~sergei/papers/kMeansPP-soda.pdf

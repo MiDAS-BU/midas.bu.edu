@@ -16,7 +16,7 @@
 
 		<link href="assets/css/style.css" rel="stylesheet" title="main-css">
 		<link href="assets/css/custom.css?ver=1" rel="stylesheet">
-		
+
 		{% block styles %}{% endblock %}
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -68,7 +68,7 @@
 				</div>
 			</nav>
 		</header>
-		
+
 		{% block content %}{% endblock %}
 
 		<footer class="footer-padding">
@@ -94,8 +94,20 @@
 		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/js/scrollreveal.min.js"></script>
 		<script type="text/javascript" src="assets/js/underscore.min.js"></script>
-		<!-- TODO -->
-		
+		<script type="text/javascript">
+
+			/* ---- nav smooth scroll ---- */
+			$(document).ready(function () {
+				$('.scroll-top').on('click', function (event) {
+					event.preventDefault();
+					$('html, body').animate({
+						scrollTop: 0
+					}, 1200);
+				});
+			});
+
+		</script>
+
 	</body>
 
 </html>
