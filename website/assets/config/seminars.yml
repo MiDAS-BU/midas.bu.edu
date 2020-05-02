@@ -255,15 +255,13 @@
       presenter:
         url: https://subhadeepsarkar.bitbucket.io
         name: Subhadeep Sarkar
-        affiliation: BU
+        affiliation: BU        
 
     - when: 05/22/20
       presenter:
         url: https://cs-people.bu.edu/zczhu/
         name: Zichen Zhu
         affiliation: BU
-
-    - when: 05/22/20
 
     - when: 05/29/20
 
