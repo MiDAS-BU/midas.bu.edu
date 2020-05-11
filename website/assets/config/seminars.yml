@@ -255,7 +255,26 @@
       presenter:
         url: https://subhadeepsarkar.bitbucket.io
         name: Subhadeep Sarkar
-        affiliation: BU        
+        affiliation: BU
+        bio: |
+          Subhadeep Sarkar is a post-doctoral researcher at Boston University working with Prof. Manos Athanassoulis. 
+          Prior to this, Subhadeep spent nearly two years as a post-doctoral researcher at INRIA Rennes, France. 
+          He completed his Ph.D. in 2017 from Indian Institute of Technology Kharagpur. 
+          Subhadeep's current research interests are NoSQL key-value stores, data access methods, and data privacy.
+      title: |
+          Lethe: A Tunable Delete-Aware LSM Engine
+      abstract: |
+        Data-intensive applications fueled the evolution of log-structured merge (LSM) based key-value engines that employ the out-of-place paradigm to support high ingestion rates with low read/write interference. 
+        These benefits, however, come at the cost of treating deletes as a second-class citizen. 
+        A delete inserts a tombstone that invalidates older instances of the deleted key. 
+        State-of-the-art LSM-engines do not provide guarantees as to how fast a tombstone will propagate to persist the deletion. 
+        Further, these LSM-engines only support deletion on the sort key. 
+        To delete on another attribute (e.g., timestamp), the entire tree is read and re-written. 
+        We highlight that fast persistent deletion without affecting read performance is key to support: (i) streaming systems operating on a window of data, (ii) privacy with latency guarantees on the right-to-be-forgotten, and (iii) en masse cloud deployment of data systems that makes storage a precious resource.<br/>
+        In this talk, I will present Lethe, an LSM-based key-value storage that introduces a set of delete-aware compaction policies and a new physical data storage layout, which together, allows for efficient and timely persistent deletion of data. 
+        Lethe is capable of supporting any user-defined threshold for the delete persistence latency offering higher read throughput and lower space amplification, with a modest increase in write amplification. 
+        In addition, by physically storing data in an interweaved order on the sort and the delete key, Lethe supports efficient range deletes on a secondary (delete) key without employing a costly full tree merge. 
+        Our paper on Lethe is set to appear at SIGMOD 2020.         
 
     - when: 05/22/20
       presenter:
