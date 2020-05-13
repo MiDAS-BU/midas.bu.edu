@@ -282,8 +282,6 @@
         name: Zichen Zhu
         affiliation: BU
 
-    - when: 05/29/20
-
 - name: Fall 2019
   when: 09/01/19
   where: |
