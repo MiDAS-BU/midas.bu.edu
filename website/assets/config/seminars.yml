@@ -286,7 +286,7 @@
           Prior to this, he received his MPhil degree in 2019 from Hong Kong University.
           Zichen's current research interests are data access methods and LSM-based NoSQL key-value stores.
       title: |
-          Workload-Driven Horizontal Partitioning
+          A Fast Workload-Driven Blocking Approach with Sub-optimal Skipping Effectiveness
       abstract: |
         With rapidly growing data volume, modern query engines are required to process enormous amount of data timely.
         In order to speed up the data access, an existing data skipping-based technique is proposed as follows.
