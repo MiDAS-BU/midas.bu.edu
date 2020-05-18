@@ -274,13 +274,28 @@
         In this talk, I will present Lethe, an LSM-based key-value storage that introduces a set of delete-aware compaction policies and a new physical data storage layout, which together, allows for efficient and timely persistent deletion of data. 
         Lethe is capable of supporting any user-defined threshold for the delete persistence latency offering higher read throughput and lower space amplification, with a modest increase in write amplification. 
         In addition, by physically storing data in an interweaved order on the sort and the delete key, Lethe supports efficient range deletes on a secondary (delete) key without employing a costly full tree merge. 
-        Our paper on Lethe is set to appear at SIGMOD 2020.         
+        Our paper on Lethe is set to appear at SIGMOD 2020.
 
     - when: 05/22/20
       presenter:
         url: https://cs-people.bu.edu/zczhu/
         name: Zichen Zhu
         affiliation: BU
+        bio: |
+          Zichen Zhu is a first-year PhD student at Boston University advised by Prof. Manos Athanassoulis.
+          Prior to this, he received his MPhil degree in 2019 from Hong Kong University.
+          Zichen's current research interests are data access methods and LSM-based NoSQL key-value stores.
+      title: |
+          Workload-Driven Horizontal Partitioning
+      abstract: |
+        With rapidly growing data volume, modern query engines are required to process enormous amount of data timely.
+        In order to speed up the data access, an existing data skipping-based technique is proposed as follows.
+        For each block of tuples, a bit vector (also noted as feature vector) is constructed where each dimension represents whether there exists a tuple qualified for some specific filters in this block.
+        Therefore, the effectiveness of data skipping essentially depends on how we partition data into blocks.
+        Existing skipping-oriented partitioning techniques assume either the number of partitions or the dimension of feature vectors is given.
+        We argue that there may exist a more intelligent way to determine these parameters.
+        In this work, a parameter-free greedy partitioning technique is introduced with sub-optimal skipping performance.
+        Further experiments also demonstrate the effectiveness of our algorithm in a synthetic workload and dataset.
 
 - name: Fall 2019
   when: 09/01/19
