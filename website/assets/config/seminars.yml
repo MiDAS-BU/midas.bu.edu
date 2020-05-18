@@ -292,9 +292,9 @@
         In order to speed up the data access, an existing data skipping-based technique is proposed as follows.
         For each block of tuples, a bit vector (also noted as feature vector) is constructed where each dimension represents whether there exists a tuple qualified for some specific filters in this block.
         Therefore, the effectiveness of data skipping essentially depends on how we partition data into blocks.
-        Existing skipping-oriented partitioning techniques assume either the number of partitions or the dimension of feature vectors is given.
-        We argue that there may exist a more intelligent way to determine these parameters.
-        In this work, a parameter-free greedy partitioning technique is introduced with sub-optimal skipping performance.
+        Existing skipping-oriented partitioning techniques assume the dimension of feature vectors is given and the feature selection is modeled as a frequent item mining problem with the dimension as the input.
+        We argue that there may exist a more intelligent way to determine the parameters.
+        In this work, a greedy partitioning technique is introduced with sub-optimal skipping performance without specifying the dimension.
         Further experiments also demonstrate the effectiveness of our algorithm in a synthetic workload and dataset.
 
 - name: Fall 2019
