@@ -39,10 +39,10 @@ people:
   #   website: OPTIONAL. Full URL to personal page.
   #   category: ID of the category
 
-  - name: Dmytro Bogatov
-    image: dmytro.jpeg
+  - name: Bashir Rastegarpanah
+    image: bashir.jpg
     position: PhD Researcher
-    website: https://dbogatov.org/
+    website: http://cs-people.bu.edu/bashir/
     category: students
 
   - name: Harshal Chaudhari
@@ -51,22 +51,22 @@ people:
     website: http://cs-people.bu.edu/harshal/
     category: students
 
-  - name: Andy Huynh
-    image: andy.jpg
-    position: PhD Researcher
-    website: http://cs-people.bu.edu/ndhuynh/
-    category: students
-
   - name: Sofia Maria Nikolakaki
     image: sofia.jpg
     position: PhD Researcher
     website: http://www.smnikolakaki.com//
     category: students
 
-  - name: Bashir Rastegarpanah
-    image: bashir.jpg
+  - name: Dmytro Bogatov
+    image: dmytro.jpeg
     position: PhD Researcher
-    website: http://cs-people.bu.edu/bashir/
+    website: https://dbogatov.org/
+    category: students
+
+  - name: Andy Huynh
+    image: andy.jpg
+    position: PhD Researcher
+    website: http://cs-people.bu.edu/ndhuynh/
     category: students
 
   - name: Konstantinos Sotiropoulos
@@ -105,23 +105,17 @@ people:
     website: https://cs-people.bu.edu/qlina/
     category: students
 
-  - name: Ju Hyoung Mun
-    image: juhyoung.jpg
-    position: Postdoctoral Researcher
-    website: http://cs-people.bu.edu/jmun
-    category: postdocs
-
   - name: Subhadeep Sarkar
     image: subjadeep.jpeg
     position: Postdoctoral Researcher
     website: https://subhadeepsarkar.bitbucket.io/
     category: postdocs
 
-  - name: Evimaria Terzi
-    image: evimaria.jpg
-    position: Professor
-    website: https://www.cs.bu.edu/~evimaria/
-    category: faculty
+  - name: Ju Hyoung Mun
+    image: juhyoung.jpg
+    position: Postdoctoral Researcher
+    website: http://cs-people.bu.edu/jmun
+    category: postdocs
 
   - name: George Kollios
     image: kollios.jpg
@@ -129,16 +123,22 @@ people:
     website: http://www.cs.bu.edu/fac/gkollios/
     category: faculty
 
-  - name: Manos Athanassoulis
-    image: manos.jpg
-    position: Assistant Professor
-    website: https://cs-people.bu.edu/mathan/
+  - name: Evimaria Terzi
+    image: evimaria.jpg
+    position: Professor
+    website: https://www.cs.bu.edu/~evimaria/
     category: faculty
 
   - name: Charalampos Tsourakakis
     image: babis.jpg
     position: Assistant Professor
     website: https://tsourakakis.com/
+    category: faculty
+
+  - name: Manos Athanassoulis
+    image: manos.jpg
+    position: Assistant Professor
+    website: https://cs-people.bu.edu/mathan/
     category: faculty
 
   - name: Charalampos Mavroforakis
