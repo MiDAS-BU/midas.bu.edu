@@ -17,6 +17,23 @@ publications:
   #     pdf: direct URL to PDF file
   #     abstract: OPTIONAL. URL to publication page (not PDF); can be researchgate, dbpl, iacr, archive, etc
   
+  - title: "Lethe: A Tunable Delete-Aware LSM Engine"
+    authors: S. Sarkar, T. I. Papon, D. Staratzis, M. Athanassoulis
+    venue: ACM SIGMOD
+    date:
+      year: 2020
+    links: 
+      pdf: http://cs-people.bu.edu/mathan/publications/sigmod20-sarkar.pdf
+
+  - title: Adaptive partitioning and indexing for in situ query processing
+    authors: M. Olma, M. Karpathiotakis, I. Alagiannis, M. Athanassoulis, A. Ailamaki
+    venue: VLDB
+    date:
+      year: 2020
+    links: 
+      pdf: http://cs-people.bu.edu/mathan/publications/vldbj19-olma.pdf
+      abstract: https://link.springer.com/article/10.1007%2Fs00778-019-00580-x
+  
   - title: Optimal Column Layout for Hybrid Workloads
     authors: M. Athanassoulis, K. Bøgh, S. Idreos
     venue: PVLDB
