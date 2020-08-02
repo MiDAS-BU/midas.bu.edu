@@ -13,6 +13,8 @@ def main():
 	from pathlib import Path
 	from jinja2 import Template, Environment, FileSystemLoader, Markup
 	from datetime import datetime
+	import requests
+	import json
 
 	abspath = os.path.abspath(__file__)
 	dname = os.path.dirname(abspath)
@@ -45,6 +47,57 @@ def main():
 			templates.get_template("class.html").stream(_class=_class).dump(
 				str(Path(dist) / "classes" / _class["code"] / "index.html" )
 			)
+
+	def generatePublications(file, *names):
+		# parse JSON list / object from DBLP into a string
+		def authorsToString(publicationJson):
+			result = ""
+			authors = publicationJson["authors"]["author"]
+			if isinstance(authors, dict):
+				return authors["text"]
+			else:
+				for author in authors:
+					result += f"{author['text']}, "
+				return result[:-2]
+
+		# load from file first
+		result = loadData(file)
+		print("Collecting publications:", end = "")
+
+		for name in names:
+
+			# load from DBLP search API
+			response = requests.get(f"https://dblp.org/search/publ/api?q=author%3A{name}%3A&format=json")
+			publications = json.loads(response.text)["result"]["hits"]["hit"]
+			print(f"\n\t{name}: ", end = "")
+
+			for publication in publications:
+
+				# Do not include archives
+				publication = publication["info"]
+				if publication["venue"] == "CoRR" or publication["venue"] == "IACR Cryptol. ePrint Arch.":
+					continue
+
+				# Do not include duplicates
+				if len(list(filter(lambda p: p["title"] == publication["title"][:-1], result["publications"]))) > 0:
+					print("d", end = "")
+					continue
+
+				# Parse to our format, add to list, template will aoutomaticaaly select latest
+				result["publications"] += [{
+					"title": publication["title"][:-1], # remove period
+					"authors": authorsToString(publication),
+					"venue": publication["venue"],
+					"date": {
+						"year": int(publication["year"])
+					},
+					"links": {
+      					"abstract": publication["ee"]
+					}
+				}]
+				print(".", end = "")
+		print()
+		return result
 
 	# filters
 
@@ -79,13 +132,16 @@ def main():
 
 	generateClasses(templates)
 
+	# do not regenerate for each page
+	publications = generatePublications("publications", "George_Kollios", "Manos_Athanassoulis", "Evimaria_Terzi", "Charalampos_E._Tsourakakis")
+
 	# render templates
 	for path in (Path(src) / "templates").glob('*.html'):
 		if not any(page in str(path) for page in ["layout", "class"]):
 			templates.get_template(path.name).stream(
 				seminars=loadData("seminars"),
 				people=loadData("people"),
-				publications=loadData("publications"),
+				publications=publications,
 				exam=loadData("depth-exam")
 			).dump(str(Path(dist) / path.name))
 
