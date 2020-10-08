@@ -26,7 +26,11 @@
     name: Tianyi Chen
     username: ctony
   talks:
-    - when: 10/09/20
+    - when: 11/06/20
+      presenter:
+        url: http://daslab.seas.harvard.edu/people/awasay/
+        name: Abdul Wasay
+        affiliation: Harvard
 
 - name: Spring 2020
   when: 02/01/20
