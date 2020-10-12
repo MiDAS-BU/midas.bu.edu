@@ -31,6 +31,31 @@
         url: http://daslab.seas.harvard.edu/people/awasay/
         name: Abdul Wasay
         affiliation: Harvard
+        bio: |
+          I am a Ph.D. candidate at the Harvard John A. Paulson School of Engineering and Applied Sciences, where I am
+          advised by Prof. Stratos Idreos. I design techniques to accelerate machine learning and data science pipelines,
+          specifically, addressing the bottleneck of repeated data movement. Additionally, I am interested in mapping out
+          the design space of deep neural network models to enable better design.
+          Prior to joining Harvard, I was an undergraduate at Lahore University of Management Sciences (LUMS). In my
+          undergraduate thesis, I investigated ways to improve buffer management in data center networks. During this
+          time, I also spent a summer at École Polytechnique Fédérale de Lausanne (EPFL) working on techniques to enhance
+          the privacy of social network graphs.
+      title: How and When to Build Neural Network Ensemble Models
+      abstract: |
+        Neural network models are applied to many tasks with rising complexity and data sizes. Researchers and
+        practitioners seek to scale the representational power of these models by adding more parameters. Increasing
+        parameters, though, requires additional critical resources such as memory and compute time leading to increased
+        training and inference cost. Thus a consistent challenge is to obtain as high as possible accuracy within a
+        parameter budget. As neural network designers navigate this complex landscape, they are guided by conventional
+        wisdom. This comes from empirical studies of the design space. We identify a critical part of this design space
+        that is not well-understood: That is how to decide between the alternatives of expanding a single network model
+        or increasing the number of networks and using them together in an ensemble. We study this question in detail
+        through extensive experimentation across various network architectures and data sets. Crucially, we provide a
+        robust assessment, missing in previous studies, by fixing the number of parameters. We also consider a holistic
+        set of metrics such as training time, inference time, and memory usage. Contrary to conventional wisdom, we show
+        that when we perform a holistic and robust assessment, we uncover a wide design space, where ensembles not only
+        provide better accuracy but also train faster, and deploy at a speed comparable to single convolutional networks
+        with the same total number of parameters.
 
 - name: Spring 2020
   when: 02/01/20
