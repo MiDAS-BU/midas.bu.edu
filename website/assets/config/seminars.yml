@@ -58,16 +58,18 @@
         with the same total number of parameters.
 
     - when: 12/04/20
-        presenter:
-          url: https://dicl.cut.ac.cy/index.php/people?id=131
-          name: Herodotos Herodotou
-          affiliation: Cyprus University of Technology
+      presenter:
+        url: https://dicl.cut.ac.cy/index.php/people?id=131
+        name: Herodotos Herodotou
+        affiliation: Cyprus University of Technology
+        bio: |
 
     - when: 12/11/20
-        presenter:
-          url: https://schariya.github.io
-          name: Sudhanshu (Dan) Chanpuriya
-          affiliation: UMass Amherst
+      presenter:
+        url: https://schariya.github.io
+        name: Sudhanshu (Dan) Chanpuriya
+        affiliation: UMass Amherst
+        bio: |
 
 - name: Spring 2020
   when: 02/01/20
