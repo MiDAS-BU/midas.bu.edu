@@ -76,24 +76,24 @@
           social computing. His research work to date has been published in several top scientific conferences and
           journals, two books, and two book chapters, while he is actively participating in multiple European and
           nationally funded projects.
-        title: Automating Distributed Tiered Storage Management in Cluster Computing
-        abstract: |
-          Data-intensive platforms such as Hadoop and Spark are routinely used to process massive amounts of data
-          residing on distributed file systems like HDFS. Increasing memory sizes and new hardware technologies
-          (e.g., NVRAM, SSDs) have recently led to the introduction of storage tiering in such settings. However, users
-          are now burdened with the additional complexity of managing the multiple storage tiers and the data residing
-          on them, while trying to optimize their workloads. In this talk, I will present OctopusFS, a novel distributed
-          file system that is aware of heterogeneous storage media (e.g., memory, SSDs, HDDs, NAS) with different
-          capacities and performance characteristics. The system offers a variety of pluggable policies for automating
-          data management across the storage tiers and cluster nodes. Smart placement and retrieval policies employ
-          multi-objective optimization techniques for making intelligent data management decisions based on the
-          requirements of fault tolerance, data and load balancing, and throughput maximization. In addition,
-          redistribution policies employ machine learning for tracking and predicting file access patterns, which are
-          used to decide when and which data to move up or down the storage tiers for increasing system performance.
-          The approach uses incremental learning to dynamically refine the models with new file accesses, allowing them
-          to naturally adjust and adapt to workload changes over time. Our extensive evaluation using realistic
-          workloads derived from Facebook and CMU traces compares our approach with several other policies and
-          showcases significant benefits in terms of both workload performance and cluster efficiency.
+      title: Automating Distributed Tiered Storage Management in Cluster Computing
+      abstract: |
+        Data-intensive platforms such as Hadoop and Spark are routinely used to process massive amounts of data
+        residing on distributed file systems like HDFS. Increasing memory sizes and new hardware technologies
+        (e.g., NVRAM, SSDs) have recently led to the introduction of storage tiering in such settings. However, users
+        are now burdened with the additional complexity of managing the multiple storage tiers and the data residing
+        on them, while trying to optimize their workloads. In this talk, I will present OctopusFS, a novel distributed
+        file system that is aware of heterogeneous storage media (e.g., memory, SSDs, HDDs, NAS) with different
+        capacities and performance characteristics. The system offers a variety of pluggable policies for automating
+        data management across the storage tiers and cluster nodes. Smart placement and retrieval policies employ
+        multi-objective optimization techniques for making intelligent data management decisions based on the
+        requirements of fault tolerance, data and load balancing, and throughput maximization. In addition,
+        redistribution policies employ machine learning for tracking and predicting file access patterns, which are
+        used to decide when and which data to move up or down the storage tiers for increasing system performance.
+        The approach uses incremental learning to dynamically refine the models with new file accesses, allowing them
+        to naturally adjust and adapt to workload changes over time. Our extensive evaluation using realistic
+        workloads derived from Facebook and CMU traces compares our approach with several other policies and
+        showcases significant benefits in terms of both workload performance and cluster efficiency.
 
 
     - when: 12/11/20
