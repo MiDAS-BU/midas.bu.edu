@@ -18,6 +18,38 @@
 #       departmental: OPTIONAL. If set, title and abstract are ignored and will be rendered "CS Department Seminar".
 #       special: OPTIONAL. If set, this text is rendered (HTML markup, like bold / italic / anchor allowed) as is in navy blue.
 
+- name: Spring 2021
+  when: 01/25/21
+  where: |
+    Because of COVID-19, seminars are held online through Zoom at 11.00 AM [unless otherwise notified].
+  responsible:
+    name: Tianyi Chen
+    username: ctony
+  talks:
+    - when: 01/22/21
+      presenter:
+        url: https://ntzia.github.io
+        name: Nikolaos Tziavelis
+        affiliation: Northeastern University
+        bio: |
+          Nikolaos Tziavelis is a PhD student at the Khoury College of Computer Sciences of Northeastern University.
+          His research interests lie in algorithms for database query processing and distributed computing. He holds a
+          MEng in Electrical and Computer Engineering from the National Technical University of Athens.
+      title: "Any-k: Optimal Join Algorithms meet Top-k"
+      abstract: |
+        Top-k queries have been studied intensively in the database community and they are an important means to reduce
+        query cost when only the “best” or “most interesting” results are needed instead of the full output. However,
+        optimality results for queries involving joins hold only in a fairly limited model of computation that does not
+        account for the cost incurred by large intermediate results. On the other hand, the idea of avoiding large
+        intermediate results is arguably the main goal of recent work on optimal join algorithms, which has created a
+        lot of excitement due to its promise of reducing the time complexity of join queries with cycles, but it has
+        mostly focused on full-output computation. In this talk, I will present the problem of ranked enumeration that
+        lies in the intersection of these two research areas. The goal is to return query results one after the other
+        in order of their importance with theoretical guarantees that are better suited for in-memory computation. I
+        will focus on two families of algorithms that have their roots on the k'th shortest path problem. The first
+        one is based on the Lawler-Murty partitioning procedure, while the second one uses a recursive approach that
+        has been developed over several decades.
+
 - name: Fall 2020
   when: 10/01/20
   where: |
