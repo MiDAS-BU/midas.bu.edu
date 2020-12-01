@@ -134,6 +134,21 @@
         name: Sudhanshu (Dan) Chanpuriya
         affiliation: UMass Amherst
         bio: |
+          Sudhanshu Chanpuriya is a PhD student at the College of Computer and Information Sciences at UMass Amherst,
+          where he is advised by Cameron Musco. His research interests lie at the intersection of machine learning and
+          graph theory. Prior to joining UMass, he received his undergraduate degree at Dartmouth College.
+      title: Towards Understanding the Success and Limitations of Node Embeddings
+      abstract: |
+        The node embedding task involves mapping nodes in networks to low-dimensional, continuous vectors for direct
+        use in downstream machine learning algorithms, such as those for classification and clustering. This task has
+        received great interest from the ML community in the past few years, and I will present some of our recent
+        work, which tries to advance two parts of our understanding: (i) What are the limitations of node embeddings?
+        In work appearing at NeurIPS 2020, we show that, contrary to recent doubts, node embeddings can capture fine
+        network structures like triangles involving only low-degree nodes; in fact, they can exactly capture the full
+        network structure at surprisingly low embedding dimensionalities. (ii) What has made recent node embedding
+        algorithms more effective on downstream tasks? I will present our variant of the popular DeepWalk algorithm,
+        InfiniteWalk, which attributes the success of DeepWalk to the addition of a nonlinear component to older
+        algorithms based on spectral clustering.
 
 - name: Spring 2020
   when: 02/01/20
