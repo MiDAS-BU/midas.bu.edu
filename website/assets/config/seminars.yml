@@ -150,6 +150,33 @@
         InfiniteWalk, which attributes the success of DeepWalk to the addition of a nonlinear component to older
         algorithms based on spectral clustering.
 
+    - when: 12/18/20
+      presenter:
+        url: https://www.ics.uci.edu/~cluo8/
+        name: Chen Luo
+        affiliation: University of California Irvine
+        bio: |
+          Chen Luo received his PhD from University of California, Irvine in December 2020 under the supervision of
+          Professor Michael J. Carey. His research interests include storage management, indexing, and LSM-trees. In
+          particular, he worked on optimizing LSM-trees for big data management systems. During his PhD studies, he
+          interned at IBM Almaden (2017) working on HTAP indexing and Microsoft Research (2019) working on customized
+          SSD controllers. Before that, he obtained the Master’s degree from Tsinghua University in 2016 and the
+          Bachelor’s degree from Tongji University in 2013, respectively.
+      title: On Optimizing LSM-based Storage for Big Data Management Systems
+      abstract: |
+        In recent years, the Log-Structured Merge-tree (LSM-tree) has been widely used in the storage layer in modern
+        NoSQL systems. Different from traditional index structures that apply updates in-place, an LSM-tree first
+        buffers all writes in memory and subsequently flushes them to disk and merges them using sequential I/Os. This
+        out-of-place update design brings a number of advantages, including superior write performance, high space
+        utilization, tunability, and simplification of concurrency control and recovery. These advantages have enabled
+        LSM-trees to serve a large variety of workloads in production systems.
+        Despite the popularity of LSM-trees, the existing research efforts have been primarily focusing on improving
+        the maximum throughput of LSM-trees in simple key-value store settings. This leads to several outages when
+        adopting LSM-based storage techniques in a Big Data Management System (BDMS) with multiple heterogeneous
+        LSM-trees and requiring performance metrics beyond just the maximum throughput. In this talk, I will describe
+        some of my PhD research to optimize LSM-trees for BDMSs, including efficient maintenance of LSM-based auxiliary
+        structures, minimizing write stalls via better scheduling, and adaptive memory managemnt of LSM-trees.
+
 - name: Spring 2020
   when: 02/01/20
   where: |
