@@ -107,8 +107,8 @@
           database techniques in other areas like maritime informatics, scientific computing, bioinformatics, and
           social computing. His research work to date has been published in several top scientific conferences and
           journals, two books, and two book chapters, while he is actively participating in multiple European and
-          nationally funded projects.
-      title: Automating Distributed Tiered Storage Management in Cluster Computing
+          nationally funded projects.  
+      title: Automating Distributed Tiered Storage Management in Cluster Computing [<a href="https://drive.google.com/file/d/1-J1DhKjmDL6_FgelKvrtbGOIPWlGQ4-V/view" target="_blank">Talk Recording</a>]
       abstract: |
         Data-intensive platforms such as Hadoop and Spark are routinely used to process massive amounts of data
         residing on distributed file systems like HDFS. Increasing memory sizes and new hardware technologies
@@ -126,6 +126,7 @@
         to naturally adjust and adapt to workload changes over time. Our extensive evaluation using realistic
         workloads derived from Facebook and CMU traces compares our approach with several other policies and
         showcases significant benefits in terms of both workload performance and cluster efficiency.
+
 
 
     - when: 12/11/20
@@ -620,7 +621,7 @@
           Before Vertica, Stella completed her B.A. with Honors in Computer Science at Harvard University in 2015, where she also conducted research in the area of column stores with Professor Stratos Idreos.
           In her free time she maintains a blog on distributed systems and technology at stylianipantela.com.
       special: |
-        <a href="https://midas.bu.edu/classes/CS460/#guest-lecture-pantela" target="_blank">Guest lecture for CS460: Introduction to Databases [4:30-5:45pm, EPC 207]</a>
+        Guest lecture for CS460: Introduction to Databases [4:30-5:45pm, EPC 207]
 
     - when: 12/06/19
       presenter:
