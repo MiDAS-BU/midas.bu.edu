@@ -132,7 +132,7 @@ people:
   - name: Evimaria Terzi
     image: evimaria.jpg
     position: Professor
-    website: https://www.cs.bu.edu/~evimaria/
+    website: http://cs-people.bu.edu/evimaria/
     category: faculty
 
   - name: Charalampos Tsourakakis
