@@ -25,7 +25,7 @@
 								<th class="text-center">Speaker</th>
 								<th class="text-center" width="600">Title and Abstract</th>
 							</tr>
-							{% for talk in semester.talks|sortByDate %}
+							{% for talk in semester.talks|sortByDate|reverse %}
 								<tr>
 									<td>{{ talk.when | formatDate }}</td>
 									<td>
