@@ -163,7 +163,7 @@
           interned at IBM Almaden (2017) working on HTAP indexing and Microsoft Research (2019) working on customized
           SSD controllers. Before that, he obtained the Master’s degree from Tsinghua University in 2016 and the
           Bachelor’s degree from Tongji University in 2013, respectively.
-      title: On Optimizing LSM-based Storage for Big Data Management Systems
+      title: On Optimizing LSM-based Storage for Big Data Management Systems [<a href="https://drive.google.com/file/d/1sqttrgQLfAzdMEaZtTAgYSwivaXTRJ3b/view" target="_blank">Talk Recording</a>]
       abstract: |
         In recent years, the Log-Structured Merge-tree (LSM-tree) has been widely used in the storage layer in modern
         NoSQL systems. Different from traditional index structures that apply updates in-place, an LSM-tree first
