@@ -49,6 +49,23 @@
         will focus on two families of algorithms that have their roots on the k'th shortest path problem. The first
         one is based on the Lawler-Murty partitioning procedure, while the second one uses a recursive approach that
         has been developed over several decades.
+    - when: 02/12/21
+      presenter:
+        url: https://cs-people.bu.edu/papon/
+        name: Tarikul Islam Papon
+        affiliation: Boston University
+        bio: | 
+          Papon is a second-year Ph.D. student, part of MiDAS group at BU, advised by Prof. Athanassoulis.
+          His research interests broadly include Data Systems, specifically on hardware-aware data management challenges, stemming from the evolution of storage and memory devices.
+          Currently, he is working on proposing a new design paradigm for interacting with durable storage that takes into account performance asymmetry between read and write operations, as well as the variable access concurrency that different devices may support.<br/>
+          Prior to joining BU, Papon served as a lecturer for 4 years at the Department of Computer Science & Engineering (CSE) in Bangladesh University of Engineering & Technology (BUET).
+          He completed his MSc and BSc degree from the same department where he worked on medical informatics using various machine learning and embedded system techniques.
+         title: "The Need for a New I/O Model"
+         abstract: |
+           Data-intensive applications performance is typically bounded by the time needed to transfer data through the storage and memory hierarchy. As a result, measuring and modeling disk I/O accesses is used as a proxy to performance. The traditional I/O model considers a two-level memory hierarchy with a fast internal memory of bounded size (memory) and a slow unbounded external memory (storage), which are both divided into fixed-size blocks. Any computation requires to have the corresponding data blocks in memory. Accessing storage is typically orders of magnitude slower than accessing memory, thus, the traditional I/O model considers only storage accesses. This modeling approach closely describes reality when two key underlying assumptions hold (i) disk reads and writes have similar cost, and (ii) applications can perform one I/O at a time. However, those two assumptions are not true for solid-state disks (SSD). The mismatch between the I/O model and contemporary devices is attributed to the fact that it was developed for hard disk drives (HDD). HDDs have symmetric read-write performance that is dominated by the seek time and rotational delay. The mechanical components of HDDs, further, do not allow them to serve multiple concurrent requests, since each request has to individually go through the costly mechanical movement.
+
+
+          
 
 - name: Fall 2020
   when: 10/01/20
