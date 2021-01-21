@@ -31,7 +31,10 @@ then
 		git push origin --delete gh-pages
 	fi
 
-	sed -i "" '/dist/d' ./.gitignore
+    #changed the next line to make sure it works for BSD, GNU (works for Mac and Linux)
+    sed -i.bak '/dist/d' ./.gitignore
+    #delete the newly created back up file 
+    rm ./.gitignore.bak
 	git add .
 	git commit -m "Edit .gitignore to publish"
 	git push origin `git subtree split --prefix dist master`:gh-pages --force
