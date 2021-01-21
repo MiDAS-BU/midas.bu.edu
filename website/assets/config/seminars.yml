@@ -23,8 +23,8 @@
   where: |
     Because of COVID-19, seminars are held online through Zoom at 11.00 AM [unless otherwise notified].
   responsible:
-    name: Tianyi Chen
-    username: ctony
+    name: Zichen Zhu
+    username: zczhu
   talks:
     - when: 01/22/21
       presenter:
