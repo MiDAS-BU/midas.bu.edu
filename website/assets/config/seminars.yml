@@ -65,21 +65,9 @@
           his MSc and BSc degree from the same department where he worked on medical informatics using various machine 
           learning and embedded system techniques.
       title: |
-        The Need for a New I/O Model
-      abstract: |
-        Data-intensive applications performance is typically bounded by the time needed to transfer data through 
-        the storage and memory hierarchy. As a result, measuring and modeling disk I/O accesses is used as a proxy 
-        to performance. The traditional I/O model considers a two-level memory hierarchy with a fast internal 
-        memory of bounded size (memory) and a slow unbounded external memory (storage), which are both divided into 
-        fixed-size blocks. Any computation requires to have the corresponding data blocks in memory. Accessing storage 
-        is typically orders of magnitude slower than accessing memory, thus, the traditional I/O model considers only 
-        storage accesses. This modeling approach closely describes reality when two key underlying assumptions hold (i) 
-        disk reads and writes have similar cost, and (ii) applications can perform one I/O at a time. However, those two 
-        assumptions are not true for solid-state disks (SSD). The mismatch between the I/O model and contemporary devices 
-        is attributed to the fact that it was developed for hard disk drives (HDD). HDDs have symmetric read-write 
-        performance that is dominated by the seek time and rotational delay. The mechanical components of HDDs, further, 
-        do not allow them to serve multiple concurrent requests, since each request has to individually go through the 
-        costly mechanical movement.
+        The Case for A Parametric I/O Model
+      abstract: | 
+        Storage devices have evolved to offer increasingly faster read/write access, through flash-based and other solid-state storage technologies. When compared to classical rotating hard disk drives (HDDs), modern solid-state drives (SSDs) have two key differences: (i) the absence of mechanical parts, and (ii) an inherent difference between the process of reading and writing. The former removes a key performance bottleneck, enabling internal device parallelism, whereas the latter manifests as a read/write performance asymmetry. In other words, modern storage devices can serve multiple concurrent I/Os, and writes are generally slower than reads; none of which is true for HDDs.To address this mismatch, we propose a simple yet expressive storage model, termed Parametric I/O Model (PIO) that captures modern (and future) devices by parameterizing read/write asymmetry (α) and access concurrency (k). PIO enables making device-specific decisions at algorithm design time, rather than as an optimization during deployment. To showcase the benefits of algorithm design using PIO, we introduce a new family of bufferpool eviction strategies that offer performance improvements by accurately modeling the behavior of the underlying devices. We compare their performance on various synthetic traces with three state-of-the-art algorithms (LRU, CFLRU, LRU-WSR) to show that they achieve 15.9%  44.5% improvement in runtime with a negligible increase in total writes ( 0.06%) and buffer misses ( 0.004%). We further report up to 1.83x speedup for TPC-C traces on PostgreSQL.
 
 
           
