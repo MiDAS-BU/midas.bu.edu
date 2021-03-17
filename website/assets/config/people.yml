@@ -110,6 +110,12 @@ people:
     position: PhD Researcher
     website: http://cs-people.bu.edu/ctony/
     category: students
+  
+  - name: Aneesh Raman
+    image: aneesh.jpg
+    position: PhD Researcher
+    website: https://ramananeesh.github.io/
+    category: students
 
   - name: Subhadeep Sarkar
     image: subjadeep.jpeg
