@@ -75,11 +75,11 @@ people:
     website: http://cs-people.bu.edu/ksotirop/
     category: students
 
-  - name: Isidora Tourni
-    image: isidora.jpg
-    position: PhD Researcher
-    website: http://cs-people.bu.edu/isidora/
-    category: students
+#  - name: Isidora Tourni
+#    image: isidora.jpg
+#    position: PhD Researcher
+#    website: http://cs-people.bu.edu/isidora/
+#    category: students
 
   - name: Tarikul Islam Papon
     image: papon.jpg
