@@ -73,9 +73,12 @@
         url: http://pages.cs.wisc.edu/~chronis/
         name: Yannis Chronis
         affiliation: University of Wisconsin Madison
-        bio: TBA
-      title: TBA
-      abstract: TBA
+        bio: |
+          Yannis is a fourth-year Ph.D. student in the Computer Sciences Department at the University of Wisconsin-Madison advised by Prof. Jignesh Patel. His research focuses on efficient data processing using modern and emerging hardware.
+      title: |
+        Castle: Accelerating analytical query processing with associative computing
+      abstract: |
+        We are in the midst of a Cambrian hardware evolution in which a rich variety of technologies and architectures are being invented with a flurry that we havent seen in a long time. One class of hardware devices, called Processing-in-Memory (PIM), is enabling new ways of utilizing memories. PIM devices generally pack storage and computing closely together and have novel computing primitives that are built into the memory devices. Associative processors are a type of PIM device with massive data-level parallelism and single-cycle search and update capabilities. The focus of our work is on exploring how database analytic workloads can be run efficiently using an associative computing substrate. Our vehicle for this research is the Castle project in which we are building a data processing engine to run on the CAPE hardware, which is a specific implementation of an associative PIM device. Initial results show that associative PIM hardware can potentially deliver manifold performance gains over traditional von Neumann architectures; however, to fully exploit CAPEs potential, data query processing kernels and query optimization methods both have to be adapted in new ways to leverage the style of data-parallel computing that can be carried out directly inside CAPE. We experiment with both individual query processing kernels and end-to-end queries and show that the performance gains using our methods are significant, and up to 46X in some cases. Tentatively, these results point to the exciting potential in accelerating database analytic query processing workloads using associative computing.
 
 - name: Fall 2020
   when: 10/01/20
