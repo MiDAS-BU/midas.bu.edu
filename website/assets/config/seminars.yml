@@ -19,7 +19,7 @@
 #       special: OPTIONAL. If set, this text is rendered (HTML markup, like bold / italic / anchor allowed) as is in navy blue.
 
 - name: Fall 2021
-  when: 09/19/21
+  when: 09/20/21
   where: |
     Seminars are held in TBA at 10:30am [unless otherwise notified].
   responsible:
