@@ -21,7 +21,7 @@
 - name: Fall 2021
   when: 09/20/21
   where: |
-    Seminars are held in TBA at 10:30am [unless otherwise notified].
+    Seminars are held in MCS B51 at 10:30am [unless otherwise notified].
   responsible:
     name: Lina Qiu
     username: qlina
