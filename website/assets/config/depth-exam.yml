@@ -1,6 +1,7 @@
 categories:
   - name: Data Management
     papers:
+# Manos's papers
       - authors: Barzan Mozafari, Eugene Zhen Ye Goh, Dong Young Yoon
         title: |
           CliffGuard: A Principled Framework for Finding Robust Database Designs
@@ -39,11 +40,12 @@ categories:
         year: 2011
         url: https://vldb.org/pvldb/vol5/p298_per-akelarson_vldb2012.pdf
 
-      - authors: Bruno Becker, Stephan Gschwind, Thomas Ohler, Bernhard Seeger, Peter Widmayer
-        title: An Asymptotically Optimal Multiversion B-Tree
-        venue: VLDB
-        year: 1996
-        url: http://www.cs.bu.edu/faculty/gkollios/ada17/LectNotes/mvbt.pdf
+# George's papers
+      - authors: Frank McSherry
+        title: "Privacy integrated queries: an extensible platform for privacy-preserving data analysis"
+        venue: SIGMOD
+        year: 2009
+        url: https://dl.acm.org/doi/pdf/10.1145/1559845.1559850
 
       - authors: Raluca A. Popa, Catherine M. S. Redfield, Nickolai Zeldovich, Hari Balakrishnan
         title: |
@@ -78,17 +80,12 @@ categories:
 
   - name: Data Mining
     papers:
+# Evimaria's papers
       - authors: Mina Ghashami, Edo Liberty, Jeff M. Phillips
         title: Efficient Frequent Directions Algorithm for Sparse Matrices
         venue: KDD
         year: 2016
         url: https://www.kdd.org/kdd2016/papers/files/rfp1039-ghashamiA.pdf
-
-      - authors: Nikhil Bansal, Avrim Blum, Shuchi Chawla
-        title: Correlation Clustering
-        venue: Machine Learning
-        year: 2004
-        url: http://pages.cs.wisc.edu/~shuchi/papers/corrclusteringFOCS.pdf
 
       - authors: Nir Ailon, Moses Charikar, Alantha Newman
         title: |
@@ -97,59 +94,46 @@ categories:
         year: 2008
         url: http://dimacs.rutgers.edu/~alantha/papers2/aggregating_journal.pdf
 
-      - authors: Sreenivas Gollapudi, Aneesh Sharma
-        title: An axiomatic approach for result diversification
-        venue: WWW
-        year: 2009
-        url: http://theory.stanford.edu/~aneeshs/papers/diversification.pdf
-
-      - authors: Jon M. Kleinberg
-        title: An Impossibility Theorem for Clustering
-        venue: NIPS
-        year: 2002
-        url: https://www.cs.cornell.edu/home/kleinber/nips15.pdf
-
-      - authors: Kiran Garimella, Aristides Gionis, Nikos Parotsidis, Nikolaj Tatti
-        title: Balancing Information Exposure in Social Networks
-        venue: NIPS
-        year: 2017
-        url: https://arxiv.org/pdf/1709.01491.pdf
-
       - authors: Andrei Z. Broder, Moses Charikar, Alan M. Frieze, Michael Mitzenmacher
         title: Min-Wise Independent Permutations
         venue: Journal of Computer and System Sciences
         year: 2000
         url: https://www.math.cmu.edu/~af1p/Texfiles/mw0.pdf
 
-      - authors: Jon M. Kleinberg
-        title: Authoritative Sources in a Hyperlinked Environment
-        venue: SODA
-        year: 1998
-        url: https://www.cs.cornell.edu/home/kleinber/auth.pdf
+      - authors: David Kempe, Jon M. Kleinberg, Eva Tardos
+        title: Maximizing the Spread of Influence through a social network
+        venue: Theory of Computing
+        year: 2015
+        url: http://www.theoryofcomputing.org/articles/v011a004/v011a004.pdf
 
-      - authors: Kook Jin Ahn, Sudipto Guha, Andrew McGregor
-        title: Analyzing graph structure via linear measurements
-        venue: SODA
-        year: 2012
-        url: https://people.cs.umass.edu/~mcgregor/papers/12-dynamic.pdf
+      - authors: Nate Veldt, Austin R. Benson, Jon M. Kleinberg
+        title: The Generalized Mean Densest Subgraph Problem
+        venue: KDD
+        year: 2021
+        url: https://www.cs.cornell.edu/~arb/papers/generalized-densest-subgraph-KDD-2021.pdf
 
-      - authors: Grzegorz Malewicz, Matthew H. Austern, Aart J. C. Bik, James C. Dehnert, Ilan Horn, Naty Leiser, Grzegorz Czajkowski
-        title: |
-          Pregel: a system for large-scale graph processing
-        venue: SIGMOD
-        year: 2010
-        url: https://kowshik.github.io/JPregel/pregel_paper.pdf
+      - authors: Raunak Kumar, Paul Liu, Moses Charikar, Austin R. Benson
+        title: Retrieving Top Weighted Triangles in Graphs
+        venue: WSDM
+        year: 2020
+        url: https://www.cs.cornell.edu/~arb/papers/top-weighted-wsdm-2020.pdf
 
-      - authors: Edith Cohen
-        title: |
-          All-distances sketches, revisited: HIP estimators for massive graphs analysis
-        venue: PODS
-        year: 2014
-        url: https://www.microsoft.com/en-us/research/wp-content/uploads/2014/06/distancesD1.pdf
+#Babis' papers
+      - authors: Hung Q. Ngo, Ely Porat, Christopher Ré, Atri Rudra
+        title: Worst-case optimal join algorithms 
+        venue: Journal of the ACM
+        year: 2018
+        url: https://dl.acm.org/doi/pdf/10.1145/3180143
 
-      - authors: David Arthur, Sergei Vassilvitskii
-        title: |
-          k-means++: the advantages of careful seeding
-        venue: SODA
-        year: 2007
-        url: https://theory.stanford.edu/~sergei/papers/kMeansPP-soda.pdf
+      - authors: Noga Alon, Raphael Yuster, Uri Zwick
+        title: Color-Coding
+        venue: Journal of the ACM
+        year: 1995
+        url: https://dl.acm.org/doi/pdf/10.1145/210332.210337
+
+      - authors: Noga Alon, Yossi Matias, Mario Szegedy
+        title: The Space Complexity of Approximating the Frequency Moments
+        venue: Journal of Computer and System Sciences
+        year: 1999
+        url: https://www.sciencedirect.com/science/article/pii/S0022000097915452/pdf?md5=a1d6b653f215655121004757d1e18a4f&pid=1-s2.0-S0022000097915452-main.pdf&_valck=1
+
