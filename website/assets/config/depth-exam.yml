@@ -2,12 +2,11 @@ categories:
   - name: Data Management
     papers:
 # Manos's papers
-      - authors: Barzan Mozafari, Eugene Zhen Ye Goh, Dong Young Yoon
-        title: |
-          CliffGuard: A Principled Framework for Finding Robust Database Designs
+      - authors: Kaan Kara, Jana Giceva, Gustavo Alonso
+        title: FPGA-based Data Partitioning
         venue: SIGMOD
-        year: 2015
-        url: https://web.eecs.umich.edu/~mozafari/papers/sigmod_2015.pdf
+        year: 2017
+        url: https://dl.acm.org/doi/pdf/10.1145/3035918.3035946
 
       - authors: Stratos Idreos, Martin L. Kersten, Stefan Manegold
         title: Updating a cracked database
@@ -28,11 +27,11 @@ categories:
         year: 2016
         url: https://db.cs.cmu.edu/papers/2016/arulraj-sigmod2016.pdf
 
-      - authors: Daniel Abadi, Peter A. Boncz, Stavros Harizopoulos, Stratos Idreos, Samuel Madden
-        title: The Design and Implementation of Modern Column-Oriented Database Systems
-        venue: Foundations and Trends in Databases
-        year: 2013
-        url: http://db.csail.mit.edu/pubs/abadi-column-stores.pdf
+      - authors: Zongheng Yang, Badrish Chandramouli, Chi Wang, Johannes Gehrke, Yinan Li, Umar Farooq Minhas, Per-Åke Larson, Donald Kossmann, Rajeev Acharya
+        title: "Qd-tree: Learning Data Layouts for Big Data Analytics"
+        venue: SIGMOD
+        year: 2020
+        url: https://www.cs.purdue.edu/homes/csjgwang/cloudb/QdTreeSIGMOD20.pdf
 
       - authors: Per-Åke Larson, Spyros Blanas, Cristian Diaconu, Craig Freedman, Jignesh M. Patel, Mike Zwilling
         title: High-Performance Concurrency Control Mechanisms for Main-Memory Databases
@@ -137,3 +136,20 @@ categories:
         year: 1999
         url: https://www.sciencedirect.com/science/article/pii/S0022000097915452/pdf?md5=a1d6b653f215655121004757d1e18a4f&pid=1-s2.0-S0022000097915452-main.pdf&_valck=1
 
+      - authors: Kook Jin Ahn, Sudipto Guha, Andrew McGregor
+        title: Analyzing Graph Structure via Linear Measurements
+        venue: SODA
+        year: 2012
+        url: https://people.cs.umass.edu/~mcgregor/papers/12-dynamic.pdf
+
+      - authors: Gary L. Miller, Richard Peng, Shen Chen Xu
+        title: Parallel Graph Decompositions Using Random Shifts
+        venue: SPAA
+        year: 2013
+        url: https://arxiv.org/pdf/1307.3692.pdf
+
+      - authors: Edith Cohen, Daniel Delling, Thomas Pajor, Renato F. Werneck
+        title: Computing classic closeness centrality, at scale
+        venue: COSN
+        year: 2014
+        url: https://dl.acm.org/doi/pdf/10.1145/2660460.2660465
