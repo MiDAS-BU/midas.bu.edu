@@ -34,10 +34,10 @@ Run this script to publish the latest commit (note that you need to commit to ma
 
 We have purchased [this template](https://wrapbootstrap.com/theme/particles-personal-agency-template-WB05N7852) for our website.
 We used a tiny fraction of its content.
-If you want to add a section or a page, look at the template, it mau already have it.
+If you want to add a section or a page, look at the template, it may already have it.
 
 The files in the root are for development purposes and are not published.
-`.dockerignore`, `Dockerfile` and `nginx.conf` allow to build a docker image with the website (e.g. for Kubernetes).
+`.dockerignore`, `Dockerfile` and `nginx.conf` allow to build a docker image with the website (e.g., for Kubernetes).
 `.editorconfig` defines some formatting rules.
 `.gitlab-ci.yml` define CI configuration (GitLab format), it builds/tests/publishes the website, but does so internally using pre-configured Gitlab.
 `requirements.txt` define pip packages needed to assemble the website.
