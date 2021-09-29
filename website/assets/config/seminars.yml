@@ -52,8 +52,11 @@
       when: 10/22/21
       title:
       abstract: |
-    - departmental: true
-      when: 10/29/21
+    - when: 10/29/21
+      presenter:
+        url: http://people.csail.mit.edu/xchen
+        name: Xuhao Chen
+        affiliation: Massachusetts Institute of Technology
       title:
       abstract: |
     - departmental: true
