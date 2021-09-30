@@ -38,12 +38,12 @@
 											{% endif %}
 
 											{% if "affiliation" in talk.presenter %}
-												({{ talk.presenter.affiliation }})
+												<br>({{ talk.presenter.affiliation }})
 											{% endif %}
 
 											{% if "bio" in talk.presenter %}
 												<details>
-													<summary> Bio </summary>
+													<summary> <u> Bio </u> </summary>
 													<p class="text-justify">
 														{{ talk.presenter.bio }}
 													</p>
@@ -54,6 +54,8 @@
 									</td>
 									<td>
 										{% if talk.departmental %}
+											<font color ="grey">CS Seminar</font>
+										{% elif talk.empty %}
 											<font color ="grey">MiDAS Seminar</font>
 										{% elif "special" in talk %}
 											<font color="navy">
@@ -62,8 +64,11 @@
 										{% elif "title" in talk %}
 											{{ talk.title }}
 											</br>
+											{% if talk.video_url %}
+												[<a href={{ talk.video_url }} target="_blank">Talk Recording</a>]
+											{% endif %}	
 											<details>
-												<summary>Click for abstract</summary>
+												<summary> <u>Click for abstract</u></summary>
 												<p class="text-justify">
 													{{ talk.abstract }}
 												</p>
