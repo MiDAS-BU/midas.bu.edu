@@ -63,8 +63,11 @@
       when: 11/05/21
       title:
       abstract: |
-    - departmental: true
-      when: 11/12/21
+    - when: 11/12/21
+      presenter:
+        url: https://www.utkusirin.com
+        name: Utku Sirin
+        affiliation: Harvard University
       title:
       abstract: |
     - departmental: true
