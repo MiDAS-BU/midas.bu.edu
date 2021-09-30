@@ -36,40 +36,40 @@
       title: "Augmenting Classical Data Structures through Learning"
       abstract: |
         Data systems are moving from data structures which are implicitly designed for specific data and workload characteristics towards data structures explicitly designed to exploit patterns in both. This generally leads to better expected performance but opens up questions about both the predictability of data structure performance and its robustness to workload or data shifts. In this talk, we make the case for ML-Augmented data structures, which solve these problems by using workload information and statistical modeling to redesign components of classical data structures. By keeping the core structure of classical data structures, we keep their robustness properties and provide a pathway towards arguing theoretically about their performance. In using ML for design, we transfer properties of the workload and data into the data structure and achieve better expected performance. The result is that we can argue theoretically that ML-designed data structures perform better than classical data structures and empirically show the benefits of this approach, all while maintaining many of the benefits of classical data structures. We present three applications of this approach. First, we present Stacked Filters, which uses workload skew to produce 100X lower false positive rates for filter data structures. Second, we present Entropy-Learned Hashing, which produces 10X faster hash function evaluation and 4X faster hash tables. And third, we present Column Sketches, which produces 7.5X faster database scans.
-    - departmental: true
+    - empty: true
       when: 10/01/21
       title:
       abstract: |
-    - departmental: true
+    - empty: true
       when: 10/08/21
       title:
       abstract: |
-    - departmental: true
+    - empty: true
       when: 10/15/21
       title:
       abstract: |
-    - departmental: true
+    - empty: true
       when: 10/22/21
       title:
       abstract: |
-    - departmental: true
+    - empty: true
       when: 10/29/21
       title:
       abstract: |
-    - departmental: true
+    - empty: true
       when: 11/05/21
       title:
       abstract: |
-    - departmental: true
+    - empty: true
       when: 11/12/21
       title:
       abstract: |
-    - departmental: true
+    - empty: true
       when: 11/19/21
       title:
       abstract: |
-    - departmental: true
-      when: 11/26/21
+    - empty: true
+      when: 12/03/21
       title:
       abstract: |
     
@@ -193,7 +193,8 @@
           social computing. His research work to date has been published in several top scientific conferences and
           journals, two books, and two book chapters, while he is actively participating in multiple European and
           nationally funded projects.  
-      title: Automating Distributed Tiered Storage Management in Cluster Computing [<a href="https://drive.google.com/file/d/1-J1DhKjmDL6_FgelKvrtbGOIPWlGQ4-V/view" target="_blank">Talk Recording</a>]
+      title: Automating Distributed Tiered Storage Management in Cluster Computing 
+      video_url: https://drive.google.com/file/d/1-J1DhKjmDL6_FgelKvrtbGOIPWlGQ4-V/view
       abstract: |
         Data-intensive platforms such as Hadoop and Spark are routinely used to process massive amounts of data
         residing on distributed file systems like HDFS. Increasing memory sizes and new hardware technologies
@@ -248,7 +249,8 @@
           interned at IBM Almaden (2017) working on HTAP indexing and Microsoft Research (2019) working on customized
           SSD controllers. Before that, he obtained the Master’s degree from Tsinghua University in 2016 and the
           Bachelor’s degree from Tongji University in 2013, respectively.
-      title: On Optimizing LSM-based Storage for Big Data Management Systems [<a href="https://drive.google.com/file/d/1sqttrgQLfAzdMEaZtTAgYSwivaXTRJ3b/view" target="_blank">Talk Recording</a>]
+      title: On Optimizing LSM-based Storage for Big Data Management Systems 
+      video_url: https://drive.google.com/file/d/1sqttrgQLfAzdMEaZtTAgYSwivaXTRJ3b/view
       abstract: |
         In recent years, the Log-Structured Merge-tree (LSM-tree) has been widely used in the storage layer in modern
         NoSQL systems. Different from traditional index structures that apply updates in-place, an LSM-tree first
