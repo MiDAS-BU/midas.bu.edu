@@ -59,9 +59,12 @@
         affiliation: Massachusetts Institute of Technology
       title: TBA
       abstract: |
-    - empty: true
-      when: 11/05/21
-      title:
+    - when: 11/05/21
+      presenter:
+        url: http://www.itrummer.org
+        name: Immanuel Trummer
+        affiliation: Cornell University
+      title: TBA
       abstract: |
     - when: 11/12/21
       presenter:
