@@ -37,10 +37,6 @@
       abstract: |
         Data systems are moving from data structures which are implicitly designed for specific data and workload characteristics towards data structures explicitly designed to exploit patterns in both. This generally leads to better expected performance but opens up questions about both the predictability of data structure performance and its robustness to workload or data shifts. In this talk, we make the case for ML-Augmented data structures, which solve these problems by using workload information and statistical modeling to redesign components of classical data structures. By keeping the core structure of classical data structures, we keep their robustness properties and provide a pathway towards arguing theoretically about their performance. In using ML for design, we transfer properties of the workload and data into the data structure and achieve better expected performance. The result is that we can argue theoretically that ML-designed data structures perform better than classical data structures and empirically show the benefits of this approach, all while maintaining many of the benefits of classical data structures. We present three applications of this approach. First, we present Stacked Filters, which uses workload skew to produce 100X lower false positive rates for filter data structures. Second, we present Entropy-Learned Hashing, which produces 10X faster hash function evaluation and 4X faster hash tables. And third, we present Column Sketches, which produces 7.5X faster database scans.
     - empty: true
-      when: 10/01/21
-      title:
-      abstract: |
-    - empty: true
       when: 10/08/21
       title:
       abstract: |
