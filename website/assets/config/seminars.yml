@@ -39,47 +39,50 @@
     - empty: true
       when: 10/08/21
       title:
-      abstract: |
+      abstract:
     - empty: true
       when: 10/15/21
       title:
-      abstract: |
-    - empty: true
-      when: 10/22/21
-      title:
-      abstract: |
+      abstract: 
+    - when: 10/22/21
+      presenter:
+        url: https://www.linkedin.com/in/siyingdong/
+        name: Siying Dong
+        affiliation: Facebook
+      title: <font color ="navy">Online only @ 11:00 AM</b></font> <br/> TBA
+      abstract: 
     - when: 10/29/21
       presenter:
         url: http://people.csail.mit.edu/xchen
         name: Xuhao Chen
         affiliation: Massachusetts Institute of Technology
       title: TBA
-      abstract: |
+      abstract: 
     - when: 11/05/21
       presenter:
         url: http://www.itrummer.org
         name: Immanuel Trummer
         affiliation: Cornell University
       title: TBA
-      abstract: |
+      abstract: 
     - when: 11/12/21
       presenter:
         url: https://www.utkusirin.com
         name: Utku Sirin
         affiliation: Harvard University
       title: TBA
-      abstract: |
+      abstract: 
     - empty: true
       when: 11/19/21
       title:
-      abstract: |
+      abstract: 
     - when: 12/03/21
       presenter:
         url: https://people.cs.umass.edu/~cmusco
         name: Cameron Musco
         affiliation: University of Massachusetts Amherst
       title: TBA
-      abstract: |
+      abstract: 
     
 - name: Spring 2021
   when: 01/25/21
