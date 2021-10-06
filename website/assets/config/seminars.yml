@@ -77,9 +77,12 @@
       when: 11/19/21
       title:
       abstract: |
-    - empty: true
-      when: 12/03/21
-      title:
+    - when: 12/03/21
+      presenter:
+        url: https://people.cs.umass.edu/~cmusco
+        name: Cameron Musco
+        affiliation: University of Massachusetts Amherst
+      title: TBA
       abstract: |
     
 - name: Spring 2021
