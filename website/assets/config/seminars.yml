@@ -78,8 +78,9 @@
         url: https://people.cs.umass.edu/~cmusco
         name: Cameron Musco
         affiliation: University of Massachusetts Amherst
-      title: TBA
+      title: "Hutch++: Optimal Stochastic Trace Estimation"
       abstract: |
+        We study the problem of estimating the trace of a matrix that can only be accessed through matrix-vector multiplication. We introduce a new randomized algorithm, Hutch++, which computes a (1+epsilon) approximation to the trace of any positive semidefinite (PSD) matrix using just O(1/epsilon) matrix-vector products. This improves quadratically on the ubiquitous Hutchinson's estimator, which requires O(1/epsilon^2) matrix-vector products. Our approach is based on a simple technique for reducing the variance of Hutchinson's estimator using low-rank approximation, and is easy to implement and analyze. Moreover, we prove that up to a logarithmic factor, the complexity of Hutch++ is optimal amongst all matrix-vector query algorithms. We show that it significantly outperforms Hutchinson's method in experiments, on both PSD and non-PSD matrices arising in applications such as network analysis and Bayesian machine learning.
     
 - name: Spring 2021
   when: 01/25/21
