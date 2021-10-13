@@ -49,8 +49,14 @@
         url: https://www.linkedin.com/in/siyingdong/
         name: Siying Dong
         affiliation: Facebook
-      title: <font color ="navy">Online only @ 11:00 AM</b></font> <br/> TBA
-      abstract: 
+        bio: |
+          Siying Dong is a software engineer working in the Database Engineering team at Facebook, focusing on RocksDB. He also worked on Hive, HDFS, and some other data warehouse infrastructures. Before joining Facebook, Siying worked in the SQL Azure Team at Microsoft. He received a bachelor’s degree from Tsinghua University and a master’s degree from Brandeis University.
+      title: |
+        <font color ="navy">Online only @ 11:00 AM</b></font> 
+        <br/>
+        RocksDB: The Changing Of Optimization Targets
+      abstract: |
+        RocksDB is an embedded persistent storage engine optimized for flash-based SSD. It has been adapted to a wide range of workloads. In the talk, Siying will introduce how and why RocksDB’s resource optimization target migrated from write amplification, to space amplification, to CPU utilization, and why disaggregated storage is the current focus. Siying will also introduce RocksDB’s plan for supporting SSD/HDD hybrid, as well as challenges for it.
     - when: 10/29/21
       presenter:
         url: http://people.csail.mit.edu/xchen
