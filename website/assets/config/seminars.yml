@@ -64,8 +64,11 @@
         url: http://www.itrummer.org
         name: Immanuel Trummer
         affiliation: Cornell University
-      title: TBA
-      abstract: 
+        bio: |
+          Immanuel Trummer is assistant professor at Cornell University, working towards making data analysis more efficient and more user-friendly. His papers were selected for “Best of VLDB”, “Best of SIGMOD”, for the ACM SIGMOD Research Highlight Award, and for publication in CACM as CACM Research Highlight. His current research is funded by the NSF and by multiple Google Faculty Research Awards.
+      title: "Towards Database Tuning Tools that Read the Manual"
+      abstract: |
+        Recent advances in natural language processing (NLP) open up new applications in the context of database systems. In this talk, I discuss how NLP can yield useful information for various database performance tuning problems. In particular, I focus on the problem of database system parameter tuning.
     - when: 11/12/21
       presenter:
         url: https://www.utkusirin.com
