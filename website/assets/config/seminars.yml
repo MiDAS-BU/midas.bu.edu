@@ -74,8 +74,11 @@
         url: https://www.utkusirin.com
         name: Utku Sirin
         affiliation: Harvard University
-      title: TBA
-      abstract: 
+        bio: |
+          Utku is a postdoctoral researcher at Harvard Data Systems lab working with Stratos Idreos. He has done his Ph.D. at EPFL, Switzerland advised by Anastasia Ailamaki. He is interested in hardware- and energy-efficient data systems.
+      title: "Characterization of OLTP Workloads: From Micro-architecture to Power/Performance"
+      abstract: |
+        Traditional online transaction processing (OLTP) systems under-utilize the micro-architectural resources; more than half of the CPU cycles go to stalls, and the number of instructions retired per cycle barely reaches one on machines that are able to retire up to four. This causes large power waste, and renders the power-hungry, heavily optimized Intel Xeon processors energy-inefficient. In this talk, we firstly examine hardware utilization of OLTP workloads for state-of-the-art OLTP systems. We then proceed by examining whether and how machine learning models can be useful in improving system performance. Lastly, we compare a high-end Intel Xeon processor with a recently announced server-grade ARM processor in terms of their power, throughput, and latency characteristics when running OLTP workloads. Based on our observations, we lastly comment on power-saving and performance improvement opportunities in co-designing OLTP software and hardware.
     - empty: true
       when: 11/19/21
       title:
