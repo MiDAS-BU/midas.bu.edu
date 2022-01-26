@@ -39,7 +39,14 @@
     - when: 03/11/22
 
     - when: 03/18/22
-      
+      presenter:
+        url: https://www.linkedin.com/in/ippokratis-pandis-03b1402/
+        name: Ippokratis Pandis
+        affiliation: Amazon AWS
+        bio: TBA
+      title: | 
+        TBA <font color ="navy"><b>(talk @ 11:00 AM)</b></font>
+      abstract: TBA
 
 - name: Fall 2021
   when: 09/20/21
@@ -67,7 +74,7 @@
         bio: |
           Siying Dong is a software engineer working in the Database Engineering team at Facebook, focusing on RocksDB. He also worked on Hive, HDFS, and some other data warehouse infrastructures. Before joining Facebook, Siying worked in the SQL Azure Team at Microsoft. He received a bachelor’s degree from Tsinghua University and a master’s degree from Brandeis University.
       title: |
-        <font color ="navy">Online only @ 11:00 AM</b></font>
+        <font color ="navy"><b>Online only @ 11:00 AM</b></font>
         <br/>
         RocksDB: The Changing Of Optimization Targets
       abstract: |
