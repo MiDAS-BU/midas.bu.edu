@@ -21,7 +21,7 @@
 - name: Spring 2022
   when: 02/02/22
   where: |
-    Because of COVID-19, seminars are held online through Zoom at 10.30 AM [unless otherwise notified].
+    Seminars are held in MCS B51 at 10:30am [unless otherwise notified].
   responsible:
     name: Andy Huynh
     username: ndhuynh
@@ -40,6 +40,81 @@
 
     - when: 03/18/22
       
+
+- name: Fall 2021
+  when: 09/20/21
+  where: |
+    Seminars are held in MCS B51 at 10:30am [unless otherwise notified].
+  responsible:
+    name: Lina Qiu
+    username: qlina
+  talks:
+    - when: 09/24/21
+      presenter:
+        url: https://scholar.harvard.edu/bhentschel/home
+        name: Brian Hentschel
+        affiliation: Harvard University
+        bio: |
+          Brian Hentschel is a Ph.D. candidate at Harvard advised by Stratos Idreos. He is interested in blending statistics and machine learning with classical techniques to improve computer systems. His research has been awarded the SIGMOD research highlight award as well a best paper from EDBT. He earned his BA in mathematics and computer science at Pomona College and has previously spent time at Microsoft, Amazon, LinkedIn, and IBM.
+      title: "Augmenting Classical Data Structures through Learning"
+      abstract: |
+        Data systems are moving from data structures which are implicitly designed for specific data and workload characteristics towards data structures explicitly designed to exploit patterns in both. This generally leads to better expected performance but opens up questions about both the predictability of data structure performance and its robustness to workload or data shifts. In this talk, we make the case for ML-Augmented data structures, which solve these problems by using workload information and statistical modeling to redesign components of classical data structures. By keeping the core structure of classical data structures, we keep their robustness properties and provide a pathway towards arguing theoretically about their performance. In using ML for design, we transfer properties of the workload and data into the data structure and achieve better expected performance. The result is that we can argue theoretically that ML-designed data structures perform better than classical data structures and empirically show the benefits of this approach, all while maintaining many of the benefits of classical data structures. We present three applications of this approach. First, we present Stacked Filters, which uses workload skew to produce 100X lower false positive rates for filter data structures. Second, we present Entropy-Learned Hashing, which produces 10X faster hash function evaluation and 4X faster hash tables. And third, we present Column Sketches, which produces 7.5X faster database scans.
+    - when: 10/22/21
+      presenter:
+        url: https://www.linkedin.com/in/siyingdong/
+        name: Siying Dong
+        affiliation: Facebook
+        bio: |
+          Siying Dong is a software engineer working in the Database Engineering team at Facebook, focusing on RocksDB. He also worked on Hive, HDFS, and some other data warehouse infrastructures. Before joining Facebook, Siying worked in the SQL Azure Team at Microsoft. He received a bachelor’s degree from Tsinghua University and a master’s degree from Brandeis University.
+      title: |
+        <font color ="navy">Online only @ 11:00 AM</b></font>
+        <br/>
+        RocksDB: The Changing Of Optimization Targets
+      abstract: |
+        RocksDB is an embedded persistent storage engine optimized for flash-based SSD. It has been adapted to a wide range of workloads. In the talk, Siying will introduce how and why RocksDB’s resource optimization target migrated from write amplification, to space amplification, to CPU utilization, and why disaggregated storage is the current focus. Siying will also introduce RocksDB’s plan for supporting SSD/HDD hybrid, as well as challenges for it.
+    - when: 10/29/21
+      presenter:
+        url: http://people.csail.mit.edu/xchen
+        name: Xuhao Chen
+        affiliation: Massachusetts Institute of Technology
+        bio: |
+          Xuhao Chen is a Research Scientist at MIT CSAIL, working with Prof. Arvind. Dr. Chen is broadly interested in parallel systems for AI & big-data, with a focus on emerging graph algorithms. He has built multiple software and hardware systems for data mining and machine learning on graphs. His work has been published in ISCA, MICRO, VLDB, ICS and DAC. Before joining MIT, Dr. Chen was a research fellow at UT Austin.
+      title: "System Specialization for Graph Pattern Mining"
+      abstract: |
+        Graph algorithms play a key role in numerous real-world applications, including social networks, e-commerce, biomedicine and cybersecurity. These algorithms process massive irregular data, which poses both performance and programmability challenges in computing system design. In this talk, I will explore system specialization approaches for an important class of graph algorithms — graph pattern mining (GPM). I will introduce a specialized software programming framework and a dedicated hardware accelerator that we built for GPM, and describe experiences creating abstractions, optimization techniques and automation methods. Overall, by specializing in both software and hardware, we can make graph algorithms easy to program and run fast at the same time.
+    - when: 11/05/21
+      presenter:
+        url: http://www.itrummer.org
+        name: Immanuel Trummer
+        affiliation: Cornell University
+        bio: |
+          Immanuel Trummer is assistant professor at Cornell University, working towards making data analysis more efficient and more user-friendly. His papers were selected for “Best of VLDB”, “Best of SIGMOD”, for the ACM SIGMOD Research Highlight Award, and for publication in CACM as CACM Research Highlight. His current research is funded by the NSF and by multiple Google Faculty Research Awards.
+      title: "Towards Database Tuning Tools that Read the Manual"
+      abstract: |
+        Recent advances in natural language processing (NLP) open up new applications in the context of database systems. In this talk, I discuss how NLP can yield useful information for various database performance tuning problems. In particular, I focus on the problem of database system parameter tuning.
+    - when: 11/12/21
+      presenter:
+        url: https://www.utkusirin.com
+        name: Utku Sirin
+        affiliation: Harvard University
+        bio: |
+          Utku is a postdoctoral researcher at Harvard Data Systems lab working with Stratos Idreos. He has done his Ph.D. at EPFL, Switzerland advised by Anastasia Ailamaki. He is interested in hardware- and energy-efficient data systems.
+      title: "Characterization of OLTP Workloads: From Micro-architecture to Power/Performance"
+      abstract: |
+        Traditional online transaction processing (OLTP) systems under-utilize the micro-architectural resources; more than half of the CPU cycles go to stalls, and the number of instructions retired per cycle barely reaches one on machines that are able to retire up to four. This causes large power waste, and renders the power-hungry, heavily optimized Intel Xeon processors energy-inefficient. In this talk, we firstly examine hardware utilization of OLTP workloads for state-of-the-art OLTP systems. We then proceed by examining whether and how machine learning models can be useful in improving system performance. Lastly, we compare a high-end Intel Xeon processor with a recently announced server-grade ARM processor in terms of their power, throughput, and latency characteristics when running OLTP workloads. Based on our observations, we lastly comment on power-saving and performance improvement opportunities in co-designing OLTP software and hardware.
+    - empty: true
+      when: 11/19/21
+      title:
+      abstract:
+    - when: 12/03/21
+      presenter:
+        url: https://people.cs.umass.edu/~cmusco
+        name: Cameron Musco
+        affiliation: University of Massachusetts Amherst
+      title: "Hutch++: Optimal Stochastic Trace Estimation"
+      abstract: |
+        We study the problem of estimating the trace of a matrix that can only be accessed through matrix-vector multiplication. We introduce a new randomized algorithm, Hutch++, which computes a (1+epsilon) approximation to the trace of any positive semidefinite (PSD) matrix using just O(1/epsilon) matrix-vector products. This improves quadratically on the ubiquitous Hutchinson's estimator, which requires O(1/epsilon^2) matrix-vector products. Our approach is based on a simple technique for reducing the variance of Hutchinson's estimator using low-rank approximation, and is easy to implement and analyze. Moreover, we prove that up to a logarithmic factor, the complexity of Hutch++ is optimal amongst all matrix-vector query algorithms. We show that it significantly outperforms Hutchinson's method in experiments, on both PSD and non-PSD matrices arising in applications such as network analysis and Bayesian machine learning.
+
 
 - name: Spring 2021
   when: 01/25/21
