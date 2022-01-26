@@ -21,7 +21,7 @@
 - name: Spring 2022
   when: 02/02/22
   where: |
-    Seminars are held in MCS B51 at 10:30am [unless otherwise notified].
+    Because of COVID-19, seminars are held online through Zoom at 10.30 AM [unless otherwise notified].
   responsible:
     name: Andy Huynh
     username: ndhuynh
