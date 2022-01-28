@@ -29,6 +29,15 @@
     - when: 02/04/22
 
     - when: 02/11/22
+      presenter:
+        url: https://homepages.inf.ed.ac.uk/scohen/
+        name: Shay Cohen
+        affiliation: University of Edinburgh
+        bio: TBA
+      title: | 
+        TBA <font color ="navy"><b>(talk @ 11:00 AM)</b></font>
+      abstract: TBA
+
       
     - when: 02/18/22
 
