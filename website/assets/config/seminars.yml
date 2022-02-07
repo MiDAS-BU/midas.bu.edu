@@ -92,6 +92,16 @@
     - when: 04/29/22
 
     - when: 05/06/22
+      presenter:
+        url: https://raulcastrofernandez.com/
+        name: Raul Castro Fernandez
+        affiliation: University of Chicago
+        bio: | 
+          TBA
+      title: | 
+        TBA
+      abstract: | 
+        TBA
 
     - when: 05/13/22
       presenter:
