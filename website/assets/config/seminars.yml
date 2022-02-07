@@ -33,12 +33,26 @@
         url: https://homepages.inf.ed.ac.uk/scohen/
         name: Shay Cohen
         affiliation: University of Edinburgh
-        bio: TBA
+        bio: | 
+          Shay Cohen is a Reader at the University of Edinburgh (School of Informatics). Prior to this, he was a
+          postdoctoral research scientist in the Department of Computer Science at Columbia University, and held an
+          NSF/CRA Computing Innovation Fellowship. He received his B.Sc. and M.Sc. from Tel Aviv University in 2000 and
+          2004, and his Ph.D. from Carnegie Mellon University in 2011. His research interests span a range of topics in
+          natural language processing and machine learning, with a focus on structured prediction (for example, parsing)
+          and text generation.
       title: | 
-        TBA
-      abstract: TBA
+        Document Summarisation: Modelling, Datasets and Verification of Content
+      abstract: | 
+        Within Natural Language Processing, document summarisation is one of the central problems. It has both
+        short-term societal implications and long-term implications in terms of the success of AI. I will describe
+        advances made in this area with respect to three different aspects: methodology and modelling, dataset
+        development and enforcing factuality of summaries. In relation to modelling, I will show how reinforcement
+        learning can be used to directly maximise the metric by which the summaries are being evaluated. With regards to
+        dataset development, I will describe a dataset that we released for summarisation, XSum, in which a single
+        sentence is used to describe the content of a whole article. The dataset has become a standard benchmark for
+        summarisation. Finally, in relation to factuality, I will show how one can improve the quantitative factuality
+        of summaries by re-ranking them in a beam based on a "verification" model.
 
-      
     - when: 02/18/22
 
     - when: 02/25/22
