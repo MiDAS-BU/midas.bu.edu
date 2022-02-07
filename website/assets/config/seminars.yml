@@ -35,7 +35,7 @@
         affiliation: University of Edinburgh
         bio: TBA
       title: | 
-        TBA <font color ="navy"><b>(talk @ 11:00 AM)</b></font>
+        TBA
       abstract: TBA
 
       
@@ -46,6 +46,14 @@
     - when: 03/04/22
 
     - when: 03/11/22
+      presenter:
+        url: https://prashantpandey.github.io/
+        name: Prashant Pandey
+        affiliation: VMware
+        bio: TBA
+      title: |
+        TBA
+      abstract: TBA
 
     - when: 03/18/22
       presenter:
@@ -72,6 +80,14 @@
     - when: 05/06/22
 
     - when: 05/13/22
+      presenter:
+        url: https://www.eurecom.fr/~appuswam/
+        name: Raja Appuswamy
+        affiliation: EURECOM
+        bio: TBA
+      title: | 
+        OligoArchive
+      abstract: TBA
 
     - when: 05/20/22
 
