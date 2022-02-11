@@ -58,6 +58,14 @@
     - when: 02/25/22
 
     - when: 03/04/22
+      presenter:
+        url: http://people.cs.uchicago.edu/~jopa/
+        name: John Paparrizos
+        affiliation: University of Chicago
+        bio: TBA
+      title: |
+        TBA
+      abstract: TBA
 
     - when: 03/11/22
       presenter:
@@ -88,6 +96,16 @@
     - when: 04/15/22
 
     - when: 04/22/22
+      presenter:
+        url: https://www.linkedin.com/in/venusatuluri/
+        name: Venu Satuluri
+        affiliation: Twitter
+        bio: | 
+          TBA
+      title: | 
+        TBA
+      abstract: | 
+        TBA
 
     - when: 04/29/22
 
