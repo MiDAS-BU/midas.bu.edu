@@ -60,7 +60,7 @@
     - when: 03/04/22
       presenter:
         url: http://people.cs.uchicago.edu/~jopa/
-        name: John Paparrizos
+        name: John Paparrizos <font color ="navy"><b>(Tenative)</b></font>
         affiliation: University of Chicago
         bio: TBA
       title: |
