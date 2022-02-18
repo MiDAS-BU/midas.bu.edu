@@ -1,7 +1,0 @@
-# Redirects will be generated in the form of "midas.bu.edu/classes/CODE" => URL
-
-- code: CS460
-  url: https://bu-disc.github.io/CS460/
-
-- code: CS561
-  url: https://bu-disc.github.io/CS561/
