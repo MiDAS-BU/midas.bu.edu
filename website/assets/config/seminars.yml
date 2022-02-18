@@ -26,8 +26,6 @@
     name: Andy Huynh
     username: ndhuynh
   talks:
-    - when: 02/04/22
-
     - when: 02/11/22
       presenter:
         url: https://homepages.inf.ed.ac.uk/scohen/
@@ -53,9 +51,14 @@
         summarisation. Finally, in relation to factuality, I will show how one can improve the quantitative factuality
         of summaries by re-ranking them in a beam based on a "verification" model.
 
-    - when: 02/18/22
-
     - when: 02/25/22
+      presenter:
+        url: 
+        name: CS Colloqiun
+        affiliation: 
+        bio: 
+      title: 
+      abstract: 
 
     - when: 03/04/22
       presenter:
@@ -88,12 +91,22 @@
       abstract: TBA
 
     - when: 03/25/22
+      presenter:
+        url: 
+        name: CS Colloqiun
+        affiliation: 
+        bio: 
+      title: 
+      abstract: 
 
     - when: 04/01/22
-
-    - when: 04/08/22
-
-    - when: 04/15/22
+      presenter:
+        url: 
+        name: CS Colloqiun
+        affiliation: 
+        bio: 
+      title: 
+      abstract: 
 
     - when: 04/22/22
       presenter:
@@ -106,8 +119,6 @@
         TBA
       abstract: | 
         TBA
-
-    - when: 04/29/22
 
     - when: 05/06/22
       presenter:
@@ -131,9 +142,6 @@
         OligoArchive
       abstract: TBA
 
-    - when: 05/20/22
-
-    - when: 05/27/22
 
 - name: Fall 2021
   when: 09/20/21
