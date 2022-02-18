@@ -3,6 +3,7 @@
 # if -f supplied, will force-recreate gh-pages branch
 
 set -e
+set -x
 
 # Ensure that the CWD is set to script's location
 cd "${0%/*}"
