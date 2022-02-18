@@ -54,9 +54,9 @@
 									</td>
 									<td>
 										{% if talk.departmental %}
-											<font color ="grey">CS Seminar</font>
+											<font color ="red">CS Seminar</font>
 										{% elif talk.empty %}
-											<font color ="grey">MiDAS Seminar</font>
+											<font color ="grey">MiDAS Seminar (available slot)</font>
 										{% elif "special" in talk %}
 											<font color="navy">
 												{{ talk.special }}

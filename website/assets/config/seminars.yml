@@ -51,14 +51,8 @@
         summarisation. Finally, in relation to factuality, I will show how one can improve the quantitative factuality
         of summaries by re-ranking them in a beam based on a "verification" model.
 
-    - when: 02/25/22
-      presenter:
-        url: 
-        name: CS Colloqiun
-        affiliation: 
-        bio: 
-      title: 
-      abstract: 
+    - departmental: true
+      when: 02/25/22
 
     - when: 03/04/22
       presenter:
@@ -91,22 +85,16 @@
       abstract: TBA
 
     - when: 03/25/22
-      presenter:
-        url: 
-        name: CS Colloqiun
-        affiliation: 
-        bio: 
-      title: 
-      abstract: 
+      departmental: true
 
     - when: 04/01/22
-      presenter:
-        url: 
-        name: CS Colloqiun
-        affiliation: 
-        bio: 
-      title: 
-      abstract: 
+      departmental: true
+
+    - when: 04/08/22
+      empty: true 
+
+    - when: 04/15/22
+      empty: true 
 
     - when: 04/22/22
       presenter:
@@ -119,6 +107,9 @@
         TBA
       abstract: | 
         TBA
+
+    - when: 04/29/22
+      empty: true 
 
     - when: 05/06/22
       presenter:
@@ -141,6 +132,13 @@
       title: | 
         OligoArchive
       abstract: TBA
+    
+    - when: 05/20/22
+      empty: true 
+
+
+    - when: 05/27/22
+      empty: true 
 
 
 - name: Fall 2021
@@ -204,10 +202,6 @@
       title: "Characterization of OLTP Workloads: From Micro-architecture to Power/Performance"
       abstract: |
         Traditional online transaction processing (OLTP) systems under-utilize the micro-architectural resources; more than half of the CPU cycles go to stalls, and the number of instructions retired per cycle barely reaches one on machines that are able to retire up to four. This causes large power waste, and renders the power-hungry, heavily optimized Intel Xeon processors energy-inefficient. In this talk, we firstly examine hardware utilization of OLTP workloads for state-of-the-art OLTP systems. We then proceed by examining whether and how machine learning models can be useful in improving system performance. Lastly, we compare a high-end Intel Xeon processor with a recently announced server-grade ARM processor in terms of their power, throughput, and latency characteristics when running OLTP workloads. Based on our observations, we lastly comment on power-saving and performance improvement opportunities in co-designing OLTP software and hardware.
-    - empty: true
-      when: 11/19/21
-      title:
-      abstract:
     - when: 12/03/21
       presenter:
         url: https://people.cs.umass.edu/~cmusco
