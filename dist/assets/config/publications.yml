@@ -1,0 +1,34 @@
+# controls how many publications in line are rendered for different screens (bootstrap IDs)
+# total controls how many most recent publications are rendered
+view:
+  publicationsPerSmall: 1
+  publicationsPerMedium: 2
+  publicationsPerLarge: 2
+  total: 12
+
+# sorted by publication year (within a year order in undefined)
+publications:
+  # - title: full publication title
+  #   authors: authors list; initials and last name per author
+  #   venue: conference / journal title
+  #   date:
+  #     year: publication year (when it was actually published / presented, can be future year)
+  #   links:
+  #     pdf: direct URL to PDF file
+  #     abstract: OPTIONAL. URL to publication page (not PDF); can be researchgate, dbpl, iacr, archive, etc
+
+  # Leave at least one publication in this file.
+  # Put in this sections the rare papers that are related to our lab (e.g. student's paper),
+  # but which is not co-authored by one of the lab's professors.
+  # For example, internship paper.
+
+  - title: Anonymous Transactions with Revocation and Auditing in Hyperledger Fabric
+    authors: Dmytro Bogatov, Angelo De Caro, Kaoutar Elkhiyaoui and Björn Tackmann
+    venue: CANS
+    date:
+      year: 2021
+    links:
+      pdf: https://d3g9eenuvjhozt.cloudfront.net/assets/docs/dac-fabric.pdf
+
+  # Let commented publications stay for a while
+  # @dbogatov: see in git history
