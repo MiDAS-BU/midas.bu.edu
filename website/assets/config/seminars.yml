@@ -104,7 +104,7 @@
         bio: | 
           TBA
       title: | 
-        TBA
+        TBA <font color ="navy"><b>(talk @ 11:00 AM)</b></font>
       abstract: | 
         TBA
 
@@ -132,6 +132,17 @@
       title: | 
         OligoArchive
       abstract: TBA
+
+    - when: 05/16/22
+      presenter:
+        url: https://sites.google.com/view/oanabalmau
+        name: Oana Balmau
+        affiliation: McGill University
+        bio: TBA
+      title: |
+        TBA <font color ="navy"><b>(talk on a Monday)</b></font>
+      abstract: |
+        TBA
     
     - when: 05/20/22
       empty: true 
