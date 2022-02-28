@@ -69,10 +69,41 @@
         url: https://prashantpandey.github.io/
         name: Prashant Pandey
         affiliation: VMware
-        bio: TBA
+        bio: |
+          Pandey is a Research Scientist at VMware Research. Previously, he did
+          postdocs at University of California Berkeley and Carnegie Mellon
+          University. He obtained his Ph.D. in Computer Science at Stony Brook
+          University in December 2018. His goal as a researcher is to advance
+          the theory and practice of resource-efficient data structures and
+          employ them to democratize complex and large-scale data analyses. He
+          designs and builds tools for large-scale data management problems
+          across computational biology, stream processing, and storage. He is
+          also the main contributor and maintainer of multiple open-source
+          software tools that are used by hundreds of users across academia and
+          industry. He won the prestigious Catacosinos Fellowship in 2018, a
+          Best paper award at FAST 2016, and Runner’s Up to Best Paper at FAST
+          2015. His work has appeared at top conferences and journals, such as
+          SIGMOD, FAST, SPAA, ESA, RECOMB, ISMB, Genome Biology, and Cell
+          Systems.
       title: |
-        TBA
-      abstract: TBA
+        Data Systems at Scale: Scaling Up by Scaling Down and Out (to Disk)
+      abstract: |
+        Our ability to generate, acquire, and store data has grown exponentially
+        over the past decade making the scalability of data systems a major
+        challenge. This talk presents my work on two techniques to tackle the
+        scalability challenge: scaling down, i.e., shrinking data to fit in RAM,
+        and scaling out to disk, i.e., organizing data on disk so that the
+        application can still run fast. I will describe new compact and
+        I/O-efficient data structures and their applications in computational
+        biology, stream processing, and storage.
+        In computational biology, my work shows how to shrink genomic and
+        transcriptomic indexes by a factor of two while accelerating queries by
+        an order of magnitude compared to the state-of-the-art tools. In stream
+        processing, my work bridges the gap between the worlds of external
+        memory and stream processing to perform scalable and precise real-time
+        event-detection on massive streams. In file systems, my work improves
+        file-system random-write performance by an order of magnitude without
+        sacrificing sequential read/write performance.
 
     - when: 03/18/22
       presenter:
