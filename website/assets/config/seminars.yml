@@ -145,11 +145,17 @@
         TBA
     
     - when: 05/20/22
-      empty: true 
+      presenter:
+        url: https://www.ics.uci.edu/~mjcarey/index.html
+        name: Michael Carey
+        affiliation: UC Irvine
+        bio: TBA
+      title: |
+        TBA
+      abstract: |
+        TBA
 
 
-    - when: 05/27/22
-      empty: true 
 
 
 - name: Fall 2021
