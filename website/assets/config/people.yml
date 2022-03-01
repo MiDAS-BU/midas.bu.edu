@@ -41,21 +41,21 @@ people:
 
   - name: Bashir Rastegarpanah
     image: bashir.jpg
-    position: PhD Researcher
+    position: "PhD (Next: Fiddler AI)"
     website: http://cs-people.bu.edu/bashir/
-    category: students
+    category: alumni
 
   - name: Harshal Chaudhari
     image: harshal.jpg
-    position: PhD Researcher
+    position: "PhD (Next: Etsy)"
     website: http://cs-people.bu.edu/harshal/
-    category: students
+    category: alumni
 
   - name: Sofia Maria Nikolakaki
     image: sofia.jpg
-    position: PhD Researcher
+    position: "PhD (Next: Apple)"
     website: http://www.smnikolakaki.com//
-    category: students
+    category: alumni
 
   - name: Dmytro Bogatov
     image: dmytro.jpeg
@@ -95,9 +95,9 @@ people:
 
   - name: Dimitris Staratzis
     image: dimitris.jpg
-    position: PhD Researcher
+    position: "Grad Researcher (Next: TileDB)"
     website: https://cs-people.bu.edu/dstara/
-    category: students
+    category: alumni
 
   - name: Lina Qiu
     image: lina.jpg
@@ -166,7 +166,7 @@ people:
 
   - name: Natali Ruchansky
     image: natali.jpg
-    position: "PhD (Next: Postdoc at UCLA)"
+    position: "PhD (Next: Postdoc at USC)"
     website: http://natalir.space/
     category: alumni
 
