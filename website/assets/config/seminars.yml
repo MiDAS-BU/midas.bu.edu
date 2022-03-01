@@ -32,24 +32,32 @@
         name: Shay Cohen
         affiliation: University of Edinburgh
         bio: | 
-          Shay Cohen is a Reader at the University of Edinburgh (School of Informatics). Prior to this, he was a
-          postdoctoral research scientist in the Department of Computer Science at Columbia University, and held an
-          NSF/CRA Computing Innovation Fellowship. He received his B.Sc. and M.Sc. from Tel Aviv University in 2000 and
-          2004, and his Ph.D. from Carnegie Mellon University in 2011. His research interests span a range of topics in
-          natural language processing and machine learning, with a focus on structured prediction (for example, parsing)
-          and text generation.
+          Shay Cohen is a Reader at the University of Edinburgh (School of
+          Informatics). Prior to this, he was a postdoctoral research scientist
+          in the Department of Computer Science at Columbia University, and held
+          an NSF/CRA Computing Innovation Fellowship. He received his B.Sc. and
+          M.Sc. from Tel Aviv University in 2000 and 2004, and his Ph.D. from
+          Carnegie Mellon University in 2011. His research interests span a
+          range of topics in natural language processing and machine learning,
+          with a focus on structured prediction (for example, parsing) and text
+          generation.
       title: | 
         Document Summarisation: Modelling, Datasets and Verification of Content
       abstract: | 
-        Within Natural Language Processing, document summarisation is one of the central problems. It has both
-        short-term societal implications and long-term implications in terms of the success of AI. I will describe
-        advances made in this area with respect to three different aspects: methodology and modelling, dataset
-        development and enforcing factuality of summaries. In relation to modelling, I will show how reinforcement
-        learning can be used to directly maximise the metric by which the summaries are being evaluated. With regards to
-        dataset development, I will describe a dataset that we released for summarisation, XSum, in which a single
-        sentence is used to describe the content of a whole article. The dataset has become a standard benchmark for
-        summarisation. Finally, in relation to factuality, I will show how one can improve the quantitative factuality
-        of summaries by re-ranking them in a beam based on a "verification" model.
+        Within Natural Language Processing, document summarisation is one of the
+        central problems. It has both short-term societal implications and
+        long-term implications in terms of the success of AI. I will describe
+        advances made in this area with respect to three different aspects:
+        methodology and modelling, dataset development and enforcing factuality
+        of summaries. In relation to modelling, I will show how reinforcement
+        learning can be used to directly maximise the metric by which the
+        summaries are being evaluated. With regards to dataset development, I
+        will describe a dataset that we released for summarisation, XSum, in
+        which a single sentence is used to describe the content of a whole
+        article. The dataset has become a standard benchmark for summarisation.
+        Finally, in relation to factuality, I will show how one can improve the
+        quantitative factuality of summaries by re-ranking them in a beam based
+        on a "verification" model.
 
     - departmental: true
       when: 02/25/22
@@ -59,10 +67,49 @@
         url: http://people.cs.uchicago.edu/~jopa/
         name: John Paparrizos <font color ="navy"><b>(Moved from Friday)</b></font>
         affiliation: University of Chicago
-        bio: TBA
+        bio: |
+          John Paparrizos is a postdoctoral researcher at the University of
+          Chicago. He works in the area of advanced database systems with a
+          focus on enabling complex analytics for high-dimensional data,
+          supporting the next generation of data-intensive and machine learning
+          applications. John completed his Ph.D. at Columbia University and
+          earned his M.S. from EPFL. His research has received multiple
+          distinctions, including a "Best of SIGMOD" selection, an ACM SIGMOD
+          Research Highlight Award, a recognition of his Ph.D. thesis at the ACM
+          SIGKDD Dissertation Award competition, and a NetApp Faculty Award. His
+          ideas have been adopted in various domains, including energy,
+          medicine, biology, neuroscience, and organizations, including Fortune
+          100 companies and the European Space Agency. Several media outlets
+          have covered his research, including The New York Times, Washington
+          Post, Guardian, and MIT Technology Review.
       title: |
-        TBA
-      abstract: TBA
+        Fast and Effective Analytics for Big Multi-Dimensional Data
+      abstract: |
+        Today, automated processes, Internet‑of‑Things deployments, and Web and
+        mobile applications generate an overwhelming amount of high‑dimensional
+        data. Meanwhile, computational resources remain limited, and advances in
+        machine learning (ML) create a pressing need to support increasingly
+        expensive and complex analytical tasks. Unfortunately, traditional data
+        management techniques offer limited support for high‑dimensional data,
+        ML tasks, and adaptation to data properties, often resulting in reduced
+        performance. Similarly, due to the difficulty of providing invariances
+        to specific data distortions, applications often resort to inadequate ML
+        methods, reducing their effectiveness.
+        In my work, I ask how we can address the lack of task‑aware and
+        data‑driven adaptations in data management and ML methods. Specifically,
+        I will discuss three solutions for (i) data representations and (ii)
+        computational methods using techniques to exploit similarities, shapes,
+        densities, and distributions in data. Motivated by the ubiquity of
+        high-dimensional time series, I will first present a
+        similarity-preserving representation to minimize storage footprint and
+        accelerate specific ML analytics for time-series data. Then, I will
+        discuss a variance-aware quantization method for indexing
+        high-dimensional data. Finally, I will present a method for anomaly
+        detection in streaming data to account for distribution drifts. In all
+        three examples, the proposed methods substantially improve performance
+        and accuracy, demonstrating the benefit of designing task-aware and
+        data-driven solutions for large-scale data science applications.
+
 
     - when: 03/11/22
       presenter:
