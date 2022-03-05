@@ -81,11 +81,11 @@ people:
 #    website: http://cs-people.bu.edu/isidora/
 #    category: students
 
-  # - name: Nathan Cordner
-  #   image: nathan.jpg
-  #   position: PhD Researcher
-  #   website: https://cs-people.bu.edu/ncordner/
-  #   category: students
+  - name: Nathan Cordner
+    image: nathan.jpg
+    position: PhD Researcher
+    website: https://cs-people.bu.edu/ncordner/
+    category: students
 
   - name: Tarikul Islam Papon
     image: papon.jpg
