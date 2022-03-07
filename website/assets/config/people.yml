@@ -38,6 +38,7 @@ people:
   #   position: position title
   #   website: OPTIONAL. Full URL to personal page.
   #   category: ID of the category
+  #   when: this is the time of arrival (for current members) or departure (for alumni) used to sort people. [NOT FULLY IMPLEMENTED YET]
 
   - name: Bashir Rastegarpanah
     image: bashir.jpg
@@ -138,26 +139,30 @@ people:
   - name: George Kollios
     image: kollios.jpg
     position: Professor
-    website: http://www.bu.edu/cs/profiles/george-kollios/
+    website: https://www.cs.bu.edu/~gkollios/
     category: faculty
+    when: 01/01/00
 
   - name: Evimaria Terzi
     image: evimaria.jpg
     position: Professor
     website: http://cs-people.bu.edu/evimaria/
     category: faculty
+    when: 01/01/09
 
   - name: Charalampos Tsourakakis
     image: babis.jpg
     position: Assistant Professor
     website: https://tsourakakis.com/
     category: faculty
+    when: 01/01/17
 
   - name: Manos Athanassoulis
     image: manos.jpg
     position: Assistant Professor
     website: https://cs-people.bu.edu/mathan/
     category: faculty
+    when: 01/01/19
 
   - name: Charalampos Mavroforakis
     image: harry.png

@@ -62,6 +62,9 @@
     - departmental: true
       when: 02/25/22
 
+    - departmental: true
+      when: 03/04/22
+
     - when: 03/11/22
       presenter:
         url: https://prashantpandey.github.io/
