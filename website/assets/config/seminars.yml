@@ -111,10 +111,36 @@
         url: https://www.linkedin.com/in/ippokratis-pandis-03b1402/
         name: Ippokratis Pandis
         affiliation: Amazon AWS
-        bio: TBA
+        bio: |
+          Ippokratis Pandis is a senior principal engineer at Amazon Web Services, currently working in Amazon Redshift.
+          Redshift is Amazon's fully managed, petabyte-scale data warehouse service. Previously, Ippokratis has held
+          positions as software engineer at Cloudera where he worked on the Impala SQL-on-Hadoop query engine, and as
+          member of the research staff at the IBM Almaden Research Center, where he worked on IBM DB2 BLU.
+          Ippokratis received his PhD from the Electrical and Computer Engineering department at Carnegie Mellon
+          University. He is the recipient of Best Demonstration awards at ICDE 2006 and SIGMOD 2011, and Test-of-Time
+          award at EDBT 2019. He has served or serving as PC chair of DaMoN 2014, DaMoN 2015, CloudDM 2016, HPTS 2019
+          and ICDE Industrial 2022, as well as General Chair of SIGMOD 2023.
       title: | 
-        TBA <font color ="navy"><b>(talk @ 11:00 AM)</b></font>
-      abstract: TBA
+        Amazon Redshift Reinvented <font color ="navy"><b>(talk @ 12:00 PM)</b></font>
+      abstract: | 
+        In 2013, eight years ago, Amazon Web Services revolutionized the data warehousing industry by launching Amazon
+        Redshift, the first fully managed, petabyte-scale cloud data warehouse solution. Amazon Redshift made it simple
+        and cost-effective to efficiently analyze large volumes of data using existing business intelligence tools. This
+        launch was a significant leap from the traditional on-premise data warehousing solutions which were expensive,
+        rigid (not elastic), and needed a lot of tribal knowledge to perform. Unsurprisingly, customers embraced Amazon
+        Redshift and it went on to become the fastest growing service in AWS. Today, tens of thousands of customers use
+        Amazon Redshift in AWS's global infrastructure of 25 launched Regions and 81 Availability Zones (AZs) to process
+        Exabytes of data daily.
+        The success of Amazon Redshift inspired a lot of innovation in the analytics industry
+        which in turn has benefited consumers. In the last few years, the use cases for Amazon Redshift have evolved and
+        in response, Amazon Redshift has delivered a series of innovations that continue to delight customers. In this
+        talk, we take a peek under the hood of Amazon Redshift, and give an overview of its architecture. We focus on
+        the core of the system and explain how Amazon Redshift maintains its differentiating industry-leading
+        performance and scalability. We discuss how Amazon Redshift extends beyond traditional data warehousing
+        workloads, but integrating with the broad AWS ecosystem making Amazon Redshift a one-stop solution for
+        analytics. We then talk about Amazon Redshift’s autonomics and Amazon Redshift Serverless. In particular, we
+        present how Redshift continuously monitors the system and uses machine learning to improve its performance and
+        operational health without the need of dedicated administration resources, in an easy to use offering.
 
     - when: 03/25/22
       departmental: true
