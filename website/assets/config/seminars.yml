@@ -149,7 +149,7 @@
       departmental: true
 
     - when: 04/08/22
-      empty: true 
+      departmental: true
 
     - when: 04/15/22
       empty: true 
