@@ -175,11 +175,38 @@
         name: Raul Castro Fernandez
         affiliation: University of Chicago
         bio: | 
-          TBA
+          I am interested in understanding the economics and value of data,
+          including the potential of data markets to unlock that value. The goal
+          of my research is to understand how to make the best use of data
+          possible. For that, I often build systems to share, discover, prepare,
+          integrate, and process data. I often use techniques from data
+          management, statistics, and machine learning. I am an assistant
+          professor in the Computer Science department at the University of
+          Chicago. Before UChicago, I did a postdoc at MIT with Sam Madden and
+          Mike Stonebraker. And before that, I completed my PhD at Imperial
+          College London with Peter Pietzuch.
       title: | 
-        TBA
+        Data Station: Delegated, Trustworthy, and Auditable Computation to
+        Enable Data-Sharing Consortia with a Data Escrow
       abstract: | 
-        TBA
+        Pooling and sharing data increases and distributes its value. But since
+        data cannot be revoked once shared, scenarios that require controlled
+        release of data for regulatory, privacy, and legal reasons default to
+        not sharing. Because selectively controlling what data to release is
+        difficult, the few data-sharing consortia that exist are often built
+        around data-sharing agreements resulting from long and tedious one-off
+        negotiations.
+        In this talk, I will present Data Station, a data escrow designed to
+        enable the formation of data-sharing consortia. Data owners share data
+        with the escrow knowing it will not be released without their consent.
+        Data users delegate their computation to the escrow. The data escrow
+        relies on delegated computation to execute queries without releasing the
+        data first. The Data Station leverages hardware enclaves to generate
+        trust among participants and exploit the centralization of data and
+        computation to generate an audit log.
+        Finally, I will contextualize the design and implementation of the Data Station
+        in a larger research agenda that explores “the value of data”, the “economics of
+        data”, and “data markets”.
 
     - when: 05/13/22
       presenter:
