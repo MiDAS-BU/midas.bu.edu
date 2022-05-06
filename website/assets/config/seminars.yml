@@ -151,23 +151,37 @@
     - when: 04/08/22
       departmental: true
 
-    - when: 04/15/22
-      empty: true 
-
     - when: 04/22/22
       presenter:
         url: https://www.linkedin.com/in/venusatuluri/
         name: Venu Satuluri
         affiliation: Twitter
         bio: | 
-          TBA
+          Venu Satuluri is a Principal ML Engineer at Twitter. He has been
+          working on a variety of recommender systems and applied ML problems
+          during the last 10 years at Twitter. Venu got his Ph.D. focusing on
+          graph clustering and similarity search from the Ohio State University
+          in 2012.
       title: | 
-        TBA <font color ="navy"><b>(talk @ 11:00 AM)</b></font>
+        SimClusters: Community-Based Representations for Heterogeneous
+          Recommendations at Twitter
+          <font color ="navy"><b>(talk @ 11:00 AM)</b></font>
       abstract: | 
-        TBA
-
-    - when: 04/29/22
-      empty: true 
+        Personalized recommendation products at Twitter target a variety of
+        items: Tweets, Events, Topics, Hashtags, and users. Each of these targets
+        varies in their cardinality (which affects the scale of the problem) and
+        their shelf life (which constrains the latency of generating the
+        recommendations). Although Twitter has built a variety of recommendation
+        systems before dating back a decade, solutions to the broader problem
+        were mostly tackled piecemeal. In this work, we present SimClusters, a
+        general-purpose representation layer based on overlapping communities
+        into which users as well as heterogeneous content can be captured as
+        sparse, interpretable vectors to support a multitude of recommendation
+        tasks. We propose a novel algorithm for community discovery based on
+        Metropolis-Hastings sampling, which is both more accurate and
+        significantly faster than off-the-shelf alternatives. SimClusters scales
+        to networks with billions of users and has been effective across a
+        variety of deployed applications at Twitter.
 
     - when: 05/06/22
       presenter:
