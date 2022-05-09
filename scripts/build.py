@@ -11,7 +11,8 @@ def main():
 	import sys
 	import markdown
 	from pathlib import Path
-	from jinja2 import Template, Environment, FileSystemLoader, Markup
+	from jinja2 import Template, Environment, FileSystemLoader
+	from markupsafe import Markup
 	from datetime import datetime
 	import requests
 	import json
