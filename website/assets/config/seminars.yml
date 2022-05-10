@@ -267,12 +267,55 @@
         url: https://sites.google.com/view/oanabalmau
         name: Oana Balmau
         affiliation: McGill University
-        bio: TBA
+        bio: |
+          Oana Balmau is an Assistant Professor in the School of Computer
+          Science at McGill University, where she leads the Data-Intensive
+          Storage and Computer Systems Lab (DISCS Lab). Her research focuses on
+          storage systems and data management systems, with an emphasis on
+          large-scale data management for workloads in Machine Learning, Data
+          Science, and Edge Computing. She completed her PhD in Computer Science
+          at the University of Sydney, advised by Prof. Willy Zwaenepoel. Before
+          her PhD, Oana earned her Bachelors and Masters degrees in Computer
+          Science from EPFL, Switzerland. Oana won the CORE John Makepeace
+          Bennet Award 2021 for the best computer science dissertation in
+          Australia and New Zealand, an Honorable Mention for the ACM SIGOPS
+          Dennis M. Ritchie Doctoral Dissertation Award 2021, as well as a Best
+          Paper Award in the USENIX Annual Technical Conference (USENIX ATC)
+          2019. Before joining McGill, Oana worked with Nutanix, ABB Research,
+          and HP Vertica. She is also a part of MLCommons, an open engineering
+          consortium that aims to accelerate machine learning innovation, where
+          she is leading the effort for storage benchmarking.
       title: |
-        TBA <font color ="navy"><b>(talk on a Monday)</b></font>
+        Reducing Space Amplification in Key-Value Stores
+        <font color ="navy"><b>(Monday Talk @ 11:30 AM EDT)</b></font>
       abstract: |
-        TBA
-    
+        As dataset sizes continue to grow, efficient storage use with low space
+        amplification is increasingly important in production systems. In
+        particular in key-value stores (KVs), space amplification is caused by
+        storing multiple versions of the same item e.g., waiting to be garbage
+        collected, or by large metadata e.g., caused by large indexes and other
+        metadata. While space amplification has been a well-known problem for
+        in-memory data stores, it is becoming problematic when the datasets are
+        stored on modern devices as well, as fast NVMe SSDs can persist millions
+        of items per second.
+        In this talk, I will present two techniques to decrease space
+        amplification at the disk, and main memory levels. Our target workload
+        is a mix of update-heavy and analytics queries running under snapshot
+        isolation. First, I introduce KVell+, a new KV store which supports data
+        analytics running alongside update-heavy workloads with close to no
+        space amplification. KVell+ is built on top of KVell, but can be easily
+        adapted to other state-of-the-art KVs such as RocksDB or LevelDB. On a
+        high-level, the key idea is to propagate an item X to the analytics
+        query to get processed out-of-order, if X happens to be updated as the
+        analytics job is running. Even though KVell+ has almost no space
+        amplification on disk, in memory its index can grow significantly with
+        the dataset size --especially for small keys. To address this issue, I
+        introduce TONE, a new write-optimized learned index. In mixed workloads,
+        TONE uses up to 2.5x less memory compared to state-of-the-art index data
+        structures (e.g., skiplists, B+trees), with order-of-magnitude
+        improvements in tail latency over state-of-the-art learned indexes
+        (e.g., ALEX, XIndex).
+
     - when: 05/20/22
       presenter:
         url: https://www.ics.uci.edu/~mjcarey/index.html
