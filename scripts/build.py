@@ -65,7 +65,7 @@ def main():
 					cur_author=author['text'].rstrip(digits)
 					cur_author=cur_author.strip()
 					# print("["+cur_author+"]")
-					result += f"{author['text']}, "
+					result += f"{cur_author}, "
 				return result[:-2]
 
 		# load from file first
