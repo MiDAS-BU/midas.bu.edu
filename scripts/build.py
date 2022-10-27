@@ -14,9 +14,10 @@ def main():
 	from jinja2 import Template, Environment, FileSystemLoader
 	from markupsafe import Markup
 	from datetime import datetime
+	from string import digits
 	import requests
 	import json
-	import re
+
 
 	abspath = os.path.abspath(__file__)
 	dname = os.path.dirname(abspath)
@@ -58,14 +59,13 @@ def main():
 			
 			if isinstance(authors, dict):
 				return authors["text"]
+				print("THIS SHOULD BE SUPER RARE!")
 			else:
 				for author in authors:
-					# check if numbers are printed in author names 
-					m = re.search(r"\d", author["text"])
-					if m:
-						result += f"{author['text'][:m.start()-1]}, "
-					else:
-						result += f"{author['text']}, "
+					cur_author=author['text'].rstrip(digits)
+					cur_author=cur_author.strip()
+					print("["+cur_author+"]")
+					result += f"{author['text']}, "
 				return result[:-2]
 
 		# load from file first
