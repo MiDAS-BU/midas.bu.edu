@@ -16,6 +16,7 @@ def main():
 	from datetime import datetime
 	import requests
 	import json
+	import re
 
 	abspath = os.path.abspath(__file__)
 	dname = os.path.dirname(abspath)
@@ -54,11 +55,17 @@ def main():
 		def authorsToString(publicationJson):
 			result = ""
 			authors = publicationJson["authors"]["author"]
+			
 			if isinstance(authors, dict):
 				return authors["text"]
 			else:
 				for author in authors:
-					result += f"{author['text']}, "
+					# check if numbers are printed in author names 
+					m = re.search(r"\d", author["text"])
+					if m:
+						result += f"{author['text'][:m.start()-1]}, "
+					else:
+						result += f"{author['text']}, "
 				return result[:-2]
 
 		# load from file first
