@@ -62,7 +62,7 @@ people:
     image: dmytro.jpeg
     position: PhD Researcher
     website: https://dbogatov.org/
-    category: students
+    category: alumni
 
   - name: Andy Huynh
     image: andy.jpg
@@ -122,6 +122,12 @@ people:
     image: aneesh.jpg
     position: PhD Researcher
     website: https://ramananeesh.github.io/
+    category: students
+    
+  - name: Konstantinos Karatsenidis
+    image: KostasKaratsenidis.jpg
+    position: PhD Researcher
+    website: https://cs-people.bu.edu/karatse/
     category: students
 
   - name: Subhadeep Sarkar
