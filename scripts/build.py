@@ -64,7 +64,7 @@ def main():
 				for author in authors:
 					cur_author=author['text'].rstrip(digits)
 					cur_author=cur_author.strip()
-					print("["+cur_author+"]")
+					# print("["+cur_author+"]")
 					result += f"{author['text']}, "
 				return result[:-2]
 
