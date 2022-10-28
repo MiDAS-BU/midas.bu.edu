@@ -31,7 +31,7 @@ categories:
     hidden: true
     sort: 4
 
-# people are sorted by the last name within a category
+# people are sorted by the last name within a category #not anymore
 people:
   # - name: full name
   #   image: image file name (with extension) from website/assets/images/people
@@ -124,16 +124,16 @@ people:
     website: https://ramananeesh.github.io/
     category: students
     
-  - name: Konstantinos Karatsenidis
-    image: KostasKaratsenidis.jpg
-    position: PhD Researcher
-    website: https://cs-people.bu.edu/karatse/
-    category: students
-
   - name: Karan Vombatkere
     image: Karan.jpeg
     position: PhD Researcher
     website: https://cs-people.bu.edu/kvombat/
+    category: students
+
+  - name: Konstantinos Karatsenidis
+    image: KostasKaratsenidis.jpg
+    position: PhD Researcher
+    website: https://cs-people.bu.edu/karatse/
     category: students
 
   - name: Subhadeep Sarkar
