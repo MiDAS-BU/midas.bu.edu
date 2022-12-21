@@ -17,6 +17,44 @@
 #       abstract: Possibly big text piece, talk's abstract. LaTeX snippets supported.
 #       departmental: OPTIONAL. If set, title and abstract are ignored and will be rendered "CS Department Seminar".
 #       special: OPTIONAL. If set, this text is rendered (HTML markup, like bold / italic / anchor allowed) as is in navy blue.
+- name: Fall 2022
+  when: 09/02/22
+  where: |
+    Seminars are held in MCS B51 at 10:30am [unless otherwise notified].
+  responsible:
+    name: Andy Huynh
+    username: ndhuynh
+  talks:
+    - when: 10/07/22
+      presenter:
+        url: https://mhmdsaiid.github.io/
+        name: Mohammed Saeed
+        affiliation: EURECOM
+        bio: | 
+          Mohammed Saeed obtained a double engineering diploma from the Lebanese
+          University and Télécom Paristech. Since 2019, he is a PhD Student in
+          Computational Fact Checking at EURECOM (France), under the supervision
+          of Prof.  Paolo Papotti. His research spans methods across Natural
+          Language Processing, Knowledge Graphs, and Deep Learning.
+      title: | 
+        Explainable Checking for Factual Claims
+      abstract: | 
+        Misinformation is an important problem but fact checkers are overwhelmed
+        by the amount of false content that is produced online every day. To
+        support fact checkers in their efforts, we are creating data driven
+        verification methods that use data resources to assess claims and
+        explain their decisions. However, using structured data for facts
+        expressed in natural language is a complex task. In this talk, we
+        present a first solution that jointly learns representations of
+        structured and non-structured data. We translate text claims into SQL
+        queries on relational databases by exploiting text classifiers and
+        tentative execution of query candidates to narrow down the set of
+        alternatives. We then discuss how logical rules can be used to verify
+        claims in a  checking task modeled as a probabilistic inference problem.
+        We show that this form of reasoning can be “learned” by
+        transformer-based language models. Experiments show that both methods
+        enable the efficient and effective labeling of claims with interpretable
+        explanations.
 
 - name: Spring 2022
   when: 02/02/22
