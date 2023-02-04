@@ -46,7 +46,6 @@
       title: | 
         Building Deletion-Compliant Data Systems
         <font color ="navy"><b>(CCDS 1001)</b></font>
-      abstract: |
       abstract: | 
         Modern data systems are designed around the silent underlying
         assumption of perpetual data retention. Systems are designed to offer
@@ -120,6 +119,7 @@
           in Computer Science.
       title: | 
         SWARE: Indexing for Near-Sorted Data
+        <font color ="navy"><b>(11:30 am - 11:50 am)</b></font>
       abstract: | 
         Indexing in data systems can be perceived as the process of adding
         structure to the incoming, otherwise unsorted data. If the data
@@ -152,6 +152,7 @@
           embedded system techniques.
       title: | 
         ACEing the Bufferpool Management Paradigm for Modern Storage Devices
+        <font color ="navy"><b>(12:00 pm - 12:20 pm)</b></font>
       abstract: | 
         Over the past few decades, solid-state drives (SSDs) have been
         replacing hard disk drives (HDDs) due to their faster reads and writes,
