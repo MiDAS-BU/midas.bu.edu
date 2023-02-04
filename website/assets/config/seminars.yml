@@ -17,6 +17,173 @@
 #       abstract: Possibly big text piece, talk's abstract. LaTeX snippets supported.
 #       departmental: OPTIONAL. If set, title and abstract are ignored and will be rendered "CS Department Seminar".
 #       special: OPTIONAL. If set, this text is rendered (HTML markup, like bold / italic / anchor allowed) as is in navy blue.
+
+
+- name: Spring 2023
+  when: 01/31/23
+  where: |
+    Seminars are held in CDS 950 at 11:30am [unless otherwise notified].
+  responsible:
+    name: Zichen Zhu
+    username: zczhu
+  talks:
+    - when: 02/10/23
+      presenter:
+        url: https://subhadeepsarkar.bitbucket.io/
+        name: Subhadeep Sakar
+        affiliation: Boston University
+        bio: | 
+          Subhadeep Sarkar is a post-doctoral associate at Boston University.
+          His current research interests are data systems, storage layouts,
+          access methods, and their intersection with data privacy. Prior to
+          this, Subhadeep spent two years as a post-doctoral researcher at
+          INRIA Rennes, France. He completed his Ph.D. in 2017 from the IIT
+          Kharagpur. Subhadeep’s work appears at leading database and network
+          conferences and journals, including SIGMOD, VLDB, EDBT, ICDE, IEEE
+          Transactions on Cloud Computing, and IEEE Transactions on Computers.
+          In 2016, Subhadeep was selected as one of the most qualified
+          research scientists to attend the Heidelberg Laureate Forum.
+      title: | 
+        Building Deletion-Compliant Data Systems
+        <font color ="navy"><b>(CCDS 1001)</b></font>
+      abstract: |
+      abstract: | 
+        Modern data systems are designed around the silent underlying
+        assumption of perpetual data retention. Systems are designed to offer
+        high performance for data ingestion and queries, while deletion of
+        data is realized by simply logically invalidating the target entries
+        (instead of modifying them in place). This has severe implications
+        on the privacy front, especially, in light of the newly enforced
+        privacy regulations which are aimed toward enabling the users to
+        express their preferences about the deletion of their data. In this
+        talk, we present our vision of enabling privacy-through-deletion as
+        a design element in modern data systems empowering them with the
+        ability to ensure timely and persistent deletion of data, and we
+        envision doing so without hurting performance or increasing
+        operational cost.
+    - when: 02/17/23
+      presenter:
+        url: https://sites.google.com/view/juhyoungmun/
+        name: Juhyoung Mun
+        affiliation: Boston University
+        bio: | 
+          Juhyoung Mun is currently a postdoctoral associate in the
+          Department of Computer Science at Boston University, working with
+          Prof. Manos Athanassoulis. She received her Ph.D. in Electronic
+          and Electrical Engineering at Ewha w. University in Seoul, Korea.
+          Her research interest lies in the area of data systems and
+          networking, particularly, enhancing the lookup performance in
+          LSM-Trees and building data systems for complex hybrid
+          transactional/analytical workloads using hardware/software
+          co-design. 
+      title: | 
+        Relational Memory: Native In-Memory Accesses on Rows and Columns
+      abstract: | 
+        Analytical database systems are typically designed to use a
+        column-first data layout to access only the desired fields. On the
+        other hand, storing data row-first works great for accessing,
+        inserting, or updating entire rows. Transforming rows to columns
+        at runtime is expensive, hence, many analytical systems ingest data
+        in row-first form and transform it in the background to columns to
+        facilitate future analytical queries. How will this design change
+        if we can always efficiently access only the desired set of columns?
+        To address this question, we present a radically new approach to
+        data transformation from rows to columns. We build upon recent
+        advancements in embedded platforms with re-programmable logic to
+        design native in-memory access on rows and columns. Our approach,
+        termed Relational Memory, relies on an FPGAbased accelerator that
+        sits between the CPU and main memory and transparently transforms
+        base data to any group of columns with minimal overhead at runtime.
+        This design allows accessing any group of columns as if it already
+        exists in memory. We implement and deploy Relational Memory in real
+        hardware, and we show that we can access the desired columns up to
+        1.63x faster than accessing them from their row-wise counterpart,
+        while matching the performance of a pure columnar access for low
+        projectivity, and outperforming it by up to 1.87X as projectivity
+        (and tuple reconstruction cost) increases. Moreover, our approach
+        can be easily extended to support offloading of a number of
+        operations to hardware, e.g., selection, group by, aggregation, and
+        joins, having the potential to vastly simplify the software logic
+        and accelerate the query execution.
+    - when: 03/03/23
+      presenter:
+        url: https://ramananeesh.github.io/
+        name: Aneesh Raman
+        affiliation: Boston University
+        bio: | 
+          Aneesh Raman is a PhD student at Boston University and a member of
+          the DiSC Lab, working with Prof. Manos Athanassoulis. His research
+          focus is on Database systems - indexing and access methods, and his
+          interests include high performance computing, data mining and machine
+          learning. Prior to Boston University, he was at Purdue University Fort
+          Wayne, where he graduated with highest distinction with a Bachelor's
+          in Computer Science.
+      title: | 
+        SWARE: Indexing for Near-Sorted Data
+      abstract: | 
+        Indexing in data systems can be perceived as the process of adding
+        structure to the incoming, otherwise unsorted data. If the data
+        ingestion order matches the indexed attribute order, the index
+        ingestion cost is entirely redundant and can be avoided altogether.
+        In this work, we identify sortedness as a resource that can accelerate
+        index ingestion. We propose a new sortedness-aware (SWARE) design
+        paradigm that pays less indexing cost for near-sorted data. When
+        applied to a classical index like the B+-tree SWARE offers a 9x
+        speedup for write intensive workloads and a 4x benefit in mixed
+        workloads by exploiting data sortedness.
+    - when: 03/03/23
+      presenter:
+        url: https://cs-people.bu.edu/papon/
+        name: Tarikul Islam Papon
+        affiliation: Boston University
+        bio: | 
+          Papon is a Ph.D candidate, part of DiSC Lab at BU, advised by Prof.
+          Athanassoulis. His research interests broadly include Data Systems,
+          specifically on hardware-aware data management challenges, stemming
+          from the evolution of storage and memory devices. Currently, he is
+          working on proposing a new design paradigm for interacting with durable
+          storage that takes into account performance asymmetry between read and
+          write operations, as well as the variable access concurrency that
+          different devices may support. Prior to joining BU, Papon served as a
+          lecturer for 4 years at the Department of Computer Science & Engineering
+          (CSE) in Bangladesh University of Engineering & Technology (BUET). He
+          completed his MSc and BSc degrees from the same department where he
+          worked on medical informatics using various machine learning and
+          embedded system techniques.
+      title: | 
+        ACEing the Bufferpool Management Paradigm for Modern Storage Devices
+      abstract: | 
+        Over the past few decades, solid-state drives (SSDs) have been
+        replacing hard disk drives (HDDs) due to their faster reads and writes,
+        and their superior random access performance. Further, when compared to HDDs,
+        SSDs have two fundamentally different properties: (i) read/write asymmetry
+        (writes are slower than reads) and (ii) access concurrency (multiple I/Os can
+        be executed in parallel to saturate the device bandwidth). However, several
+        database operators are designed without considering storage asymmetry and
+        concurrency resulting in device underutilization, which is typically addressed
+        opportunistically by device-specific tuning during deployment. As a key example
+        and the focus of our work, the bufferpool management of a Database Management
+        System (DBMS) is tightly connected to the underlying storage device, yet,
+        state-of-the-art approaches treat reads and writes equally, and do not
+        expressly exploit the device concurrency, leading to subpar performance.
+        In this paper, we propose a new Asymmetry & Concurrency-aware bufferpool
+        management (ACE) that batches writes based on device concurrency and performs
+        them in parallel to amortize the asymmetric write cost. In addition, ACE
+        performs parallel prefetching to exploit the device’s read concurrency. ACE
+        does not modify the existing bufferpool replacement policy, rather, it is a
+        wrapper that can be integrated with any eplacement policy. We implement ACE in
+        PostgreSQL and evaluate its benefits using a synthetic benchmark and TPC-C for
+        several popular eviction policies (Clock Sweep, LRU, CFLRU, LRU-WSR). The ACE
+        counterparts of all four policies lead to significant performance improvements,
+        exhibiting up to 32.1% lower runtime for mixed workloads (33.8% for
+        write-intensive TPC-C transactions) with a negligible increase in total disk
+        writes and buffer misses, which shows that incorporating asymmetry and
+        concurrency in algorithm design leads to more faithful storage modeling and,
+        ultimately, to better device utilization.
+
+
+
+
 - name: Fall 2022
   when: 09/02/22
   where: |
