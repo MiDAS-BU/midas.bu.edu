@@ -119,7 +119,6 @@
           in Computer Science.
       title: | 
         SWARE: Indexing for Near-Sorted Data
-        <font color ="navy"><b>(11:30 am - 11:50 am)</b></font>
       abstract: | 
         Indexing in data systems can be perceived as the process of adding
         structure to the incoming, otherwise unsorted data. If the data
@@ -131,7 +130,7 @@
         applied to a classical index like the B+-tree SWARE offers a 9x
         speedup for write intensive workloads and a 4x benefit in mixed
         workloads by exploiting data sortedness.
-    - when: 03/03/23
+    - when: 03/17/23
       presenter:
         url: https://cs-people.bu.edu/papon/
         name: Tarikul Islam Papon
@@ -152,7 +151,6 @@
           embedded system techniques.
       title: | 
         ACEing the Bufferpool Management Paradigm for Modern Storage Devices
-        <font color ="navy"><b>(12:00 pm - 12:20 pm)</b></font>
       abstract: | 
         Over the past few decades, solid-state drives (SSDs) have been
         replacing hard disk drives (HDDs) due to their faster reads and writes,
