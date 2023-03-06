@@ -181,6 +181,17 @@
         writes and buffer misses, which shows that incorporating asymmetry and
         concurrency in algorithm design leads to more faithful storage modeling and,
         ultimately, to better device utilization.
+    - when: 04/21/23
+      presenter:
+        url: https://itrummer.github.io/
+        name: Immanuel Trummer
+        affiliation: Cornell University
+        bio: | 
+          TBD
+      title: | 
+        TBD
+      abstract: | 
+        TBD
 
 
 
