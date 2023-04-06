@@ -179,6 +179,17 @@
         writes and buffer misses, which shows that incorporating asymmetry and
         concurrency in algorithm design leads to more faithful storage modeling and,
         ultimately, to better device utilization.
+     - when: 04/14/23
+      presenter:
+        url:  https://kvombatkere.github.io/
+        name: Karan Vombatkere
+        affiliation: Boston University
+        bio: | 
+         Karan Vombatkere is a 2nd year PhD student in the Massive Data & Algorithms (MiDAS) research group at BU, advised by Dr. Evimaria Terzi. His research interests are primarily focused on algorithmic data mining and computational social science problems. His current research is on designing efficient approximation algorithms for submodular optimization problems, specifically the Team Formation problem. 
+      title: | 
+        Balancing Task Coverage and Expert Workload in Team Formation
+      abstract: | 
+        In the classical team-formation problem the goal is to identify a team of experts such that the skills of these experts cover all the skills required by a given task. We deviate from this setting and propose a variant of the classical problem in which we aim to cover the skills of every task as well as possible, while also trying to minimize the maximum workload among the experts. Instead of setting the coverage constraint and minimizing the maximum load, we combine these two objectives into one. We call the corresponding assignment problem the Balanced Coverage problem, and show that it is NP-hard. We adopt a weaker notion of approximation and we show that under this notion we can design a polynomial-time approximation algorithm with provable guarantees. We also describe a set of computational speedups that we can apply to the algorithm and make it scale for reasonably large datasets. From the practical point of view, we demonstrate how the nature of the objective function allows us to efficiently tune the two parts of the objective and tailor their importance to a particular application. Our experiments with a variety of real datasets demonstrate the utility of our problem formulation as well as the efficacy and efficiency of our algorithm in practice.
     - when: 04/21/23
       presenter:
         url: https://itrummer.github.io/
