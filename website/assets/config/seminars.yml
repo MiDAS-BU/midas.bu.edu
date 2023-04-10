@@ -192,6 +192,33 @@
         Balancing Task Coverage and Expert Workload in Team Formation
       abstract: | 
         In the classical team-formation problem the goal is to identify a team of experts such that the skills of these experts cover all the skills required by a given task. We deviate from this setting and propose a variant of the classical problem in which we aim to cover the skills of every task as well as possible, while also trying to minimize the maximum workload among the experts. Instead of setting the coverage constraint and minimizing the maximum load, we combine these two objectives into one. We call the corresponding assignment problem the Balanced Coverage problem, and show that it is NP-hard. We adopt a weaker notion of approximation and we show that under this notion we can design a polynomial-time approximation algorithm with provable guarantees. We also describe a set of computational speedups that we can apply to the algorithm and make it scale for reasonably large datasets. From the practical point of view, we demonstrate how the nature of the objective function allows us to efficiently tune the two parts of the objective and tailor their importance to a particular application. Our experiments with a variety of real datasets demonstrate the utility of our problem formulation as well as the efficacy and efficiency of our algorithm in practice.
+    - when: 04/18/23
+      presenter:
+        url: https://rmarcus.info/blog/
+        name: Ryan Marcus
+        affiliation: University of Pennsylvania
+        bio: | 
+          Ryan Marcus is working on using machine learning to build the next generation
+          of data management tools that automatically adapt to new hardware and user
+          workloads, invent novel processing strategies, and understand user intention.
+          He is especially interested in query optimization, index structures,
+          intelligent clouds, programming language runtimes, program synthesis for data
+          processing, and applications of reinforcement learning to systems problems in
+          general.
+      title: | 
+        LSI: A Learned Secondary Index Structure <font color ="navy"><b>(MCS B37, 12:30pm)</b></font>
+      abstract: | 
+        Learned index structures have been shown to achieve favorable lookup performance
+        and space consumption compared to their traditional counterparts such as B-trees.
+        However, most learned index studies have focused on the primary indexing setting,
+        where the base data is sorted. In this work, we investigate whether learned indexes
+        sustain their advantage in the secondary indexing setting. We introduce Learned
+        Secondary Index (LSI), a first attempt to use learned indexes for indexing unsorted
+        data. LSI works by building a learned index over a permutation vector, which allows
+        binary search to performed on the unsorted base data using random access. We
+        additionally augment LSI with a fingerprint vector to accelerate equality lookups.
+        We show that LSI achieves comparable lookup performance to state-of-the-art
+        secondary indexes while being up to 6× more space efficient.
     - when: 04/21/23
       presenter:
         url: https://itrummer.github.io/
