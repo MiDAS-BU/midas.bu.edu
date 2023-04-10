@@ -225,11 +225,22 @@
         name: Immanuel Trummer
         affiliation: Cornell University
         bio: | 
-          TBD
+          Immanuel Trummer is an assistant professor at Cornell University. His papers were selected
+          for “Best of VLDB”, “Best of SIGMOD”, for the ACM SIGMOD Research Highlight Award, and for
+          publication in CACM as CACM Research Highlight. His online lecture introducing students to
+          database topics collected over a million views. He received the NSF CAREER Award and
+          multiple Google Faculty Research Awards.
       title: | 
-        TBD
+        Towards Highly Customizable Database Systems via Generative AI
       abstract: | 
-        TBD
+        The past years have been marked by several breakthrough results in the domain of generative AI,
+        culminating in the rise of tools like ChatGPT, able to solve a variety of language-related
+        tasks without specialized training. In this talk, I outline novel opportunities in the context
+        of data management, enabled by these advances. I discuss several recent research projects at
+        Cornell, aimed at exploiting advanced language processing for tasks such as parsing a database
+        manual to support automated tuning, or mining data for patterns, described in natural language.
+        Finally, I discuss our recent and ongoing research, aimed at synthesizing code for SQL processing
+        in general-purpose programming languages, while enabling customization via natural language commands.
 
 
 
