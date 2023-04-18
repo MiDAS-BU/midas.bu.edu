@@ -241,6 +241,26 @@
         manual to support automated tuning, or mining data for patterns, described in natural language.
         Finally, I discuss our recent and ongoing research, aimed at synthesizing code for SQL processing
         in general-purpose programming languages, while enabling customization via natural language commands.
+    - when: 04/26/23
+      presenter:
+        url: https://users.cs.duke.edu/~sudeepa/
+        name: Sudeepa Roy
+        affiliation: Duke University
+        bio: | 
+          Sudeepa Roy is an associate professor in Duke University. Before joining Duke, She was a postdoctoral research
+          associate in the Department of Computer Science and Engineering, University of Washington working with Prof. Dan Suciu.
+          She is broadly interested in data and information management with a focus on foundational aspects of databases and
+          big data analysis. Her current research focuses on building tools and techniques to help users leverage the maximum
+          benefit from the available data. While her ongoing work on causality and explanations in databases directly aims to
+          assist users get deep insights into data by providing causal analysis and rich explanations to their questions, they
+          often motivate the questions we in her recent work data repair and query optimization. Her earlier work in the areas
+          of data and workflow provenance, probabilistic databases, and crowd-sourcing probed into compelling, fundamental
+          questions that need to be answered to enable end-to-end processing and analysis of unstructured, noisy, and unreliable
+          data in today's world while preserving its entire context.
+      title: | 
+        TBD <font color ="navy"><b>(CSD TBD, 11:00am)</b></font>
+      abstract: | 
+        TBD.
 
 
 
