@@ -247,20 +247,33 @@
         name: Sudeepa Roy
         affiliation: Duke University
         bio: | 
-          Sudeepa Roy is an associate professor in Duke University. Before joining Duke, She was a postdoctoral research
-          associate in the Department of Computer Science and Engineering, University of Washington working with Prof. Dan Suciu.
-          She is broadly interested in data and information management with a focus on foundational aspects of databases and
-          big data analysis. Her current research focuses on building tools and techniques to help users leverage the maximum
-          benefit from the available data. While her ongoing work on causality and explanations in databases directly aims to
-          assist users get deep insights into data by providing causal analysis and rich explanations to their questions, they
-          often motivate the questions we in her recent work data repair and query optimization. Her earlier work in the areas
-          of data and workflow provenance, probabilistic databases, and crowd-sourcing probed into compelling, fundamental
-          questions that need to be answered to enable end-to-end processing and analysis of unstructured, noisy, and unreliable
-          data in today's world while preserving its entire context.
+          Sudeepa Roy is an Associate Professor in Computer Science at Duke University. She works broadly in
+          data management, with a focus on the foundational aspects of big data analysis, which includes
+          causality and explanations for big data, data repair, query optimization, probabilistic databases,
+          and database theory. Before joining Duke in 2015,  she did a postdoc at the University of Washington,
+          and obtained her Ph.D. from the University of Pennsylvania. She is a recipient of the VLDB Early Career
+          Research Contributions Award, an NSF CAREER Award, and a Google Ph.D. fellowship in structured data.
+          She is a co-director of the Almost Matching Exactly (AME) lab for interpretable causal inference at
+          Duke (https://almost-matching-exactly.github.io/).
       title: | 
-        TBD <font color ="navy"><b>(CSD TBD, 11:00am)</b></font>
+        Connecting Causal Inference with Databases towards Actionable Data Analysis <font color ="navy"><b>(CSD 701, 11:00am)</b></font>
       abstract: | 
-        TBD.
+        Causal analysis – i.e., estimating the effect of a "treatment" on an "outcome" – lays the foundation of
+        sound and robust policy making by providing a means to estimate the impact of a certain intervention to
+        the world, and is practically indispensable in health, medicine, social sciences, and other domains.
+        It forms the stepping stone for actionable data analysis that correlation, association, or model-based
+        prediction analysis cannot provide -- as cited widely in statistical studies, correlation does not imply
+        causation. In this talk, I will discuss some of our research in making a connection between traditional
+        database research with causal inference research from AI and Statistics, and exploring how they can
+        strengthen each other. First, I will present a "matching" framework for causal inference called "Almost
+        Matching Exactly", which rivals black box machine learning methods in estimation accuracy but has the
+        benefit of being interpretable and easier to troubleshoot, and also can use efficient SQL query
+        evaluations from databases for scalability. Then I will discuss how standard causal inference
+        techniques on homogenous populations (single table) can be extended to "relational" (multi-table) data
+        frequently found in practice. Finally, I will talk about how such "relational causal inference" can be
+        applied to hypothetical reasoning in database research in terms of "what-if" and "how-to" queries, and
+        conclude with an overview of our ongoing research directions on actionable and interpretable data
+        analysis with causality and explanations.
 
 
 
