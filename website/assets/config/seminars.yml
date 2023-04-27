@@ -231,16 +231,62 @@
           database topics collected over a million views. He received the NSF CAREER Award and
           multiple Google Faculty Research Awards.
       title: | 
-        Towards Highly Customizable Database Systems via Generative AI <font color ="navy"><b>(CSD 801, 11:00am)</b></font>
+        Towards Highly Customizable Database Systems via Generative AI <font color ="navy"><b>(MCS B37, 12:30pm)</b></font>
       abstract: | 
-        The past years have been marked by several breakthrough results in the domain of generative AI,
-        culminating in the rise of tools like ChatGPT, able to solve a variety of language-related
-        tasks without specialized training. In this talk, I outline novel opportunities in the context
-        of data management, enabled by these advances. I discuss several recent research projects at
-        Cornell, aimed at exploiting advanced language processing for tasks such as parsing a database
-        manual to support automated tuning, or mining data for patterns, described in natural language.
-        Finally, I discuss our recent and ongoing research, aimed at synthesizing code for SQL processing
-        in general-purpose programming languages, while enabling customization via natural language commands.
+        Deep neural networks are becoming ever more useful for numerous applications. However, it is
+        increasingly more challenging to utilize high-quality networks due to massive computational
+        costs. In fact, computational costs continuously increase due to the need for ever more
+        complex networks and due to the need to explore numerous network designs during the
+        development of an AI solution. This leads to several problems including limiting development
+        and access to high-quality AI solutions, time-to-market limitations for organizations, and
+        negative environmental impact caused by increased use of resources. We observe that modern
+        GPUs, the substrate where neural networks are developed, are severely underutilized. In fact,
+        the utilization factor is only in the order of 50% and drops as GPUs get ever faster. Fusing
+        operators across multiple models and larger mini-batch sizes are two key methods for
+        increasing hardware utilization and training throughput. However, the large memory requirements
+        of training algorithms coupled with the limited memory capacity of modern GPUs pose a strict
+        restriction on the applicability of these methods. In this paper, we introduce μ-two, a new
+        scheduling algorithm that maximizes GPU utilization by using operator fusion and memory
+        optimization. The core novelty behind μ-two is in being able to schedule enough independent
+        computational operations from multiple models such as to utilize all compute capacity of the
+        available GPU while at the same time, it utilizes all compute time to overlap independent memory
+        swapping operations. We show how to create μ-two schedules for arbitrary neural network and GPU
+        architectures. We integrated μ-two within the PyTorch compiler and demonstrate a 3× speed-up with
+        diverse network architectures and diverse NVIDIA GPUs, spanning vision, natural language
+        processing and recommendation applications.
+    - when: 04/25/23
+      presenter:
+        url: https://scholar.harvard.edu/sanket/home
+        name: Sanket Purandare
+        affiliation: Harvard University
+        bio: | 
+          Sanket Purandare is a 4th year PhD student at the Data and Systems Lab (DASLab) at Harvard
+          University, advised by Prof. Stratos Idreos. His research interests lie in the area of systems for
+          deep learning. In particular, he works on the characterization of deep learning training and
+          inference workloads and optimizing the deep learning software infrastructure for hardware
+          efficiency by applying systems concepts from operating systems, compilers, and computer
+          architecture in a novel fashion. Currently, he is a Visiting Researcher with Meta Inc.
+          (formerly Facebook) and works with the PyTorch Compilers and Distributed Teams on building
+          the compiler stack for distributed training.
+      title: | 
+        μ -TWO: Multi-Model Training with Orchestration and Memory Optimization <font color ="navy"><b>(CSD 701, 11:00am)</b></font>
+      abstract: | 
+        Causal analysis – i.e., estimating the effect of a "treatment" on an "outcome" – lays the foundation of
+        sound and robust policy making by providing a means to estimate the impact of a certain intervention to
+        the world, and is practically indispensable in health, medicine, social sciences, and other domains.
+        It forms the stepping stone for actionable data analysis that correlation, association, or model-based
+        prediction analysis cannot provide -- as cited widely in statistical studies, correlation does not imply
+        causation. In this talk, I will discuss some of our research in making a connection between traditional
+        database research with causal inference research from AI and Statistics, and exploring how they can
+        strengthen each other. First, I will present a "matching" framework for causal inference called "Almost
+        Matching Exactly", which rivals black box machine learning methods in estimation accuracy but has the
+        benefit of being interpretable and easier to troubleshoot, and also can use efficient SQL query
+        evaluations from databases for scalability. Then I will discuss how standard causal inference
+        techniques on homogenous populations (single table) can be extended to "relational" (multi-table) data
+        frequently found in practice. Finally, I will talk about how such "relational causal inference" can be
+        applied to hypothetical reasoning in database research in terms of "what-if" and "how-to" queries, and
+        conclude with an overview of our ongoing research directions on actionable and interpretable data
+        analysis with causality and explanations.
     - when: 04/26/23
       presenter:
         url: https://users.cs.duke.edu/~sudeepa/
