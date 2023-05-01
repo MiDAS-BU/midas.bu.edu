@@ -323,17 +323,17 @@
     - when: 05/05/23
       presenter:
         url: https://user.it.uu.se/~geofa117/
-        name: George Fakas
+        name: Georgios Fakas
         affiliation: Uppsala University
         bio: | 
-          I am an Associate Professor at the Department of Information Technology, Uppsala University. I am
-          currently leading the Uppsala DataBase Laboratory (UDBL) within the Department of Information
-          Technology. Before joining Uppsala University, I worked as a Research Fellow at the Hong Kong
-          University of Science and Technology (with Prof. Dimitris Papadias), Hong Kong University (with
+          Georgios Fakas is an Associate Professor at the Department of Information Technology, Uppsala
+          University. He is currently leading the Uppsala DataBase Laboratory (UDBL) within the Department of
+          Information Technology. Before joining Uppsala University, he worked as a Research Fellow at the Hong
+          Kong University of Science and Technology (with Prof. Dimitris Papadias), Hong Kong University (with
           Prof. Nikos Mamoulis), EPFL (Lausanne, Switzerland), UMIST (Manchester, UK), University of Cyprus
-          (Cyprus). I also worked as a Senior Lecturer at Manchester Metropolitan University (UK).  I obtained
-          my Ph.D. in 1998, my M.Phil. in 1996 and my B.Sc. in Computation in 1995; all from the Department of
-          Computation, UMIST, Manchester, UK.
+          (Cyprus). Prof. Georgios Fakas also worked as a Senior Lecturer at Manchester Metropolitan University
+          (UK). He obtained his Ph.D. in 1998, his M.Phil. in 1996 and his B.Sc. in Computation in 1995; all
+          from the Department of Computation, UMIST, Manchester, UK.
       title: | 
         Proportionality on Spatial Data with Context
       abstract: | 
