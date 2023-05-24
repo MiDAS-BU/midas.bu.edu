@@ -351,6 +351,33 @@
         studies on real datasets show that our algorithms are effective and efficient. A user evaluation verifies
         that proportional selection is more preferable than random selection and selection based on object
         diversification.
+    - when: 06/02/23
+      presenter:
+        url: https://www.it.uu.se/katalog/tiazh991/
+        name: Tianru Zhang
+        affiliation: Uppsala University <font color ="navy"><b>Online only @ 11:30 AM</b></font>
+        bio: | 
+          Tianru Zhang is a PhD student in Department of Information Technology at Uppsala University. He received
+          his MSc degree from ENSAI (National school of statistics and information analysis of France), and his
+          bachelor degree from University of Science and Technology of China. Before joining Uppsala University,
+          he also worked as an assistant researcher in Fujitsu R&D center, Beijing. Zhang is interested in research
+          field including cloud computing, data management, and federated machine learning.
+      title: | 
+        Efficient Hierarchical Storage Management Empowered by Reinforcement Learning
+      abstract: | 
+        With the rapid development of big data and cloud computing, data management has become increasingly
+        challenging. Over the years, a number of frameworks for data management have become available. Most of them
+        are highly efficient, but ultimately create data silos. It becomes difficult to move and work coherently
+        with data as new requirements emerge. A possible solution is to use an intelligent hierarchical
+        (multi-tier) storage system (HSS). A HSS is a meta solution that consists of different storage frameworks
+        organized as a jointly constructed storage pool. A built-in data migration policy that determines the
+        optimal placement of the datasets in the hierarchy is essential. Placement decisions is a non-trivial task
+        since it should be made according to the characteristics of the dataset, the tier status in a hierarchy,
+        and access patterns. This paper presents an open-source hierarchical storage framework with a dynamic
+        migration policy based on reinforcement learning (RL). We present a mathematical model, a software
+        architecture, and implementations based on both simulations and a live cloud-based environment. We compare
+        the proposed RL-based strategy to a baseline of three rule-based policies, showing that the RL-based policy
+        achieves significantly higher efficiency and optimal data distribution in different scenarios.
 
 
 
