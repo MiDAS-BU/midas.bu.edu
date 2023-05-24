@@ -355,7 +355,7 @@
       presenter:
         url: https://www.it.uu.se/katalog/tiazh991/
         name: Tianru Zhang
-        affiliation: Uppsala University <font color ="navy"><b>Online only @ 11:30 AM</b></font>
+        affiliation: Uppsala University 
         bio: | 
           Tianru Zhang is a PhD student in Department of Information Technology at Uppsala University. He received
           his MSc degree from ENSAI (National school of statistics and information analysis of France), and his
@@ -363,7 +363,7 @@
           he also worked as an assistant researcher in Fujitsu R&D center, Beijing. Zhang is interested in research
           field including cloud computing, data management, and federated machine learning.
       title: | 
-        Efficient Hierarchical Storage Management Empowered by Reinforcement Learning
+        Efficient Hierarchical Storage Management Empowered by Reinforcement Learning <font color ="navy"><b>(Online only @ 11:30 AM)</b></font>
       abstract: | 
         With the rapid development of big data and cloud computing, data management has become increasingly
         challenging. Over the years, a number of frameworks for data management have become available. Most of them
