@@ -143,16 +143,16 @@ people:
     category: students
 
   - name: Kevin B Quinn
-    image: placeholder-male.png
+    image: Kevin-Quinn.jpeg
     position: PhD Researcher
-    website: https://cs-people.bu.edu/
+    website: https://www.bu.edu/cds-faculty/profile/kevin-quinn/
     category: students
 
   - name: Subhadeep Sarkar
     image: subjadeep.jpeg
-    position: Postdoctoral Researcher
+    position: "Postdoc (Next: Faculty at Brandeis University)"
     website: https://subhadeepsarkar.bitbucket.io/
-    category: postdocs
+    category: alumni
 
   - name: Ju Hyoung Mun
     image: juhyoung.jpg
