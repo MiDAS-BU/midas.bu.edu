@@ -18,6 +18,33 @@
 #       departmental: OPTIONAL. If set, title and abstract are ignored and will be rendered "CS Department Seminar".
 #       special: OPTIONAL. If set, this text is rendered (HTML markup, like bold / italic / anchor allowed) as is in navy blue.
 
+- name: Fall 2023
+  when: 09/01/23
+  where: |
+    Seminars are held in CDS 950 at 11:30am [unless otherwise notified].
+  responsible:
+    name: Zichen Zhu
+    username: zczhu
+  talks:
+    - when: 12/05/23
+      presenter:
+        url: https://www.eecs.tufts.edu/~johes/
+        name: Johes Bater
+        affiliation: Tufts University
+        bio: |
+          Johes Bater is  an assistant professor of Computer Science at Tufts
+          University. Before that, he was a postdoctoral researcher in the
+          Database Group at Duke University, received his Ph.D. in computer
+          science from Northwestern University, and completed my B.S. and
+          M.S. in electrical engineering at Stanford University. His
+          research centers on how to balance privacy, security, and utility
+          to build fast, accurate database systems that support
+          privacy-preserving analytics with provable security guarantees.
+      title: |
+           TBD <font color ="navy"><b>(CAS 313)</b></font>
+      abstract: TBD
+
+
 
 - name: Spring 2023
   when: 01/31/23
@@ -45,7 +72,7 @@
           research scientists to attend the Heidelberg Laureate Forum.
       title: | 
         Building Deletion-Compliant Data Systems
-        <font color ="navy"><b>(CCDS 1001)</b></font>
+        <font color ="navy"><b>(CDS 1001)</b></font>
       abstract: | 
         Modern data systems are designed around the silent underlying
         assumption of perpetual data retention. Systems are designed to offer
@@ -269,7 +296,7 @@
           (formerly Facebook) and works with the PyTorch Compilers and Distributed Teams on building
           the compiler stack for distributed training.
       title: | 
-        μ -TWO: Multi-Model Training with Orchestration and Memory Optimization <font color ="navy"><b>(CSD 701, 11:00am)</b></font>
+        μ -TWO: Multi-Model Training with Orchestration and Memory Optimization <font color ="navy"><b>(CDS 701, 11:00am)</b></font>
       abstract: | 
         Causal analysis – i.e., estimating the effect of a "treatment" on an "outcome" – lays the foundation of
         sound and robust policy making by providing a means to estimate the impact of a certain intervention to
@@ -302,7 +329,7 @@
           She is a co-director of the Almost Matching Exactly (AME) lab for interpretable causal inference at
           Duke (https://almost-matching-exactly.github.io/).
       title: | 
-        Connecting Causal Inference with Databases towards Actionable Data Analysis <font color ="navy"><b>(CSD 701, 11:00am)</b></font>
+        Connecting Causal Inference with Databases towards Actionable Data Analysis <font color ="navy"><b>(CDS 701, 11:00am)</b></font>
       abstract: | 
         Causal analysis – i.e., estimating the effect of a "treatment" on an "outcome" – lays the foundation of
         sound and robust policy making by providing a means to estimate the impact of a certain intervention to
