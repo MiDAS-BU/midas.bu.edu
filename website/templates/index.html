@@ -148,10 +148,10 @@
 					{% endif %}
 				</h2>
 				<div id="section-people-toggle-{{ category.id }}" class="row {{ 'people-hidden' if category.hidden }}">
-					
-					{% for person in people.people|selectattr("category", "equalto", category.id) %}
+					{% if category.name=="Alumni" %}
+						{% for person in people.people|selectattr("category", "equalto", category.id)|sort(attribute="when", reverse=true) %}
 						<div class="clearfix {{ 'visible-xs' if (loop.index - 1) % people.view.profilesPerXSmall == 0 }} {{ 'visible-sm' if (loop.index - 1) % people.view.profilesPerSmall == 0 }} {{ 'visible-md' if (loop.index - 1) % people.view.profilesPerMedium == 0 }} {{ 'visible-lg' if (loop.index - 1) % people.view.profilesPerLarge == 0 }}"></div>
-						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center topReveal">
+						<div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 text-center topReveal">
 							<div class="team-member-box-2">
 								<div class="team-image-wrapper rotateTopReveal">
 									{% if "website" in person %}
@@ -162,12 +162,32 @@
 										<img {{ "data-src" if category.hidden else "src" }}="/assets/images/people/{{ person.image }}" alt="{{ person.name }}" class="img-responsive img-circle team-member-img text-center image-people-toggle-{{ category.id }} {{ 'image-shown' if not category.hidden }}">
 									{% endif %}
 								</div>
-								<h3>{{ person.name }}</h3>
-								<p class="mb15">{{ person.position }}</p>
+								<h4>{{ person.name }}</h4>
+								<p class="mb15" style="font-size: 14px;">{{ person.position }}</p>
 							</div>
 						</div>
-					{% endfor %}
-					
+						{% endfor %}
+					{% else %}
+						{% for person in people.people|selectattr("category", "equalto", category.id)|sort(attribute="when") %}
+						<div class="clearfix {{ 'visible-xs' if (loop.index - 1) % people.view.profilesPerXSmall == 0 }} {{ 'visible-sm' if (loop.index - 1) % people.view.profilesPerSmall == 0 }} {{ 'visible-md' if (loop.index - 1) % people.view.profilesPerMedium == 0 }} {{ 'visible-lg' if (loop.index - 1) % people.view.profilesPerLarge == 0 }}"></div>
+						<div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 text-center topReveal">
+							<div class="team-member-box-2">
+								<div class="team-image-wrapper rotateTopReveal">
+									{% if "website" in person %}
+										<a target="_blank" href="{{ person.website }}">
+											<img {{ "data-src" if category.hidden else "src" }}="/assets/images/people/{{ person.image }}" alt="{{ person.name }}" class="img-responsive img-circle team-member-img text-center image-people-toggle-{{ category.id }} {{ 'image-shown' if not category.hidden }}">
+										</a>
+									{% else %}
+										<img {{ "data-src" if category.hidden else "src" }}="/assets/images/people/{{ person.image }}" alt="{{ person.name }}" class="img-responsive img-circle team-member-img text-center image-people-toggle-{{ category.id }} {{ 'image-shown' if not category.hidden }}">
+									{% endif %}
+								</div>
+								<h4>{{ person.name }}</h4>
+								<p class="mb15" style="font-size: 14px;">{{ person.position }}</p>
+							</div>
+						</div>
+						{% endfor %}
+					{% endif %}
+				
 				</div>
 			{% endfor %}
 		</div>

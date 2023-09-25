@@ -2,8 +2,8 @@
 view:
   profilesPerXSmall: 1
   profilesPerSmall: 2
-  profilesPerMedium: 4
-  profilesPerLarge: 4
+  profilesPerMedium: 6
+  profilesPerLarge: 6
 
 categories:
   # - name: category title
@@ -38,240 +38,286 @@ people:
   #   position: position title
   #   website: OPTIONAL. Full URL to personal page.
   #   category: ID of the category
-  #   when: this is the time of arrival (for current members) or departure (for alumni) used to sort people. [NOT FULLY IMPLEMENTED YET]
+  #   when: this is the time of arrival (for current members) or departure (for alumni) used to sort people. Should be changed from arrival year to departure year when someone becomes alumni
 
   - name: Bashir Rastegarpanah
     image: bashir.jpg
     position: "PhD (Next: Fiddler AI)"
-    website: http://cs-people.bu.edu/bashir/
+    website: https://www.linkedin.com/in/bashir-rastegarpanah-56422839/
     category: alumni
+    when: 2021
 
   - name: Harshal Chaudhari
     image: harshal.jpg
     position: "PhD (Next: Etsy)"
-    website: http://cs-people.bu.edu/harshal/
+    website: https://harshalc.com/
     category: alumni
+    when: 2021
 
   - name: Sofia Maria Nikolakaki
     image: sofia.jpg
     position: "PhD (Next: Apple)"
-    website: http://www.smnikolakaki.com//
+    website: http://www.smnikolakaki.com/
     category: alumni
+    when: 2021
 
   - name: Dmytro Bogatov
     image: dmytro.jpeg
     position: PhD Researcher
     website: https://dbogatov.org/
     category: alumni
+    when: 2022
 
   - name: Andy Huynh
     image: andy.jpg
     position: PhD Researcher
     website: http://cs-people.bu.edu/ndhuynh/
     category: students
+    when: 2017
 
   - name: Konstantinos Sotiropoulos
     image: sotiropoulos.jpg
-    position: PhD Researcher
+    position: "PhD (Next: Postdoc at CMU)"
     website: http://cs-people.bu.edu/ksotirop/
-    category: students
+    category: alumni
+    when: 2023
 
 #  - name: Isidora Tourni
 #    image: isidora.jpg
 #    position: PhD Researcher
 #    website: http://cs-people.bu.edu/isidora/
 #    category: students
+#    when: 2010
 
   - name: Nathan Cordner
     image: nathan.jpg
-    position: PhD Researcher
+    position: "PhD (Next: Faculty at Utah Valley University)"
     website: https://cs-people.bu.edu/ncordner/
-    category: students
+    category: alumni
+    when: 2023
 
   - name: Tarikul Islam Papon
     image: papon.jpg
     position: PhD Researcher
     website: https://cs-people.bu.edu/papon/
     category: students
+    when: 2019
+
 
   - name: Zichen Zhu
     image: zichen.jpg
     position: PhD Researcher
     website: https://cs-people.bu.edu/zczhu/
     category: students
+    when: 2019
 
   - name: Dimitris Staratzis
     image: dimitris.jpg
     position: "Grad Researcher (Next: TileDB)"
     website: https://cs-people.bu.edu/dstara/
     category: alumni
+    when: 2020
 
   - name: Lina Qiu
     image: lina.jpg
     position: PhD Researcher
     website: https://cs-people.bu.edu/qlina/
     category: students
+    when: 2019
 
   - name: Tianyi Chen
     image: tianyi.png
     position: PhD Researcher
     website: http://cs-people.bu.edu/ctony/
     category: students
+    when: 2019
   
   - name: Aneesh Raman
     image: aneesh.jpg
     position: PhD Researcher
     website: https://ramananeesh.github.io/
     category: students
+    when: 2020
     
   - name: Karan Vombatkere
     image: Karan.jpeg
     position: PhD Researcher
     website: https://cs-people.bu.edu/kvombat/
     category: students
+    when: 2021
 
   - name: Konstantinos Karatsenidis
     image: KostasKaratsenidis.jpg
     position: PhD Researcher
     website: https://cs-people.bu.edu/karatse/
     category: students
+    when: 2022
 
   - name: Iasonas Nikolaou
     image: iasonas.jpg
     position: PhD Researcher
     website: https://jasonnikolaou.github.io/
     category: students
+    when: 2022
 
   - name: Kevin B Quinn
     image: Kevin-Quinn.jpeg
     position: PhD Researcher
     website: https://www.bu.edu/cds-faculty/profile/kevin-quinn/
     category: students
+    when: 2023
 
   - name: Subhadeep Sarkar
     image: subjadeep.jpeg
     position: "Postdoc (Next: Faculty at Brandeis University)"
     website: https://subhadeepsarkar.bitbucket.io/
     category: alumni
+    when: 2023
 
   - name: Ju Hyoung Mun
     image: juhyoung.jpg
     position: Postdoctoral Researcher
     website: http://cs-people.bu.edu/jmun
     category: postdocs
+    when: 2019
+
+  - name: Mark Crovella
+    image: crovella.png
+    position: Professor
+    website: https://www.cs.bu.edu/fac/crovella/
+    category: faculty
+    when: 1994
+
 
   - name: George Kollios
     image: kollios.jpg
     position: Professor
     website: https://www.cs.bu.edu/~gkollios/
     category: faculty
-    when: 01/01/00
+    when: 2000
 
   - name: Evimaria Terzi
     image: evimaria.jpg
     position: Professor
     website: http://cs-people.bu.edu/evimaria/
     category: faculty
-    when: 01/01/09
+    when: 2009
 
   - name: Charalampos Tsourakakis
     image: babis.jpg
     position: Assistant Professor
     website: https://tsourakakis.com/
     category: faculty
-    when: 01/01/17
+    when: 2017
 
   - name: Manos Athanassoulis
     image: manos.jpg
     position: Assistant Professor
     website: https://cs-people.bu.edu/mathan/
     category: faculty
-    when: 01/01/19
+    when: 2019
 
   - name: Charalampos Mavroforakis
     image: harry.png
     position: "PhD (Next: Facebook)"
     website: https://www.linkedin.com/in/harrymvr
     category: alumni
+    when: 2018
 
   - name: Sanaz Bahargam
     image: sanaz.jpg
     position: "PhD (Next: Twitter)"
+    website: https://sanazbahargam.github.io/
     category: alumni
+    when: 2017
 
   - name: Natali Ruchansky
     image: natali.jpg
     position: "PhD (Next: Postdoc at USC)"
-    website: http://natalir.space/
+    website: https://www.linkedin.com/in/nataliru/
     category: alumni
+    when: 2016
 
   - name: Behzad Golshan
     image: behzad.jpeg
     position: "PhD (Next: Megagon Labs)"
+    website: http://behzad.io/
     category: alumni
+    when: 2016
 
   - name: Xianrui Meng
     image: xianrui.jpg
     position: "PhD (Next: Amazon)"
     website: https://www.xianruimeng.org/
     category: alumni
+    when: 2016
 
   - name: Haohan Zhu
     image: haohan.jpg
     position: "PhD (Next: Facebook)"
     website: http://zhuhaohan.com/
     category: alumni
+    when: 2016
 
   - name: Dora Erdos
     image: dori.jpg
     position: "PhD (Next: Postdoc at Brown University)"
     website: http://cs-people.bu.edu/edori/
     category: alumni
+    when: 2015
 
   - name: Esther Galbrun
     image: esther.jpg
     position: "Postdoc (Next: Postdoc at INRIA Nancy)"
     website: https://members.loria.fr/EGalbrun/
     category: alumni
+    when: 2015
 
   - name: Theodoros Lappas
     image: ted.jpg
     position: "Postdoc (Next: Faculty at Stevens Institute of Technology)"
     website: http://tedlappas.com/
     category: alumni
+    when: 2013
 
   - name: Vassilis Athitsos
     image: vassilis.jpg
-    position: "Postdoc (Next: Faculty at UT Arlington)"
+    position: "PhD & Postdoc (Next: Faculty at UT Arlington)"
     website: http://vlm1.uta.edu/~athitsos/
     category: alumni
+    when: 2007
 
   - name: Marios Hadjieleftheriou
     image: marios.jpg
     position: "Postdoc (Next: AT&amp;T Labs)"
     website: http://hadjieleftheriou.com/
     category: alumni
+    when: 2010
 
   - name: Feifei Li
     image: feifei.jpg
     position: "PhD (Next: Faculty at Florida State University)"
     website: http://www.cs.utah.edu/~lifeifei/
     category: alumni
+    when: 2007
 
   - name: Panagiotis Papapetrou
     image: panagiotis.jpg
     position: "PhD (Next: Postdoc at Aalto University)"
     website: https://papapetrou.blogs.dsv.su.se/
     category: alumni
+    when: 2009
 
   - name: Michalis Potamias
     image: michalis.jpg
     position: "PhD (Next: Groupon)"
     website: https://www.linkedin.com/in/mpotamias/
     category: alumni
+    when: 2011
 
   - name: Georgios Kellaris
     image: kellaris.jpeg
     position: "Postdoc (Next: Co-Founder at Kalepso)"
     website: https://www.linkedin.com/in/gkellaris/
     category: alumni
+    when: 2017

@@ -4,7 +4,7 @@ view:
   publicationsPerSmall: 1
   publicationsPerMedium: 2
   publicationsPerLarge: 2
-  total: 12
+  total: 16
 
 # sorted by publication year (within a year order in undefined)
 publications:
