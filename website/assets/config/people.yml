@@ -82,13 +82,6 @@ people:
     category: alumni
     when: 2023
 
-#  - name: Isidora Tourni
-#    image: isidora.jpg
-#    position: PhD Researcher
-#    website: http://cs-people.bu.edu/isidora/
-#    category: students
-#    when: 2010
-
   - name: Nathan Cordner
     image: nathan.jpg
     position: "PhD (Next: Faculty at Utah Valley University)"
