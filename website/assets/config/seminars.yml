@@ -26,6 +26,16 @@
     name: Zichen Zhu
     username: zczhu
   talks:
+    - when: 11/06/23
+      presenter:
+        url: https://cs.uwaterloo.ca/~xiaohu/
+        name: Xiao Hu
+        affiliation: University of Waterloo
+        bio: |
+          TBA
+      title: |
+              TBD <font color ="navy"></font>
+      abstract: TBD
     - when: 12/05/23
       presenter:
         url: https://www.eecs.tufts.edu/~johes/
