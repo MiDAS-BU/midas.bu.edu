@@ -146,6 +146,13 @@ people:
     category: students
     when: 2021
 
+  - name: Teona Bagashvili
+    image: teona.png
+    position: PhD Researcher
+    website: https://cs-people.bu.edu/teona/
+    category: students
+    when: 2022
+
   - name: Konstantinos Karatsenidis
     image: KostasKaratsenidis.jpg
     position: PhD Researcher
