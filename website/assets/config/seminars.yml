@@ -54,10 +54,11 @@
         name: Xiao Hu
         affiliation: University of Waterloo
         bio: |
-          TBA
+          Xiao Hu is an incoming Assistant Professor in the Cheriton School of Computer Science at the University of Waterloo. Prior to that, she was a Visiting Faculty Scholar in the Discrete Algorithm Group at Google Research from and a postdoctoral associate within the Department of Computer Science at Duke University. She received her Ph.D. in Computer Science and Engineering from HKUST, and a BE degree in Computer Software from Tsinghua University. Her research has focused on studying fundamental problems in database theory and their implications to practical systems.
       title: |
-              TBD 
-      abstract: TBD
+              Incremental View Maintenance for Conjunctive Queries 
+      abstract: |
+                 Incremental view maintenance (IVM) is a critical problem in the field of database management systems. It addresses the challenge of efficiently updating materialized views in response to changes in the underlying data, reducing the computational cost and ensuring up-to-date query results. In this context, conjunctive queries, a subset of relational algebra, provide a rich framework for expressing complex queries of both theoretical and practical interest. In this talk, I will introduce a general IVM framework for conjunctive queries, such that views can be maintained efficiently while supporting enumerating full query results as well as delta query results with delay guarantee. I will describe the intrinsic relationship between the sequence of updates and the maintenance cost. At last, I will briefly discuss some interesting questions when aggregation is involved.
     - when: 11/27/23
       presenter:
         url: https://midas.bu.edu/seminar.html
