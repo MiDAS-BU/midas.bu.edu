@@ -65,10 +65,11 @@
         name: Viktor Leis
         affiliation: Technical University of Munich
         bio: |
-          Viktor Leis is a Full Professor in the Computer Science Department at TUM, leading the chair for Decentralized Information Systems and Data Management. His research revolves around designing high-performance data management systems and includes core database systems topics such as query processing, query optimization, transaction processing, index structures, and storage. Another major research area is the architecture of cloud-native, cost-efficient information systems. Viktor Leis received his doctoral degree in 2016 from TUM and was a Professor at the Friedrich-Schiller-Universität Jena and Friedrich-Alexander-Universität Erlangen-Nürnberg before returning to TUM in 2022. He received the ACM SIGMOD dissertation award, the IEEE TCDE Rising Star Award, best paper awards at IEEE ICDE and ACM SIGMOD, and an ERC Starting Grant.
+           Viktor Leis is a Professor of Computer Science at the Technical University of Munich (TUM). His research revolves around designing high-performance data management systems and includes core database systems topics such as query processing, query optimization, transaction processing, index structures, and storage. Another major research area is designing cloud-native, cost-efficient information systems. Viktor Leis received his doctoral degree in 2016 from TUM and was a professor at the Friedrich-Schiller-Universität Jena and Friedrich-Alexander-Universität Erlangen-Nürnberg before returning to TUM in 2022. He received the ACM SIGMOD dissertation award, the IEEE TCDE Rising Star Award, best paper awards at IEEE ICDE and ACM SIGMOD, and an ERC Starting Grant.
       title: |
-              TBD 
-      abstract: TBD
+              LeanStore: A High-Performance Storage Engine for NVMe SSDs and Multi-Core CPUs 
+      abstract: |
+                 The goal of the LeanStore project is to achieve robust performance comparable to in-memory systems when the data set fits into RAM, while being able to fully exploit the bandwidth of fast NVMe SSDs for larger data sets. To achieve these goals we had to redesign all components of the traditional DBMS stack, including buffer management, indexing, concurrency control, I/O management, logging, recovery, and page replacement. In this talk, I will give an overview of these components and the evolution of the system over the past 6 years.
     - when: 12/05/23
       presenter:
         url: https://www.eecs.tufts.edu/~johes/
