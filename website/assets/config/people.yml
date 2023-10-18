@@ -175,7 +175,7 @@ people:
     when: 2023
 
   - name: Themistoklis Nikas
-    image: placeholder-male.png
+    image: themis.jpg
     position: PhD Researcher
     website: https://cs-people.bu.edu/tnikas/
     category: students
