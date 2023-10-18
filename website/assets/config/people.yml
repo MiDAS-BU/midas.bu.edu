@@ -174,6 +174,13 @@ people:
     category: students
     when: 2023
 
+  - name: Nikas Themistoklis
+    image: placeholder-male.png
+    position: PhD Researcher
+    website: https://cs-people.bu.edu/tnikas/
+    category: students
+    when: 2023
+    
   - name: Subhadeep Sarkar
     image: subjadeep.jpeg
     position: "Postdoc (Next: Faculty at Brandeis University)"
