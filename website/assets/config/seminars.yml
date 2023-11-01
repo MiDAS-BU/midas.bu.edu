@@ -87,9 +87,15 @@
       title: |
               TBD <font color ="navy"><b>(CAS 313, 12:30pm)</b></font>
       abstract: TBD
-
-
-
+    - when: 12/11/23
+      presenter:
+        url: https://midas.bu.edu/seminar.html
+        name: N/A
+        affiliation: Boston University
+        bio: |
+      title: |
+              Project Updates 
+      abstract: |
 - name: Spring 2023
   when: 01/31/23
   where: |
