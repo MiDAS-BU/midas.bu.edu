@@ -68,10 +68,12 @@
 												[<a href={{ talk.video_url }} target="_blank">Talk Recording</a>]
 											{% endif %}	
 											<details>
+												{% if talk.abstract %}
 												<summary> <u>Click for abstract</u></summary>
 												<p class="text-justify">
 													{{ talk.abstract }}
 												</p>
+												{% endif %}	
 											</details>
 										{% endif %}
 									</td>
