@@ -17,6 +17,13 @@
 #       abstract: Possibly big text piece, talk's abstract. LaTeX snippets supported.
 #       departmental: OPTIONAL. If set, title and abstract are ignored and will be rendered "CS Department Seminar".
 #       special: OPTIONAL. If set, this text is rendered (HTML markup, like bold / italic / anchor allowed) as is in navy blue.
+- name: Spring 2024
+  when: 01/18/24
+  where: |
+    Seminars are held in CDS 950 at 11:30am [unless otherwise notified].
+  responsible:
+    name: Jinqi Lu
+    username: jinqilu
 
 - name: Fall 2023
   when: 09/01/23
