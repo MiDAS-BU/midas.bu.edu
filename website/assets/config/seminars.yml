@@ -66,7 +66,7 @@
               Incremental View Maintenance for Conjunctive Queries 
       abstract: |
                  Incremental view maintenance (IVM) is a critical problem in the field of database management systems. It addresses the challenge of efficiently updating materialized views in response to changes in the underlying data, reducing the computational cost and ensuring up-to-date query results. In this context, conjunctive queries, a subset of relational algebra, provide a rich framework for expressing complex queries of both theoretical and practical interest. In this talk, I will introduce a general IVM framework for conjunctive queries, such that views can be maintained efficiently while supporting enumerating full query results as well as delta query results with delay guarantee. I will describe the intrinsic relationship between the sequence of updates and the maintenance cost. At last, I will briefly discuss some interesting questions when aggregation is involved.
-    - when: 11/27/23
+    - when: 11/30/23
       presenter:
         url: https://midas.bu.edu/seminar.html
         name: Viktor Leis
@@ -74,7 +74,7 @@
         bio: |
            Viktor Leis is a Professor of Computer Science at the Technical University of Munich (TUM). His research revolves around designing high-performance data management systems and includes core database systems topics such as query processing, query optimization, transaction processing, index structures, and storage. Another major research area is designing cloud-native, cost-efficient information systems. Viktor Leis received his doctoral degree in 2016 from TUM and was a professor at the Friedrich-Schiller-Universität Jena and Friedrich-Alexander-Universität Erlangen-Nürnberg before returning to TUM in 2022. He received the ACM SIGMOD dissertation award, the IEEE TCDE Rising Star Award, best paper awards at IEEE ICDE and ACM SIGMOD, and an ERC Starting Grant.
       title: |
-              LeanStore: A High-Performance Storage Engine for NVMe SSDs and Multi-Core CPUs 
+              LeanStore: A High-Performance Storage Engine for NVMe SSDs and Multi-Core CPUs <font color ="navy"><b>(CAS 313, 12:30pm)</b></font>
       abstract: |
                  The goal of the LeanStore project is to achieve robust performance comparable to in-memory systems when the data set fits into RAM, while being able to fully exploit the bandwidth of fast NVMe SSDs for larger data sets. To achieve these goals we had to redesign all components of the traditional DBMS stack, including buffer management, indexing, concurrency control, I/O management, logging, recovery, and page replacement. In this talk, I will give an overview of these components and the evolution of the system over the past 6 years.
     - when: 12/04/23
