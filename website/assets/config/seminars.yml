@@ -68,7 +68,7 @@
                  Incremental view maintenance (IVM) is a critical problem in the field of database management systems. It addresses the challenge of efficiently updating materialized views in response to changes in the underlying data, reducing the computational cost and ensuring up-to-date query results. In this context, conjunctive queries, a subset of relational algebra, provide a rich framework for expressing complex queries of both theoretical and practical interest. In this talk, I will introduce a general IVM framework for conjunctive queries, such that views can be maintained efficiently while supporting enumerating full query results as well as delta query results with delay guarantee. I will describe the intrinsic relationship between the sequence of updates and the maintenance cost. At last, I will briefly discuss some interesting questions when aggregation is involved.
     - when: 11/30/23
       presenter:
-        url: https://midas.bu.edu/seminar.html
+        url: https://www.cs.cit.tum.de/dis/team/prof-dr-viktor-leis/
         name: Viktor Leis
         affiliation: Technical University of Munich
         bio: |
@@ -95,17 +95,12 @@
         name: Johes Bater
         affiliation: Tufts University
         bio: |
-          Johes Bater is  an assistant professor of Computer Science at Tufts
-          University. Before that, he was a postdoctoral researcher in the
-          Database Group at Duke University, received his Ph.D. in computer
-          science from Northwestern University, and completed his B.S. and
-          M.S. in electrical engineering at Stanford University. His
-          research centers on how to balance privacy, security, and utility
-          to build fast, accurate database systems that support
-          privacy-preserving analytics with provable security guarantees.
+          Johes Bater is an assistant professor of Computer Science at Tufts University and co-director of the Tufts Security and Privacy Lab. Before that, he was a postdoctoral researcher in the Database Group at Duke University, received his Ph.D. in computer science from Northwestern University, and completed his B.S. and M.S. in electrical engineering at Stanford University. His research centers on how to balance privacy, security, and utility to build fast, accurate database systems that support privacy-preserving analytics with provable security guarantees.
       title: |
-              TBD <font color ="navy"><b>(CAS 313, 12:30pm)</b></font>
-      abstract: TBD
+              Title: Building Systems That Protect Users and Their Data <font color ="navy"><b>(CAS 313, 12:30pm)</b></font>
+      abstract: |
+                Simply put, data security and privacy affects every single person in the world. Data breaches, where organizations compromise sensitive user data, are frighteningly common. Current approaches however, fail to properly safeguard security and privacy. Existing encrypted databases introduce data pipelines that leak enough side channel information that data breaches are an inevitability, while cryptographically secure solutions are so slow and cumbersome that they no longer serve their intended purpose. Moreover, many business models - such as targeted advertising - are predicated on their continued ability to analyze and make decisions based on private user data. Without a principled approach to protecting user privacy, it is unclear if this setup is sustainable. To address this problem, we need systems that treat security and privacy as first-class citizens in their system design.
+                In this talk, I will discuss how to build secure and private database management systems that balance the trade-offs among privacy, performance, and query result accuracy. This work spans numerous disciplines of computer science, including, 1) databases: modeling query workloads to estimate and optimize their privacy properties, runtime, and result accuracy across multiple settings, 2) security: extending secure computation protocols to evaluate SQL statements over the private data of many data owners without revealing data in plaintext, and 3) privacy: rigorously modeling the end-to-end information leakage profile of a privacy-preserving DBMS. The goal of this work is to bring together these disparate research areas to create usable query processing engines with strong privacy and security guarantees.
     - when: 12/11/23
       special: |
               Internal Project Updates 
