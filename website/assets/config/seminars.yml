@@ -24,7 +24,19 @@
   responsible:
     name: Jinqi Lu
     username: jinqilu
-
+  talks:
+    - when: 01/29/24
+      presenter:
+        url: https://kapilvaidya24.github.io/
+        name: Kapil Vaidya
+        affiliation: MIT
+        bio: |
+              TBD
+      title: |
+              TBD
+      abstract: | 
+                 TBD
+        
 - name: Fall 2023
   when: 09/01/23
   where: |
