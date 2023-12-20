@@ -20,7 +20,7 @@
 - name: Spring 2024
   when: 01/18/24
   where: |
-    Seminars are held on Thursdays in CDS (TBA) at 12:30pm [unless otherwise notified].
+    Seminars are held on Thursdays in CDS 801 at 12:30pm [unless otherwise notified].
   responsible:
     name: Jinqi Lu
     username: jinqilu
