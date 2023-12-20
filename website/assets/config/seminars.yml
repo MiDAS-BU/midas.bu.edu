@@ -27,6 +27,17 @@
   talks:
     - when: 02/01/24
       presenter:
+        url: https://gatterbauer.name/
+        name: Wolfgang Gatterbauer
+        affiliation: Northeaster University
+        bio: |
+              TBD
+      title: |
+              TBD
+      abstract: | 
+                 TBD
+    - when: 02/01/24
+      presenter:
         url: https://kapilvaidya24.github.io/
         name: Kapil Vaidya
         affiliation: MIT
