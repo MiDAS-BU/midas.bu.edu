@@ -54,7 +54,7 @@
 									</td>
 									<td>
 										{% if talk.departmental %}
-											<font color ="red">CS Seminar</font>
+											<font color ="crimson">CS Seminar</font>
 										{% elif talk.empty %}
 											<font color ="grey">MiDAS Seminar (available slot)</font>
 										{% elif "special" in talk %}
@@ -62,7 +62,9 @@
 												{{ talk.special }}
 											</font>
 										{% elif "title" in talk %}
-											{{ talk.title }}
+											<font color="crimson">
+												{{ talk.title }}
+											</font>
 											</br>
 											{% if talk.video_url %}
 												[<a href={{ talk.video_url }} target="_blank">Talk Recording</a>]

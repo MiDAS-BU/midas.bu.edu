@@ -25,17 +25,22 @@
     name: Jinqi Lu
     username: jinqilu
   talks:
-    - when: 02/01/24
+    - when: 02/08/24
       presenter:
         url: https://gatterbauer.name/
         name: Wolfgang Gatterbauer
         affiliation: Northeaster University
         bio: |
               TBD
-      title: |
-              TBD
+      title : |
+              HITSnDIFFs: From Truth Discovery to Ability Discovery by Recovering Matrices with the Consecutive Ones Property
       abstract: | 
-                 TBD
+                 We analyze a general problem in a crowd-sourced setting where one user asks a question (also called item) and other users return answers (also called labels) for this question. Different from existing crowd sourcing work which focuses on finding the most appropriate label for the question (the "truth"), our problem is to determine a ranking of the users based on their ability to answer questions. We call this problem "ability discovery" to emphasize the connection to and duality with the more well-studied problem of "truth discovery".
+                 To model items and their labels in a principled way, we draw upon Item Response Theory (IRT) which is the widely accepted theory behind standardized tests such as SAT and GRE. We start from an idealized setting where the relative performance of users is consistent across items and better users choose better fitting labels for each item. We posit that a principled algorithmic solution to our more general problem should solve this ideal setting correctly and observe that the response matrices in this setting obey the Consecutive Ones Property (C1P). While C1P is well understood algorithmically with various discrete algorithms, we devise a novel variant of the HITS algorithm which we call "HITSNDIFFS" (or HND), and prove that it can recover the ideal C1P-permutation in case it exists. Unlike fast combinatorial algorithms for finding the consecutive ones permutation (if it exists), HND also returns an ordering when such a permutation does not exist. Thus it provides a principled heuristic for our problem that is guaranteed to return the correct answer in the ideal setting. Our experiments show that HND produces user rankings with robustly high accuracy compared to state-of-the-art truth discovery methods. We also show that our novel variant of HITS scales better in the number of users than ABH, the only prior spectral C1P reconstruction algorithm. 
+                  Based on join work with Zixuan Chen, Subhodeep Mitra and R. Ravi
+                  https://arxiv.org/abs/2401.00013
+                  https://github.com/northeastern-datalab/HITSnDIFFs/ 
+                  https://www.youtube.com/watch?v=2pN1Nx7-sd0 
     - when: 02/01/24
       presenter:
         url: https://kapilvaidya24.github.io/
