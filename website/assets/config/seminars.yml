@@ -29,7 +29,7 @@
       presenter:
         url: https://gatterbauer.name/
         name: Wolfgang Gatterbauer
-        affiliation: Northeaster University
+        affiliation: Northeastern University
         bio: |
               Wolfgang Gatterbauer is an Associate Professor in the Khoury College of Computer Sciences at Northeastern University. A major focus of his research is to extend the capabilities of modern data management systems in generic ways and to allow them to support novel functionalities that seem hard at first. He received an NSF Career award and, with his students and collaborators, a best paper award at EDBT 2021, best-of-conference selections for PODS 2021, SIGMOD 2017, WALCOM 2017, and VLDB 2015, and two out of three reproducibility awards for papers published at SIGMOD 2020.
               <br/><br/><a href="https://gatterbauer.name">https://gatterbauer.name</a>
