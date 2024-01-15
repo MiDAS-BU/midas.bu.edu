@@ -45,7 +45,7 @@
     - when: 02/01/24
       presenter:
         url: https://kapilvaidya24.github.io/
-        name: Kapil Vaidya 
+        name: Kapil Vaidya
         affiliation: MIT
         bio: |
               Kapil Vaidya is an Applied Scientist at Amazon Redshift in the Learned Systems Group. He recently graduated from MIT, where he completed his PhD under the guidance of Professor Tim Kraska in the Data Systems Group. His research primarily revolves around the application of machine learning to data systems, with a special focus on the data structures and algorithms integral to these systems. Before that Kapil completed his Bachelors from IIT Bombay. 
