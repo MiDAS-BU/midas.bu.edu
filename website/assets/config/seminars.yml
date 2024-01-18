@@ -53,6 +53,17 @@
               Sparse Numerical Array-Based Range Filters (SNARF) <font color ="navy"><b>(1:00pm)</b></font>
       abstract: | 
                  We present Sparse Numerical Array-Based Range Filters (SNARF),a learned range filter that efficiently supports range queries for numerical data. SNARF creates a model of the data distribution to map the keys into a bit array which is stored in a compressed form. The model along with the compressed bit array which constitutes SNARF are used to answer membership queries. We evaluate SNARF on multiple synthetic and real-world datasets as a stand-alone filter and by integrating it into RocksDB. For range queries, SNARF provides up to 50x better false positive rate than state-of-the-art range filters, such as SuRF and Rosetta, with the same space usage. We also evaluate SNARF in RocksDB as a filter replacement for filtering requests before they access on-disk data structures. For RocksDB, SNARF can improve the execution time of the system up to 10x compared to SuRF and Rosetta for certain read-only workloads.
+    - when: 02/15/24
+      presenter:
+        url: https://www.lujinqi.com/
+        name: Jinqi Lu
+        affiliation: Boston University
+        bio: |
+              Jinqi is currently a CS Master's student at BU DiSC Lab advised by Prof. Athanassoulis. He posses a wide range of interests including Database Systems, Cloud, and Networks. Currently, he is engaged in the relational memory project and also contributes to the testing of computational and zoned storage devices.
+      title: |
+              Reading Group: Selection Pushdown in Column Stores using Bit Manipulation Instructions
+      abstract: | 
+                 Modern analytical database systems predominantly rely on column-oriented storage, which offers superior compression efficiency due to the nature of the columnar layout. This compression, however, creates challenges in decoding speed during query processing. Previous research has explored predicate pushdown on encoded values to avoid decoding, but these techniques are restricted to specific encoding schemes and predicates, limiting their practical use. In this paper, we propose a generic predicate pushdown approach that supports arbitrary predicates by leveraging selection pushdown to reduce decoding costs. At the core of our approach is a fast select operator capable of directly extracting selected encoded values without decoding, by using Bit Manipulation Instructions, an instruction set extension to the X86 architecture. We empirically evaluate the proposed techniques in the context of Apache Parquet using both micro-benchmarks and the TPC-H benchmark, and show that our techniques improve the query performance of Parquet by up to one order of magnitude with representative scan queries. Further experimentation using Apache Spark demonstrates speed improvements of up to 5.5X even for end-to-end queries involving complex joins.
         
 - name: Fall 2023
   when: 09/01/23
