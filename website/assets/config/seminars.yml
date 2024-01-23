@@ -20,11 +20,22 @@
 - name: Spring 2024
   when: 01/18/24
   where: |
-    Seminars are held on Thursdays in CDS 801 at 12:30pm [unless otherwise notified].
+    Seminars are held on Thursdays in CDS 950 at 1:30pm [unless otherwise notified].
   responsible:
     name: Jinqi Lu
     username: jinqilu
   talks:
+    - when: 02/01/24
+      presenter:
+        url: https://kapilvaidya24.github.io/
+        name: Kapil Vaidya
+        affiliation: MIT
+        bio: |
+              Kapil Vaidya is an Applied Scientist at Amazon Redshift in the Learned Systems Group. He recently graduated from MIT, where he completed his PhD under the guidance of Professor Tim Kraska in the Data Systems Group. His research primarily revolves around the application of machine learning to data systems, with a special focus on the data structures and algorithms integral to these systems. Before that Kapil completed his Bachelors from IIT Bombay. 
+      title: |
+              Sparse Numerical Array-Based Range Filters (SNARF) <font color ="navy"><b>(12:00pm @ CDS 1101 also part of BU Systems Seminar)</b></font>
+      abstract: | 
+                 We present Sparse Numerical Array-Based Range Filters (SNARF),a learned range filter that efficiently supports range queries for numerical data. SNARF creates a model of the data distribution to map the keys into a bit array which is stored in a compressed form. The model along with the compressed bit array which constitutes SNARF are used to answer membership queries. We evaluate SNARF on multiple synthetic and real-world datasets as a stand-alone filter and by integrating it into RocksDB. For range queries, SNARF provides up to 50x better false positive rate than state-of-the-art range filters, such as SuRF and Rosetta, with the same space usage. We also evaluate SNARF in RocksDB as a filter replacement for filtering requests before they access on-disk data structures. For RocksDB, SNARF can improve the execution time of the system up to 10x compared to SuRF and Rosetta for certain read-only workloads.
     - when: 02/08/24
       presenter:
         url: https://gatterbauer.name/
@@ -42,17 +53,6 @@
                   <br/><br/><a href="https://arxiv.org/abs/2401.00013" target=_blank>https://arxiv.org/abs/2401.00013</a>
                   <br/><a href="https://github.com/northeastern-datalab/HITSnDIFFs/" target=_blank>https://github.com/northeastern-datalab/HITSnDIFFs/</a>
                   <br/><a href="https://www.youtube.com/watch?v=2pN1Nx7-sd0" target=_blank>https://www.youtube.com/watch?v=2pN1Nx7-sd0</a> 
-    - when: 02/01/24
-      presenter:
-        url: https://kapilvaidya24.github.io/
-        name: Kapil Vaidya
-        affiliation: MIT
-        bio: |
-              Kapil Vaidya is an Applied Scientist at Amazon Redshift in the Learned Systems Group. He recently graduated from MIT, where he completed his PhD under the guidance of Professor Tim Kraska in the Data Systems Group. His research primarily revolves around the application of machine learning to data systems, with a special focus on the data structures and algorithms integral to these systems. Before that Kapil completed his Bachelors from IIT Bombay. 
-      title: |
-              Sparse Numerical Array-Based Range Filters (SNARF) <font color ="navy"><b>(1:00pm)</b></font>
-      abstract: | 
-                 We present Sparse Numerical Array-Based Range Filters (SNARF),a learned range filter that efficiently supports range queries for numerical data. SNARF creates a model of the data distribution to map the keys into a bit array which is stored in a compressed form. The model along with the compressed bit array which constitutes SNARF are used to answer membership queries. We evaluate SNARF on multiple synthetic and real-world datasets as a stand-alone filter and by integrating it into RocksDB. For range queries, SNARF provides up to 50x better false positive rate than state-of-the-art range filters, such as SuRF and Rosetta, with the same space usage. We also evaluate SNARF in RocksDB as a filter replacement for filtering requests before they access on-disk data structures. For RocksDB, SNARF can improve the execution time of the system up to 10x compared to SuRF and Rosetta for certain read-only workloads.
     - when: 02/15/24
       presenter:
         url: https://www.lujinqi.com/
