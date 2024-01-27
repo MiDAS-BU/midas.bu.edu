@@ -75,7 +75,117 @@
               Reading Group: ZNS SSDs
       abstract: | 
                  TBA
-        
+                 
+    - when: 02/29/24
+      presenter:
+        url: https://sites.google.com/view/juhyoungmun/
+        name: Ju Hyoung Mun
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: Programmable DDRx Controllers
+      abstract: | 
+                 TBA
+    - when: 03/07/24
+      presenter:
+        url: https://cs-people.bu.edu/karatse/
+        name: Konstantinos Karatsenidis
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: LRU-C: Parallelizing Database I/Os for Flash SSDs
+      abstract: | 
+                 TBA
+    - when: 03/14/24
+      presenter:
+        url: https://midas.bu.edu
+        name: TBA
+        affiliation: TBA
+        bio: |
+              TBA
+      title: |
+              TBA
+      abstract: | 
+                 TBA
+    - when: 03/21/24
+      presenter:
+        url: https://cs-people.bu.edu/ndhuynh/
+        name: Andy Huynh
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: Learning to Optimize LSM-trees: Towards A Reinforcement Learning based Key-Value Store for Dynamic Workloads
+      abstract: | 
+                 TBA
+    - when: 03/28/24
+      presenter:
+        url: https://cs-people.bu.edu/weiran22/
+        name: Ran Wei
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: Improving LSM-Tree Based Key-Value Stores With Fine-Grained Compaction Mechanism
+      abstract: | 
+                 TBA
+    - when: 04/04/24
+      presenter:
+        url: https://cs-people.bu.edu/aarona/
+        name: Aaron Ang
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: AutoSteer: Learned Query Optimization for Any SQL Database
+      abstract: | 
+                 TBA
+    - when: 04/11/24
+      presenter:
+        url: https://cs-people.bu.edu/zczhu/
+        name: Zichen Zhu
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: InfiniFilter: Expanding Filters to Infinity and Beyond
+      abstract: | 
+                 TBA
+    - when: 04/18/24
+      presenter:
+        url: https://cs-people.bu.edu/papon/
+        name: Tarikul Islam Papon
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: WA-Zone: Wear-Aware Zone Management Optimization for LSM-Tree on ZNS SSDs
+      abstract: | 
+                 TBA
+    - when: 04/25/24
+      presenter:
+        url: https://ramananeesh.github.io/
+        name: Aneesh Raman
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: Learned Index with Precise Positions
+      abstract: | 
+                 TBA
+    - when: 05/09/24
+      presenter:
+        url: https://midas.bu.edu
+        name: TBA
+        affiliation: TBA
+        bio: |
+              TBA
+      title: |
+              TBA
+      abstract: | 
+                 TBA
 - name: Fall 2023
   when: 09/01/23
   where: |
