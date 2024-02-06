@@ -109,6 +109,20 @@
               TBA
       abstract: | 
                  TBA
+    - when: 03/18/24
+      presenter:
+        url: https://aamodkh.github.io/
+        name: Aamod Khatiwada
+        affiliation: Northeastern University
+        bio: |
+              Aamod Khatiwada is a PhD Candidate (Computer Science, Databases) at Khoury College of Computer Sciences, Northeastern University, Boston, MA, USA. He originally from Jhorahat, a town in the southeastern part of Nepal. His primary research focus is to develop novel techniques and algorithms that find and integrate open data tables in a principled way. During free times, he enjoy watching cricket and soccer, writing poems, stories, and news articles.
+      title: |
+              Table Discovery and Integration in Data Lakes <font color ="navy"><b>(5:00pm - 6:15pm @ HAR 306)</b></font>
+      abstract: | 
+                 Data lakes serve as repositories that house millions of tables covering a wide range of subjects. Data scientists use tables from data lakes to support decision-making processes, train machine learning models, perform statistical analysis, and more. However, the enormous size and heterogeneity of data lakes, together with missing or unreliable metadata, make it challenging for data scientists to find suitable tables for their analyses. Furthermore, after table discovery, another challenge is to integrate the discovered tables together to get a unified view of data, enabling queries that go beyond a single table. In this talk, I will present novel techniques for table discovery and integration tasks. First, I will overview SANTOS [1] which helps data scientists discover tables from a data lake that union with their query table and possibly extend it with more rows. Contrary to existing techniques that only use the semantics of columns to perform union search, we improve the search accuracy by also using semantic relationships between pairs of columns in a table. Second, I will cover ALITE (Align and Integrate) [2], the first proposal for scalable integration of tables that may have been discovered using join, union, or related table search. ALITE aligns the columns of discovered tables using holistic schema matching and then applies Full Disjunction, an associative version of outer join,  to get an integrated table. I will also describe DIALITE [3], a novel table discovery pipeline that allows users to discover, integrate, and analyze open data tables. DIALITE is flexible such that the user can easily add and compare additional discovery and integration algorithms.
+                 [1] Aamod Khatiwada, Grace Fan, Roee Shraga, Zixuan Chen, Wolfgang Gatterbauer, Renée J. Miller, Mirek Riedewald. SANTOS: Relationship-based Semantic Table Union Search. SIGMOD 2023
+                 [2] Aamod Khatiwada, Roee Shraga, Wolfgang Gatterbauer, Renée J. Miller. Integrating Data Lake Tables. VLDB 2023.
+                 [3] Aamod Khatiwada, Roee Shraga, Renée J. Miller. DIALITE: Discover, Align and Integrate Open Data Tables. SIGMOD-Companion 2023.
     - when: 03/21/24
       presenter:
         url: https://cs-people.bu.edu/ndhuynh/
