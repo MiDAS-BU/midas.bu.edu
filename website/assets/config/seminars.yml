@@ -47,6 +47,18 @@
               Reading Group: Selection Pushdown in Column Stores using Bit Manipulation Instructions
       abstract: | 
                  Modern analytical database systems predominantly rely on column-oriented storage, which offers superior compression efficiency due to the nature of the columnar layout. This compression, however, creates challenges in decoding speed during query processing. Previous research has explored predicate pushdown on encoded values to avoid decoding, but these techniques are restricted to specific encoding schemes and predicates, limiting their practical use. In this paper, we propose a generic predicate pushdown approach that supports arbitrary predicates by leveraging selection pushdown to reduce decoding costs. At the core of our approach is a fast select operator capable of directly extracting selected encoded values without decoding, by using Bit Manipulation Instructions, an instruction set extension to the X86 architecture. We empirically evaluate the proposed techniques in the context of Apache Parquet using both micro-benchmarks and the TPC-H benchmark, and show that our techniques improve the query performance of Parquet by up to one order of magnitude with representative scan queries. Further experimentation using Apache Spark demonstrates speed improvements of up to 5.5X even for end-to-end queries involving complex joins.
+    - when: 02/21/24
+      presenter:
+        url: https://homes.cs.washington.edu/~suciu/
+        name: Dan Suciu
+        affiliation: University of Washington
+        bio: |
+              Dan Suciu is a Microsoft Endowed Professor in the Paul G. Allen School of Computer Science and Engineering at the University of Washington. Suciu is conducting research in data management, on topics such as query optimization, probabilistic data, data pricing, parallel data processing, data security. He is a co-author of two books Data on the Web: from Relations to Semistructured Data and XML, 1999, and Probabilistic Databases, 2011. He received the ACM SIGMOD Codd Innovation Award, received several best paper awards and test of time awards, and is a Fellow of the ACM. Suciu is currently an associate editor for the Journal of the ACM. Suciu’s PhD students Gerome Miklau, Christopher Re and Paris Koutris received the ACM SIGMOD Best Dissertation Award in 2006, 2010, and 2016 respectively, and Nilesh Dalvi was a runner up in 2008.
+      title: |
+              Cardinality Estimation: Achilles’ Heel of Query Optimizers <font color ="navy"><b>(11:00am @ CDS 1750)</b></font>
+
+      abstract: |
+                 Cardinality estimation is the problem of estimating the size of the output of a query, without actually evaluating the query.  The estimator has access to some limited statistics on the database, such as table cardinalities, number of distinct values in various columns, sometimes histograms, and needs to estimate the output size of complex queries, often involving many joins and filter predicates.  The cardinality estimator is a critical piece of any query optimizer, and is often the main culprit when the optimizer chooses a poor plan.  In this talk I will briefly survey existing cardinality estimation methods, discussing their pros and cons, then I will introduce a new approach to the problem, which is based on computing an upper bound instead of an estimate.  The upper bound is given by a mathematical formula, and can use the available database statistics in surprising ways.
     - when: 02/22/24
       presenter:
         url: https://cs-people.bu.edu/teona/
