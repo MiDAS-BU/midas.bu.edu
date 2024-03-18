@@ -16,12 +16,17 @@ categories:
     hidden: false
     sort: 1
 
-  - name: Postdocs
-    id: postdocs
-    hidden: false
-    sort: 2
+  # - name: Postdocs
+  #   id: postdocs
+  #   hidden: false
+  #   sort: 2
 
-  - name: Graduate Students
+  # - name: Graduate Students
+  #   id: students
+  #   hidden: false
+  #   sort: 3
+
+  - name: Researchers
     id: students
     hidden: false
     sort: 3
@@ -192,7 +197,7 @@ people:
     image: juhyoung.jpg
     position: Postdoctoral Researcher
     website: http://cs-people.bu.edu/jmun
-    category: postdocs
+    category: students
     when: 2019
 
   - name: Mark Crovella
