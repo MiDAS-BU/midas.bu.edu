@@ -76,6 +76,10 @@ def main():
 
 			# load from DBLP search API
 			response = requests.get(f"https://dblp.org/search/publ/api?q=author%3A{name}%3A&format=json")
+			# print("\n\t"+str(response))
+			if response.status_code == 429:
+				print(f"\n\tToo many requests to DBLP server. Please wait a few minutes.")
+				exit(1)
 			publications = json.loads(response.text)["result"]["hits"]["hit"]
 			print(f"\n\t{name}: ", end = "")
 
@@ -84,6 +88,10 @@ def main():
 				# Do not include archives
 				publication = publication["info"]
 				if publication["venue"] == "CoRR" or publication["venue"] == "IACR Cryptol. ePrint Arch.":
+					continue		
+
+				# Do not include specific entries
+				if publication["key"] == "journals/pvldb/Koutrika023f" or publication["key"] == "journals/sigweb/LauwCSTTT23" or publication["key"] == "conf/wsdm/2023" or publication["key"] == "journals/sigir/LauwCSTTT23":
 					continue
 
 				# Do not include duplicates
