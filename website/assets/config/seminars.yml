@@ -20,12 +20,80 @@
 - name: Spring 2024
   when: 01/18/24
   where: |
-    Seminars are held on Thursdays in CDS 801 at 12:30pm [unless otherwise notified].
+    Seminars are held on Thursdays in CDS 950 at 1:30pm [unless otherwise notified].
   responsible:
     name: Jinqi Lu
     username: jinqilu
   talks:
-    - when: 02/08/24
+    - when: 02/01/24
+      presenter:
+        url: https://kapilvaidya24.github.io/
+        name: Kapil Vaidya
+        affiliation: MIT
+        bio: |
+              Kapil Vaidya is an Applied Scientist at Amazon Redshift in the Learned Systems Group. He recently graduated from MIT, where he completed his PhD under the guidance of Professor Tim Kraska in the Data Systems Group. His research primarily revolves around the application of machine learning to data systems, with a special focus on the data structures and algorithms integral to these systems. Before that Kapil completed his Bachelors from IIT Bombay. 
+      title: |
+              Sparse Numerical Array-Based Range Filters (SNARF) <font color ="navy"><b>(12:00pm @ CDS 1101 also part of BU Systems Seminar)</b></font>
+      abstract: | 
+                 We present Sparse Numerical Array-Based Range Filters (SNARF),a learned range filter that efficiently supports range queries for numerical data. SNARF creates a model of the data distribution to map the keys into a bit array which is stored in a compressed form. The model along with the compressed bit array which constitutes SNARF are used to answer membership queries. We evaluate SNARF on multiple synthetic and real-world datasets as a stand-alone filter and by integrating it into RocksDB. For range queries, SNARF provides up to 50x better false positive rate than state-of-the-art range filters, such as SuRF and Rosetta, with the same space usage. We also evaluate SNARF in RocksDB as a filter replacement for filtering requests before they access on-disk data structures. For RocksDB, SNARF can improve the execution time of the system up to 10x compared to SuRF and Rosetta for certain read-only workloads.
+    - when: 02/15/24
+      presenter:
+        url: https://www.lujinqi.com/
+        name: Jinqi Lu
+        affiliation: Boston University
+        bio: |
+              Jinqi is currently a CS Master's student at BU DiSC Lab advised by Prof. Athanassoulis. He posses a wide range of interests including Database Systems, Cloud, and Networks. Currently, he is engaged in the relational memory project and also contributes to the testing of computational and zoned storage devices.
+      title: |
+              Reading Group: Selection Pushdown in Column Stores using Bit Manipulation Instructions
+      abstract: | 
+                 Modern analytical database systems predominantly rely on column-oriented storage, which offers superior compression efficiency due to the nature of the columnar layout. This compression, however, creates challenges in decoding speed during query processing. Previous research has explored predicate pushdown on encoded values to avoid decoding, but these techniques are restricted to specific encoding schemes and predicates, limiting their practical use. In this paper, we propose a generic predicate pushdown approach that supports arbitrary predicates by leveraging selection pushdown to reduce decoding costs. At the core of our approach is a fast select operator capable of directly extracting selected encoded values without decoding, by using Bit Manipulation Instructions, an instruction set extension to the X86 architecture. We empirically evaluate the proposed techniques in the context of Apache Parquet using both micro-benchmarks and the TPC-H benchmark, and show that our techniques improve the query performance of Parquet by up to one order of magnitude with representative scan queries. Further experimentation using Apache Spark demonstrates speed improvements of up to 5.5X even for end-to-end queries involving complex joins.
+    - when: 02/21/24
+      presenter:
+        url: https://homes.cs.washington.edu/~suciu/
+        name: Dan Suciu
+        affiliation: University of Washington
+        bio: |
+              Dan Suciu is a Microsoft Endowed Professor in the Paul G. Allen School of Computer Science and Engineering at the University of Washington. Suciu is conducting research in data management, on topics such as query optimization, probabilistic data, data pricing, parallel data processing, data security. He is a co-author of two books Data on the Web: from Relations to Semistructured Data and XML, 1999, and Probabilistic Databases, 2011. He received the ACM SIGMOD Codd Innovation Award, received several best paper awards and test of time awards, and is a Fellow of the ACM. Suciu is currently an associate editor for the Journal of the ACM. Suciu’s PhD students Gerome Miklau, Christopher Re and Paris Koutris received the ACM SIGMOD Best Dissertation Award in 2006, 2010, and 2016 respectively, and Nilesh Dalvi was a runner up in 2008.
+      title: |
+              Cardinality Estimation: Achilles’ Heel of Query Optimizers <font color ="navy"><b>(11:00am @ CDS 1750 also part of the CS Distinguished Colloquium)</b></font>
+
+      abstract: |
+                 Cardinality estimation is the problem of estimating the size of the output of a query, without actually evaluating the query.  The estimator has access to some limited statistics on the database, such as table cardinalities, number of distinct values in various columns, sometimes histograms, and needs to estimate the output size of complex queries, often involving many joins and filter predicates.  The cardinality estimator is a critical piece of any query optimizer, and is often the main culprit when the optimizer chooses a poor plan.  In this talk I will briefly survey existing cardinality estimation methods, discussing their pros and cons, then I will introduce a new approach to the problem, which is based on computing an upper bound instead of an estimate.  The upper bound is given by a mathematical formula, and can use the available database statistics in surprising ways.
+    - when: 02/22/24
+      presenter:
+        url: https://cs-people.bu.edu/teona/
+        name: Teona Bagashvili
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: ZNS SSDs
+      abstract: | 
+                 TBA
+                 
+    - when: 02/29/24
+      presenter:
+        url: https://sites.google.com/view/juhyoungmun/
+        name: Ju Hyoung Mun
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: Programmable DDRx Controllers
+      abstract: | 
+                 TBA
+    - when: 03/07/24
+      presenter:
+        url: https://cs-people.bu.edu/karatse/
+        name: Konstantinos Karatsenidis
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: LRU-C: Parallelizing Database I/Os for Flash SSDs
+      abstract: | 
+                 TBA
+    - when: 03/14/24
       presenter:
         url: https://gatterbauer.name/
         name: Wolfgang Gatterbauer
@@ -42,18 +110,97 @@
                   <br/><br/><a href="https://arxiv.org/abs/2401.00013" target=_blank>https://arxiv.org/abs/2401.00013</a>
                   <br/><a href="https://github.com/northeastern-datalab/HITSnDIFFs/" target=_blank>https://github.com/northeastern-datalab/HITSnDIFFs/</a>
                   <br/><a href="https://www.youtube.com/watch?v=2pN1Nx7-sd0" target=_blank>https://www.youtube.com/watch?v=2pN1Nx7-sd0</a> 
-    - when: 02/01/24
+    - when: 03/18/24
       presenter:
-        url: https://kapilvaidya24.github.io/
-        name: Kapil Vaidya 
-        affiliation: MIT
+        url: https://aamodkh.github.io/
+        name: Aamod Khatiwada
+        affiliation: Northeastern University
         bio: |
-              Kapil Vaidya is an Applied Scientist at Amazon Redshift in the Learned Systems Group. He recently graduated from MIT, where he completed his PhD under the guidance of Professor Tim Kraska in the Data Systems Group. His research primarily revolves around the application of machine learning to data systems, with a special focus on the data structures and algorithms integral to these systems. Before that Kapil completed his Bachelors from IIT Bombay. 
+              Aamod Khatiwada is a PhD Candidate (Computer Science, Databases) at Khoury College of Computer Sciences, Northeastern University, Boston, MA, USA. He originally from Jhorahat, a town in the southeastern part of Nepal. His primary research focus is to develop novel techniques and algorithms that find and integrate open data tables in a principled way. During free times, he enjoy watching cricket and soccer, writing poems, stories, and news articles.
       title: |
-              Sparse Numerical Array-Based Range Filters (SNARF) <font color ="navy"><b>(1:00pm)</b></font>
+              Table Discovery and Integration in Data Lakes <font color ="navy"><b>(5:00pm - 6:15pm @ HAR 306)</b></font>
       abstract: | 
-                 We present Sparse Numerical Array-Based Range Filters (SNARF),a learned range filter that efficiently supports range queries for numerical data. SNARF creates a model of the data distribution to map the keys into a bit array which is stored in a compressed form. The model along with the compressed bit array which constitutes SNARF are used to answer membership queries. We evaluate SNARF on multiple synthetic and real-world datasets as a stand-alone filter and by integrating it into RocksDB. For range queries, SNARF provides up to 50x better false positive rate than state-of-the-art range filters, such as SuRF and Rosetta, with the same space usage. We also evaluate SNARF in RocksDB as a filter replacement for filtering requests before they access on-disk data structures. For RocksDB, SNARF can improve the execution time of the system up to 10x compared to SuRF and Rosetta for certain read-only workloads.
-        
+                 Data lakes serve as repositories that house millions of tables covering a wide range of subjects. Data scientists use tables from data lakes to support decision-making processes, train machine learning models, perform statistical analysis, and more. However, the enormous size and heterogeneity of data lakes, together with missing or unreliable metadata, make it challenging for data scientists to find suitable tables for their analyses. Furthermore, after table discovery, another challenge is to integrate the discovered tables together to get a unified view of data, enabling queries that go beyond a single table. In this talk, I will present novel techniques for table discovery and integration tasks. First, I will overview SANTOS [1] which helps data scientists discover tables from a data lake that union with their query table and possibly extend it with more rows. Contrary to existing techniques that only use the semantics of columns to perform union search, we improve the search accuracy by also using semantic relationships between pairs of columns in a table. Second, I will cover ALITE (Align and Integrate) [2], the first proposal for scalable integration of tables that may have been discovered using join, union, or related table search. ALITE aligns the columns of discovered tables using holistic schema matching and then applies Full Disjunction, an associative version of outer join,  to get an integrated table. I will also describe DIALITE [3], a novel table discovery pipeline that allows users to discover, integrate, and analyze open data tables. DIALITE is flexible such that the user can easily add and compare additional discovery and integration algorithms.
+                 [1] Aamod Khatiwada, Grace Fan, Roee Shraga, Zixuan Chen, Wolfgang Gatterbauer, Renée J. Miller, Mirek Riedewald. SANTOS: Relationship-based Semantic Table Union Search. SIGMOD 2023
+                 [2] Aamod Khatiwada, Roee Shraga, Wolfgang Gatterbauer, Renée J. Miller. Integrating Data Lake Tables. VLDB 2023.
+                 [3] Aamod Khatiwada, Roee Shraga, Renée J. Miller. DIALITE: Discover, Align and Integrate Open Data Tables. SIGMOD-Companion 2023.
+    - when: 03/21/24
+      presenter:
+        url: https://cs-people.bu.edu/ndhuynh/
+        name: Andy Huynh
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: Learning to Optimize LSM-trees: Towards A Reinforcement Learning based Key-Value Store for Dynamic Workloads
+      abstract: | 
+                 TBA
+    - when: 03/28/24
+      presenter:
+        url: https://cs-people.bu.edu/weiran22/
+        name: Ran Wei
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: Improving LSM-Tree Based Key-Value Stores With Fine-Grained Compaction Mechanism
+      abstract: | 
+                 TBA
+    - when: 04/04/24
+      presenter:
+        url: https://cs-people.bu.edu/aarona/
+        name: Aaron Ang
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: AutoSteer: Learned Query Optimization for Any SQL Database
+      abstract: | 
+                 TBA
+    - when: 04/11/24
+      presenter:
+        url: https://cs-people.bu.edu/zczhu/
+        name: Zichen Zhu
+        affiliation: Boston University
+        bio: |
+               Zichen Zhu is currently a 5th-year PhD candidate in MiDAS of Boston University, advised by Prof. Manos Athanassoulis. Prior to joining Boston University, he studied as an MPhil student in Database Group, department of Computer Science in the University of Hong Kong, advised by Prof. Reynold Cheng. His research interest focuses on designing workload-aware query optimization under memory constraint.
+      title: |
+              Reading Group: InfiniFilter: Expanding Filters to Infinity and Beyond
+      abstract: | 
+                 Filter data structures have been used ubiquitously since the 1970s to answer approximate set-membership queries in various areas of computer science including architecture, networks, operating systems, and databases. Such filters need to be allocated with a given capacity in advance to provide a guarantee over the false positive rate. In many applications, however, the data size is not known in advance, requiring filters to dynamically expand. This paper shows that existing methods for expanding filters exhibit at least one of the following flaws: (1) they entail an expensive scan over the whole data set, (2) they require a lavish memory footprint, (3) their query, delete and/or insertion performance plummets, (4) their false positive rate skyrockets, and/or (5) they cannot expand indefinitely. We introduce InfiniFilter, a new method for expanding filters that addresses these shortcomings. InfiniFilter is a hash table that stores a fingerprint for each entry. It doubles in size when it reaches capacity, and it sacrifices one bit from each fingerprint to map it to the expanded hash table. The core novelty is a new and flexible hash slot format that sets longer fingerprints to newer entries. This keeps the average fingerprint length long and thus the false positive rate stable. At the same time, InfiniFilter provides stable insertion/query/delete performance as it is comprised of a unified hash table. We implement InfiniFilter on top of Quotient Filter, and we demonstrate theoretically and empirically that it offers superior cost properties compared to existing methods: it better scales performance, the false positive rate, and the memory footprint, all at the same time.
+    - when: 04/18/24
+      presenter:
+        url: https://cs-people.bu.edu/papon/
+        name: Tarikul Islam Papon
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: WA-Zone: Wear-Aware Zone Management Optimization for LSM-Tree on ZNS SSDs
+      abstract: | 
+                 TBA
+    - when: 04/25/24
+      presenter:
+        url: https://ramananeesh.github.io/
+        name: Aneesh Raman
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Reading Group: Learned Index with Precise Positions
+      abstract: | 
+                 TBA
+    - when: 05/09/24
+      presenter:
+        url: https://midas.bu.edu
+        name: TBA
+        affiliation: TBA
+        bio: |
+              TBA
+      title: |
+              TBA
+      abstract: | 
+                 TBA
 - name: Fall 2023
   when: 09/01/23
   where: |
@@ -106,18 +253,6 @@
               LeanStore: A High-Performance Storage Engine for NVMe SSDs and Multi-Core CPUs <font color ="navy"><b>(CAS 313, 12:30pm)</b></font>
       abstract: |
                  The goal of the LeanStore project is to achieve robust performance comparable to in-memory systems when the data set fits into RAM, while being able to fully exploit the bandwidth of fast NVMe SSDs for larger data sets. To achieve these goals we had to redesign all components of the traditional DBMS stack, including buffer management, indexing, concurrency control, I/O management, logging, recovery, and page replacement. In this talk, I will give an overview of these components and the evolution of the system over the past 6 years.
-    - when: 12/04/23
-      presenter:
-        url: https://delphiancalamity.github.io/
-        name: Kelly Kostopoulou
-        affiliation: Columbia University
-        bio: |
-          Kelly is a fourth-year PhD student at Columbia University, advised by Asaf Cidon. Her research spans broad areas of computer systems including privacy and systems for machine learning with a focus on accelerating training for large-scale deep neural networks. Lately, her work focuses on building functional system prototypes to enhance the practicality of differentially-private databases.
-      title: |
-              Turbo: Effective Caching in Differentially-Private Databases
-      abstract: |
-                 Differentially-private (DP) databases allow for privacy-preserving analytics over sensitive datasets or data streams. In these systems, user privacy is a limited resource that must be conserved with each query. We propose Turbo, a novel, state-of-the-art caching layer for linear query workloads over DP databases. Turbo builds upon private multiplicative weights (PMW), a DP mechanism that is powerful in theory but ineffective in practice, and transforms it into a highly-effective caching mechanism, PMW-Bypass, that uses prior query results obtained through an external DP mechanism to train a PMW to answer arbitrary future linear queries accurately and "for free" from a privacy perspective. Our experiments on public Covid and CitiBike datasets show that Turbo with PMW-Bypass conserves 1.7-15.9x more budget compared to vanilla PMW and simpler cache designs, a significant improvement. Moreover, Turbo provides support for range query workloads, such as timeseries or streams, where opportunities exist to further conserve privacy budget through DP parallel composition and warm-starting of PMW state. Our work provides a theoretical foundation and general system design for effective caching in DP databases.
-                 
     - when: 12/05/23
       presenter:
         url: https://www.eecs.tufts.edu/~johes/
