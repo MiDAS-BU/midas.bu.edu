@@ -144,7 +144,7 @@
               TBA
       title: |
               Reading Group: Improving LSM-Tree Based Key-Value Stores With Fine-Grained Compaction Mechanism
-      abstract: | 
+      abstract: |
                  TBA
     - when: 04/04/24
       presenter:
@@ -154,8 +154,8 @@
         bio: |
               TBA
       title: |
-              Reading Group: AutoSteer: Learned Query Optimization for Any SQL Database
-      abstract: | 
+              Reading Group: Automatic SQL Error Mitigation in Oracle
+      abstract: |
                  TBA
     - when: 04/11/24
       presenter:
