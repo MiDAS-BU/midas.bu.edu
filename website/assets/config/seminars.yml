@@ -135,7 +135,7 @@
               Reading Group: Learning to Optimize LSM-trees: Towards A Reinforcement Learning based Key-Value Store for Dynamic Workloads
       abstract: | 
                  TBA
-    - when: 03/28/24
+    - when: 04/11/24
       presenter:
         url: https://cs-people.bu.edu/weiran22/
         name: Ran Wei
@@ -146,7 +146,7 @@
               Reading Group: Improving LSM-Tree Based Key-Value Stores With Fine-Grained Compaction Mechanism
       abstract: |
                  TBA
-    - when: 04/04/24
+    - when: 04/11/24
       presenter:
         url: https://cs-people.bu.edu/aarona/
         name: Aaron Ang
@@ -157,7 +157,7 @@
               Reading Group: Automatic SQL Error Mitigation in Oracle
       abstract: |
                  TBA
-    - when: 04/11/24
+    - when: 04/04/24
       presenter:
         url: https://cs-people.bu.edu/zczhu/
         name: Zichen Zhu
