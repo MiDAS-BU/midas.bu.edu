@@ -135,6 +135,19 @@
               Reading Group: Learning to Optimize LSM-trees: Towards A Reinforcement Learning based Key-Value Store for Dynamic Workloads
       abstract: | 
                  TBA
+                 
+    - when: 04/04/24
+      presenter:
+        url: https://cs-people.bu.edu/zczhu/
+        name: Zichen Zhu
+        affiliation: Boston University
+        bio: |
+              Zichen Zhu is currently a 5th-year PhD candidate in MiDAS of Boston University, advised by Prof. Manos Athanassoulis. Prior to joining Boston University, he studied as an MPhil student in Database Group, department of Computer Science in the University of Hong Kong, advised by Prof. Reynold Cheng. His research interest focuses on designing workload-aware query optimization under memory constraint.
+      title: |
+              Dry Run for Zichen's Prospectus
+      abstract: | 
+                 TBA
+                 
     - when: 04/11/24
       presenter:
         url: https://cs-people.bu.edu/weiran22/
@@ -146,6 +159,7 @@
               Reading Group: Improving LSM-Tree Based Key-Value Stores With Fine-Grained Compaction Mechanism
       abstract: |
                  TBA
+                 
     - when: 04/11/24
       presenter:
         url: https://cs-people.bu.edu/aarona/
@@ -157,17 +171,7 @@
               Reading Group: Automatic SQL Error Mitigation in Oracle
       abstract: |
                  TBA
-    - when: 04/04/24
-      presenter:
-        url: https://cs-people.bu.edu/zczhu/
-        name: Zichen Zhu
-        affiliation: Boston University
-        bio: |
-               Zichen Zhu is currently a 5th-year PhD candidate in MiDAS of Boston University, advised by Prof. Manos Athanassoulis. Prior to joining Boston University, he studied as an MPhil student in Database Group, department of Computer Science in the University of Hong Kong, advised by Prof. Reynold Cheng. His research interest focuses on designing workload-aware query optimization under memory constraint.
-      title: |
-              Reading Group: InfiniFilter: Expanding Filters to Infinity and Beyond
-      abstract: | 
-                 Filter data structures have been used ubiquitously since the 1970s to answer approximate set-membership queries in various areas of computer science including architecture, networks, operating systems, and databases. Such filters need to be allocated with a given capacity in advance to provide a guarantee over the false positive rate. In many applications, however, the data size is not known in advance, requiring filters to dynamically expand. This paper shows that existing methods for expanding filters exhibit at least one of the following flaws: (1) they entail an expensive scan over the whole data set, (2) they require a lavish memory footprint, (3) their query, delete and/or insertion performance plummets, (4) their false positive rate skyrockets, and/or (5) they cannot expand indefinitely. We introduce InfiniFilter, a new method for expanding filters that addresses these shortcomings. InfiniFilter is a hash table that stores a fingerprint for each entry. It doubles in size when it reaches capacity, and it sacrifices one bit from each fingerprint to map it to the expanded hash table. The core novelty is a new and flexible hash slot format that sets longer fingerprints to newer entries. This keeps the average fingerprint length long and thus the false positive rate stable. At the same time, InfiniFilter provides stable insertion/query/delete performance as it is comprised of a unified hash table. We implement InfiniFilter on top of Quotient Filter, and we demonstrate theoretically and empirically that it offers superior cost properties compared to existing methods: it better scales performance, the false positive rate, and the memory footprint, all at the same time.
+                 
     - when: 04/18/24
       presenter:
         url: https://cs-people.bu.edu/papon/
@@ -179,7 +183,20 @@
               Reading Group: WA-Zone: Wear-Aware Zone Management Optimization for LSM-Tree on ZNS SSDs
       abstract: | 
                  TBA
-    - when: 04/25/24
+                 
+    - when: 05/02/24
+      presenter:
+        url: https://disc.bu.edu/
+        name: Tarikul Islam Papon / Zichen Zhu
+        affiliation: Boston University
+        bio: |
+              TBA
+      title: |
+              Dry Run for SIGMOD
+      abstract: | 
+                 TBA
+
+    - when: 05/09/24
       presenter:
         url: https://ramananeesh.github.io/
         name: Aneesh Raman
@@ -190,17 +207,7 @@
               Reading Group: Learned Index with Precise Positions
       abstract: | 
                  TBA
-    - when: 05/09/24
-      presenter:
-        url: https://midas.bu.edu
-        name: TBA
-        affiliation: TBA
-        bio: |
-              TBA
-      title: |
-              TBA
-      abstract: | 
-                 TBA
+                 
     - when: 05/16/24
       presenter:
         url: https://midas.bu.edu
@@ -209,7 +216,7 @@
         bio: |
               TBA
       title: |
-              Reading Group: TBA
+              Reading Group: Cabin: a Compressed Adaptive Binned Scan Index
       abstract: |
                  TBA
 
