@@ -22,8 +22,8 @@
   where: |
     Seminars are held on Monday in TBA at 12:00pm-1:30pm [unless otherwise noted].
   responsible:
-    name: TBA
-    username: TBA
+    name: Teona Bagashvili
+    username: teona
   talks:
     - when: 09/09/24
       presenter:
