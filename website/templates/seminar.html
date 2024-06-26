@@ -27,7 +27,8 @@
 							</tr>
 							{% for talk in semester.talks|sortByDate|reverse %}
 								<tr>
-									<td>{{ talk.when | formatDate }}</td>
+									<td>{{ talk.when | formatDate }}
+									</td>
 									<td>
 										{% if "presenter" in talk %}
 
