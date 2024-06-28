@@ -20,7 +20,7 @@
 - name: Fall 2024 (Data Systems Seminar)
   when: 09/09/24
   where: |
-    Seminars are held on Monday in TBA at 12:00pm-1:30pm [unless otherwise noted].
+    Seminars are held on Monday in CDS 801 at 12:00pm-1:30pm [unless otherwise noted].
   responsible:
     name: Teona Bagashvili
     username: teona
@@ -70,7 +70,6 @@
       title: | 
               TBA
       abstract: 
-
     - when: 10/14/24
       presenter:
         url: 
