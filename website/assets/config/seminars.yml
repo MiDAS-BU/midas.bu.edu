@@ -45,9 +45,9 @@
       abstract: 
     - when: 09/23/24
       presenter:
-        url: 
-        name: TBA
-        affiliation: 
+        url: https://www.cs.tau.ac.il/~danielde/
+        name: Daniel Deutch
+        affiliation: Tel Aviv University
         bio: 
       title: | 
               TBA
