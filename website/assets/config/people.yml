@@ -229,7 +229,7 @@ people:
     category: faculty
     when: 2019
 
-- name: Charalampos Tsourakakis
+  - name: Charalampos Tsourakakis
     image: babis.jpg
     position: Adjunct Faculty
     website: https://tsourakakis.com/
