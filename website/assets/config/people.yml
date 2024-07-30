@@ -125,10 +125,10 @@ people:
 
   - name: Tianyi Chen
     image: tianyi.png
-    position: PhD Researcher
-    website: http://cs-people.bu.edu/ctony/
-    category: students
-    when: 2019
+    position: PhD Researcher (Next: Celonis)
+    website: https://www.linkedin.com/in/tianyi-chen-609939145/
+    category: alumni
+    when: 2024
   
   - name: Aneesh Raman
     image: aneesh.jpg
@@ -195,7 +195,7 @@ people:
 
   - name: Ju Hyoung Mun
     image: juhyoung.jpg
-    position: "Postdoc (Next: Teaching Faculty at Brandeis University)"
+    position: "Postdoc (Next: Faculty at Brandeis University)"
     website: https://sites.google.com/view/juhyoungmun/
     category: alumni
     when: 2024
