@@ -222,19 +222,19 @@ people:
     category: faculty
     when: 2009
 
-  - name: Charalampos Tsourakakis
-    image: babis.jpg
-    position: Assistant Professor
-    website: https://tsourakakis.com/
-    category: faculty
-    when: 2017
-
   - name: Manos Athanassoulis
     image: manos.jpg
     position: Assistant Professor
     website: https://cs-people.bu.edu/mathan/
     category: faculty
     when: 2019
+
+- name: Charalampos Tsourakakis
+    image: babis.jpg
+    position: Adjunct Faculty
+    website: https://tsourakakis.com/
+    category: faculty
+    when: 2024
 
   - name: Charalampos Mavroforakis
     image: harry.png
