@@ -122,13 +122,6 @@ people:
     website: https://cs-people.bu.edu/qlina/
     category: students
     when: 2019
-
-  - name: Tianyi Chen
-    image: tianyi.png
-    position: "PhD (Next: Celonis)"
-    website: https://www.linkedin.com/in/tianyi-chen-609939145/
-    category: alumni
-    when: 2024
   
   - name: Aneesh Raman
     image: aneesh.jpg
@@ -200,13 +193,19 @@ people:
     category: alumni
     when: 2024
 
+  - name: Tianyi Chen
+    image: tianyi.png
+    position: "PhD (Next: Celonis)"
+    website: https://www.linkedin.com/in/tianyi-chen-609939145/
+    category: alumni
+    when: 2024
+  
   - name: Mark Crovella
     image: crovella.png
     position: Professor
     website: https://www.cs.bu.edu/fac/crovella/
     category: faculty
     when: 1994
-
 
   - name: George Kollios
     image: kollios.jpg
