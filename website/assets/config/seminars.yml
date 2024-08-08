@@ -25,6 +25,15 @@
     name: Teona Bagashvili
     username: teona
   talks:
+    - when: 09/04/24
+      presenter:
+        url: 
+        name: Kyle Deeds
+        affiliation: 
+        bio: 
+      title: | 
+              Galley: Modern Query Optimization for Sparse Tensor Programs <font color ="navy"><b>(12:00pm)</b></font>
+      abstract: 
     - when: 09/09/24
       presenter:
         url: 
