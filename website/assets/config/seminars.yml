@@ -32,7 +32,7 @@
         affiliation: 
         bio: 
       title: | 
-              Galley: Modern Query Optimization for Sparse Tensor Programs <font color ="navy"><b>(12:00pm)</b></font>
+              Galley: Modern Query Optimization for Sparse Tensor Programs <font color ="navy"><b>(12:00pm @ CDS 801)</b></font>
       abstract: 
     - when: 09/09/24
       presenter:
@@ -46,11 +46,11 @@
     - when: 09/16/24
       presenter:
         url: 
-        name: TBA
+        name: Sepanta Zeighami
         affiliation: 
         bio: 
       title: | 
-              TBA
+              <font color ="navy"><b>(online @ CDS 801)</b></font>
       abstract: 
     - when: 09/23/24
       presenter:
