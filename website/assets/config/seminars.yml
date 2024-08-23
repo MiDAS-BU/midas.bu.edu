@@ -94,7 +94,7 @@
         name: TBA
         affiliation: 
         bio: 
-      title: | 
+        special: | 
               Indigenous People’s Day Holiday, Classes Suspended
       abstract: 
     - when: 10/21/24
@@ -110,7 +110,7 @@
       presenter:
         url:  http://andrew.nerdnetworks.org/
         name: Andrew Lamb
-        affiliation: 
+        affiliation: InfluxDB
         bio: Andrew currently works in Rust on InfluxDB 3.0, focused on query processing, the Apache DataFusion query engine and the Apache Arrow ecosystem. He serves on the Apache DataFusion PMC (2024 Chair), and on the Apache Arrow PMC (2023 Chair), and actively contributes to the Apache Arrow DataFusion query engine and the Apache Arrow Rust implementation. He earned a BS and MEng in Course VI from MIT. More details are available at http://andrew.nerdnetworks.org/
       title: | 
               Apache DataFusion: Design Choices when Building Modern Analytic Systems
