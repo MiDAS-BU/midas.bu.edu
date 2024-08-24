@@ -29,7 +29,7 @@
       presenter:
         url: 
         name: Kyle Deeds
-        affiliation: 
+        affiliation: University of Washington
         bio: 
       title: | 
               Galley: Modern Query Optimization for Sparse Tensor Programs <font color ="navy"><b>(12:00pm @ CDS 801)</b></font>
@@ -37,17 +37,17 @@
     - when: 09/09/24
       presenter:
         url: 
-        name: TBA 
-        affiliation: 
+        name: Anwesha Saha/Teona Bagashvili
+        affiliation: Boston University
         bio: 
       title: | 
-              TBA
+              First meeting of the semester and summer school updates
       abstract: 
     - when: 09/16/24
       presenter:
         url: 
         name: Sepanta Zeighami
-        affiliation: 
+        affiliation: UC Berkeley
         bio: 
       title: | 
               <font color ="navy"><b>(online @ CDS 801)</b></font>
@@ -56,7 +56,7 @@
       presenter:
         url:  https://www.cs.tau.ac.il/~danielde/
         name: Daniel Deutch
-        affiliation:
+        affiliation: Tel Aviv University
         bio: 
       title: | 
               <font color ="navy"><b>(12:00pm)</b></font>
@@ -65,7 +65,7 @@
       presenter:
         url:  https://u.cs.biu.ac.il/~amstery/
         name: Yael Amsterdamer
-        affiliation:
+        affiliation: Bar-Ilan University
         bio: 
       title: | 
               <font color ="navy"><b>(12:45pm)</b></font>
