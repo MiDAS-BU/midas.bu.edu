@@ -30,10 +30,12 @@
         url: 
         name: Kyle Deeds
         affiliation: University of Washington
-        bio: 
+        bio: |
+              Kyle Deeds is currently a 5th year PhD student in the database lab at the University of Washington. He is advised by Dan Suciu and Magda Balazinska and interested in the intersection of databases, compilers, and HPC. Broadly, his work aims to make high performance computing accessible to domain experts through declarative programming coupled with automatic program optimization.
       title: | 
-              Galley: Modern Query Optimization for Sparse Tensor Programs <font color ="navy"><b>(12:00pm @ CDS 801)</b></font>
-      abstract: 
+              Galley: Modern Query Optimization for Declarative Sparse Tensor Programming <font color ="navy"><b>(12:00pm @ CDS 801)</b></font>
+      abstract: |
+              Modern computation has become dominated by the tensor programming abstraction. This framework allows users to write high performance programs for bulk computation via a high-level imperative interface. Recent work has extended this paradigm to sparse tensors (i.e. tensors where most entries are not explicitly represented) with the use of sparse tensor compilers. These systems excel at producing efficient code for computation over sparse tensors, which may be stored in a wide variety of formats. However, they require the user to manually choose the order of operations and the data formats at every step. Unfortunately, these decisions are both highly impactful and complicated, requiring significant effort to manually optimize. In this talk, I’ll present Galley, a system for declarative sparse tensor programming. Galley adapts the database community’s expertise in cost-based optimization to sparse tensor programs. First, it synthesizes a logical plan which determines high level structure and materialization strategy. Then, it lowers each piece of the logical plan to a physical implementation by determining loop orders, tensor formats, and merge algorithms. This plan is then efficiently executed by a sparse tensor compiler. Lastly, I’ll present early experimental results which show how Galley can produce up to 100x speedups over hand-optimized implementations for modestly complex tensor programs.
     - when: 09/09/24
       presenter:
         url: 
