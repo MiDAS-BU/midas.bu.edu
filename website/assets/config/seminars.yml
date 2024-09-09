@@ -47,13 +47,15 @@
       abstract: 
     - when: 09/16/24
       presenter:
-        url: 
+        url: https://szeighami.github.io/
         name: Sepanta Zeighami
         affiliation: UC Berkeley
-        bio: 
+        bio: |
+              Sepanta Zeighami is a postdoctoral scholar at UC Berkeley. Before that, he obtained his PhD from the University of Southern California.  His research is focused on using -- and theoretically understanding -- AI methods for improving data systems, where he has extensively published in top-tier conferences in both AI and database communities, including in SIGMOD, VLDB, ICML, ICLR, etc. His research has been recognized by oral presentation and best paper awards.
       title: | 
-              <font color ="navy"><b>(online @ CDS 801)</b></font>
-      abstract: 
+              Towards Practical Learned Database Operations with Theoretical Guarantees <font color ="navy"><b>(online @ CDS 801)</b></font>
+      abstract: |
+              Machine learning has shown significant practical benefits for performing various database operations such as indexing, cardinality estimation, and sorting. However, the theoretical characteristics of such learned database operations have not been well understood, limiting their applicability in real-world systems. In this talk, I will present our recent work on characterizing the performance benefits of learned database operations. I will show that, in the case of indexing, in static settings or when there is no distribution shift, learned methods can answer queries in O(loglog n) expected time, but their performance can drop to O(log n) in the presence of distribution shift. Using insights from this result, I will then discuss our broader analysis framework, distribution learnability, through which we show various novel theoretical results for different learned database operations. Our results provide a better understanding of why and when learned methods outperform non-learn methods (and when they don’t) and take a first step towards practical learned database operations with theoretical guarantees. I will conclude the talk by presenting various open theoretical and practical problems to achieve that goal.
     - when: 09/23/24
       presenter:
         url:  https://www.cs.tau.ac.il/~danielde/
