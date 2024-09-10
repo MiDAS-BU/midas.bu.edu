@@ -77,11 +77,11 @@
     - when: 09/30/24
       presenter:
         url: 
-        name: TBA
-        affiliation: 
+        name: Yuanli Wang/Lei Huang
+        affiliation: Boston University
         bio: 
       title: | 
-              TBA
+              CAPSys: Contention-aware task placement for data stream processing
       abstract: 
     - when: 10/07/24
       presenter:
