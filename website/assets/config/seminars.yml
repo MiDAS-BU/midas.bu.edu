@@ -20,7 +20,7 @@
 - name: Fall 2024 (Data Systems Seminar)
   when: 09/09/24
   where: |
-    Seminars are held on Monday in CDS 801 at 12:00pm-1:30pm [unless otherwise noted].
+    Seminars are held on Monday in CDS 950 at 12:00pm-1:30pm [unless otherwise noted].
   responsible:
     name: Teona Bagashvili
     username: teona
@@ -58,21 +58,12 @@
               Machine learning has shown significant practical benefits for performing various database operations such as indexing, cardinality estimation, and sorting. However, the theoretical characteristics of such learned database operations have not been well understood, limiting their applicability in real-world systems. In this talk, I will present our recent work on characterizing the performance benefits of learned database operations. I will show that, in the case of indexing, in static settings or when there is no distribution shift, learned methods can answer queries in O(loglog n) expected time, but their performance can drop to O(log n) in the presence of distribution shift. Using insights from this result, I will then discuss our broader analysis framework, distribution learnability, through which we show various novel theoretical results for different learned database operations. Our results provide a better understanding of why and when learned methods outperform non-learn methods (and when they don’t) and take a first step towards practical learned database operations with theoretical guarantees. I will conclude the talk by presenting various open theoretical and practical problems to achieve that goal.
     - when: 09/23/24
       presenter:
-        url:  https://www.cs.tau.ac.il/~danielde/
-        name: Daniel Deutch
-        affiliation: Tel Aviv University
+        url:  
+        name: TBA
+        affiliation: 
         bio: 
       title: | 
-              <font color ="navy"><b>(12:00pm)</b></font>
-      abstract: 
-    - when: 09/23/24
-      presenter:
-        url:  https://u.cs.biu.ac.il/~amstery/
-        name: Yael Amsterdamer
-        affiliation: Bar-Ilan University
-        bio: 
-      title: | 
-              <font color ="navy"><b>(12:45pm)</b></font>
+              Lightning talks <font color ="navy"><b>(@ CDS 950)</b></font>
       abstract: 
     - when: 09/30/24
       presenter:
