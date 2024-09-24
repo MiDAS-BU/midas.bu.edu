@@ -56,15 +56,6 @@
               Towards Practical Learned Database Operations with Theoretical Guarantees <font color ="navy"><b>(online @ CDS 801)</b></font>
       abstract: |
               Machine learning has shown significant practical benefits for performing various database operations such as indexing, cardinality estimation, and sorting. However, the theoretical characteristics of such learned database operations have not been well understood, limiting their applicability in real-world systems. In this talk, I will present our recent work on characterizing the performance benefits of learned database operations. I will show that, in the case of indexing, in static settings or when there is no distribution shift, learned methods can answer queries in O(loglog n) expected time, but their performance can drop to O(log n) in the presence of distribution shift. Using insights from this result, I will then discuss our broader analysis framework, distribution learnability, through which we show various novel theoretical results for different learned database operations. Our results provide a better understanding of why and when learned methods outperform non-learn methods (and when they don’t) and take a first step towards practical learned database operations with theoretical guarantees. I will conclude the talk by presenting various open theoretical and practical problems to achieve that goal.
-    - when: 09/23/24
-      presenter:
-        url:  
-        name: TBA
-        affiliation: 
-        bio: 
-      title: | 
-              Lightning talks <font color ="navy"><b>(@ CDS 950)</b></font>
-      abstract: 
     - when: 09/30/24
       presenter:
         url: 
@@ -94,12 +85,12 @@
       abstract: 
     - when: 10/21/24
       presenter:
-        url: 
-        name: TBA
-        affiliation: 
+        url:  https://aneeshraman.net/
+        name: Aneesh Raman
+        affiliation: Boston University
         bio: 
       title: | 
-              TBA
+              Reducing the real storage overhead of learned indexes with wavelet trees
       abstract:
     - when: 10/28/24
       presenter:
@@ -114,29 +105,29 @@
     - when: 11/04/24
       presenter:
         url: 
-        name: TBA
-        affiliation: 
+        name: Anwesha Saha
+        affiliation: Boston University
         bio: 
       title: | 
               TBA
       abstract:
     - when: 11/11/24
       presenter:
-        url: 
-        name: TBA
-        affiliation: 
+        url: https://cs-people.bu.edu/papon/
+        name: Tarikul Islam Papon
+        affiliation: Boston University
         bio: 
       title: | 
               TBA
       abstract:
     - when: 11/18/24
       presenter:
-        url: 
-        name: TBA
-        affiliation: 
+        url: https://cs-people.bu.edu/teona/
+        name: Teona Bagashvili
+        affiliation: Boston University
         bio: 
       title: | 
-              TBA
+              Efficient Data Placement for LSM Trees on ZNS SSD
       abstract:
     - when: 11/19/24
       presenter:
@@ -149,30 +140,30 @@
       abstract:
     - when: 11/25/24
       presenter:
-        url: 
-        name: TBA
-        affiliation: 
+        url: https://cs-people.bu.edu/zczhu/
+        name: Zichen Zhu
+        affiliation: Boston University
         bio: 
       title: | 
               TBA
       abstract:
     - when: 12/02/24
       presenter:
-        url: 
-        name: TBA
-        affiliation: 
+        url: https://ndhuynh.com/
+        name: Andy Huynh
+        affiliation: Boston University
         bio: 
       title: | 
               TBA
       abstract:
     - when: 12/09/24
       presenter:
-        url: 
-        name: TBA
-        affiliation: 
+        url: https://cs-people.bu.edu/karatse/
+        name: Konstantinos Karatsenidis
+        affiliation: Boston University
         bio: 
       title: | 
-              TBA
+              Query Optimization with Zero-Cost Material Views
       abstract: 
     - when: 12/16/24
       presenter:
