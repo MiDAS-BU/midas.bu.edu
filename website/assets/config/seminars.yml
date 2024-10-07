@@ -67,21 +67,21 @@
       abstract: 
     - when: 10/07/24
       presenter:
-        url: 
+        url: https://sites.bu.edu/casp/people/naima-abrar-shami/
         name: Naima Abrar
-        affiliation: 
+        affiliation: Boston University
         bio: 
       title: | 
               GNN Inference
       abstract: 
-    - when: 10/14/24
+    - when: 10/15/24
       presenter:
-        url: 
-        name: TBA
-        affiliation: 
+        url: https://cs-people.bu.edu/mfaisal/
+        name: Muhammad Faisal
+        affiliation: Boston University
         bio: 
-        special: | 
-              Indigenous People’s Day Holiday, Classes Suspended
+        title: | 
+              TBA
       abstract: 
     - when: 10/21/24
       presenter:
