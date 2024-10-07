@@ -76,7 +76,7 @@ def main():
 
 			# load from DBLP search API
 			response = requests.get(f"https://dblp.org/search/publ/api?q=author%3A{name}%3A&format=json")
-			# print("\n\t"+str(response))
+			print("\n\t"+str(response))
 			if response.status_code == 429:
 				print(f"\n\tToo many requests to DBLP server. Please wait a few minutes.")
 				exit(1)
