@@ -68,11 +68,11 @@
     - when: 10/07/24
       presenter:
         url: 
-        name: TBA
+        name: Naima Abrar
         affiliation: 
         bio: 
       title: | 
-              TBA
+              GNN Inference
       abstract: 
     - when: 10/14/24
       presenter:
