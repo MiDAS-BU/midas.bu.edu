@@ -143,10 +143,11 @@
         url: 
         name: George Neville-Neil
         affiliation: Yale University
-        bio: 
+        bio:  George V. Neville-Neil, works on networking and operating system code for fun and profit. His areas of interest are computer security, operating systems, networking, time protocols, and the care and feeding of large code bases. He is the author of The Kollected Kode Vicious and co-author with Marshall Kirk McKusick and Robert N. M. Watson of The Design and Implementation of the FreeBSD Operating System. For nearly twenty years he has been the columnist better known as Kode Vicious. Since 2014 he has been an Industrial Visitor at the University of Cambridge where he is involved in several projects relating to computer security. He earned his bachelor’s degree in computer science at Northeastern University in Boston, Massachusetts, and is a member of ACM, the Usenix Association, and IEEE. His software not only runs on Earth but has been deployed, as part of VxWorks in NASA’s missions to Mars. He is an avid bicyclist and traveler who currently lives in New York City. He is currently a PhD student at Yale University working with Robert Soulé, Avi Silberschatz and Peter Alvaro
       title: | 
-              <font color ="navy"><b>(12:30pm @ CAS211)</b></font>
-      abstract:
+              OSDB: Exposing the Operating System’s Inner Database <font color ="navy"><b>(12:30pm @ CAS211)</b></font>
+      abstract: |
+              Operating systems must provide functionality that closely resembles that of a data management system, but existing query mechanisms are ad-hoc and idiosyncratic. To address this problem, we argue for the adoption of a relational interface to the operating system kernel. While prior work has made similar proposals, our approach is unique in that it allows for incremental adoption over an existing, production-ready operating system. In this paper, we present progress on a prototype system called OSDB that embodies the incremental approach and discuss key aspects of the design, including the data model and concurrency control mechanisms. We present three example use cases: a network usage monitor, a load balancer, and file system checker, as well as experiments that demonstrate low overhead for our approach.
     - when: 11/25/24
       presenter:
         url: https://cs-people.bu.edu/zczhu/
