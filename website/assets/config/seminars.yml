@@ -107,10 +107,11 @@
         url:  https://itshelenxu.github.io/
         name: Helen Xu
         affiliation: Georgia Institute of Technology
-        bio: 
+        bio: Helen Xu is an assistant professor at Georgia Tech in the School of Computational Science and Engineering. Previously, she was the Grace Hopper Postdoctoral Scholar. At Lawrence Berkeley National Laboratory. She completed her Ph.D. at MIT with Professor Charles E. Leiserson. Her main research interests are in parallel and cache-friendly algorithms and data structures.
       title: | 
-              TBA <font color ="navy"><b>(10am @ CDS 701)</b></font>
-      abstract:
+              Recent Advances on In-Memory Cache-Friendly Data Structures <font color ="navy"><b>(10am @ CDS 701)</b></font>
+      abstract: |
+              This talk will discuss optimizing different types of parallel in-memory indexes for improved spatial locality. Specifically, it will overview 1) BP-tree [VLDB 23], a cache-optimized concurrent in-memory index that improves range query performance without giving up on point queries, and 2) CPMA [PPoPP 24], an in-memory batch-parallel data structure built on the Packed Memory Array (PMA) that overcomes the point-range tradeoff.
     - when: 11/04/24
       presenter:
         url: 
