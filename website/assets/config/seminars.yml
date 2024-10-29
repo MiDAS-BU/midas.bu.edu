@@ -74,15 +74,14 @@
       title: | 
               GNN Inference
       abstract: 
-    - when: 10/15/24
+    - when: 10/14/24
       presenter:
-        url: https://cs-people.bu.edu/mfaisal/
-        name: Muhammad Faisal
-        affiliation: Boston University
+        url: 
+        name: TBA
+        affiliation: 
         bio: 
-        title: |
-              Towards a scalable, generic, configurable Multi-Party Computation engine
-        abstract:
+      title: | 
+              TBA
     - when: 10/21/24
       presenter:
         url:  https://aneeshraman.net/
