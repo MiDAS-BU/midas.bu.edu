@@ -77,11 +77,11 @@
     - when: 10/14/24
       presenter:
         url: 
-        name: TBA
+        name: Muhammad Faisal
         affiliation: 
         bio: 
       title: | 
-              TBA
+              Towards a scalable, generic, configurable Multi-Party Computation engine
     - when: 10/21/24
       presenter:
         url:  https://aneeshraman.net/
