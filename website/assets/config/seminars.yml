@@ -74,11 +74,11 @@
       title: | 
               GNN Inference
       abstract: 
-    - when: 10/14/24
+    - when: 10/15/24
       presenter:
         url: 
         name: Muhammad Faisal
-        affiliation: 
+        affiliation: Boston University
         bio: 
       title: | 
               Towards a scalable, generic, configurable Multi-Party Computation engine
