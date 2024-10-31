@@ -69,7 +69,10 @@
 											</br>
 											{% if talk.video_url %}
 												[<a href={{ talk.video_url }} target="_blank">Talk Recording</a>]
-											{% endif %}	
+											{% endif %}
+											{% if talk.slides %}
+												[<a href="/website/assets/slides/{{ talk.slides }}" target="_blank">Slides</a>]
+											{% endif %}
 											{% if talk.abstract %}
 											<details>
 												<summary> <u>Click for abstract</u></summary>

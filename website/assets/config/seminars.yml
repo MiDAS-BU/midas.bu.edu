@@ -100,6 +100,7 @@
       title: | 
               Apache DataFusion: Design Choices when Building Modern Analytic Systems
       video_url: https://www.youtube.com/watch?v=CpnxuBwHbUc
+      slides: andrew_lamb_slides.pdf
       abstract: |
               Andrew will discuss engineering choices made when building Apache DataFusion, an open source and extensible query engine used as the basis of many commercial and open source projects. He will cover rationale for decisions such as using Rust and building on standards such as Arrow and Parquet. He will also discuss DataFusion’s design philosophy of extensible APIs paired with simple default implementations. Finally, he will offer lessons learned and enumerate some things that worked well and what could have been improved.
     - when: 10/31/24
