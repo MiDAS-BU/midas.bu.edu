@@ -72,7 +72,7 @@
         affiliation: Boston University
         bio: 
       title: | 
-              GNN Inference
+              PlatoGL: Effective and Scalable Deep Graph Learning System for Graph-enhanced Real-Time Recommendation
       abstract: 
     - when: 10/15/24
       presenter:
