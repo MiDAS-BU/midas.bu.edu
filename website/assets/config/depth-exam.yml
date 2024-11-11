@@ -2,154 +2,147 @@ categories:
   - name: Data Management
     papers:
 # Manos's papers
-      - authors: Kaan Kara, Jana Giceva, Gustavo Alonso
-        title: FPGA-based Data Partitioning
-        venue: SIGMOD
-        year: 2017
-        url: https://dl.acm.org/doi/pdf/10.1145/3035918.3035946
-
-      - authors: Stratos Idreos, Martin L. Kersten, Stefan Manegold
-        title: Updating a cracked database
-        venue: SIGMOD
-        year: 2007
-        url: https://stratos.seas.harvard.edu/files/IKM_SIGMOD07.pdf
+      - authors: Matias Bjørling, Abutalib Aghayev, Hans Holmberg, Aravind Ramesh, Damien Le Moal, Gregory R. Ganger, George Amvrosiadis
+        title: "ZNS: Avoiding the Block Interface Tax for Flash-based SSDs"
+        venue: USENIX ATC
+        year: 2021
+        url: https://www.usenix.org/system/files/atc21-bjorling.pdf
 
       - authors: Chen Luo, Michael J. Carey
-        title: |
-          LSM-based storage techniques: a survey
+        title: "LSM-based storage techniques: a survey"
         venue: VLDB
         year: 2020
         url: https://arxiv.org/pdf/1812.07527.pdf
 
-      - authors: Joy Arulraj, Andrew Pavlo, Prashanth Menon
-        title: Bridging the Archipelago between Row-Stores and Column-Stores for Hybrid Workloads
-        venue: SIGMOD
-        year: 2016
-        url: https://db.cs.cmu.edu/papers/2016/arulraj-sigmod2016.pdf
+      - authors: James Jie Pan, Jianguo Wang, Guoliang Li
+        title: Survey of vector database management systems
+        venue: The VLDB Journal
+        year: 2024
+        url: https://link.springer.com/article/10.1007/s00778-024-00864-x
 
-      - authors: Zongheng Yang, Badrish Chandramouli, Chi Wang, Johannes Gehrke, Yinan Li, Umar Farooq Minhas, Per-Åke Larson, Donald Kossmann, Rajeev Acharya
-        title: "Qd-tree: Learning Data Layouts for Big Data Analytics"
-        venue: SIGMOD
-        year: 2020
-        url: https://www.cs.purdue.edu/homes/csjgwang/cloudb/QdTreeSIGMOD20.pdf
+      - authors: Cheng Chen, Chenzhe Jin, Yunan Zhang, Sasha Podolsky, Chun Wu, Szu-Po Wang, Eric Hanson, Zhou Sun, Robert Walzer, Jianguo Wang
+        title: "SingleStore-V: An Integrated Vector Database System in SingleStore"
+        venue: PVLDB 
+        year: 2024
+        url: https://dl.acm.org/doi/pdf/10.14778/3685800.3685805
 
-      - authors: Per-Åke Larson, Spyros Blanas, Cristian Diaconu, Craig Freedman, Jignesh M. Patel, Mike Zwilling
-        title: High-Performance Concurrency Control Mechanisms for Main-Memory Databases
+      - authors: Jongsung Lee, Donguk Kim, Jae W. Lee
+        title: "WALTZ: Leveraging Zone Append to Tighten the Tail Latency of LSM Tree on ZNS SSD" 
         venue: PVLDB
-        year: 2011
-        url: https://vldb.org/pvldb/vol5/p298_per-akelarson_vldb2012.pdf
+        year: 2023
+        url: https://dl.acm.org/doi/pdf/10.14778/3611479.3611495
+
+      - authors: Alberto Lerner, Gustavo Alonso
+        title: CXL and the Return of Scale-Up Database Engines
+        venue: PVLDB
+        year: 2024
+        url: https://dl.acm.org/doi/pdf/10.14778/3675034.3675047
 
 # George's papers
-      - authors: Frank McSherry
-        title: "Privacy integrated queries: an extensible platform for privacy-preserving data analysis"
-        venue: SIGMOD
-        year: 2009
-        url: https://dl.acm.org/doi/pdf/10.1145/1559845.1559850
+      # - authors: Frank McSherry
+      #   title: "Privacy integrated queries: an extensible platform for privacy-preserving data analysis"
+      #   venue: SIGMOD
+      #   year: 2009
+      #   url: https://dl.acm.org/doi/pdf/10.1145/1559845.1559850
 
-      - authors: Raluca A. Popa, Catherine M. S. Redfield, Nickolai Zeldovich, Hari Balakrishnan
-        title: |
-          CryptDB: protecting confidentiality with encrypted query processing
-        venue: SOSP
-        year: 2011
-        url: https://web.cs.ucdavis.edu/~franklin/ecs228/2013/popa_etal_sosp_2011.pdf
+      # - authors: Raluca A. Popa, Catherine M. S. Redfield, Nickolai Zeldovich, Hari Balakrishnan
+      #   title: |
+      #     CryptDB: protecting confidentiality with encrypted query processing
+      #   venue: SOSP
+      #   year: 2011
+      #   url: https://web.cs.ucdavis.edu/~franklin/ecs228/2013/popa_etal_sosp_2011.pdf
 
-      - authors: Eamonn J. Keogh, CA Ratanamahatana
-        title: Exact indexing of dynamic time warping
-        venue: Knowledge and information systems
-        year: 2005
-        url: https://www.cs.ucr.edu/~eamonn/KAIS_2004_warping.pdf
+      # - authors: Eamonn J. Keogh, CA Ratanamahatana
+      #   title: Exact indexing of dynamic time warping
+      #   venue: Knowledge and information systems
+      #   year: 2005
+      #   url: https://www.cs.ucr.edu/~eamonn/KAIS_2004_warping.pdf
 
-      - authors: Christopher Re, Nilesh N. Dalvi, Dan Suciu
-        title: Efficient Top-k Query Evaluation on Probabilistic Data
-        venue: ICDE
-        year: 2007
-        url: https://homes.cs.washington.edu/~suciu/Multisimulation_ICDE07.pdf
+      # - authors: Christopher Re, Nilesh N. Dalvi, Dan Suciu
+      #   title: Efficient Top-k Query Evaluation on Probabilistic Data
+      #   venue: ICDE
+      #   year: 2007
+      #   url: https://homes.cs.washington.edu/~suciu/Multisimulation_ICDE07.pdf
 
-      - authors: Hakan Hacigümüs, Balakrishna R. Iyer, Chen Li, Sharad Mehrotra
-        title: Executing SQL over encrypted data in the database-service-provider model
-        venue: SIGMOD
-        year: 2002
-        url: https://www.ics.uci.edu/~chenli/pub/sigmod02.pdf
+      # - authors: Hakan Hacigümüs, Balakrishna R. Iyer, Chen Li, Sharad Mehrotra
+      #   title: Executing SQL over encrypted data in the database-service-provider model
+      #   venue: SIGMOD
+      #   year: 2002
+      #   url: https://www.ics.uci.edu/~chenli/pub/sigmod02.pdf
 
-      - authors: Michael Hay, Vibhor Rastogi, Gerome Miklau, Dan Suciu
-        title: Boosting the Accuracy of Differentially Private Histograms Through Consistency
-        venue: VLDB
-        year: 2010
-        url: https://www.vldb.org/pvldb/vldb2010/pvldb_vol3/R91.pdf
+      # - authors: Michael Hay, Vibhor Rastogi, Gerome Miklau, Dan Suciu
+      #   title: Boosting the Accuracy of Differentially Private Histograms Through Consistency
+      #   venue: VLDB
+      #   year: 2010
+      #   url: https://www.vldb.org/pvldb/vldb2010/pvldb_vol3/R91.pdf
 
   - name: Data Mining
     papers:
 # Evimaria's papers
-      - authors: Mina Ghashami, Edo Liberty, Jeff M. Phillips
-        title: Efficient Frequent Directions Algorithm for Sparse Matrices
+      - authors: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin
+        title: Attention is All You Need
+        venue: NeurIPS
+        year: 2017
+        url: https://arxiv.org/abs/1706.03762
+
+      - authors: Aditya Grover, Jure Leskovec
+        title: "node2vec: Scalable Feature Learning for Networks"
         venue: KDD
         year: 2016
-        url: https://www.kdd.org/kdd2016/papers/files/rfp1039-ghashamiA.pdf
+        url: https://arxiv.org/abs/1607.00653
 
-      - authors: Nir Ailon, Moses Charikar, Alantha Newman
-        title: |
-          Aggregating inconsistent information: Ranking and clustering
-        venue: ACM
-        year: 2008
-        url: http://dimacs.rutgers.edu/~alantha/papers2/aggregating_journal.pdf
+      - authors: Gruia Calinescu, Chandra Chekuri, Martin Pál, Jan Vondrák
+        title: Maximizing a Monotone Submodular Function Subject to a Matroid Constraint
+        venue: SIAM Journal of Computing
+        year: 2011
+        url: https://theory.stanford.edu/~jvondrak/data/submod-matroid.pdf
 
-      - authors: Andrei Z. Broder, Moses Charikar, Alan M. Frieze, Michael Mitzenmacher
-        title: Min-Wise Independent Permutations
-        venue: Journal of Computer and System Sciences
-        year: 2000
-        url: https://www.math.cmu.edu/~af1p/Texfiles/mw0.pdf
-
-      - authors: David Kempe, Jon M. Kleinberg, Eva Tardos
-        title: Maximizing the Spread of Influence through a social network
-        venue: Theory of Computing
-        year: 2015
-        url: http://www.theoryofcomputing.org/articles/v011a004/v011a004.pdf
-
-      - authors: Nate Veldt, Austin R. Benson, Jon M. Kleinberg
+      - authors: Nate Veldt, Austin R. Benson, Jon Kleinberg
         title: The Generalized Mean Densest Subgraph Problem
         venue: KDD
         year: 2021
         url: https://www.cs.cornell.edu/~arb/papers/generalized-densest-subgraph-KDD-2021.pdf
 
-      - authors: Raunak Kumar, Paul Liu, Moses Charikar, Austin R. Benson
-        title: Retrieving Top Weighted Triangles in Graphs
-        venue: WSDM
-        year: 2020
-        url: https://www.cs.cornell.edu/~arb/papers/top-weighted-wsdm-2020.pdf
+      - authors: Piotr Indyk, Sandeep Silwal 
+        title: Faster Linear Algebra for Distance Matrices
+        venue: NeurIPS
+        year: 2022
+        url: https://papers.nips.cc/paper_files/paper/2022/file/e7599c4b309e39e444a7dcf92572fae1-Paper-Conference.pdf
+
 
 #Babis' papers
-      - authors: Hung Q. Ngo, Ely Porat, Christopher Ré, Atri Rudra
-        title: Worst-case optimal join algorithms 
-        venue: Journal of the ACM
-        year: 2018
-        url: https://dl.acm.org/doi/pdf/10.1145/3180143
+      # - authors: Hung Q. Ngo, Ely Porat, Christopher Ré, Atri Rudra
+      #   title: Worst-case optimal join algorithms 
+      #   venue: Journal of the ACM
+      #   year: 2018
+      #   url: https://dl.acm.org/doi/pdf/10.1145/3180143
 
-      - authors: Noga Alon, Raphael Yuster, Uri Zwick
-        title: Color-Coding
-        venue: Journal of the ACM
-        year: 1995
-        url: https://dl.acm.org/doi/pdf/10.1145/210332.210337
+      # - authors: Noga Alon, Raphael Yuster, Uri Zwick
+      #   title: Color-Coding
+      #   venue: Journal of the ACM
+      #   year: 1995
+      #   url: https://dl.acm.org/doi/pdf/10.1145/210332.210337
 
-      - authors: Noga Alon, Yossi Matias, Mario Szegedy
-        title: The Space Complexity of Approximating the Frequency Moments
-        venue: Journal of Computer and System Sciences
-        year: 1999
-        url: https://www.sciencedirect.com/science/article/pii/S0022000097915452/pdf?md5=a1d6b653f215655121004757d1e18a4f&pid=1-s2.0-S0022000097915452-main.pdf&_valck=1
+      # - authors: Noga Alon, Yossi Matias, Mario Szegedy
+      #   title: The Space Complexity of Approximating the Frequency Moments
+      #   venue: Journal of Computer and System Sciences
+      #   year: 1999
+      #   url: https://www.sciencedirect.com/science/article/pii/S0022000097915452/pdf?md5=a1d6b653f215655121004757d1e18a4f&pid=1-s2.0-S0022000097915452-main.pdf&_valck=1
 
-      - authors: Kook Jin Ahn, Sudipto Guha, Andrew McGregor
-        title: Analyzing Graph Structure via Linear Measurements
-        venue: SODA
-        year: 2012
-        url: https://people.cs.umass.edu/~mcgregor/papers/12-dynamic.pdf
+      # - authors: Kook Jin Ahn, Sudipto Guha, Andrew McGregor
+      #   title: Analyzing Graph Structure via Linear Measurements
+      #   venue: SODA
+      #   year: 2012
+      #   url: https://people.cs.umass.edu/~mcgregor/papers/12-dynamic.pdf
 
-      - authors: Gary L. Miller, Richard Peng, Shen Chen Xu
-        title: Parallel Graph Decompositions Using Random Shifts
-        venue: SPAA
-        year: 2013
-        url: https://arxiv.org/pdf/1307.3692.pdf
+      # - authors: Gary L. Miller, Richard Peng, Shen Chen Xu
+      #   title: Parallel Graph Decompositions Using Random Shifts
+      #   venue: SPAA
+      #   year: 2013
+      #   url: https://arxiv.org/pdf/1307.3692.pdf
 
-      - authors: Edith Cohen, Daniel Delling, Thomas Pajor, Renato F. Werneck
-        title: Computing classic closeness centrality, at scale
-        venue: COSN
-        year: 2014
-        url: https://dl.acm.org/doi/pdf/10.1145/2660460.2660465
+      # - authors: Edith Cohen, Daniel Delling, Thomas Pajor, Renato F. Werneck
+      #   title: Computing classic closeness centrality, at scale
+      #   venue: COSN
+      #   year: 2014
+      #   url: https://dl.acm.org/doi/pdf/10.1145/2660460.2660465
