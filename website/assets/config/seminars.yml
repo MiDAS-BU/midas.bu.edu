@@ -120,16 +120,7 @@
         affiliation: Boston University
         bio: 
       title: | 
-              TBA
-      abstract:
-    - when: 11/11/24
-      presenter:
-        url: https://cs-people.bu.edu/papon/
-        name: Tarikul Islam Papon
-        affiliation: Boston University
-        bio: 
-      title: | 
-              TBA
+              Bayesian Optimization for LSM Tuning
       abstract:
     - when: 11/18/24
       presenter:
@@ -138,7 +129,7 @@
         affiliation: Boston University
         bio: 
       title: | 
-              Efficient Data Placement for LSM Trees on ZNS SSD
+              TBA
       abstract:
     - when: 11/19/24
       presenter:
