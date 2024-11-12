@@ -109,6 +109,11 @@ categories:
         year: 2022
         url: https://papers.nips.cc/paper_files/paper/2022/file/e7599c4b309e39e444a7dcf92572fae1-Paper-Conference.pdf
 
+      - authors: Harald Steck, Chaitanya Ekanadham, Nathan Kallus
+        title: Is Cosine-Similarity of Embeddings Really About Similarity?
+        venue: WWW
+        year: 2024
+        url: https://dl.acm.org/doi/pdf/10.1145/3589335.3651526
 
 #Babis' papers
       # - authors: Hung Q. Ngo, Ely Porat, Christopher Ré, Atri Rudra
