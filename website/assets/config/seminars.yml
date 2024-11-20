@@ -111,6 +111,7 @@
         bio: Helen Xu is an assistant professor at Georgia Tech in the School of Computational Science and Engineering. Previously, she was the Grace Hopper Postdoctoral Scholar. At Lawrence Berkeley National Laboratory. She completed her Ph.D. at MIT with Professor Charles E. Leiserson. Her main research interests are in parallel and cache-friendly algorithms and data structures.
       title: | 
               Recent Advances on In-Memory Cache-Friendly Data Structures <font color ="navy"><b>(10am @ CDS 701)</b></font>
+      video_url: https://www.youtube.com/watch?v=cdq4ebPYUTQ
       abstract: |
               This talk will discuss optimizing different types of parallel in-memory indexes for improved spatial locality. Specifically, it will overview 1) BP-tree [VLDB 23], a cache-optimized concurrent in-memory index that improves range query performance without giving up on point queries, and 2) CPMA [PPoPP 24], an in-memory batch-parallel data structure built on the Packed Memory Array (PMA) that overcomes the point-range tradeoff.
     - when: 11/04/24
@@ -121,15 +122,6 @@
         bio: 
       title: | 
               Bayesian Optimization for LSM Tuning
-      abstract:
-    - when: 11/18/24
-      presenter:
-        url: https://cs-people.bu.edu/teona/
-        name: Teona Bagashvili
-        affiliation: Boston University
-        bio: 
-      title: | 
-              TBA
       abstract:
     - when: 11/19/24
       presenter:
@@ -143,8 +135,8 @@
               Operating systems must provide functionality that closely resembles that of a data management system, but existing query mechanisms are ad-hoc and idiosyncratic. To address this problem, we argue for the adoption of a relational interface to the operating system kernel. While prior work has made similar proposals, our approach is unique in that it allows for incremental adoption over an existing, production-ready operating system. In this paper, we present progress on a prototype system called OSDB that embodies the incremental approach and discuss key aspects of the design, including the data model and concurrency control mechanisms. We present three example use cases: a network usage monitor, a load balancer, and file system checker, as well as experiments that demonstrate low overhead for our approach.
     - when: 11/25/24
       presenter:
-        url: https://cs-people.bu.edu/zczhu/
-        name: Zichen Zhu
+        url: https://aneeshraman.net/
+        name: Aneesh Raman
         affiliation: Boston University
         bio: 
       title: | 
@@ -152,8 +144,8 @@
       abstract:
     - when: 12/02/24
       presenter:
-        url: https://ndhuynh.com/
-        name: Andy Huynh
+        url: https://aneeshraman.net/
+        name: Aneesh Raman
         affiliation: Boston University
         bio: 
       title: | 
