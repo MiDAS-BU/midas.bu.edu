@@ -140,34 +140,16 @@
         affiliation: Boston University
         bio: 
       title: | 
-              TBA
-      abstract:
-    - when: 12/02/24
-      presenter:
-        url: https://aneeshraman.net/
-        name: Aneesh Raman
-        affiliation: Boston University
-        bio: 
-      title: | 
-              TBA
+              PhD prospectus dry run
       abstract:
     - when: 12/09/24
-      presenter:
-        url: https://cs-people.bu.edu/karatse/
-        name: Konstantinos Karatsenidis
+      presenter: 
+        url: https://cs-people.bu.edu/zczhu/
+        name: Zichen Zhu
         affiliation: Boston University
         bio: 
       title: | 
-              Query Optimization with Zero-Cost Material Views
-      abstract: 
-    - when: 12/16/24
-      presenter:
-        url: 
-        name: TBA
-        affiliation: 
-        bio: 
-      title: | 
-              TBA
+              Designing Instance-Optimal Data Systems in Modern Applications
       abstract: 
 
 - name: Spring 2024
