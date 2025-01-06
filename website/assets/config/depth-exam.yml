@@ -2,11 +2,11 @@ categories:
   - name: Data Management
     papers:
 # Manos's papers
-      - authors: Matias Bjørling, Abutalib Aghayev, Hans Holmberg, Aravind Ramesh, Damien Le Moal, Gregory R. Ganger, George Amvrosiadis
-        title: "ZNS: Avoiding the Block Interface Tax for Flash-based SSDs"
-        venue: USENIX ATC
-        year: 2021
-        url: https://www.usenix.org/system/files/atc21-bjorling.pdf
+      # - authors: Matias Bjørling, Abutalib Aghayev, Hans Holmberg, Aravind Ramesh, Damien Le Moal, Gregory R. Ganger, George Amvrosiadis
+      #   title: "ZNS: Avoiding the Block Interface Tax for Flash-based SSDs"
+      #   venue: USENIX ATC
+      #   year: 2021
+      #   url: https://www.usenix.org/system/files/atc21-bjorling.pdf
 
       - authors: Chen Luo, Michael J. Carey
         title: "LSM-based storage techniques: a survey"
@@ -20,23 +20,35 @@ categories:
         year: 2024
         url: https://link.springer.com/article/10.1007/s00778-024-00864-x
 
-      - authors: Cheng Chen, Chenzhe Jin, Yunan Zhang, Sasha Podolsky, Chun Wu, Szu-Po Wang, Eric Hanson, Zhou Sun, Robert Walzer, Jianguo Wang
-        title: "SingleStore-V: An Integrated Vector Database System in SingleStore"
-        venue: PVLDB 
-        year: 2024
-        url: https://dl.acm.org/doi/pdf/10.14778/3685800.3685805
+      # - authors: Cheng Chen, Chenzhe Jin, Yunan Zhang, Sasha Podolsky, Chun Wu, Szu-Po Wang, Eric Hanson, Zhou Sun, Robert Walzer, Jianguo Wang
+      #   title: "SingleStore-V: An Integrated Vector Database System in SingleStore"
+      #   venue: PVLDB 
+      #   year: 2024
+      #   url: https://dl.acm.org/doi/pdf/10.14778/3685800.3685805
 
       - authors: Jongsung Lee, Donguk Kim, Jae W. Lee
         title: "WALTZ: Leveraging Zone Append to Tighten the Tail Latency of LSM Tree on ZNS SSD" 
         venue: PVLDB
         year: 2023
-        url: https://dl.acm.org/doi/pdf/10.14778/3611479.3611495
+        url: https://www.vldb.org/pvldb/vol16/p2884-lee.pdf
+
+      - authors: Dmytro Bogatov, Georgios Kellaris, George Kollios, Kobbi Nissim, Adam O'Neill
+        title: "εpsolute: Efficiently Querying Databases While Providing Differential Privacy"
+        venue: CCS
+        year: 2021
+        url: https://dl.acm.org/doi/10.1145/3460120.3484786
 
       - authors: Alberto Lerner, Gustavo Alonso
         title: CXL and the Return of Scale-Up Database Engines
         venue: PVLDB
         year: 2024
         url: https://dl.acm.org/doi/pdf/10.14778/3675034.3675047
+
+      - authors: Hazar Harmouch, Felix Naumann
+        title: "Cardinality Estimation: An Experimental Survey"
+        venue: PVLDB
+        year: 2017
+        url: https://www.vldb.org/pvldb/vol11/p499-harmouch.pdf
 
 # George's papers
       # - authors: Frank McSherry
