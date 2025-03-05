@@ -36,6 +36,42 @@
               Powering Declarative Programming with Data-Aware Program Optimization <font color ="navy"><b>(11:00am @ CDS 950)</b></font>
       abstract: |
               Modern computing has been defined by two trends; 1) data that relentlessly grows in scale and 2) programs that become increasingly complex. This creates a massive challenge for the engineers and data scientists who need to write efficient, correct programs. The standard solution is a hand-coded package that is shared across problem instances. This is a code-then-data approach where an implementation is written and compiled first, then the data arrives later. Unfortunately, this approach struggles when the performance of the program fundamentally depends on the data. In these cases, there is no ”efficient implementation”. There is only an ”efficient implementation for this dataset”. My research leverages insights from database theory and query optimization to develop methods for data-aware program optimization. This approach enables a range of new program rewrites which are highly efficient, conditioned on the data distribution. The goal of this work is to enable efficient, declarative interfaces in new areas of computing, as exemplified by Galley, our optimizer for sparse tensor programs.
+    - when: 04/03/25
+      presenter:
+        url: 
+        name: Ben Vandiver
+        affiliation: Google
+        bio: |
+      title: | 
+              Google's Spanner Database <font color ="navy"><b>(11:00am @ CDS 364)</b></font>
+      abstract: |
+    - when: 04/10/25
+      presenter:
+        url: 
+        name: George Neville-Neil
+        affiliation: Yale University
+        bio: |
+      title: | 
+              OSDB: Exposing the Operating System's Inner Database <font color ="navy"><b>(11:00am @ CDS 364)</b></font>
+      abstract: |
+    - when: 04/17/25
+      presenter:
+        url: 
+        name: Andrew Lamb
+        affiliation: 
+        bio: |
+      title: | 
+              Cloud Data Lakes <font color ="navy"><b>(11:00am @ CDS 364)</b></font>
+      abstract: |
+    - when: 04/29/25
+      presenter:
+        url: 
+        name: Yongjoo Park
+        affiliation: 
+        bio: |
+      title: | 
+              TBA 
+      abstract: |
 
 - name: Fall 2024 (Data Systems Seminar)
   when: 09/09/24
