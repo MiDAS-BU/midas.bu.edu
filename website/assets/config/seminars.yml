@@ -17,6 +17,26 @@
 #       abstract: Possibly big text piece, talk's abstract. LaTeX snippets supported.
 #       departmental: OPTIONAL. If set, title and abstract are ignored and will be rendered "CS Department Seminar".
 #       special: OPTIONAL. If set, this text is rendered (HTML markup, like bold / italic / anchor allowed) as is in navy blue.
+- name: Spring 2025 
+  when: 01/01/25
+  where: |
+    Seminars are held on Monday in CDS 950 at 12:00pm-1:30pm [unless otherwise noted].
+  responsible:
+    name: Teona Bagashvili
+    username: teona
+  talks:
+    - when: 02/03/25
+      presenter:
+        url: https://kylebd99.github.io/kyle.deeds.github.io/
+        name: Kyle Deeds
+        affiliation: University of Washington
+        bio: |
+             Kyle Deeds is currently a 5th year PhD student in the database lab at the University of Washington, advised by Dan Suciu and Magda Balazinska. He is interested in the intersection of database theory, systems, and programming languages. His research aims to make high performance computing accessible to domain experts through declarative programming coupled with automatic program optimization.
+      title: | 
+              Powering Declarative Programming with Data-Aware Program Optimization <font color ="navy"><b>(11:00am @ CDS 950)</b></font>
+      abstract: |
+      Modern computing has been defined by two trends; 1) data that relentlessly grows in scale and 2) programs that become increasingly complex. This creates a massive challenge for the engineers and data scientists who need to write efficient, correct programs. The standard solution is a hand-coded package that is shared across problem instances. This is a code-then-data approach where an implementation is written and compiled first, then the data arrives later. Unfortunately, this approach struggles when the performance of the program fundamentally depends on the data. In these cases, there is no ”efficient implementation”. There is only an ”efficient implementation for this dataset”. My research leverages insights from database theory and query optimization to develop methods for data-aware program optimization. This approach enables a range of new program rewrites which are highly efficient, conditioned on the data distribution. The goal of this work is to enable efficient, declarative interfaces in new areas of computing, as exemplified by Galley, our optimizer for sparse tensor programs.
+
 - name: Fall 2024 (Data Systems Seminar)
   when: 09/09/24
   where: |
