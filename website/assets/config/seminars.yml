@@ -36,6 +36,27 @@
               Powering Declarative Programming with Data-Aware Program Optimization <font color ="navy"><b>(11:00am @ CDS 950)</b></font>
       abstract: |
               Modern computing has been defined by two trends; 1) data that relentlessly grows in scale and 2) programs that become increasingly complex. This creates a massive challenge for the engineers and data scientists who need to write efficient, correct programs. The standard solution is a hand-coded package that is shared across problem instances. This is a code-then-data approach where an implementation is written and compiled first, then the data arrives later. Unfortunately, this approach struggles when the performance of the program fundamentally depends on the data. In these cases, there is no ”efficient implementation”. There is only an ”efficient implementation for this dataset”. My research leverages insights from database theory and query optimization to develop methods for data-aware program optimization. This approach enables a range of new program rewrites which are highly efficient, conditioned on the data distribution. The goal of this work is to enable efficient, declarative interfaces in new areas of computing, as exemplified by Galley, our optimizer for sparse tensor programs.
+    - when: 03/18/25
+      presenter:
+        url: https://yingjunwu.github.io/
+        name: Yingjun Wu
+        affiliation: RisingWave Labs
+        bio: | 
+             Yingjun Wu is the founder of RisingWave Labs (https://www.risingwave.com/), a database company developing RisingWave, a distributed SQL database for stream processing. Before running the company, Yingjun was a software engineer at the Redshift team, Amazon Web Services, and a researcher at the Database group, IBM Almaden Research Center. Yingjun received his PhD degree from National University of Singapore, and was a visiting PhD at Carnegie Mellon University. He has been working in the field of stream processing and database systems for over a decade.
+      title: | 
+              Stream Processing In Practice: Everything You Wanted to Know but Were Afraid to Ask <font color ="navy"><b>(3:30pm part of CASP seminar)</b></font>
+      abstract: |
+                Stream processing systems seem magical: they deliver much fresher results compared to batch processing, promise the highest levels of consistency, and leverage S3 to reduce state storage costs. But is it too good to be true? In the world of data systems, there’s no such thing as a free lunch. Every benefit comes with trade-offs. In this talk, I will discuss the lesser-known aspects of stream processing, including but not limited to core issues such as cost, consistency, backfilling, and resource isolation. I’ll share real-world examples of how these issues manifest and the “bloody facts” of how they can bite even the most experienced practitioners.
+    - when: 03/20/25
+      presenter:
+        url: https://kai-chi.github.io/
+        name: Kajetan Maliszewski
+        affiliation: TU Berlin 
+        bio: |
+             Kajetan Maliszewski is a final-year PhD candidate at TU Berlin, supervised by Prof. Volker Markl. His research focuses on privacy-preserving data management systems, with an emphasis on bridging confidential computing and data systems to achieve both efficiency and privacy.
+      title: | 
+              Privacy-Preserving Joins in Untrusted Environments <font color ="navy"><b>(11:00am @ Zoom, part of CASP seminar)</b></font>
+      abstract: |
     - when: 04/03/25
       presenter:
         url: https://www.linkedin.com/in/ben-vandiver-8926b71/
