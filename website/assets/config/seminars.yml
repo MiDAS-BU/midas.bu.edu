@@ -64,37 +64,44 @@
         name: Ben Vandiver
         affiliation: Google
         bio: |
+              TBD
       title: | 
               Google's Spanner Database <font color ="navy"><b>(11:00am @ CDS 364)</b></font>
       abstract: |
+              TBD
     - when: 04/10/25
       presenter:
         url: https://www.linkedin.com/in/george-neville-neil-8a1485211/
         name: George Neville-Neil
         affiliation: Yale University
         bio: |
+             TBD
       title: | 
               OSDB: Exposing the Operating System's Inner Database <font color ="navy"><b>(11:00am @ CDS 364)</b></font>
       abstract: |
+             TBD
     - when: 04/17/25
       presenter:
         url: http://andrew.nerdnetworks.org/
         name: Andrew Lamb
         affiliation: InfluxData
         bio: |
+             TBD
       title: | 
               Cloud Data Lakes <font color ="navy"><b>(11:00am @ CDS 364)</b></font>
       abstract: |
-
+             TBD
     - when: 04/28/25
       presenter:
         url: https://yongjoopark.com/
         name: Yongjoo Park
         affiliation: UIUC
         bio: |
+             TBD
         title: | 
                 TBA  <font color ="navy"><b>(11:00am @ CDS 950)</b></font>
         abstract: |
+             TBD
     - when: 05/08/25
       presenter:
         url: https://web.eecs.umich.edu/~linmacse/
