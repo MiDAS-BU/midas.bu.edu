@@ -97,9 +97,10 @@
         name: Yongjoo Park
         affiliation: UIUC
         bio: |
-        title: | 
-                TBA  <font color ="navy"><b>(11:00am @ CDS 950)</b></font>
-        abstract: |
+        
+      title: | 
+              TBA  <font color ="navy"><b>(11:00am @ CDS 950)</b></font>
+      abstract: |
              TBD
     - when: 05/08/25
       presenter:
