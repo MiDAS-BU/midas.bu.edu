@@ -85,6 +85,7 @@
       title: | 
               Cloud Data Lakes <font color ="navy"><b>(11:00am @ CDS 364)</b></font>
       abstract: |
+
     - when: 04/28/25
       presenter:
         url: https://yongjoopark.com/
@@ -102,7 +103,7 @@
         bio: |
              Lin Ma is an Assistant Professor in the Computer Science and Engineering Division at the University of Michigan, where his research focuses on using machine learning and/or novel hardware to optimize the performance and administration of database systems. Prior to the University of Michigan, he was a software engineer at Databricks, where he worked on automated optimizations on Delta Lake. Before that, he was a PhD student in the database group at Carnegie Mellon University, where he worked on a self-driving database (NoisePage) built from the ground up to support autonomous operations. He constantly servers on the program and organizing committees for top database conferences, including SIGMOD, VLDB, and CIDR.
       title: | 
-              Vortex: Overcoming Memory Capacity Limitations in GPU-Accelerated Large-Scale Data Analytics
+              Vortex: Overcoming Memory Capacity Limitations in GPU-Accelerated Large-Scale Data Analytics <font color ="navy"><b>(11:00am @ CDS 950)</b></font>
       abstract: |
               Despite the high computational throughput of GPUs, limited memory capacity and bandwidth-limited CPU-GPU communication via PCIe links remain significant bottlenecks for accelerating large-scale data analytics workloads. In this talk, I'll discuss Vortex, a GPU-accelerated framework designed for data analytics workloads that exceed GPU memory capacity. A key aspect of our framework is an optimized IO primitive that leverages all available PCIe links in multi-GPU systems for the IO demand of a single target GPU. It routes data through other GPUs to such target GPU that handles IO-intensive analytics tasks. This approach is advantageous when other GPUs are occupied with compute-bound workloads, such as popular AI applications that typically underutilize IO resources. Vortex also includes a novel programming model that separates GPU kernel development from IO scheduling, reducing programmer burden and enabling GPU code reuse. Based on such a programming model, we develop a set of operators and a late materialization technique using GPU's zero-copy memory access. Without caching any data in GPU memory, Vortex improves the performance of the state-of-the-art GPU baseline, Proteus, by 5.7x on average and enhances price performance by 2.5x compared to a CPU-based DuckDB baseline.
               Through this talk, we want to present a paradigm on how databases should use GPUs to process larger-than-GPU-memroy datasets, get your feedback on future directions, and seek collaboration opportunities.
