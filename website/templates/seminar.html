@@ -73,6 +73,9 @@
 											{% if talk.slides %}
 												[<a href="/assets/slides/{{ talk.slides }}" target="_blank">Slides</a>]
 											{% endif %}
+											{% if talk.slides_url %}
+												[<a href={{ talk.slides_url }} target="_blank">Slides</a>]
+											{% endif %}
 											{% if talk.abstract %}
 											<details>
 												<summary> <u>Click for abstract</u></summary>
