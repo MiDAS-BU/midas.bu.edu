@@ -94,6 +94,9 @@
               Cloud Data Lakes <font color ="navy"><b>(CDS 364)</b></font>
       abstract: |
              In this talk, Andrew will review the architecture of recent cloud analytic database systems, the trends driving these architectures (e.g. cheap durable Object Storage, elastic compute), the common features in such systems (disaggregated storage, caching layers, metadata stores).
+      video_url: https://www.youtube.com/watch?v=wf2LLwhFU84
+      slides_url: https://bu-disc.github.io/CS561/slides/CAS-CS561-Class23.pdf
+      
     - when: 04/28/25
       presenter:
         url: https://yongjoopark.com/
