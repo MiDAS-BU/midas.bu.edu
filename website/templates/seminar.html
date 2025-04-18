@@ -67,14 +67,14 @@
 												{{ talk.title }}
 											</font>
 											</br>
-											{% if talk.video_url %}
-												[<a href={{ talk.video_url }} target="_blank">Talk Recording</a>]
-											{% endif %}
 											{% if talk.slides %}
 												[<a href="/assets/slides/{{ talk.slides }}" target="_blank">Slides</a>]
 											{% endif %}
 											{% if talk.slides_url %}
 												[<a href={{ talk.slides_url }} target="_blank">Slides</a>]
+											{% endif %}
+											{% if talk.video_url %}
+												[<a href={{ talk.video_url }} target="_blank">Talk Recording</a>]
 											{% endif %}
 											{% if talk.abstract %}
 											<details>
