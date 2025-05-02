@@ -135,7 +135,7 @@ def main():
 	templates = Environment(loader=FileSystemLoader(searchpath=str(Path(src) / "templates")))
 	templates.filters['sortByLastName'] = sortByLastName
 	templates.filters['sortByDate'] = sortByDate
-	templates.filters['formatDate'] = lambda input: datetime.strptime(input, "%m/%d/%y").strftime('%A, %b %d')
+	templates.filters['formatDate'] = lambda input: datetime.strptime(input, "%m/%d/%y").strftime('%a, %b ') + str(int(datetime.strptime(input, "%m/%d/%y").strftime('%d')))
 	templates.filters['limit'] = lambda input, n: input[:n]
 	templates.filters['markdown'] = lambda input, style: f"<div class=\"markdown\" style=\"{style}\"> {Markup(md.convert(input))} </div>"
 
