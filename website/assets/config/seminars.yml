@@ -148,11 +148,11 @@
         name: Yang Guo
         affiliation: The Chinese University of Hong Kong
         bio: |
-             TBA
+             Yang Guo is currently a postdoctoral researcher at The Chinese University of Hong Kong (CUHK). He earned his Ph.D. in Computer Science and Engineering from CUHK, under the supervision of Prof. Zili Shao. Prior to that, he received his B.Eng. from the University of Electronic Science and Technology of China (UESTC). His research interests include storage optimization for big data, the application of large language models (LLMs) and AI in databases, and data management and analytics in the cloud.
       title: | 
-              TBA <font color ="navy"><b>(9am via Zoom)</b></font>
+              Storage Optimizations for Spatio-Temporal Big Data Systems <font color ="navy"><b>(9am via Zoom)</b></font>
       abstract: |
-              TBA
+              The continuous generation of spatio-temporal data, such as trajectory data, due to the rapid proliferation of location-acquisition devices like smartphones, has led to the creation of massive datasets. Effectively managing this spatio-temporal big data is pivotal for supporting efficient queries. At the same time, emerging storage technologies, including key-value data stores, cloud storage, and computational storage devices, offer new opportunities to address the challenges associated with spatio-temporal data management. In this talk, I will present my research on building efficient spatio-temporal big data systems through storage optimizations tailored to various storage technologies. The overarching goal is to enhance query performance on large-scale spatio-temporal datasets while minimizing storage overhead. I will specifically highlight three key works: (A) a query-aware indexing framework for spatio-temporal data, (B) a cloud-based trajectory data management solution featuring a novel data model, indexing strategy, and data layout optimized for cloud environments, and (C) a storage model that enables fine-grained in-storage query processing for spatio-temporal data.
 
 - name: Fall 2024 (Data Systems Seminar)
   when: 09/09/24
