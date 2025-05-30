@@ -142,6 +142,17 @@
               Ωkypous: Harnessing Timing Slacks and Coordinated DVFS for Power-Efficient Serverless Workflows <font color ="navy"><b>(Zoom, part of CASP seminar)</b></font>
       abstract: |
               Serverless workflows have emerged in Function-as-a-Service (FaaS) platforms to represent the operational structure of traditional applications. With latency propagation effects becoming increasingly prominent, step-wise resource tuning is required to address Service-Level-Objectives (SLOs). Modern processors’ allowance for fine-grained Dynamic Voltage and Frequency Scaling (DVFS), coupled with serverless workflows’ intermittent nature, presents a unique opportunity to reduce power while meeting SLOs. We introduce Ωkypous, an SLO-driven DVFS framework for serverless workflows. Ωkypous employs a grey-box model that predicts functions’ execution latency and power under different Core and Uncore frequency combinations. Based on these predictions and the timing slacks between workflow functions, Ωkypous uses a closed-loop control mechanism to dynamically adjust Core and Uncore frequencies, thus minimizing power consumption without compromising predefined end-to-end latency constraints. Our evaluation on real-world traces from Azure, against state-of-the-art power management frameworks, demonstrates an average power consumption reduction of 23%, while consistently maintaining low SLO violation rates (1.8%), when operating under power caps.
+    - when: 06/10/25
+      presenter:
+        url: 
+        name: Yang Guo
+        affiliation: The Chinese University of Hong Kong
+        bio: |
+             TBA
+      title: | 
+              TBA <font color ="navy"><b>(9am via Zoom)</b></font>
+      abstract: |
+              TBA
 
 - name: Fall 2024 (Data Systems Seminar)
   when: 09/09/24
