@@ -146,7 +146,21 @@ people:
     website: https://cs-people.bu.edu/tnikas/
     category: students
     when: 2023
-    
+
+  - name: Anwesha Saha
+    image: anwesha-saha.jpg
+    position: PhD Researcher
+    website: https://cs-people.bu.edu/anwesha/
+    category: students
+    when: 2024
+
+  - name: Andrew Briasco-Stewart
+    image: andrew-briasco-stewart.jpg
+    position: PhD Researcher
+    website: https://cs-people.bu.edu/abriasco/
+    category: students
+    when: 2025
+
 
 # alumni
 
@@ -286,7 +300,7 @@ people:
   - name: Subhadeep Sarkar
     image: subjadeep.jpeg
     position: "Postdoc (Next: Faculty at Brandeis University)"
-    website: https://subhadeepsarkar.bitbucket.io/
+    website: https://subhadeep.net/
     category: alumni
     when: 2023
 
@@ -307,28 +321,28 @@ people:
   - name: Konstantinos Karatsenidis
     image: KostasKaratsenidis.jpg
     position: "Grad Researcher (Next: Tower Research Capital)"
-    website: https://cs-people.bu.edu/karatse/
+    website: https://www.linkedin.com/in/karatse/
     category: alumni
     when: 2025  
 
   - name: Konstantinos Sotiropoulos
     image: sotiropoulos.jpg
     position: "PhD (Next: Postdoc at CMU)"
-    website: http://cs-people.bu.edu/ksotirop/
+    website: https://www.linkedin.com/in/konstantinos-sotiropoulos-738755178/
     category: alumni
     when: 2023
 
   - name: Nathan Cordner
     image: nathan.jpg
     position: "PhD (Next: Faculty at Utah Valley University)"
-    website: https://cs-people.bu.edu/ncordner/
+    website: https://www.linkedin.com/in/nathan-cordner-504901aa/
     category: alumni
     when: 2023
 
   - name: Tarikul Islam Papon
     image: papon.jpg
     position: "PhD (Next: Faculty at UMass Boston)"
-    website: https://cs-people.bu.edu/papon/
+    website: https://www.cs.umb.edu/~tpapon/
     category: alumni
     when: 2025
 
@@ -342,20 +356,20 @@ people:
   - name: Dimitris Staratzis
     image: dimitris.jpg
     position: "Grad Researcher (Next: TileDB)"
-    website: https://cs-people.bu.edu/dstara/
+    website: https://www.linkedin.com/in/dimitris-staratzis-4b388b170/
     category: alumni
     when: 2020
 
   - name: Lina Qiu
     image: lina.jpg
-    position: "PhD (Next: Huawei))"
-    website: https://cs-people.bu.edu/qlina/
+    position: "PhD (Next: Huawei)"
+    website: https://www.linkedin.com/in/lina-qiu-8a97b3147/
     category: alumni
     when: 2025
   
   - name: Aneesh Raman
     image: aneesh.jpg
     position: "PhD (Next: Salesforce)"
-    website: https://ramananeesh.github.io/
+    website: https://www.linkedin.com/in/aneesh-raman/
     category: alumni
     when: 2025
