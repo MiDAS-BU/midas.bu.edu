@@ -17,6 +17,28 @@
 #       abstract: Possibly big text piece, talk's abstract. LaTeX snippets supported.
 #       departmental: OPTIONAL. If set, title and abstract are ignored and will be rendered "CS Department Seminar".
 #       special: OPTIONAL. If set, this text is rendered (HTML markup, like bold / italic / anchor allowed) as is in navy blue.
+
+- name: Spring 2026 
+  when: 01/01/26
+  where: |
+    Seminars are held on Wednesdays in CDS TBA at 1-2pm [unless otherwise noted].
+  responsible:
+    name: TBA
+    username: tba
+  talks:
+    - when: 01/21/26
+      presenter:
+        url: TBA
+        name: TBA
+        affiliation: TBA
+        bio: |
+             TBA
+      title: | 
+              TBA
+      abstract: |
+              TBA
+
+
 - name: Spring 2025 
   when: 01/01/25
   where: |
