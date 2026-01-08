@@ -89,16 +89,14 @@ people:
     category: faculty
     when: 2024
 
+  # active researchers
+
   - name: Xiyue Gao
     image: xiyue-gao-visiting-faculty.jpg
     position: Visiting Faculty
     website: https://scholar.google.com.hk/citations?user=grbVcy4AAAAJ&hl=en
-    category: faculty
+    category: students
     when: 2024
-
-  # active researchers
-
-
 
   - name: Andy Huynh
     image: andy.jpg
