@@ -74,11 +74,23 @@ def main():
 
 		for name in names:
 
-			# load from DBLP search API
-			# response = requests.get(f"https://dblp.org/search/publ/api?q=author%3A{name}%3A&format=json")
-			response = requests.get(f"https://dblp.uni-trier.de/search/publ/api?q=author%3A{name}%3A&format=json")
-			if response.status_code == 429:
-				print(f"\n\tToo many requests to DBLP server. Please wait a few minutes.")
+			# load from DBLP search API (try primary, then fallback)
+			query = f"author%3A{name}%3A"
+			urls = [
+				f"https://dblp.org/search/publ/api?q={query}&format=json",
+				f"https://dblp.uni-trier.de/search/publ/api?q={query}&format=json",
+			]
+			response = None
+			for url in urls:
+				response = requests.get(url, timeout=20)
+				if response.status_code == 200:
+					break
+				if response.status_code == 429:
+					print(f"\n\tToo many requests to DBLP server. Please wait a few minutes.")
+					exit(1)
+			if response is None or response.status_code != 200:
+				status = response.status_code if response is not None else "no response"
+				print(f"\n\tDBLP request failed with status {status}.")
 				exit(1)
 			publications = json.loads(response.text)["result"]["hits"]["hit"]
 			print(f"\n\t{name}: ", end = "")
