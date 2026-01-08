@@ -161,7 +161,7 @@ def main():
 	generateClasses(templates)
 
 	# do not regenerate for each page
-	publications = generatePublications("publications", "George_Kollios", "Manos_Athanassoulis", "Evimaria_Terzi", "Charalampos_E._Tsourakakis", "Mark_Crovella")
+	publications = generatePublications("publications", "George_Kollios", "Manos_Athanassoulis", "Evimaria_Terzi", "Charalampos_E._Tsourakakis", "Mark_Crovella", "Kyle_Deeds")
 
 	# render templates
 	for path in (Path(src) / "templates").glob('*.html'):
