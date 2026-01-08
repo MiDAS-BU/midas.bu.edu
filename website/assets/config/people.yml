@@ -45,33 +45,60 @@ people:
   #   category: ID of the category
   #   when: this is the time of arrival (for current members) or departure (for alumni) used to sort people. Should be changed from arrival year to departure year when someone becomes alumni
 
-  - name: Bashir Rastegarpanah
-    image: bashir.jpg
-    position: "PhD (Next: Fiddler AI)"
-    website: https://www.linkedin.com/in/bashir-rastegarpanah-56422839/
-    category: alumni
-    when: 2021
+  # faculty
 
-  - name: Harshal Chaudhari
-    image: harshal.jpg
-    position: "PhD (Next: Etsy)"
-    website: https://harshalc.com/
-    category: alumni
-    when: 2021
+  - name: Mark Crovella
+    image: crovella.png
+    position: Professor
+    website: https://www.cs.bu.edu/fac/crovella/
+    category: faculty
+    when: 1994
 
-  - name: Sofia Maria Nikolakaki
-    image: sofia.jpg
-    position: "PhD (Next: Apple)"
-    website: http://www.smnikolakaki.com/
-    category: alumni
-    when: 2021
+  - name: George Kollios
+    image: kollios.jpg
+    position: Professor
+    website: https://www.cs.bu.edu/~gkollios/
+    category: faculty
+    when: 2000
 
-  - name: Dmytro Bogatov
-    image: dmytro.jpeg
-    position: "PhD (Next: AWS)"
-    website: https://dbogatov.org/
-    category: alumni
-    when: 2022
+  - name: Evimaria Terzi
+    image: evimaria.jpg
+    position: Professor
+    website: http://cs-people.bu.edu/evimaria/
+    category: faculty
+    when: 2009
+
+  - name: Manos Athanassoulis
+    image: manos.jpg
+    position: Associate Professor
+    website: https://cs-people.bu.edu/mathan/
+    category: faculty
+    when: 2019
+
+  - name: Kyle Deeds
+    image: kyle-deeds.jpg
+    position: Assistant Professor
+    website: https://kylebd99.github.io/kyle.deeds.github.io/
+    category: faculty
+    when: 2026
+
+  - name: Charalampos Tsourakakis
+    image: babis.jpg
+    position: Adjunct Faculty
+    website: https://tsourakakis.com/
+    category: faculty
+    when: 2024
+
+  - name: Xiyue Gao
+    image: xiyue-gao-visiting-faculty.jpg
+    position: Visiting Faculty
+    website: https://scholar.google.com.hk/citations?user=grbVcy4AAAAJ&hl=en
+    category: faculty
+    when: 2024
+
+  # active researchers
+
+
 
   - name: Andy Huynh
     image: andy.jpg
@@ -79,57 +106,7 @@ people:
     website: http://cs-people.bu.edu/ndhuynh/
     category: students
     when: 2017
-
-  - name: Konstantinos Sotiropoulos
-    image: sotiropoulos.jpg
-    position: "PhD (Next: Postdoc at CMU)"
-    website: http://cs-people.bu.edu/ksotirop/
-    category: alumni
-    when: 2023
-
-  - name: Nathan Cordner
-    image: nathan.jpg
-    position: "PhD (Next: Faculty at Utah Valley University)"
-    website: https://cs-people.bu.edu/ncordner/
-    category: alumni
-    when: 2023
-
-  - name: Tarikul Islam Papon
-    image: papon.jpg
-    position: PhD Researcher
-    website: https://cs-people.bu.edu/papon/
-    category: students
-    when: 2019
-
-
-  - name: Zichen Zhu
-    image: zichen.jpg
-    position: PhD Researcher
-    website: https://cs-people.bu.edu/zczhu/
-    category: students
-    when: 2019
-
-  - name: Dimitris Staratzis
-    image: dimitris.jpg
-    position: "Grad Researcher (Next: TileDB)"
-    website: https://cs-people.bu.edu/dstara/
-    category: alumni
-    when: 2020
-
-  - name: Lina Qiu
-    image: lina.jpg
-    position: PhD Researcher
-    website: https://cs-people.bu.edu/qlina/
-    category: students
-    when: 2019
   
-  - name: Aneesh Raman
-    image: aneesh.jpg
-    position: PhD Researcher
-    website: https://ramananeesh.github.io/
-    category: students
-    when: 2020
-    
   - name: Karan Vombatkere
     image: Karan.jpeg
     position: PhD Researcher
@@ -148,13 +125,6 @@ people:
     image: teona.png
     position: PhD Researcher
     website: https://cs-people.bu.edu/teona/
-    category: students
-    when: 2022
-
-  - name: Konstantinos Karatsenidis
-    image: KostasKaratsenidis.jpg
-    position: PhD Researcher
-    website: https://cs-people.bu.edu/karatse/
     category: students
     when: 2022
 
@@ -179,61 +149,8 @@ people:
     category: students
     when: 2023
     
-  - name: Subhadeep Sarkar
-    image: subjadeep.jpeg
-    position: "Postdoc (Next: Faculty at Brandeis University)"
-    website: https://subhadeepsarkar.bitbucket.io/
-    category: alumni
-    when: 2023
 
-  - name: Ju Hyoung Mun
-    image: juhyoung.jpg
-    position: "Postdoc (Next: Faculty at Brandeis University)"
-    website: https://sites.google.com/view/juhyoungmun/
-    category: alumni
-    when: 2024
-
-  - name: Tianyi Chen
-    image: tianyi.png
-    position: "PhD (Next: Celonis)"
-    website: https://www.linkedin.com/in/tianyi-chen-609939145/
-    category: alumni
-    when: 2024
-  
-  - name: Mark Crovella
-    image: crovella.png
-    position: Professor
-    website: https://www.cs.bu.edu/fac/crovella/
-    category: faculty
-    when: 1994
-
-  - name: George Kollios
-    image: kollios.jpg
-    position: Professor
-    website: https://www.cs.bu.edu/~gkollios/
-    category: faculty
-    when: 2000
-
-  - name: Evimaria Terzi
-    image: evimaria.jpg
-    position: Professor
-    website: http://cs-people.bu.edu/evimaria/
-    category: faculty
-    when: 2009
-
-  - name: Manos Athanassoulis
-    image: manos.jpg
-    position: Assistant Professor
-    website: https://cs-people.bu.edu/mathan/
-    category: faculty
-    when: 2019
-
-  - name: Charalampos Tsourakakis
-    image: babis.jpg
-    position: Adjunct Faculty
-    website: https://tsourakakis.com/
-    category: faculty
-    when: 2024
+# alumni
 
   - name: Charalampos Mavroforakis
     image: harry.png
@@ -339,3 +256,108 @@ people:
     website: https://www.linkedin.com/in/gkellaris/
     category: alumni
     when: 2017
+
+  - name: Bashir Rastegarpanah
+    image: bashir.jpg
+    position: "PhD (Next: Fiddler AI)"
+    website: https://www.linkedin.com/in/bashir-rastegarpanah-56422839/
+    category: alumni
+    when: 2021
+
+  - name: Harshal Chaudhari
+    image: harshal.jpg
+    position: "PhD (Next: Etsy)"
+    website: https://harshalc.com/
+    category: alumni
+    when: 2021
+
+  - name: Sofia Maria Nikolakaki
+    image: sofia.jpg
+    position: "PhD (Next: Apple)"
+    website: http://www.smnikolakaki.com/
+    category: alumni
+    when: 2021
+
+  - name: Dmytro Bogatov
+    image: dmytro.jpeg
+    position: "PhD (Next: AWS)"
+    website: https://dbogatov.org/
+    category: alumni
+    when: 2022
+
+  - name: Subhadeep Sarkar
+    image: subjadeep.jpeg
+    position: "Postdoc (Next: Faculty at Brandeis University)"
+    website: https://subhadeepsarkar.bitbucket.io/
+    category: alumni
+    when: 2023
+
+  - name: Ju Hyoung Mun
+    image: juhyoung.jpg
+    position: "Postdoc (Next: Faculty at Brandeis University)"
+    website: https://sites.google.com/view/juhyoungmun/
+    category: alumni
+    when: 2024
+
+  - name: Tianyi Chen
+    image: tianyi.png
+    position: "PhD (Next: Celonis)"
+    website: https://www.linkedin.com/in/tianyi-chen-609939145/
+    category: alumni
+    when: 2024
+
+  - name: Konstantinos Karatsenidis
+    image: KostasKaratsenidis.jpg
+    position: "Grad Researcher (Next: Tower Research Capital)"
+    website: https://cs-people.bu.edu/karatse/
+    category: alumni
+    when: 2025  
+
+  - name: Konstantinos Sotiropoulos
+    image: sotiropoulos.jpg
+    position: "PhD (Next: Postdoc at CMU)"
+    website: http://cs-people.bu.edu/ksotirop/
+    category: alumni
+    when: 2023
+
+  - name: Nathan Cordner
+    image: nathan.jpg
+    position: "PhD (Next: Faculty at Utah Valley University)"
+    website: https://cs-people.bu.edu/ncordner/
+    category: alumni
+    when: 2023
+
+  - name: Tarikul Islam Papon
+    image: papon.jpg
+    position: "PhD (Next: Faculty at UMass Boston)"
+    website: https://cs-people.bu.edu/papon/
+    category: alumni
+    when: 2025
+
+  - name: Zichen Zhu
+    image: zichen.jpg
+    position: "PhD (Next: Google)"
+    website: https://cs-people.bu.edu/zczhu/
+    category: alumni
+    when: 2025
+
+  - name: Dimitris Staratzis
+    image: dimitris.jpg
+    position: "Grad Researcher (Next: TileDB)"
+    website: https://cs-people.bu.edu/dstara/
+    category: alumni
+    when: 2020
+
+  - name: Lina Qiu
+    image: lina.jpg
+    position: "PhD (Next: Huawei))"
+    website: https://cs-people.bu.edu/qlina/
+    category: alumni
+    when: 2025
+  
+  - name: Aneesh Raman
+    image: aneesh.jpg
+    position: "PhD (Next: Salesforce)"
+    website: https://ramananeesh.github.io/
+    category: alumni
+    when: 2025

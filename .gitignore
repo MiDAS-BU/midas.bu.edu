@@ -1,3 +1,4 @@
 .vscode/launch.json
 .vs/
 dist/
+.DS_Store
