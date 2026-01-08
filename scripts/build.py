@@ -99,11 +99,12 @@ def main():
 
 				# Do not include archives
 				publication = publication["info"]
-				if publication["venue"] == "CoRR" or publication["venue"] == "IACR Cryptol. ePrint Arch.":
+				venue = publication.get("venue")
+				if not venue or venue == "CoRR" or venue == "IACR Cryptol. ePrint Arch.":
 					continue		
 
-				# Do not include specific entries
-				if publication["key"] == "journals/pvldb/Koutrika023f" or publication["key"] == "journals/sigweb/LauwCSTTT23" or publication["key"] == "conf/wsdm/2023" or publication["key"] == "journals/sigir/LauwCSTTT23":
+				# Do not include specific entries (e.g., frontmatters, etc.)
+				if publication["key"] == "journals/tist/LauwNTT25" or publication["key"] == "journals/pvldb/Koutrika023f" or publication["key"] == "journals/sigweb/LauwCSTTT23" or publication["key"] == "conf/wsdm/2023" or publication["key"] == "journals/sigir/LauwCSTTT23":
 					continue
 
 				# Do not include duplicates
@@ -111,7 +112,7 @@ def main():
 					print("d", end = "")
 					continue
 
-				# Parse to our format, add to list, template will aoutomaticaaly select latest
+				# Parse to our format, add to list, template will automatically select latest
 				result["publications"] += [{
 					"title": publication["title"][:-1], # remove period
 					"authors": authorsToString(publication),
