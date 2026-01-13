@@ -104,7 +104,7 @@ def main():
 					continue		
 
 				# Do not include specific entries (e.g., frontmatters, etc.)
-				if publication["key"] == "journals/tist/LauwNTT25" or publication["key"] == "journals/pvldb/Koutrika023f" or publication["key"] == "journals/sigweb/LauwCSTTT23" or publication["key"] == "conf/wsdm/2023" or publication["key"] == "journals/sigir/LauwCSTTT23":
+				if publication["key"] == "conf/sigmod/2024ari" or publication["key"] == "journals/tist/LauwNTT25" or publication["key"] == "journals/pvldb/Koutrika023f" or publication["key"] == "journals/sigweb/LauwCSTTT23" or publication["key"] == "conf/wsdm/2023" or publication["key"] == "journals/sigir/LauwCSTTT23":
 					continue
 
 				# Do not include duplicates
