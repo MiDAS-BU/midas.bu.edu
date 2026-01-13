@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 
+{% block styles %}
+<link
+	rel="stylesheet"
+	href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+	integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+	crossorigin=""
+/>
+{% endblock %}
+
 {% block content %}
 
 <div class="jumbotron jumbotron-main" id="home">
@@ -237,103 +246,25 @@
 
 {% block scripts %}
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_qmSmLWwX3IvNN4iyNJYEiyX71MAQGq4&amp;callback=initMap" async defer></script>
+<script
+	src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+	integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+	crossorigin=""
+></script>
 <script type="text/javascript">
-	/* ---- Google Maps ---- */
-	function initMap() {
-		var mapOptions = {
-			zoom: 15,
-			zoomControl: false,
-			scaleControl: false,
-			scrollwheel: false,
-			disableDoubleClickZoom: true,
-			center: new google.maps.LatLng(42.349946850280745, -71.1032380011781),
-			styles: [{
-				"featureType": "landscape",
-				"stylers": [{
-					"saturation": -100
-				}, {
-					"lightness": 65
-				}, {
-					"visibility": "on"
-				}]
-			}, {
-				"featureType": "poi",
-				"stylers": [{
-					"saturation": -100
-				}, {
-					"lightness": 51
-				}, {
-					"visibility": "simplified"
-				}]
-			}, {
-				"featureType": "road.highway",
-				"stylers": [{
-					"saturation": -100
-				}, {
-					"visibility": "simplified"
-				}]
-			}, {
-				"featureType": "road.arterial",
-				"stylers": [{
-					"saturation": -100
-				}, {
-					"lightness": 30
-				}, {
-					"visibility": "on"
-				}]
-			}, {
-				"featureType": "road.local",
-				"stylers": [{
-					"saturation": -100
-				}, {
-					"lightness": 40
-				}, {
-					"visibility": "on"
-				}]
-			}, {
-				"featureType": "transit",
-				"stylers": [{
-					"saturation": -100
-				}, {
-					"visibility": "simplified"
-				}]
-			}, {
-				"featureType": "administrative.province",
-				"stylers": [{
-					"visibility": "off"
-				}]
-			}, {
-				"featureType": "water",
-				"elementType": "labels",
-				"stylers": [{
-					"visibility": "on"
-				}, {
-					"lightness": -25
-				}, {
-					"saturation": -100
-				}]
-			}, {
-				"featureType": "water",
-				"elementType": "geometry",
-				"stylers": [{
-					"hue": "#ffff00"
-				}, {
-					"lightness": -25
-				}, {
-					"saturation": -97
-				}]
-			}]
-		};
-		var mapElement = document.getElementById('map');
-		var map = new google.maps.Map(mapElement, mapOptions);
-		var marker = new google.maps.Marker({
-			position: new google.maps.LatLng(42.349946850280745, -71.1032380011781),
-			map: map,
-			title: 'Our Lab!'
-		});
-	}
+	/* ---- Leaflet + OpenStreetMap ---- */
+	var map = L.map('map', {
+		scrollWheelZoom: false,
+		doubleClickZoom: false
+	}).setView([42.349946850280745, -71.1032380011781], 15);
 
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+	L.marker([42.349946850280745, -71.1032380011781], {
+		title: 'Our Lab!'
+	}).addTo(map);
 </script>
 <script type="text/javascript" src="assets/js/particles.min.js"></script>
 <script type="text/javascript" src="assets/js/particlesRun.js"></script>
