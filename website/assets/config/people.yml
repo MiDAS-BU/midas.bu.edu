@@ -91,13 +91,6 @@ people:
 
   # active researchers
 
-  - name: Xiyue Gao
-    image: xiyue-gao-visiting-faculty.jpg
-    position: Visiting Faculty
-    website: https://scholar.google.com.hk/citations?user=grbVcy4AAAAJ&hl=en
-    category: students
-    when: 2024
-
   - name: Andy Huynh
     image: andy.jpg
     position: PhD Researcher
@@ -171,6 +164,13 @@ people:
 
 
 # alumni
+
+  - name: Xiyue Gao
+    image: xiyue-gao-visiting-faculty.jpg
+    position: "Visiting Faculty (Next: Back to Xidian University)"
+    website: https://scholar.google.com.hk/citations?user=grbVcy4AAAAJ&hl=en
+    category: alumni
+    when: 2026
 
   - name: Charalampos Mavroforakis
     image: harry.png
