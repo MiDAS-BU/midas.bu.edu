@@ -23,8 +23,8 @@
   where: |
     Seminars are held on Wednesdays in CDS TBA at 1-2pm [unless otherwise noted].
   responsible:
-    name: TBA
-    username: tba
+    name: Anwesha Saha
+    username: anwesha
   talks:
     - when: 01/21/26
       presenter:
