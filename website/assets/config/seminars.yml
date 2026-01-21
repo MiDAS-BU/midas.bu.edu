@@ -26,17 +26,39 @@
     name: Anwesha Saha
     username: anwesha
   talks:
-    - when: 01/21/26
+    - when: TBD
       presenter:
-        url: TBA
-        name: TBA
-        affiliation: TBA
+        url: https://kylebd99.github.io/kyle.deeds.github.io/
+        name: Kyle Deeds
+        affiliation: Boston University
         bio: |
-             TBA
+             Kyle Deeds is an assistant professor at Boston University. Broadly, He is interested in the intersection of databases, compilers, and tensor programming with two main branches - firstly making high performance computing accessible to domain experts through declarative programming coupled with automatic program optimization and secondly about building systems to support the open-data community. In this vein, he is currently working on an open-data project called Govscape (https://www.govscape.net/) that provides a modern search interface over millions of government PDFs.
       title: | 
-              TBA
+            TBD
       abstract: |
-              TBA
+            TBD
+    - when: 02/04/26
+      presenter:
+        url: https://people.cs.umass.edu/~nehamakhija/
+        name: Neha Makhija
+        affiliation: UMass Amherst
+        bio: | 
+            Neha Makhija is an Assistant Professor at the University of Massachusetts, Amherst, where she is a member of the DREAM lab (https://dream.cs.umass.edu/). Her current research interests are in the theory and practice of data management - how can we develop algorithms that extract knowledge from data efficiently? A common theme that emerges in data management research is that we can often leverage structure in data to solve hard problems efficiently. More specifically, she develops such techniques for problems related to query explanations, probabilistic/ uncertain data, and finding minimal representations of data - with the goal of discovering when we can solve these problems efficiently.
+      title: | 
+            TBD
+      abstract: |
+              TBD
+    - when: 03/18/26
+      presenter:
+        url: https://gatterbauer.name/
+        name: Wolfgang Gatterbauer
+        affiliation: Northeastern University
+        bio: |
+             Wolfgang Gatterbauer is an Associate Professor at Northeastern University, where he works on the theory of scalable data management. One of his goals is to extend the capabilities of modern data management systems in generic ways to allow them to support novel functionalities that seem hard at first. Examples of such functionalities are managing provenance, trust, explanations, and uncertain or inconsistent data. To support these functionalities, he is interested in understanding the fundamental algebraic properties that allow algorithms to scale with the size of data by leveraging structure in data: Given a large data or knowledge base, what types of questions can be answered efficiently? And what do we do about those that cannot?
+      title: | 
+            TBD
+      abstract: |
+            TBD
 
 
 - name: Spring 2025 
