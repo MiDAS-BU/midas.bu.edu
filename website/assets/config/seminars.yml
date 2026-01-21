@@ -26,13 +26,134 @@
     name: Anwesha Saha
     username: anwesha
   talks:
-    - when: 02/04/26
+    - when: 04/29/26
+      presenter:
+        url: TBD
+        name: TBD
+        affiliation: TBD
+        bio: |
+            TBD
+      title: | 
+            TBD
+      abstract: |
+            TBD
+    - when: 04/22/26
+      presenter:
+        url: TBD
+        name: TBD
+        affiliation: TBD
+        bio: |
+            TBD
+      title: | 
+            TBD
+      abstract: |
+            TBD
+    - when: 04/15/26
+      presenter:
+        url: TBD
+        name: TBD
+        affiliation: TBD
+        bio: |
+            TBD
+      title: | 
+            TBD
+      abstract: |
+            TBD
+    - when: 04/08/26
+      presenter:
+        url: TBD
+        name: TBD
+        affiliation: TBD
+        bio: |
+            TBD
+      title: | 
+            TBD
+      abstract: |
+            TBD
+    - when: 04/01/26
+      presenter:
+        url: TBD
+        name: TBD
+        affiliation: TBD
+        bio: |
+            TBD
+      title: | 
+            TBD
+      abstract: |
+            TBD
+    - when: 03/25/26
       presenter:
         url: https://kylebd99.github.io/kyle.deeds.github.io/
         name: Kyle Deeds
         affiliation: Boston University
         bio: |
              Kyle Deeds is an assistant professor at Boston University. Broadly, He is interested in the intersection of databases, compilers, and tensor programming with two main branches - firstly making high performance computing accessible to domain experts through declarative programming coupled with automatic program optimization and secondly about building systems to support the open-data community. In this vein, he is currently working on an open-data project called Govscape (https://www.govscape.net/) that provides a modern search interface over millions of government PDFs.
+      title: | 
+            TBD
+      abstract: |
+            TBD
+    - when: 03/18/26
+      presenter:
+        url: https://gatterbauer.name/
+        name: Wolfgang Gatterbauer
+        affiliation: Northeastern University
+        bio: |
+             Wolfgang Gatterbauer is an Associate Professor at Northeastern University, where he works on the theory of scalable data management. One of his goals is to extend the capabilities of modern data management systems in generic ways to allow them to support novel functionalities that seem hard at first. Examples of such functionalities are managing provenance, trust, explanations, and uncertain or inconsistent data. To support these functionalities, he is interested in understanding the fundamental algebraic properties that allow algorithms to scale with the size of data by leveraging structure in data: Given a large data or knowledge base, what types of questions can be answered efficiently? And what do we do about those that cannot?
+      title: | 
+            TBD
+      abstract: |
+            TBD
+    - when: 03/11/26
+      presenter:
+        url: TBD
+        name: TBD
+        affiliation: TBD
+        bio: |
+            TBD
+      title: | 
+            TBD
+      abstract: |
+            TBD
+    - when: 03/04/26
+      presenter:
+        url: TBD
+        name: TBD
+        affiliation: TBD
+        bio: |
+            TBD
+      title: | 
+            TBD
+      abstract: |
+            TBD
+    - when: 02/25/26
+      presenter:
+        url: TBD
+        name: TBD
+        affiliation: TBD
+        bio: |
+            TBD
+      title: | 
+            TBD
+      abstract: |
+            TBD
+    - when: 02/18/26
+      presenter:
+        url: TBD
+        name: TBD
+        affiliation: TBD
+        bio: |
+            TBD
+      title: | 
+            TBD
+      abstract: |
+            TBD
+    - when: 02/11/26
+      presenter:
+        url: TBD
+        name: TBD
+        affiliation: TBD
+        bio: |
+            TBD
       title: | 
             TBD
       abstract: |
@@ -48,13 +169,13 @@
             TBD
       abstract: |
               TBD
-    - when: 03/18/26
+    - when: 01/28/26
       presenter:
-        url: https://gatterbauer.name/
-        name: Wolfgang Gatterbauer
-        affiliation: Northeastern University
+        url: TBD
+        name: TBD
+        affiliation: TBD
         bio: |
-             Wolfgang Gatterbauer is an Associate Professor at Northeastern University, where he works on the theory of scalable data management. One of his goals is to extend the capabilities of modern data management systems in generic ways to allow them to support novel functionalities that seem hard at first. Examples of such functionalities are managing provenance, trust, explanations, and uncertain or inconsistent data. To support these functionalities, he is interested in understanding the fundamental algebraic properties that allow algorithms to scale with the size of data by leveraging structure in data: Given a large data or knowledge base, what types of questions can be answered efficiently? And what do we do about those that cannot?
+            TBD
       title: | 
             TBD
       abstract: |
