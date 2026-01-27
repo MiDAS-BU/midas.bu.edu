@@ -94,15 +94,15 @@
             TBD
     - when: 03/18/26
       presenter:
-        url: https://gatterbauer.name/
-        name: Wolfgang Gatterbauer
-        affiliation: Northeastern University
-        bio: |
-             Wolfgang Gatterbauer is an Associate Professor at Northeastern University, where he works on the theory of scalable data management. One of his goals is to extend the capabilities of modern data management systems in generic ways to allow them to support novel functionalities that seem hard at first. Examples of such functionalities are managing provenance, trust, explanations, and uncertain or inconsistent data. To support these functionalities, he is interested in understanding the fundamental algebraic properties that allow algorithms to scale with the size of data by leveraging structure in data: Given a large data or knowledge base, what types of questions can be answered efficiently? And what do we do about those that cannot?
+        url: https://people.cs.umass.edu/~nehamakhija/
+        name: Neha Makhija
+        affiliation: UMass Amherst
+        bio: | 
+            Neha Makhija is an Assistant Professor at the University of Massachusetts, Amherst, where she is a member of the DREAM lab (https://dream.cs.umass.edu/). Her current research interests are in the theory and practice of data management - how can we develop algorithms that extract knowledge from data efficiently? A common theme that emerges in data management research is that we can often leverage structure in data to solve hard problems efficiently. More specifically, she develops such techniques for problems related to query explanations, probabilistic/ uncertain data, and finding minimal representations of data - with the goal of discovering when we can solve these problems efficiently.
       title: | 
             TBD
       abstract: |
-            TBD
+              TBD
     - when: 03/11/26
       presenter:
         url: TBD
@@ -149,9 +149,9 @@
             TBD
     - when: 02/11/26
       presenter:
-        url: TBD
-        name: TBD
-        affiliation: TBD
+        url: https://cs-people.bu.edu/abriasco/
+        name: Andrew B
+        affiliation: Boston University
         bio: |
             TBD
       title: | 
@@ -160,26 +160,17 @@
             TBD
     - when: 02/04/26
       presenter:
-        url: https://people.cs.umass.edu/~nehamakhija/
-        name: Neha Makhija
-        affiliation: UMass Amherst
-        bio: | 
-            Neha Makhija is an Assistant Professor at the University of Massachusetts, Amherst, where she is a member of the DREAM lab (https://dream.cs.umass.edu/). Her current research interests are in the theory and practice of data management - how can we develop algorithms that extract knowledge from data efficiently? A common theme that emerges in data management research is that we can often leverage structure in data to solve hard problems efficiently. More specifically, she develops such techniques for problems related to query explanations, probabilistic/ uncertain data, and finding minimal representations of data - with the goal of discovering when we can solve these problems efficiently.
-      title: | 
-            TBD
-      abstract: |
-              TBD
-    - when: 01/28/26
-      presenter:
-        url: TBD
-        name: TBD
-        affiliation: TBD
+        url: https://gatterbauer.name/
+        name: Wolfgang Gatterbauer
+        affiliation: Northeastern University
         bio: |
-            TBD
+             Wolfgang Gatterbauer is an Associate Professor at the Khoury College of Computer Sciences at Northeastern University. His research interests lie in the intersection of theory and practice of data management. He is co-recipient of a SIGMOD research highlight award 2025, an honorable mention for SIGMOD 2024, “best of conference” mentions for PODS 2021, SIGMOD 2017, WALCOM 2017, and VLDB 2015, the EDBT 2021 best paper award, and two SIGMOD 2021 reproducibility awards (including one for a user study).
       title: | 
-            TBD
+            Database Research needs an Abstract Relational Query Language
       abstract: |
-            TBD
+            Practitioners increasingly avoid writing SQL from scratch. Instead, they read, interpret and edit queries drafted by AI assistants. As a result, queries are no longer a fixed, non-negotiable specification, and more a malleable medium for surfacing ambiguities and interactively converging on an intended meaning. We argue that rethinking future interfaces for this human-AI generate-and-review loop calls for an Abstract Relational Query Language (ARQL): a semantics-first metalanguage that cleanly separates intent from surface syntax and makes relational patterns comparable across languages. 
+            We present Abstract Relational Calculus (ARC), a generalization of tuple relational calculus (TRC) that decomposes queries into a (1) relational core, (2) audience-specific modalities (humans vs. machines), and (3) explicit conventions. ARC serves as a shared semantic reference (a "Rosetta Stone") for relational language and interface design, including NL2SQL.
+            This separation lets us revisit two long-standing claims in relational language design: (1) that pipeline-style languages are inherently more intuitive than SQL's (or TRC's) "inside-out" dataflow, and (2) that pipelines are inherently more reusable. Using our vocabulary and ARC as reference language, we show that cognitive load (and thus perceived intuitiveness when reading queries) is primarily a matter of modality rather than "inside-out" vs. linear flow, and that we can achieve modularity and composition even for "inside-out" by using abstract relations.
 
 
 - name: Spring 2025 
