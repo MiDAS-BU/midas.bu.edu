@@ -29,7 +29,7 @@
     - when: 04/29/26
       presenter:
         url: TBD
-        name: TBD
+        name: Lightning talks
         affiliation: TBD
         bio: |
             TBD
@@ -72,11 +72,12 @@
             TBD
     - when: 04/01/26
       presenter:
-        url: TBD
-        name: TBD
-        affiliation: TBD
+        url: https://www.bu.edu/cs/profiles/karan-vombatkere/
+        name: Karan Vombatkere
+        affiliation: Boston University
         bio: |
-            TBD
+            Karan Vombatkere is a Computer Science PhD candidate advised by Dr. Evimaria Terzi. He is a part of the Massive Data & Algorithms (MiDAS) research group at BU, and his research is primarily focused on data mining algorithms. His current research is on designing efficient approximation algorithms for submodular optimization problems, such as the Team Formation/Max-k Coverage problem.
+            Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activities such as hiking and skiing
       title: | 
             TBD
       abstract: |
@@ -105,11 +106,11 @@
               TBD
     - when: 03/11/26
       presenter:
-        url: TBD
-        name: TBD
-        affiliation: TBD
+        url: https://cs-people.bu.edu/teona/
+        name: Teona Bagashvili
+        affiliation: Boston University
         bio: |
-            TBD
+            Teona Bagashvili is a PhD researcher in Computer Science at Boston University advised by Prof. Manos Athanassoulis. Her research focuses on storage systems, databases, flash memory, and specialized hardware. More recently she has been working on SSD controller design for Zoned Namespace (ZNS) SSDs and hardware-aware data management.
       title: | 
             TBD
       abstract: |
