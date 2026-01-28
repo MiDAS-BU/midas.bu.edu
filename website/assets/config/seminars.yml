@@ -139,11 +139,11 @@
             TBD
     - when: 02/18/26
       presenter:
-        url: TBD
-        name: TBD
-        affiliation: TBD
+        url: https://aquaorifice.github.io/
+        name: Anwesha Saha
+        affiliation: Boston University
         bio: |
-            TBD
+            Anwesha is a PhD student at Boston University researching database systems and data management. My work involves designing practical, data-aware structures that exploit the structure of data and it's distribution to reduce latency and memory footprint. Her overarching goal is to build data structures that can be integrated into practical applications and make existing technologies more practically implementable.
       title: | 
             TBD
       abstract: |
