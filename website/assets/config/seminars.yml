@@ -151,14 +151,16 @@
     - when: 02/11/26
       presenter:
         url: https://cs-people.bu.edu/abriasco/
-        name: Andrew B
+        name: Andrew Briasco Stewart
         affiliation: Boston University
         bio: |
             Andrew is a Computer Science PhD candidate at Boston University working with the DiSC Lab advised by Prof. Manos Athanassoulis. His interests are in computer systems, data systems, software engineering, and the boundary between software and hardware. Prior to Boston University, he attended Northeastern University where he graduated Summa Cum Laude with his Bachelors in Computer Engineering/ Computer Science. During his time there, he Co-op'd at Intel, Wolters Kluwer, and MORSE Corp
       title: | 
-            TBD
+            Split Layouts for Query Processing with Relational Memory
       abstract: |
-            TBD
+            Analytical data systems typically rely on a single physical data layout, where data is stored column-first. While column-stores avoid accessing unwanted fields, they suffer from the cost of tuple reconstruction, which is higher as more columns participate in the query. On the other hand, row-stores lead to a lot of unnecessary data movement for most analytical queries. On-the-fly data transformation supported by Relational Memory (RME) leverages custom hardware to offer the ideal layout per query, reducing cache line transfers. However, RME may still incur unnecessary accesses when fetching projected fields of rows that are eventually filtered out.
+
+We propose several novel hybrid data layouts to address these challenges: a split row-store structure that separates projection and selection columns, a hybrid column-row layout that combines the strengths of column-stores for selection columns and row-stores for projection columns, iterations of the two with an additional RME engine for columns that are used to join two tables together, and a possible another RME engine for columns used in both selection and projection. These layouts are designed to optimize memory access patterns for analytical queries by reducing cache line transfers and improving memory bandwidth efficiency. We demonstrate that the proposed layouts significantly outperform traditional row-wise, columnar, and RME-based layouts in terms of execution time and memory efficiency, leading to up to 1.55 times query speedup by reducing data movement up to 65%. Our experimental results show that the best performance can be achieved when selection columns are stored in a columnar fashion and projected columns in a row-wise manner. We note that this would typically mean a different layout for each query, which is why this work advocates for extending prior art on Relational Memory to make this feasible.
     - when: 02/04/26
       presenter:
         url: https://gatterbauer.name/
