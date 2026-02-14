@@ -139,13 +139,13 @@
             TBD
     - when: 02/18/26
       presenter:
-        url: https://aquaorifice.github.io/
-        name: Anwesha Saha
-        affiliation: Boston University
+        url: https://www.linkedin.com/in/zoumpatianos/
+        name: Kostas Zoumpatianos
+        affiliation: Fivetran
         bio: |
-            Anwesha is a PhD student at Boston University researching database systems and data management. My work involves designing practical, data-aware structures that exploit the structure of data and it's distribution to reduce latency and memory footprint. Her overarching goal is to build data structures that can be integrated into practical applications and make existing technologies more practically implementable.
+            Kostas Zoumpatianos is a computer scientist and software engineer specializing in large-scale data systems, distributed computing, and database technologies. He is currently a Principal Software Engineer at Fivetran, where he builds scalable cloud data infrastructure. He previously held a senior engineering role at Snowflake. He was a Marie Skłodowska-Curie Fellow at Université Paris Cité and at Harvard University. Kostas holds a PhD in Computer Science from the University of Trento. His work on Data Series Management has been published in leading venues such as VLDB, ACM SIGMOD, and KDD, and he has served on program committees for major conferences and journals in the data management community.
       title: | 
-            TBD
+            Managed Data Lakes in Fivetran and the Open Data Infrastructure
       abstract: |
             TBD
     - when: 02/11/26
