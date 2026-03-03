@@ -28,22 +28,22 @@
   talks:
     - when: 04/29/26
       presenter:
-        url: TBD
-        name: Lightning talks
-        affiliation: TBD
+        url: https://shubhamkaushik.com/
+        name: Shubham Kaushik
+        affiliation: Brandeis University
         bio: |
-            TBD
+            Shubham is a PhD student at the Michtom School of Computer Science, Brandeis University, working under the mentorship of Prof. Subhadeep Sarkar. His research revolves around optimizing data systems and distributed systems, with a current focus on Log-Structured Merge (LSM) trees. In this domain, he explores innovative compaction strategies and improvements to range deletes. He completed a Master’s degree in Computer Science, specializing in Data-Centric Computing, at the Graduate School of Arts & Science, Boston University.
       title: | 
             TBD
       abstract: |
             TBD
     - when: 04/22/26
       presenter:
-        url: TBD
-        name: TBD
-        affiliation: TBD
+        url: https://www.cs.umb.edu/~tpapon/
+        name: Tarikul Islam Papon
+        affiliation: UMass Boston
         bio: |
-            TBD
+            Tarikul Islam Papon is an Assistant Professor in the Department of Computer Science at UMass Boston, where he is the director of the Computing Hardware & Large Data Lab (CHiLL). His research focuses on hardware-aware data management challenges stemming from the evolution of storage and memory devices. Papon’s work has been published in top-tier database conferences (SIGMOD, VLDB, ICDE, EDBT) and journals (ACM TODS, IEEE TKDE). He has received several awards, including the Best Demo Award (VLDB ’23) and Boston University’s CS Research & Teaching Excellence Award.
       title: | 
             TBD
       abstract: |
