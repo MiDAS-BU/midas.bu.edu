@@ -79,9 +79,9 @@
             Karan Vombatkere is a Computer Science PhD candidate advised by Dr. Evimaria Terzi. He is a part of the Massive Data & Algorithms (MiDAS) research group at BU, and his research is primarily focused on data mining algorithms. His current research is on designing efficient approximation algorithms for submodular optimization problems, such as the Team Formation/Max-k Coverage problem.
             Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activities such as hiking and skiing
       title: | 
-            TBD
+            Computing Approximate Pareto Frontiers for Submodular Utility and Cost Tradeoffs
       abstract: |
-            TBD
+            In many data-mining applications, including recommender systems, influence maximization, and team formation, the goal is to pick a subset of elements (e.g., items, nodes in a network, experts to perform a task) to maximize a monotone submodular utility function while simultaneously minimizing a cost function. Classical formulations model this tradeoff via cardinality or knapsack constraints, or by combining utility and cost into a single weighted objective. However, such approaches require committing to a specific tradeoff in advance and return only a single solution, offering limited insight into the space of viable utility-cost tradeoffs. In this paper, we depart from the single-solution paradigm and examine the problem of computing representative sets of high-quality solutions that expose different tradeoffs between submodular utility and cost. For this, we introduce $(\alpha_1,\alpha_2)$-approximate Pareto frontiers that provably approximate the achievable tradeoffs between submodular utility and cost. Specifically, we formalize the Pareto-$\langle f,c \rangle$ problem and develop efficient algorithms for multiple instantiations arising from different combinations of submodular utility $f$ and cost functions $c$. Our results offer a principled and practical framework for understanding and exploiting utility-cost tradeoffs in submodular optimization. Experiments on datasets from diverse application domains demonstrate that our algorithms efficiently compute approximate Pareto frontiers in practice.
     - when: 03/25/26
       presenter:
         url: https://kylebd99.github.io/kyle.deeds.github.io/
@@ -90,20 +90,20 @@
         bio: |
              Kyle Deeds is an assistant professor at Boston University. Broadly, He is interested in the intersection of databases, compilers, and tensor programming with two main branches - firstly making high performance computing accessible to domain experts through declarative programming coupled with automatic program optimization and secondly about building systems to support the open-data community. In this vein, he is currently working on an open-data project called Govscape (https://www.govscape.net/) that provides a modern search interface over millions of government PDFs.
       title: | 
-            TBD
+            Interfaces, Optimizers, and Compilers for Sparse Array Programming
       abstract: |
-            TBD
+            As we push forward on building an optimized sparse array programming system (finch-tensor-lite), we've had to tackle a series of architectural questions. These range from basic questions about the interface offered to users (lazy/compute vs fused) to the kinds of optimizations that should be supported and how those optimizations can be composed to how we can support a broad set of execution backends. In this talk, I'll walk through these questions and the alternatives that we've considered as well as some currently open questions. Pending time, I'll also provide an overview of how we should model sparse computation theoretically and what relationship it has to existing theoretical models for database problems (e.g. conjunctive queries).
     - when: 03/18/26
       presenter:
         url: https://people.cs.umass.edu/~nehamakhija/
         name: Neha Makhija
         affiliation: UMass Amherst
         bio: | 
-            Neha Makhija is an Assistant Professor at the University of Massachusetts, Amherst, where she is a member of the DREAM lab (https://dream.cs.umass.edu/). Her current research interests are in the theory and practice of data management - how can we develop algorithms that extract knowledge from data efficiently? A common theme that emerges in data management research is that we can often leverage structure in data to solve hard problems efficiently. More specifically, she develops such techniques for problems related to query explanations, probabilistic/ uncertain data, and finding minimal representations of data - with the goal of discovering when we can solve these problems efficiently.
+            Neha Makhija is an Assistant Professor at the Manning College of Information and Computer Sciences (CICS) at the University of Massachusetts, Amherst. Her core research goal is to design unified algorithms that automatically work as efficiently as the theoretical best-case for the given input problem instance (i.e., have instance-optimality), thus achieving the best of both theory and practice. She studies this question in the domain of explainable data management, provenance, and knowledge representation. Neha earned her PhD in Computer Science from Northeastern University in 2025, where her dissertation was awarded the Khoury Research Award.
       title: | 
-            TBD
+            A Deep Dive on the Resilience Problem in Data Management
       abstract: |
-              TBD
+              How resilient is the output of your query to perturbations in its underlying data? A notion called Resilience, introduced in only 2015, quantifies the resilience of a boolean query by the minimum number of tuples that need to be deleted from the input database to make the query false. This simple to define problem is related to seminal questions in data management, such as deletion propagation and causality, and variants of the problem have been studied in the context of data repair, explainability and in-database optimization. However, there are still many open questions about its complexity and algorithms. The talk will introduce this problem from historical and practical perspectives, and will present recent results on the complexity of computing resilience for increasingly general classes of queries (going from conjunctive queries to finite and infinite regular path queries to semantic pipelines). We will also discuss connections of this problem to other fundamental problems in data management, and how the tools and algorithms developed for this problem (such as automatic proof generation) can be used to solve other problems in data management and beyond.
     - when: 02/18/26
       presenter:
         url: https://www.linkedin.com/in/zoumpatianos/
