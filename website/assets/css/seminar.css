@@ -2,6 +2,14 @@ body * {
 	box-sizing: border-box;
 }
 
+.seminar-anchor-target {
+	display: block;
+	height: 90px;
+	margin-top: -120px;
+	visibility: hidden;
+	pointer-events: none;
+}
+
 .header {
 	border: 1px solid #327a81;
 	border-radius: 10px;
