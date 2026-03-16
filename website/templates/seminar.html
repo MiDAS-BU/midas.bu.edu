@@ -26,7 +26,7 @@
 								<th class="text-center" width="600">Title and Abstract</th>
 							</tr>
 							{% for talk in semester.talks|sortByDate|reverse %}
-								<tr>
+								<tr id="{{ talk | seminarAnchorId }}">
 									<td>{{ talk.when | formatDate }}
 									</td>
 									<td>

@@ -15,6 +15,7 @@ def main():
 	from markupsafe import Markup
 	from datetime import datetime
 	from string import digits
+	import re
 	import requests
 	import json
 
@@ -141,6 +142,27 @@ def main():
 			return datetime.timestamp(datetime.strptime(obj["when"], "%m/%d/%y"))
 		return sorted(input, key = sortFunc)
 
+	def seminarAnchorId(talk):
+		talk_date = datetime.strptime(talk["when"], "%m/%d/%y")
+		anchor_date = talk_date.strftime('%b') + str(int(talk_date.strftime('%d')))
+
+		presenter = talk.get("presenter", {})
+		presenter_name = presenter.get("name", "")
+		name_parts = [re.sub(r"[^A-Za-z0-9]", "", part) for part in presenter_name.split()]
+		speaker_key = next((part for part in reversed(name_parts) if part), "")
+
+		if not speaker_key:
+			if talk.get("departmental"):
+				speaker_key = "Departmental"
+			elif talk.get("special"):
+				speaker_key = "Special"
+			elif talk.get("empty"):
+				speaker_key = "OpenSlot"
+			else:
+				speaker_key = "Talk"
+
+		return f"{anchor_date}{speaker_key}"
+
 	dist = "./dist"
 	src = "./website"
 
@@ -148,6 +170,7 @@ def main():
 	templates = Environment(loader=FileSystemLoader(searchpath=str(Path(src) / "templates")))
 	templates.filters['sortByLastName'] = sortByLastName
 	templates.filters['sortByDate'] = sortByDate
+	templates.filters['seminarAnchorId'] = seminarAnchorId
 	templates.filters['formatDate'] = lambda input: datetime.strptime(input, "%m/%d/%y").strftime('%a, %b ') + str(int(datetime.strptime(input, "%m/%d/%y").strftime('%d')))
 	templates.filters['limit'] = lambda input, n: input[:n]
 	templates.filters['markdown'] = lambda input, style: f"<div class=\"markdown\" style=\"{style}\"> {Markup(md.convert(input))} </div>"
