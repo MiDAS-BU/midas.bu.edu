@@ -16,6 +16,7 @@ def main():
 	from datetime import datetime
 	from string import digits
 	import re
+	import time
 	import requests
 	import json
 
@@ -53,6 +54,49 @@ def main():
 			)
 
 	def generatePublications(file, *names):
+		cache_dir = Path("./cache")
+		cache_file = cache_dir / f"{file}.json"
+		cache_ttl_seconds = 30 * 60
+		source_file = Path(src) / "assets" / "config" / f"{file}.yml"
+
+		def loadCachedPublications():
+			if not cache_file.exists():
+				return None
+
+			try:
+				with open(cache_file) as cached_file:
+					cached_payload = json.load(cached_file)
+			except (OSError, json.JSONDecodeError):
+				return None
+
+			generated_at = cached_payload.get("generated_at")
+			cached_names = cached_payload.get("names")
+			cached_data = cached_payload.get("data")
+			source_mtime = source_file.stat().st_mtime
+
+			if generated_at is None or cached_names != list(names) or cached_data is None:
+				return None
+			if time.time() - generated_at > cache_ttl_seconds:
+				return None
+			if source_mtime > generated_at:
+				return None
+
+			print("Collecting publications: using cached DBLP results.")
+			return cached_data
+
+		def saveCachedPublications(publications):
+			cache_dir.mkdir(parents=True, exist_ok=True)
+			with open(cache_file, "w") as cached_file:
+				json.dump({
+					"generated_at": time.time(),
+					"names": list(names),
+					"data": publications,
+				}, cached_file)
+
+		cached_publications = loadCachedPublications()
+		if cached_publications is not None:
+			return cached_publications
+
 		# parse JSON list / object from DBLP into a string
 		def authorsToString(publicationJson):
 			result = ""
@@ -127,6 +171,7 @@ def main():
 				}]
 				print(".", end = "")
 		print()
+		saveCachedPublications(result)
 		return result
 
 	# filters
