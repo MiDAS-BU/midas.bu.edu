@@ -50,12 +50,12 @@
             TBD
     - when: 04/15/26
       presenter:
-        url: TBD
-        name: TBD
-        affiliation: TBD
+        url: https://cs-people.bu.edu/anwesha
+        name: Anwesha Saha
+        affiliation: Boston University
         bio: |
-            TBD
-      title: | 
+              Anwesha is a PhD student at Boston University, advised by Prof. Manos Athanassoulis in the DiSC Lab within the MiDAS Group. Her current research focuses on Database Systems, specifically designing efficient space-optimized indexing structures. Her interests lie in exploring data structures that can exploit intrinsic geometry and distribution of data to outperform traditional structures or make existing structures more efficient.
+      title: |
             TBD
       abstract: |
             TBD
