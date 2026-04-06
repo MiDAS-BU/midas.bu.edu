@@ -56,9 +56,9 @@
         bio: |
               Anwesha is a PhD student at Boston University, advised by Prof. Manos Athanassoulis in the DiSC Lab within the MiDAS Group. Her current research focuses on Database Systems, specifically designing efficient space-optimized indexing structures. Her interests lie in exploring data structures that can exploit intrinsic geometry and distribution of data to outperform traditional structures or make existing structures more efficient.
       title: |
-            TBD
+              TBD
       abstract: |
-            TBD
+              TBD
     - when: 04/08/26
       presenter:
         url: https://cs-people.bu.edu/teona/
@@ -67,9 +67,9 @@
         bio: |
               Teona Bagashvili is a PhD researcher in Computer Science at Boston University advised by Prof. Manos Athanassoulis. Her research focuses on storage systems, databases, flash memory, and specialized hardware. More recently she has been working on SSD controller design for Zoned Namespace (ZNS) SSDs and hardware-aware data management.
       title: | 
-            TBD
+            Eliminating hidden cost of zone management in ZNS SSDs
       abstract: |
-            TBD
+            Zoned Namespace (ZNS) SSDs offer a promising interface for stable throughput and low-latency storage by eliminating device-side garbage collection. They expose storage as append-only zones that give the host applications direct control over data placement. However, current ZNS implementations suffer from (a) device-level write amplification (DLWA), (b) increased wear, and (c) interference with host I/O due to zone mapping and management. We identify two primary design decisions as the main cause: (i) fixed physical zones and (ii) full-zone operations that lead to excessive physical writes. We propose SilentZNS, a new zone mapping and management approach that addresses the aforementioned limitations by on-the-fly allocating available resources to zones, while minimizing wear, maintaining parallelism, and avoiding unnecessary writes at the device-level. SilentZNS is a flexible zone allocation scheme that departs from the traditional logical-to-physical zone mapping and allows for arbitrary collections of blocks to be assigned to a zone. We add the necessary constraints to ensure wear-leveling and state-of-the-art read performance, and use only the required blocks to avoid dummy writes during zone reset. We implement SilentZNS using the state-of-the-art ConfZNS++ emulator and show that it eliminates the undue burden of dummy writes by up to 20x, leading to lower DLWA (86% less at 10% zone occupancy), less overall wear (up to 76.9%), and up to 3.7x faster workload execution.
     - when: 04/01/26
       presenter:
         url: https://www.bu.edu/cs/profiles/karan-vombatkere/
