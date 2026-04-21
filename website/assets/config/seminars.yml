@@ -21,7 +21,7 @@
 - name: Spring 2026 
   when: 01/01/26
   where: |
-    Seminars are held on Wednesdays in CDS TBA at 1-2pm [unless otherwise noted].
+    Seminars are held on Wednesdays in CDS 948 at 1-2pm [unless otherwise noted].
   responsible:
     name: Anwesha Saha
     username: anwesha
