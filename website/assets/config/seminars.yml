@@ -26,6 +26,17 @@
     name: Anwesha Saha
     username: anwesha
   talks:
+    - when: 05/06/26
+      presenter:
+        url: https://www.linkedin.com/in/yhmao/
+        name: Yunhao Mao
+        affiliation: University of Toronto
+        bio: |
+            Yunhao Mao is a PhD candidate at the University of Toronto with the Middleware Systems Research Group (MSRG), advised by Prof. Hans-Arno Jacobsen.
+      title: | 
+            Building Scalable Distributed Databases in the Age of Geo-Replication
+      abstract: |
+            To ensure high availability and fault tolerance, modern distributed applications rely heavily on geo-replication that distributes data across multiple data centers. However, high network latency among replicas forces geo-replicated databases to trade off between consistency, availability, and performance. Weak consistency achieves high performance but exposes developers to data anomalies, whereas strong consistency requires synchronous coordination that severely degrades performance over wide-area networks. Our research addresses two critical challenges: improving the usability of eventually consistent systems and designing strongly consistent transaction systems tailored for geo-replication. We begin by exploring Conflict-free Replicated Datatypes (CRDTs) as a robust, eventually consistent solution. We detail our work on reversible CRDTs, introducing a novel "undo" operation for CRDT interfaces, followed by reliable CRDTs, which provision strong consistency on demand. We will highlight Janus, our implementation that uses asynchronous Byzantine fault-tolerant consensus to replicate CRDTs without performance penalties and ensures safety. Finally, we present Minerva, a scalable transaction protocol for multi-leader geo-replicated databases that leverages asynchronous consensus to maintain high-throughput processing under wide-area network latency.
     - when: 04/29/26
       presenter:
         url: https://shubhamkaushik.com/
