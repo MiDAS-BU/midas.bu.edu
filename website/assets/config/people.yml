@@ -91,13 +91,6 @@ people:
 
   # active researchers
 
-  - name: Andy Huynh
-    image: andy.jpg
-    position: PhD Researcher
-    website: http://cs-people.bu.edu/ndhuynh/
-    category: students
-    when: 2017
-  
   - name: Karan Vombatkere
     image: Karan.jpeg
     position: PhD Researcher
@@ -162,8 +155,29 @@ people:
     category: students
     when: 2025
 
+  - name: Lucas Tassis
+    image: lucas-tassis.jpg
+    position: PhD Researcher
+    website: https://cs-people.bu.edu/ltassis/
+    category: students
+    when: 2026
+
+  - name: Angelos Poulis
+    image: angelos-poulis.jpg
+    position: PhD Researcher
+    website: https://cs-people.bu.edu/apoulis/
+    category: students
+    when: 2026
+
 
 # alumni
+
+  - name: Andy Huynh
+    image: andy.jpg
+    position: "PhD (Next: Google)"
+    website: http://cs-people.bu.edu/ndhuynh/
+    category: alumni
+    when: 2026
 
   - name: Xiyue Gao
     image: xiyue-gao-visiting-faculty.jpg
