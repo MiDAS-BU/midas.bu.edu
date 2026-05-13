@@ -169,6 +169,13 @@ people:
     category: students
     when: 2024
 
+  - name: Taishan Chen
+    image: taishan-chen.jpg
+    position: PhD Researcher
+    website: https://www.bu.edu/cds-faculty/profile/taishan-chen/
+    category: students
+    when: 2025
+
 
 # alumni
 
