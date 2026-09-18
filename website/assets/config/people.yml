@@ -82,12 +82,13 @@ people:
     category: faculty
     when: 2026
 
-  - name: Charalampos Tsourakakis
-    image: babis.jpg
-    position: Adjunct Faculty
-    website: https://tsourakakis.com/
-    category: faculty
-    when: 2100
+  # Charalampos Tsourakakis left BU
+  # - name: Charalampos Tsourakakis
+  #   image: babis.jpg
+  #   position: Adjunct Faculty
+  #   website: https://tsourakakis.com/
+  #   category: faculty
+  #   when: 2100
 
   # active researchers
 
