@@ -97,21 +97,34 @@ def main():
 		if cached_publications is not None:
 			return cached_publications
 
-		# parse JSON list / object from DBLP into a string
-		def authorsToString(publicationJson):
-			result = ""
-			authors = publicationJson["authors"]["author"]
-			
-			if isinstance(authors, dict):
-				return authors["text"]
-				print("THIS SHOULD BE SUPER RARE!")
-			else:
-				for author in authors:
-					cur_author=author['text'].rstrip(digits)
-					cur_author=cur_author.strip()
-					# print("["+cur_author+"]")
-					result += f"{cur_author}, "
-				return result[:-2]
+		# dblp's JSON search API now sits behind a bot-detection challenge (see
+		# https://dblp.org/robots.txt), so publications are fetched via dblp's
+		# public SPARQL endpoint instead.
+		DBLP_SPARQL_ENDPOINT = "https://sparql.dblp.org/sparql/dblp"
+
+		EXCLUDED_KEYS = {
+			"conf/sigmod/2024ari", "journals/tist/LauwNTT25", "journals/pvldb/Koutrika023f",
+			"journals/sigweb/LauwCSTTT23", "conf/wsdm/2023", "journals/sigir/LauwCSTTT23",
+		}
+
+		def authorsToString(author_names):
+			return ", ".join(name.rstrip(digits).strip() for name in author_names)
+
+		def runSparqlQuery(query):
+			response = requests.post(
+				DBLP_SPARQL_ENDPOINT,
+				data={"query": query},
+				timeout=30,
+				headers={"Accept": "application/sparql-results+json"},
+			)
+			if response.status_code != 200:
+				print(f"\n\tDBLP SPARQL request failed with status {response.status_code}.")
+				exit(1)
+			try:
+				return response.json()["results"]["bindings"]
+			except (ValueError, KeyError):
+				print(f"\n\tDBLP SPARQL returned an unexpected response.")
+				exit(1)
 
 		# load from file first
 		result = loadData(file)
@@ -119,38 +132,57 @@ def main():
 
 		for name in names:
 
-			# load from DBLP search API (try primary, then fallback)
-			query = f"author%3A{name}%3A"
-			urls = [
-				f"https://dblp.org/search/publ/api?q={query}&format=json",
-				f"https://dblp.uni-trier.de/search/publ/api?q={query}&format=json",
-			]
-			response = None
-			for url in urls:
-				response = requests.get(url, timeout=20)
-				if response.status_code == 200:
-					break
-				if response.status_code == 429:
-					print(f"\n\tToo many requests to DBLP server. Please wait a few minutes.")
-					exit(1)
-			if response is None or response.status_code != 200:
-				status = response.status_code if response is not None else "no response"
-				print(f"\n\tDBLP request failed with status {status}.")
-				exit(1)
-			publications = json.loads(response.text)["result"]["hits"]["hit"]
+			display_name = name.replace("_", " ")
+			bindings = runSparqlQuery(f"""
+				PREFIX dblp: <https://dblp.org/rdf/schema#>
+				SELECT ?pub ?title ?venue ?year ?ee WHERE {{
+					?creator dblp:primaryCreatorName "{display_name}" .
+					?pub dblp:authoredBy ?creator .
+					?pub dblp:title ?title .
+					?pub dblp:yearOfPublication ?year .
+					OPTIONAL {{ ?pub dblp:publishedIn ?venue . }}
+					OPTIONAL {{ ?pub dblp:primaryDocumentPage ?ee . }}
+				}} ORDER BY DESC(?year)
+			""")
 			print(f"\n\t{name}: ", end = "")
 
-			for publication in publications:
-
-				# Do not include archives
-				publication = publication["info"]
-				venue = publication.get("venue")
+			publications = []
+			for binding in bindings:
+				venue = binding.get("venue", {}).get("value")
 				if not venue or venue == "CoRR" or venue == "IACR Cryptol. ePrint Arch.":
-					continue		
-
-				# Do not include specific entries (e.g., frontmatters, etc.)
-				if publication["key"] == "conf/sigmod/2024ari" or publication["key"] == "journals/tist/LauwNTT25" or publication["key"] == "journals/pvldb/Koutrika023f" or publication["key"] == "journals/sigweb/LauwCSTTT23" or publication["key"] == "conf/wsdm/2023" or publication["key"] == "journals/sigir/LauwCSTTT23":
 					continue
+
+				key = binding["pub"]["value"].removeprefix("https://dblp.org/rec/")
+				if key in EXCLUDED_KEYS:
+					continue
+
+				publications.append({
+					"key": key,
+					"pub": binding["pub"]["value"],
+					"title": binding["title"]["value"],
+					"venue": venue,
+					"year": binding["year"]["value"],
+					"ee": binding.get("ee", {}).get("value"),
+				})
+
+			# fetch ordered author names for the surviving publications in one batched query
+			authors_by_pub = {}
+			if publications:
+				values = " ".join(f"<{p['pub']}>" for p in publications)
+				author_bindings = runSparqlQuery(f"""
+					PREFIX dblp: <https://dblp.org/rdf/schema#>
+					SELECT ?pub ?ord ?authorName WHERE {{
+						VALUES ?pub {{ {values} }}
+						?pub dblp:hasSignature ?sig .
+						?sig dblp:signatureCreator ?c .
+						?sig dblp:signatureOrdinal ?ord .
+						?c dblp:primaryCreatorName ?authorName .
+					}} ORDER BY ?pub ?ord
+				""")
+				for binding in author_bindings:
+					authors_by_pub.setdefault(binding["pub"]["value"], []).append(binding["authorName"]["value"])
+
+			for publication in publications:
 
 				# Do not include duplicates
 				if len(list(filter(lambda p: p["title"] == publication["title"][:-1], result["publications"]))) > 0:
@@ -158,17 +190,18 @@ def main():
 					continue
 
 				# Parse to our format, add to list, template will automatically select latest
-				result["publications"] += [{
+				entry = {
 					"title": publication["title"][:-1], # remove period
-					"authors": authorsToString(publication),
+					"authors": authorsToString(authors_by_pub.get(publication["pub"], [])),
 					"venue": publication["venue"],
 					"date": {
 						"year": int(publication["year"])
 					},
-					"links": {
-						"abstract": publication["ee"]
-					}
-				}]
+					"links": {},
+				}
+				if publication["ee"]:
+					entry["links"]["abstract"] = publication["ee"]
+				result["publications"] += [entry]
 				print(".", end = "")
 		print()
 		saveCachedPublications(result)
@@ -230,7 +263,8 @@ def main():
 	generateClasses(templates)
 
 	# do not regenerate for each page
-	publications = generatePublications("publications", "George_Kollios", "Manos_Athanassoulis", "Evimaria_Terzi", "Charalampos_E._Tsourakakis", "Mark_Crovella", "Kyle_Deeds")
+	# Charalampos_E._Tsourakakis left BU, no longer pulled into publications
+	publications = generatePublications("publications", "George_Kollios", "Manos_Athanassoulis", "Evimaria_Terzi", "Mark_Crovella", "Kyle_Deeds")
 
 	# render templates
 	for path in (Path(src) / "templates").glob('*.html'):
