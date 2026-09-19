@@ -69,7 +69,7 @@ people:
     when: 2009
 
   - name: Manos Athanassoulis
-    image: manos.jpg
+    image: manos-bu-brink-square-zoomed2-reshoot.png
     position: Associate Professor
     website: https://cs-people.bu.edu/mathan/
     category: faculty
