@@ -178,14 +178,14 @@ people:
     when: 2025
 
   - name: Katia Arshinova
-    image: placeholder-male.png
+    image: katia-arshinova.jpg
     position: PhD Researcher
     website: https://crystalktr.github.io
     category: students
     when: 2026
 
   - name: Akshay Mehta
-    image: placeholder-male.png
+    image: akshay-mehta.jpg
     position: PhD Researcher
     website: https://akslaym.dev
     category: students
