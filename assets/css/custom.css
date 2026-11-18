@@ -63,3 +63,8 @@
 	font-size: 16px;
 	margin-bottom: 8px;
 }
+
+.container.container-wide {
+	width: 90%;
+	max-width: 1300px;
+}

@@ -1,27 +1,78 @@
-dates: February 13th and 14th, 2025
-academic_year: "2024/25"
+dates: early 2027 (no date yet)
+academic_year: "2026-2027"
 
 categories:
   - name: Data Management
     papers:
-# Manos's papers
-      # - authors: Matias Bjørling, Abutalib Aghayev, Hans Holmberg, Aravind Ramesh, Damien Le Moal, Gregory R. Ganger, George Amvrosiadis
-      #   title: "ZNS: Avoiding the Block Interface Tax for Flash-based SSDs"
-      #   venue: USENIX ATC
-      #   year: 2021
-      #   url: https://www.usenix.org/system/files/atc21-bjorling.pdf
+# 2026-2027 papers (10 total)
+      - authors: Christopher R. Aberger, Andrew Lamb, Susan Tu, Andres Nötzli, Kunle Olukotun, Christopher Ré
+        title: "EmptyHeaded: A Relational Engine for Graph Processing"
+        venue: ACM Transactions on Database Systems
+        year: 2017
+        url: https://dl.acm.org/doi/pdf/10.1145/3129246
 
+      - authors: Todd J. Green, Grigoris Karvounarakis, Val Tannen
+        title: Provenance Semirings
+        venue: PODS
+        year: 2007
+        url: https://dl.acm.org/doi/pdf/10.1145/1265530.1265535
+
+      - authors: Bailu Ding, Vivek R. Narasayya, Surajit Chaudhuri
+        title: Extensible Query Optimizers in Practice (Ch. 1 and 2)
+        venue: Foundations and Trends in Databases
+        year: 2024
+        url: https://www.microsoft.com/en-us/research/wp-content/uploads/2024/12/Extensible-Query-Optimizers-in-Practice.pdf
+
+# Manos's papers
       - authors: Chen Luo, Michael J. Carey
         title: "LSM-based storage techniques: a survey"
         venue: VLDB
         year: 2020
         url: https://arxiv.org/pdf/1812.07527.pdf
 
-      - authors: James Jie Pan, Jianguo Wang, Guoliang Li
-        title: Survey of vector database management systems
-        venue: The VLDB Journal
-        year: 2024
-        url: https://link.springer.com/article/10.1007/s00778-024-00864-x
+      - authors: Jason Hu, Philip A. Bernstein, Jialin Li, Qizhen Zhang
+        title: "DPDPU: Data Processing with DPUs"
+        venue: CIDR
+        year: 2025
+        url: https://vldb.org/cidrdb/papers/2025/p9-hu.pdf
+
+      - authors: Junchang Wang, Fei Gao, Fu Xiao, Manos Athanassoulis
+        title: "BitEngine: Rethinking Query Processing with Bitmap Indexes"
+        venue: PVLDB
+        year: 2026
+        url: https://cs-people.bu.edu/mathan/publications/vldb26-wang.pdf
+
+      - authors: Sven Helmer, Till Westmann, Guido Moerkotte
+        title: "Diag-Join: An Opportunistic Join Algorithm for 1:N Relationships"
+        venue: VLDB
+        year: 1998
+        url: https://www.vldb.org/conf/1998/p098.pdf
+
+# Empty placeholders for the remaining papers (10 total)
+      - title: TBD
+
+      - title: TBD
+
+      - title: TBD
+
+# Previous exam's papers (not used for 2026-2027)
+      # - authors: Junchang Wang, Fu Xiao, Manos Athanassoulis
+      #   title: "RABIT: Efficient Range Queries with Bitmap Indexing"
+      #   venue: Proc. ACM Manag. Data (SIGMOD)
+      #   year: 2025
+      #   url: https://dl.acm.org/doi/10.1145/3769819
+
+      # - authors: Matias Bjørling, Abutalib Aghayev, Hans Holmberg, Aravind Ramesh, Damien Le Moal, Gregory R. Ganger, George Amvrosiadis
+      #   title: "ZNS: Avoiding the Block Interface Tax for Flash-based SSDs"
+      #   venue: USENIX ATC
+      #   year: 2021
+      #   url: https://www.usenix.org/system/files/atc21-bjorling.pdf
+
+      # - authors: James Jie Pan, Jianguo Wang, Guoliang Li
+      #   title: Survey of vector database management systems
+      #   venue: The VLDB Journal
+      #   year: 2024
+      #   url: https://link.springer.com/article/10.1007/s00778-024-00864-x
 
       # - authors: Cheng Chen, Chenzhe Jin, Yunan Zhang, Sasha Podolsky, Chun Wu, Szu-Po Wang, Eric Hanson, Zhou Sun, Robert Walzer, Jianguo Wang
       #   title: "SingleStore-V: An Integrated Vector Database System in SingleStore"
@@ -29,29 +80,29 @@ categories:
       #   year: 2024
       #   url: https://dl.acm.org/doi/pdf/10.14778/3685800.3685805
 
-      - authors: Jongsung Lee, Donguk Kim, Jae W. Lee
-        title: "WALTZ: Leveraging Zone Append to Tighten the Tail Latency of LSM Tree on ZNS SSD" 
-        venue: PVLDB
-        year: 2023
-        url: https://www.vldb.org/pvldb/vol16/p2884-lee.pdf
+      # - authors: Jongsung Lee, Donguk Kim, Jae W. Lee
+      #   title: "WALTZ: Leveraging Zone Append to Tighten the Tail Latency of LSM Tree on ZNS SSD"
+      #   venue: PVLDB
+      #   year: 2023
+      #   url: https://www.vldb.org/pvldb/vol16/p2884-lee.pdf
 
-      - authors: Dmytro Bogatov, Georgios Kellaris, George Kollios, Kobbi Nissim, Adam O'Neill
-        title: "εpsolute: Efficiently Querying Databases While Providing Differential Privacy"
-        venue: CCS
-        year: 2021
-        url: https://dl.acm.org/doi/10.1145/3460120.3484786
+      # - authors: Dmytro Bogatov, Georgios Kellaris, George Kollios, Kobbi Nissim, Adam O'Neill
+      #   title: "εpsolute: Efficiently Querying Databases While Providing Differential Privacy"
+      #   venue: CCS
+      #   year: 2021
+      #   url: https://dl.acm.org/doi/10.1145/3460120.3484786
 
-      - authors: Alberto Lerner, Gustavo Alonso
-        title: CXL and the Return of Scale-Up Database Engines
-        venue: PVLDB
-        year: 2024
-        url: https://dl.acm.org/doi/pdf/10.14778/3675034.3675047
+      # - authors: Alberto Lerner, Gustavo Alonso
+      #   title: CXL and the Return of Scale-Up Database Engines
+      #   venue: PVLDB
+      #   year: 2024
+      #   url: https://dl.acm.org/doi/pdf/10.14778/3675034.3675047
 
-      - authors: Hazar Harmouch, Felix Naumann
-        title: "Cardinality Estimation: An Experimental Survey"
-        venue: PVLDB
-        year: 2017
-        url: https://www.vldb.org/pvldb/vol11/p499-harmouch.pdf
+      # - authors: Hazar Harmouch, Felix Naumann
+      #   title: "Cardinality Estimation: An Experimental Survey"
+      #   venue: PVLDB
+      #   year: 2017
+      #   url: https://www.vldb.org/pvldb/vol11/p499-harmouch.pdf
 
 # George's papers
       # - authors: Frank McSherry
