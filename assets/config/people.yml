@@ -177,6 +177,26 @@ people:
     category: students
     when: 2025
 
+  - name: Katia Arshinova
+    image: katia-arshinova.jpg
+    position: PhD Researcher
+    website: https://crystalktr.github.io
+    category: students
+    when: 2026
+
+  - name: Akshay Mehta
+    image: akshay-mehta.jpg
+    position: PhD Researcher
+    website: https://akslaym.dev
+    category: students
+    when: 2026
+
+  - name: Andrew Day
+    image: placeholder-male.png
+    position: PhD Researcher
+    category: students
+    when: 2026
+
 
 # alumni
 
