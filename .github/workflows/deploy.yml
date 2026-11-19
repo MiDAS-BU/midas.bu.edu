@@ -3,6 +3,9 @@ name: Deploy
 on:
   push:
     branches: [master]
+  # Rebuild every 2 months (1st of Jan/Mar/May/Jul/Sep/Nov, 06:00 UTC) to refresh dblp publications
+  schedule:
+    - cron: "0 6 1 1,3,5,7,9,11 *"
   workflow_dispatch:
 
 permissions:
