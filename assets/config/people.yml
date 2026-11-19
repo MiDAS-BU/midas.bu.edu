@@ -100,7 +100,7 @@ people:
     when: 2026
 
   - name: Gabriel Franco
-    image: gabriel_franco.jpeg
+    image: gabriel-franco.jpg
     position: PhD Researcher
     website: https://cs-people.bu.edu/gvfranco/
     category: students
@@ -124,13 +124,6 @@ people:
     image: Kevin-Quinn.jpeg
     position: PhD Researcher
     website: https://www.bu.edu/cds-faculty/profile/kevin-quinn/
-    category: students
-    when: 2023
-
-  - name: Themistoklis Nikas
-    image: themis.jpg
-    position: PhD Researcher
-    website: https://cs-people.bu.edu/tnikas/
     category: students
     when: 2023
 
