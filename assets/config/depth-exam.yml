@@ -48,12 +48,23 @@ categories:
         year: 1998
         url: https://www.vldb.org/conf/1998/p098.pdf
 
-# Empty placeholders for the remaining papers (10 total)
-      - title: TBD
+      - authors: Frank McSherry
+        title: "Privacy integrated queries: an extensible platform for privacy-preserving data analysis"
+        venue: SIGMOD
+        year: 2009
+        url: https://css.csail.mit.edu/6.5660/2024/readings/pinq.pdf
 
-      - title: TBD
+      - authors: Noah M. Johnson, Joseph P. Near, Dawn Song
+        title: Towards Practical Differential Privacy for SQL Queries
+        venue: PVLDB
+        year: 2018
+        url: https://www.vldb.org/pvldb/vol11/p526-johnson.pdf
 
-      - title: TBD
+      - authors: Saba Eskandarian, Matei Zaharia
+        title: "ObliDB: Oblivious Query Processing for Secure Databases"
+        venue: PVLDB
+        year: 2019
+        url: https://www.acsu.buffalo.edu/~mblanton/cse715/database-queries.pdf
 
 # Previous exam's papers (not used for 2026-2027)
       # - authors: Junchang Wang, Fu Xiao, Manos Athanassoulis
