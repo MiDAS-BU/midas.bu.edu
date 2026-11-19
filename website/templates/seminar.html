@@ -9,7 +9,7 @@
 {% block content %}
 
 <section id="seminar" class="background2 section-padding">
-	<div class="container">
+	<div class="container container-wide">
 		<div class="row">
 			<div class="col-xs-12 section-title text-center">
 				<h2>MiDAS Seminar</h2>
@@ -21,9 +21,9 @@
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							{% for talk in semester.talks|sortByDate|reverse %}
 								<tr>
@@ -43,9 +43,9 @@
 											{% endif %}
 
 											{% if "bio" in talk.presenter %}
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														{{ talk.presenter.bio }}
 													</p>
 												</details>
@@ -77,9 +77,9 @@
 												[<a href={{ talk.video_url }} target="_blank">Talk Recording</a>]
 											{% endif %}
 											{% if talk.abstract %}
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													{{ talk.abstract }}
 												</p>
 											</details>
