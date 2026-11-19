@@ -67,12 +67,17 @@ body * {
 	max-width: calc(100% - 2em);
 	margin: 1em auto;
 	overflow: hidden;
-	width: 1200px;
+	width: 100%;
 }
 
 table {
 	width: 100%;
+	table-layout: fixed;
 }
+
+th.col-date { width: 11%; }
+th.col-speaker { width: 27%; }
+th.col-talk { width: 62%; }
 
 table td,
 table th {
@@ -213,4 +218,92 @@ table tr:nth-child(2n+1) {
 		box-shadow: none;
 		overflow: visible;
 	}
+}
+
+
+/* Smooth, collapsible bio / abstract */
+.seminar-details {
+	interpolate-size: allow-keywords;
+	margin-top: 8px;
+	text-align: left;
+}
+
+.seminar-details summary {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	cursor: pointer;
+	list-style: none;
+	color: #D84141;
+	font-size: 0.9em;
+	font-weight: 600;
+	padding: 2px 10px;
+	border: 1px solid #e3b4b4;
+	border-radius: 999px;
+	background: #fff;
+	transition: background-color 0.2s ease, color 0.2s ease;
+	user-select: none;
+}
+
+.seminar-details summary::-webkit-details-marker {
+	display: none;
+}
+
+.seminar-details summary::before {
+	content: "\25B8";
+	display: inline-block;
+	transition: transform 0.25s ease;
+}
+
+.seminar-details[open] summary::before {
+	transform: rotate(90deg);
+}
+
+.seminar-details summary:hover,
+.seminar-details[open] summary {
+	background: #D84141;
+	color: #fff;
+}
+
+.seminar-details p {
+	margin: 10px 0 0;
+	padding: 10px 14px;
+	background: #fff;
+	border-left: 3px solid #D84141;
+	border-radius: 0 6px 6px 0;
+	color: #333;
+	font-size: 0.95em;
+	line-height: 1.6;
+	text-align: left;
+	animation: seminar-reveal 0.3s ease;
+}
+
+@keyframes seminar-reveal {
+	from { opacity: 0; transform: translateY(-6px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.seminar-details p { animation: none; }
+	.seminar-details summary::before { transition: none; }
+}
+
+@media (min-width: 701px) {
+	.seminar-details::details-content {
+		transition: block-size 0.3s ease, content-visibility 0.3s allow-discrete;
+		block-size: 0;
+		overflow: hidden;
+	}
+	.seminar-details[open]::details-content {
+		block-size: auto;
+	}
+}
+
+/* Bio: centered under the speaker's name */
+.seminar-bio {
+	text-align: center;
+}
+
+.seminar-bio p {
+	text-align: left;
 }

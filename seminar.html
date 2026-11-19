@@ -85,7 +85,7 @@
 		
 
 <section id="seminar" class="background2 section-padding">
-	<div class="container">
+	<div class="container container-wide">
 		<div class="row">
 			<div class="col-xs-12 section-title text-center">
 				<h2>MiDAS Seminar</h2>
@@ -98,9 +98,9 @@
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							
 								<tr>
@@ -118,9 +118,9 @@
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Yunhao Mao is a PhD candidate at the University of Toronto with the Middleware Systems Research Group (MSRG), advised by Prof. Hans-Arno Jacobsen.
 
 													</p>
@@ -140,9 +140,9 @@
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													To ensure high availability and fault tolerance, modern distributed applications rely heavily on geo-replication that distributes data across multiple data centers. However, high network latency among replicas forces geo-replicated databases to trade off between consistency, availability, and performance. Weak consistency achieves high performance but exposes developers to data anomalies, whereas strong consistency requires synchronous coordination that severely degrades performance over wide-area networks. Our research addresses two critical challenges: improving the usability of eventually consistent systems and designing strongly consistent transaction systems tailored for geo-replication. We begin by exploring Conflict-free Replicated Datatypes (CRDTs) as a robust, eventually consistent solution. We detail our work on reversible CRDTs, introducing a novel "undo" operation for CRDT interfaces, followed by reliable CRDTs, which provision strong consistency on demand. We will highlight Janus, our implementation that uses asynchronous Byzantine fault-tolerant consensus to replicate CRDTs without performance penalties and ensures safety. Finally, we present Minerva, a scalable transaction protocol for multi-leader geo-replicated databases that leverages asynchronous consensus to maintain high-throughput processing under wide-area network latency.
 
 												</p>
@@ -167,9 +167,9 @@
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Shubham is a PhD student at the Michtom School of Computer Science, Brandeis University, working under the mentorship of Prof. Subhadeep Sarkar. His research revolves around optimizing data systems and distributed systems, with a current focus on Log-Structured Merge (LSM) trees. In this domain, he explores innovative compaction strategies and improvements to range deletes. He completed a Master’s degree in Computer Science, specializing in Data-Centric Computing, at the Graduate School of Arts & Science, Boston University.
 
 													</p>
@@ -189,9 +189,9 @@
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Log-structured merge (LSM) trees are widely used in the storage layer of modern ingestion-optimized data stores. The high ingestion throughput, however, comes at the cost of sub-optimal range query (RQ) performance. This is because LSM-trees arrange the data as a hierarchical collection of sorted runs, which implies that every RQ must (i) probe all sorted runs to locate the qualifying entries, (ii) scan and merge the entries from all qualifying runs, (iii) filter out the logically invalidated entries by updates and deletes on the fly, and (iv) return the most recent version of each qualifying key. This leads to high read amplification and significant redundant work in terms of superfluous I/Os to storage and wasted CPU cycles, which is exacerbated in the presence of updates and deletes. Additionally, during compactions, the same data is read and written multiple times, further amplifying the read and write amplification. We introduce RangeReduce, an RQ-optimized LSM-engine that uses RQs as a hint to compact data that is already read into memory as part of the query, and thereby, improves the overall performance of the storage engine. The key intuition is to take advantage of the I/Os and CPU cycles spent on reading and merging data from slow storage during RQs and write the RQ-qualifying data back as part of a single sorted run. Such RQ-driven compactions enable RangeReduce to (i) read less data from fewer sorted runs for subsequent RQs, (ii) reduce overall data movement (reads and writes) due to RQs and compactions, and (iii) improve space amplification, while (iv) significantly reducing compaction debt. Experiments show that RangeReduce offers up to 90% lower compaction debt, 12% less data movement, and 20% lower space amplification while improving average RQ latency by up to 18%.
 
 												</p>
@@ -216,9 +216,9 @@
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Anwesha is a PhD student at Boston University, advised by Prof. Manos Athanassoulis in the DiSC Lab within the MiDAS Group. Her current research focuses on Database Systems, specifically designing efficient space-optimized indexing structures. Her interests lie in exploring data structures that can exploit intrinsic geometry and distribution of data to outperform traditional structures or make existing structures more efficient.
 
 													</p>
@@ -238,9 +238,9 @@
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Recent advancements propose learned indexes as an alternative to traditional indexing structures as they achieve faster lookup speeds and smaller memory footprint by approximating the cumulative distribution function of the data. However, to predict the position of a key, learned indexes store a copy of the underlying data in a sorted order; limiting their memory savings. To resolve this limitation, we require a mapping structure that maps the sorted position predicted by the learned index to the physical position of the underlying data.  Prior work shows that this mapping can be represented as a permutation vector but such a structure grows linearly with the size of data.  In this paper, we introduce Constellation Maps, a two-dimensional geometric structure that re-imagines data permutations as spatial coordinates. Constellations represent structure or linear segments inherent in real-world workloads that can be exploited to model these permutations as lines with a bounded error. By storing line parameters and compact error corrections instead of raw positions, Constellation Maps are compressed by construction. We generate lines using a scalable hybrid algorithm combining seed-based RANSAC with linear regression, and handle unstructured regions through a cost-guided fallback to compact dense storage. To make access competitive with the array-based mapping structure, we implement several optimizations - we use fixed point  arithmetic to replace floating-point decode, restricted search strategy that decodes only a narrow region around the model's prediction, and a batched lookup that interleaves binary searches across multiple queries to hide memory latency. We further reduce per-query cost by caching bitvector rank queries across binary search iterations. Our current evaluations on real-world datasets with 200 million elements shows that Constellation Maps achieve up to 3.5x space savings compared to the state-of-the-art while matching or exceeding its speed under batched queries. For single queries, Constellation Maps remain within 2x of the baseline while using a fraction of the memory.
 
 												</p>
@@ -265,9 +265,9 @@
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Teona Bagashvili is a PhD researcher in Computer Science at Boston University advised by Prof. Manos Athanassoulis. Her research focuses on storage systems, databases, flash memory, and specialized hardware. More recently she has been working on SSD controller design for Zoned Namespace (ZNS) SSDs and hardware-aware data management.
 
 													</p>
@@ -287,9 +287,9 @@
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Zoned Namespace (ZNS) SSDs offer a promising interface for stable throughput and low-latency storage by eliminating device-side garbage collection. They expose storage as append-only zones that give the host applications direct control over data placement. However, current ZNS implementations suffer from (a) device-level write amplification (DLWA), (b) increased wear, and (c) interference with host I/O due to zone mapping and management. We identify two primary design decisions as the main cause: (i) fixed physical zones and (ii) full-zone operations that lead to excessive physical writes. We propose SilentZNS, a new zone mapping and management approach that addresses the aforementioned limitations by on-the-fly allocating available resources to zones, while minimizing wear, maintaining parallelism, and avoiding unnecessary writes at the device-level. SilentZNS is a flexible zone allocation scheme that departs from the traditional logical-to-physical zone mapping and allows for arbitrary collections of blocks to be assigned to a zone. We add the necessary constraints to ensure wear-leveling and state-of-the-art read performance, and use only the required blocks to avoid dummy writes during zone reset. We implement SilentZNS using the state-of-the-art ConfZNS++ emulator and show that it eliminates the undue burden of dummy writes by up to 20x, leading to lower DLWA (86% less at 10% zone occupancy), less overall wear (up to 76.9%), and up to 3.7x faster workload execution.
 
 												</p>
@@ -314,9 +314,9 @@
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Karan Vombatkere is a Computer Science PhD candidate advised by Dr. Evimaria Terzi. He is a part of the Massive Data & Algorithms (MiDAS) research group at BU, and his research is primarily focused on data mining algorithms. His current research is on designing efficient approximation algorithms for submodular optimization problems, such as the Team Formation/Max-k Coverage problem.
 Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activities such as hiking and skiing
 
@@ -337,9 +337,9 @@ Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activiti
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													In many data-mining applications, including recommender systems, influence maximization, and team formation, the goal is to pick a subset of elements (e.g., items, nodes in a network, experts to perform a task) to maximize a monotone submodular utility function while simultaneously minimizing a cost function. Classical formulations model this tradeoff via cardinality or knapsack constraints, or by combining utility and cost into a single weighted objective. However, such approaches require committing to a specific tradeoff in advance and return only a single solution, offering limited insight into the space of viable utility-cost tradeoffs. In this paper, we depart from the single-solution paradigm and examine the problem of computing representative sets of high-quality solutions that expose different tradeoffs between submodular utility and cost. For this, we introduce $(\alpha_1,\alpha_2)$-approximate Pareto frontiers that provably approximate the achievable tradeoffs between submodular utility and cost. Specifically, we formalize the Pareto-$\langle f,c \rangle$ problem and develop efficient algorithms for multiple instantiations arising from different combinations of submodular utility $f$ and cost functions $c$. Our results offer a principled and practical framework for understanding and exploiting utility-cost tradeoffs in submodular optimization. Experiments on datasets from diverse application domains demonstrate that our algorithms efficiently compute approximate Pareto frontiers in practice.
 
 												</p>
@@ -364,9 +364,9 @@ Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activiti
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Pandey is an assistant professor in the Khoury College of Computer Sciences at Northeastern University. He focuses on creating scalable data systems with robust theoretical foundations. His work spans the entire spectrum of this challenge, from exploring the theoretical aspects of data structures to addressing the practical issues of scaling data systems. His work extends to tackling scalability challenges across computational biology, cybersecurity, stream processing, and storage systems. Pandey has received the NSF CAREER Award, NSF Elements Award, and the IEEE-CS Early Career Researchers Award for Excellence in High Performance Computing. Prior to joining Khoury College, he spent a year as a research scientist at VMware Research and held postdoctoral research positions at UC Berkeley and Carnegie Mellon University.
 
 													</p>
@@ -386,9 +386,9 @@ Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activiti
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Our ability to generate, acquire, and store data has grown exponentially over the past decade making the scalability of data systems a major challenge. In this talk, I will present my work on addressing this challenge through novel data structures and algorithms. First, I will introduce Monotonic Adaptive Filters, which address long-standing limitations in traditional filters by dynamically adapting to false positives while guaranteeing a maximum false positive rate, regardless of the query distribution. Next, I will discuss our advancements in modern hash tables, including IcebergHT and ZombieHT, which break traditional trade-offs by providing high performance with strong worst-case latency guarantees.
 <br/><br/>Based on the following papers:
 <br/><br/><a href="https://dl.acm.org/doi/pdf/10.1145/3677128" target=_blank>https://dl.acm.org/doi/pdf/10.1145/3677128</a>
@@ -417,9 +417,9 @@ Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activiti
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Kyle Deeds is an assistant professor at Boston University. Broadly, He is interested in the intersection of databases, compilers, and tensor programming with two main branches - firstly making high performance computing accessible to domain experts through declarative programming coupled with automatic program optimization and secondly about building systems to support the open-data community. In this vein, he is currently working on an open-data project called Govscape (https://www.govscape.net/) that provides a modern search interface over millions of government PDFs.
 
 													</p>
@@ -439,9 +439,9 @@ Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activiti
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													As we push forward on building an optimized sparse array programming system (finch-tensor-lite), we've had to tackle a series of architectural questions. These range from basic questions about the interface offered to users (lazy/compute vs fused) to the kinds of optimizations that should be supported and how those optimizations can be composed to how we can support a broad set of execution backends. In this talk, I'll walk through these questions and the alternatives that we've considered as well as some currently open questions. Pending time, I'll also provide an overview of how we should model sparse computation theoretically and what relationship it has to existing theoretical models for database problems (e.g. conjunctive queries).
 
 												</p>
@@ -466,9 +466,9 @@ Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activiti
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Neha Makhija is an Assistant Professor at the Manning College of Information and Computer Sciences (CICS) at the University of Massachusetts, Amherst. Her core research goal is to design unified algorithms that automatically work as efficiently as the theoretical best-case for the given input problem instance (i.e., have instance-optimality), thus achieving the best of both theory and practice. She studies this question in the domain of explainable data management, provenance, and knowledge representation. Neha earned her PhD in Computer Science from Northeastern University in 2025, where her dissertation was awarded the Khoury Research Award.
 
 													</p>
@@ -488,9 +488,9 @@ Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activiti
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													How resilient is the output of your query to perturbations in its underlying data? A notion called Resilience, introduced in only 2015, quantifies the resilience of a boolean query by the minimum number of tuples that need to be deleted from the input database to make the query false. This simple to define problem is related to seminal questions in data management, such as deletion propagation and causality, and variants of the problem have been studied in the context of data repair, explainability and in-database optimization. However, there are still many open questions about its complexity and algorithms. The talk will introduce this problem from historical and practical perspectives, and will present recent results on the complexity of computing resilience for increasingly general classes of queries (going from conjunctive queries to finite and infinite regular path queries to semantic pipelines). We will also discuss connections of this problem to other fundamental problems in data management, and how the tools and algorithms developed for this problem (such as automatic proof generation) can be used to solve other problems in data management and beyond.
 
 												</p>
@@ -515,9 +515,9 @@ Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activiti
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Kostas Zoumpatianos is a computer scientist and software engineer specializing in large-scale data systems, distributed computing, and database technologies. He is currently a Principal Software Engineer at Fivetran, where he builds scalable cloud data infrastructure. He previously held a senior engineering role at Snowflake. He was a Marie Skłodowska-Curie Fellow at Université Paris Cité and at Harvard University. Kostas holds a PhD in Computer Science from the University of Trento. His work on Data Series Management has been published in leading venues such as VLDB, ACM SIGMOD, and KDD, and he has served on program committees for major conferences and journals in the data management community.
 
 													</p>
@@ -537,9 +537,9 @@ Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activiti
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													TBD
 
 												</p>
@@ -564,9 +564,9 @@ Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activiti
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Andrew is a Computer Science PhD candidate at Boston University working with the DiSC Lab advised by Prof. Manos Athanassoulis. His interests are in computer systems, data systems, software engineering, and the boundary between software and hardware. Prior to Boston University, he attended Northeastern University where he graduated Summa Cum Laude with his Bachelors in Computer Engineering/ Computer Science. During his time there, he Co-op'd at Intel, Wolters Kluwer, and MORSE Corp
 
 													</p>
@@ -586,9 +586,9 @@ Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activiti
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Analytical data systems typically rely on a single physical data layout, where data is stored column-first. While column-stores avoid accessing unwanted fields, they suffer from the cost of tuple reconstruction, which is higher as more columns participate in the query. On the other hand, row-stores lead to a lot of unnecessary data movement for most analytical queries. On-the-fly data transformation supported by Relational Memory (RME) leverages custom hardware to offer the ideal layout per query, reducing cache line transfers. However, RME may still incur unnecessary accesses when fetching projected fields of rows that are eventually filtered out. We propose several novel hybrid data layouts to address these challenges: a split row-store structure that separates projection and selection columns, a hybrid column-row layout that combines the strengths of column-stores for selection columns and row-stores for projection columns, iterations of the two with an additional RME engine for columns that are used to join two tables together, and a possible another RME engine for columns used in both selection and projection. These layouts are designed to optimize memory access patterns for analytical queries by reducing cache line transfers and improving memory bandwidth efficiency. We demonstrate that the proposed layouts significantly outperform traditional row-wise, columnar, and RME-based layouts in terms of execution time and memory efficiency, leading to up to 1.55 times query speedup by reducing data movement up to 65%. Our experimental results show that the best performance can be achieved when selection columns are stored in a columnar fashion and projected columns in a row-wise manner. We note that this would typically mean a different layout for each query, which is why this work advocates for extending prior art on Relational Memory to make this feasible.
 
 												</p>
@@ -613,9 +613,9 @@ Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activiti
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Wolfgang Gatterbauer is an Associate Professor at the Khoury College of Computer Sciences at Northeastern University. His research interests lie in the intersection of theory and practice of data management. He is co-recipient of a SIGMOD research highlight award 2025, an honorable mention for SIGMOD 2024, “best of conference” mentions for PODS 2021, SIGMOD 2017, WALCOM 2017, and VLDB 2015, the EDBT 2021 best paper award, and two SIGMOD 2021 reproducibility awards (including one for a user study).
 
 													</p>
@@ -635,9 +635,9 @@ Apart from academics, Karan plays tennis and soccer, and enjoys outdoor activiti
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Practitioners increasingly avoid writing SQL from scratch. Instead, they read, interpret and edit queries drafted by AI assistants. As a result, queries are no longer a fixed, non-negotiable specification, and more a malleable medium for surfacing ambiguities and interactively converging on an intended meaning. We argue that rethinking future interfaces for this human-AI generate-and-review loop calls for an Abstract Relational Query Language (ARQL): a semantics-first metalanguage that cleanly separates intent from surface syntax and makes relational patterns comparable across languages. 
 We present Abstract Relational Calculus (ARC), a generalization of tuple relational calculus (TRC) that decomposes queries into a (1) relational core, (2) audience-specific modalities (humans vs. machines), and (3) explicit conventions. ARC serves as a shared semantic reference (a "Rosetta Stone") for relational language and interface design, including NL2SQL.
 This separation lets us revisit two long-standing claims in relational language design: (1) that pipeline-style languages are inherently more intuitive than SQL's (or TRC's) "inside-out" dataflow, and (2) that pipelines are inherently more reusable. Using our vocabulary and ARC as reference language, we show that cognitive load (and thus perceived intuitiveness when reading queries) is primarily a matter of modality rather than "inside-out" vs. linear flow, and that we can achieve modularity and composition even for "inside-out" by using abstract relations.
@@ -661,9 +661,9 @@ This separation lets us revisit two long-standing claims in relational language 
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							
 								<tr>
@@ -681,9 +681,9 @@ This separation lets us revisit two long-standing claims in relational language 
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Yang Guo is currently a postdoctoral researcher at The Chinese University of Hong Kong (CUHK). He earned his Ph.D. in Computer Science and Engineering from CUHK, under the supervision of Prof. Zili Shao. Prior to that, he received his B.Eng. from the University of Electronic Science and Technology of China (UESTC). His research interests include storage optimization for big data, the application of large language models (LLMs) and AI in databases, and data management and analytics in the cloud.
 
 													</p>
@@ -703,9 +703,9 @@ This separation lets us revisit two long-standing claims in relational language 
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													The continuous generation of spatio-temporal data, such as trajectory data, due to the rapid proliferation of location-acquisition devices like smartphones, has led to the creation of massive datasets. Effectively managing this spatio-temporal big data is pivotal for supporting efficient queries. At the same time, emerging storage technologies, including key-value data stores, cloud storage, and computational storage devices, offer new opportunities to address the challenges associated with spatio-temporal data management. In this talk, I will present my research on building efficient spatio-temporal big data systems through storage optimizations tailored to various storage technologies. The overarching goal is to enhance query performance on large-scale spatio-temporal datasets while minimizing storage overhead. I will specifically highlight three key works: (A) a query-aware indexing framework for spatio-temporal data, (B) a cloud-based trajectory data management solution featuring a novel data model, indexing strategy, and data layout optimized for cloud environments, and (C) a storage model that enables fine-grained in-storage query processing for spatio-temporal data.
 
 												</p>
@@ -730,9 +730,9 @@ This separation lets us revisit two long-standing claims in relational language 
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Achilleas Tzenetopoulos received his integrated M.Eng. degree in Electrical and Computer Engineering from the National Technical University of Athens (NTUA), Greece, in 2019. He is currently pursuing a Ph.D in the same institution. His research focuses on resource management for serverless computing and the optimization of cloud computing architectures. He has contributed to EU H2020 projects, including EVOLVE and AI@EDGE. During his Ph.D., he completed research internships at IBM Research in Ireland and Huawei Research in the UK.
 
 													</p>
@@ -752,9 +752,9 @@ This separation lets us revisit two long-standing claims in relational language 
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Serverless workflows have emerged in Function-as-a-Service (FaaS) platforms to represent the operational structure of traditional applications. With latency propagation effects becoming increasingly prominent, step-wise resource tuning is required to address Service-Level-Objectives (SLOs). Modern processors’ allowance for fine-grained Dynamic Voltage and Frequency Scaling (DVFS), coupled with serverless workflows’ intermittent nature, presents a unique opportunity to reduce power while meeting SLOs. We introduce Ωkypous, an SLO-driven DVFS framework for serverless workflows. Ωkypous employs a grey-box model that predicts functions’ execution latency and power under different Core and Uncore frequency combinations. Based on these predictions and the timing slacks between workflow functions, Ωkypous uses a closed-loop control mechanism to dynamically adjust Core and Uncore frequencies, thus minimizing power consumption without compromising predefined end-to-end latency constraints. Our evaluation on real-world traces from Azure, against state-of-the-art power management frameworks, demonstrates an average power consumption reduction of 23%, while consistently maintaining low SLO violation rates (1.8%), when operating under power caps.
 
 												</p>
@@ -779,9 +779,9 @@ This separation lets us revisit two long-standing claims in relational language 
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Lin Ma is an Assistant Professor in the Computer Science and Engineering Division at the University of Michigan, where his research focuses on using machine learning and/or novel hardware to optimize the performance and administration of database systems. Prior to the University of Michigan, he was a software engineer at Databricks, where he worked on automated optimizations on Delta Lake. Before that, he was a PhD student in the database group at Carnegie Mellon University, where he worked on a self-driving database (NoisePage) built from the ground up to support autonomous operations. He constantly servers on the program and organizing committees for top database conferences, including SIGMOD, VLDB, and CIDR.
 
 													</p>
@@ -803,9 +803,9 @@ This separation lets us revisit two long-standing claims in relational language 
 												[<a href=https://www.youtube.com/watch?v=-_B1NuA0dwg target="_blank">Talk Recording</a>]
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Despite the high computational throughput of GPUs, limited memory capacity and bandwidth-limited CPU-GPU communication via PCIe links remain significant bottlenecks for accelerating large-scale data analytics workloads. In this talk, I'll discuss Vortex, a GPU-accelerated framework designed for data analytics workloads that exceed GPU memory capacity. A key aspect of our framework is an optimized IO primitive that leverages all available PCIe links in multi-GPU systems for the IO demand of a single target GPU. It routes data through other GPUs to such target GPU that handles IO-intensive analytics tasks. This approach is advantageous when other GPUs are occupied with compute-bound workloads, such as popular AI applications that typically underutilize IO resources. Vortex also includes a novel programming model that separates GPU kernel development from IO scheduling, reducing programmer burden and enabling GPU code reuse. Based on such a programming model, we develop a set of operators and a late materialization technique using GPU's zero-copy memory access. Without caching any data in GPU memory, Vortex improves the performance of the state-of-the-art GPU baseline, Proteus, by 5.7x on average and enhances price performance by 2.5x compared to a CPU-based DuckDB baseline.
 Through this talk, we want to present a paradigm on how databases should use GPUs to process larger-than-GPU-memroy datasets, get your feedback on future directions, and seek collaboration opportunities.
 
@@ -831,9 +831,9 @@ Through this talk, we want to present a paradigm on how databases should use GPU
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														
 													</p>
 												</details>
@@ -871,9 +871,9 @@ Through this talk, we want to present a paradigm on how databases should use GPU
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Yongjoo Park is an Assistant Professor in the School of Computing and Data Science at the University of Illinois at Urbana-Champaign. His research focuses on systems for data-intensive AI. Yongjoo is also a Chief Scientist of Keebo, a start-up company he co-founded based on his Ph.D. research. Yongjoo obtained a Ph.D. in Computer Science and Engineering from the University of Michigan, Ann Arbor. He is a recipient of 2018 SIGMOD Jim Gray Dissertation Honorable Mention and ACM SIGMOD 2023 Best Artifact Award Honorable Mention.
 
 													</p>
@@ -895,9 +895,9 @@ Through this talk, we want to present a paradigm on how databases should use GPU
 												[<a href=https://www.youtube.com/watch?v=peU20MyisfQ target="_blank">Talk Recording</a>]
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Today’s data science systems, ranging from batch jobs to interactive interfaces, are surprisingly fragile. Data scientists typically use dozens of libraries, but a single bug in any of them can destroy hours or even days of computation, causing significant pain. This issue has been widely discussed in the data science community and academic literature. Yet, no principled mechanisms have been proposed to address the issue. It may be puzzling to database researchers. Existing databases implement checkpointing to periodically save changes for future recovery. Why haven’t data science systems adopted it? Are there any unique properties that challenge the adoption?
 In this talk, I will first identify a core challenge: the lack of mechanisms for detecting data changes, a key premise of checkpointing. Unlike databases with centralized buffer pools, data science systems intentionally omit centralized data spaces, allowing individual libraries to use shared memory, GPUs, and remote machines. Changes across these diverse locations must still be identified. To address this, we are making exciting progress around one central theme: a nonintrusive state manager that behaves like conventional buffer pools without requiring data to be placed in a central location. The key idea is to construct a mathematical map of library-managed data—including data dependencies—using graphs. These graphs enable new algorithms to detect changes, save them incrementally, and restore states correctly. We are actively developing an open-source system, Kishu, to benefit all data practitioners.
 
@@ -923,9 +923,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Andrew currently works in Rust on InfluxDB 3.0, focused on query processing, the Apache DataFusion query engine and the Apache Arrow ecosystem. He serves on the Apache DataFusion PMC (2024 Chair), and on the Apache Arrow PMC (2023 Chair), and actively contributes to the Apache Arrow DataFusion query engine and the Apache Arrow Rust implementation. He earned a BS and MEng in Course VI from MIT. More details are available at http://andrew.nerdnetworks.org/
 
 													</p>
@@ -949,9 +949,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 												[<a href=https://www.youtube.com/watch?v=wf2LLwhFU84 target="_blank">Talk Recording</a>]
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													In this talk, Andrew will review the architecture of recent cloud analytic database systems, the trends driving these architectures (e.g. cheap durable Object Storage, elastic compute), the common features in such systems (disaggregated storage, caching layers, metadata stores).
 
 												</p>
@@ -976,9 +976,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														George V. Neville-Neil, works on networking and operating system code for fun and profit. His areas of interest are computer security, operating systems, networking, time protocols, and the care and feeding of large code bases. He is the author of The Kollected Kode Vicious and co-author with Marshall Kirk McKusick and Robert N. M. Watson of The Design and Implementation of the FreeBSD Operating System. For nearly twenty years he has been the columnist better known as Kode Vicious. Since 2014 he has been an Industrial Visitor at the University of Cambridge where he is involved in several projects relating to computer security. He earned his bachelor’s degree in computer science at Northeastern University in Boston, Massachusetts, and is a member of ACM, the Usenix Association, and IEEE. His software not only runs on Earth but has been deployed, as part of VxWorks in NASA’s missions to Mars. He is an avid bicyclist and traveler who currently lives in New York City. He is currently a PhD student at Yale University working with Robert Soulé, Avi Silberschatz and Peter Alvaro.
 
 													</p>
@@ -1002,9 +1002,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 												[<a href=https://www.youtube.com/watch?v=IdHBIeyIvrI target="_blank">Talk Recording</a>]
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Operating systems must provide functionality that closely resembles that of a data management system, but existing query mechanisms are ad-hoc and idiosyncratic. To address this problem, we argue for the adoption of a relational interface to the operating system kernel. While prior work has made similar proposals, our approach is unique in that it allows for incremental adoption over an existing, production-ready operating system. In this paper, we present progress on a prototype system called OSDB that embodies the incremental approach and discuss key aspects of the design, including the data model and concurrency control mechanisms. We present four example use cases: a network usage monitor, a load balancer, file system checker, and network debugging session, as well as experiments that demonstrate the low overhead for our approach.
 
 												</p>
@@ -1029,9 +1029,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Ben Vandiver (MIT PhD '08) is one of the lead engineers on Google's Spanner development team.  For the last 6 years, he's been working to "make Spanner less weird" to its Cloud and internal customers.  Prior to joining Google, Ben was the CTO for Vertica, a pioneering columnar database company of Mike Stonebraker lineage.  Ben has written code for almost every area of database implementation at some point, some of it even bug-free.  When not hacking on databases, Ben enjoys hanging out with his kids and sword fighting.
 
 													</p>
@@ -1053,9 +1053,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Spanner is Google's global scale database that underlies many of the core systems at Google.  Think GMail, Photos, YouTube metadata, Ads.    Spanner is built to meet the demanding needs of these applications: over 15 Exabytes of data under storage and over 2B QPS at peak. Additionally, Spanner must be highly reliable and compliant with a variety of regulations.  I'll talk about some of the core design decisions and the architecture that resulted.  Finally, I'll give some color commentary about the software engineering practices necessary to build databases like Spanner.
 
 												</p>
@@ -1080,9 +1080,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Kajetan Maliszewski is a final-year PhD candidate at TU Berlin, supervised by Prof. Volker Markl. His research focuses on privacy-preserving data management systems, with an emphasis on bridging confidential computing and data systems to achieve both efficiency and privacy.
 
 													</p>
@@ -1102,9 +1102,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													TBD
 
 												</p>
@@ -1129,9 +1129,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Yingjun Wu is the founder of RisingWave Labs (https://www.risingwave.com/), a database company developing RisingWave, a distributed SQL database for stream processing. Before running the company, Yingjun was a software engineer at the Redshift team, Amazon Web Services, and a researcher at the Database group, IBM Almaden Research Center. Yingjun received his PhD degree from National University of Singapore, and was a visiting PhD at Carnegie Mellon University. He has been working in the field of stream processing and database systems for over a decade.
 
 													</p>
@@ -1151,9 +1151,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Stream processing systems seem magical: they deliver much fresher results compared to batch processing, promise the highest levels of consistency, and leverage S3 to reduce state storage costs. But is it too good to be true? In the world of data systems, there’s no such thing as a free lunch. Every benefit comes with trade-offs. In this talk, I will discuss the lesser-known aspects of stream processing, including but not limited to core issues such as cost, consistency, backfilling, and resource isolation. I’ll share real-world examples of how these issues manifest and the “bloody facts” of how they can bite even the most experienced practitioners.
 
 												</p>
@@ -1178,9 +1178,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Kyle Deeds is currently a 5th year PhD student in the database lab at the University of Washington, advised by Dan Suciu and Magda Balazinska. He is interested in the intersection of database theory, systems, and programming languages. His research aims to make high performance computing accessible to domain experts through declarative programming coupled with automatic program optimization.
 
 													</p>
@@ -1200,9 +1200,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Modern computing has been defined by two trends; 1) data that relentlessly grows in scale and 2) programs that become increasingly complex. This creates a massive challenge for the engineers and data scientists who need to write efficient, correct programs. The standard solution is a hand-coded package that is shared across problem instances. This is a code-then-data approach where an implementation is written and compiled first, then the data arrives later. Unfortunately, this approach struggles when the performance of the program fundamentally depends on the data. In these cases, there is no ”efficient implementation”. There is only an ”efficient implementation for this dataset”. My research leverages insights from database theory and query optimization to develop methods for data-aware program optimization. This approach enables a range of new program rewrites which are highly efficient, conditioned on the data distribution. The goal of this work is to enable efficient, declarative interfaces in new areas of computing, as exemplified by Galley, our optimizer for sparse tensor programs.
 
 												</p>
@@ -1224,9 +1224,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							
 								<tr>
@@ -1244,9 +1244,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														None
 													</p>
 												</details>
@@ -1284,9 +1284,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														None
 													</p>
 												</details>
@@ -1324,9 +1324,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														George V. Neville-Neil, works on networking and operating system code for fun and profit. His areas of interest are computer security, operating systems, networking, time protocols, and the care and feeding of large code bases. He is the author of The Kollected Kode Vicious and co-author with Marshall Kirk McKusick and Robert N. M. Watson of The Design and Implementation of the FreeBSD Operating System. For nearly twenty years he has been the columnist better known as Kode Vicious. Since 2014 he has been an Industrial Visitor at the University of Cambridge where he is involved in several projects relating to computer security. He earned his bachelor’s degree in computer science at Northeastern University in Boston, Massachusetts, and is a member of ACM, the Usenix Association, and IEEE. His software not only runs on Earth but has been deployed, as part of VxWorks in NASA’s missions to Mars. He is an avid bicyclist and traveler who currently lives in New York City. He is currently a PhD student at Yale University working with Robert Soulé, Avi Silberschatz and Peter Alvaro
 													</p>
 												</details>
@@ -1345,9 +1345,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Operating systems must provide functionality that closely resembles that of a data management system, but existing query mechanisms are ad-hoc and idiosyncratic. To address this problem, we argue for the adoption of a relational interface to the operating system kernel. While prior work has made similar proposals, our approach is unique in that it allows for incremental adoption over an existing, production-ready operating system. In this paper, we present progress on a prototype system called OSDB that embodies the incremental approach and discuss key aspects of the design, including the data model and concurrency control mechanisms. We present three example use cases: a network usage monitor, a load balancer, and file system checker, as well as experiments that demonstrate low overhead for our approach.
 
 												</p>
@@ -1372,9 +1372,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														None
 													</p>
 												</details>
@@ -1412,9 +1412,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Helen Xu is an assistant professor at Georgia Tech in the School of Computational Science and Engineering. Previously, she was the Grace Hopper Postdoctoral Scholar. At Lawrence Berkeley National Laboratory. She completed her Ph.D. at MIT with Professor Charles E. Leiserson. Her main research interests are in parallel and cache-friendly algorithms and data structures.
 													</p>
 												</details>
@@ -1435,9 +1435,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 												[<a href=https://www.youtube.com/watch?v=cdq4ebPYUTQ target="_blank">Talk Recording</a>]
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													This talk will discuss optimizing different types of parallel in-memory indexes for improved spatial locality. Specifically, it will overview 1) BP-tree [VLDB 23], a cache-optimized concurrent in-memory index that improves range query performance without giving up on point queries, and 2) CPMA [PPoPP 24], an in-memory batch-parallel data structure built on the Packed Memory Array (PMA) that overcomes the point-range tradeoff.
 
 												</p>
@@ -1462,9 +1462,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Andrew currently works in Rust on InfluxDB 3.0, focused on query processing, the Apache DataFusion query engine and the Apache Arrow ecosystem. He serves on the Apache DataFusion PMC (2024 Chair), and on the Apache Arrow PMC (2023 Chair), and actively contributes to the Apache Arrow DataFusion query engine and the Apache Arrow Rust implementation. He earned a BS and MEng in Course VI from MIT. More details are available at http://andrew.nerdnetworks.org/
 													</p>
 												</details>
@@ -1487,9 +1487,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 												[<a href=https://www.youtube.com/watch?v=CpnxuBwHbUc target="_blank">Talk Recording</a>]
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Andrew will discuss engineering choices made when building Apache DataFusion, an open source and extensible query engine used as the basis of many commercial and open source projects. He will cover rationale for decisions such as using Rust and building on standards such as Arrow and Parquet. He will also discuss DataFusion’s design philosophy of extensible APIs paired with simple default implementations. Finally, he will offer lessons learned and enumerate some things that worked well and what could have been improved.
 
 												</p>
@@ -1514,9 +1514,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														None
 													</p>
 												</details>
@@ -1554,9 +1554,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														None
 													</p>
 												</details>
@@ -1594,9 +1594,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														None
 													</p>
 												</details>
@@ -1634,9 +1634,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														None
 													</p>
 												</details>
@@ -1674,9 +1674,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Sepanta Zeighami is a postdoctoral scholar at UC Berkeley. Before that, he obtained his PhD from the University of Southern California.  His research is focused on using -- and theoretically understanding -- AI methods for improving data systems, where he has extensively published in top-tier conferences in both AI and database communities, including in SIGMOD, VLDB, ICML, ICLR, etc. His research has been recognized by oral presentation and best paper awards.
 
 													</p>
@@ -1696,9 +1696,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Machine learning has shown significant practical benefits for performing various database operations such as indexing, cardinality estimation, and sorting. However, the theoretical characteristics of such learned database operations have not been well understood, limiting their applicability in real-world systems. In this talk, I will present our recent work on characterizing the performance benefits of learned database operations. I will show that, in the case of indexing, in static settings or when there is no distribution shift, learned methods can answer queries in O(loglog n) expected time, but their performance can drop to O(log n) in the presence of distribution shift. Using insights from this result, I will then discuss our broader analysis framework, distribution learnability, through which we show various novel theoretical results for different learned database operations. Our results provide a better understanding of why and when learned methods outperform non-learn methods (and when they don’t) and take a first step towards practical learned database operations with theoretical guarantees. I will conclude the talk by presenting various open theoretical and practical problems to achieve that goal.
 
 												</p>
@@ -1723,9 +1723,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														None
 													</p>
 												</details>
@@ -1763,9 +1763,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Kyle Deeds is currently a 5th year PhD student in the database lab at the University of Washington. He is advised by Dan Suciu and Magda Balazinska and interested in the intersection of databases, compilers, and HPC. Broadly, his work aims to make high performance computing accessible to domain experts through declarative programming coupled with automatic program optimization.
 
 													</p>
@@ -1785,9 +1785,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Modern computation has become dominated by the tensor programming abstraction. This framework allows users to write high performance programs for bulk computation via a high-level imperative interface. Recent work has extended this paradigm to sparse tensors (i.e. tensors where most entries are not explicitly represented) with the use of sparse tensor compilers. These systems excel at producing efficient code for computation over sparse tensors, which may be stored in a wide variety of formats. However, they require the user to manually choose the order of operations and the data formats at every step. Unfortunately, these decisions are both highly impactful and complicated, requiring significant effort to manually optimize. In this talk, I’ll present Galley, a system for declarative sparse tensor programming. Galley adapts the database community’s expertise in cost-based optimization to sparse tensor programs. First, it synthesizes a logical plan which determines high level structure and materialization strategy. Then, it lowers each piece of the logical plan to a physical implementation by determining loop orders, tensor formats, and merge algorithms. This plan is then efficiently executed by a sparse tensor compiler. Lastly, I’ll present early experimental results which show how Galley can produce up to 100x speedups over hand-optimized implementations for modestly complex tensor programs.
 
 												</p>
@@ -1809,9 +1809,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							
 								<tr>
@@ -2031,9 +2031,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Zichen Zhu is currently a 5th-year PhD candidate in MiDAS of Boston University, advised by Prof. Manos Athanassoulis. Prior to joining Boston University, he studied as an MPhil student in Database Group, department of Computer Science in the University of Hong Kong, advised by Prof. Reynold Cheng. His research interest focuses on designing workload-aware query optimization under memory constraint.
 
 													</p>
@@ -2107,9 +2107,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Aamod Khatiwada is a PhD Candidate (Computer Science, Databases) at Khoury College of Computer Sciences, Northeastern University, Boston, MA, USA. He originally from Jhorahat, a town in the southeastern part of Nepal. His primary research focus is to develop novel techniques and algorithms that find and integrate open data tables in a principled way. During free times, he enjoy watching cricket and soccer, writing poems, stories, and news articles.
 
 													</p>
@@ -2129,9 +2129,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Data lakes serve as repositories that house millions of tables covering a wide range of subjects. Data scientists use tables from data lakes to support decision-making processes, train machine learning models, perform statistical analysis, and more. However, the enormous size and heterogeneity of data lakes, together with missing or unreliable metadata, make it challenging for data scientists to find suitable tables for their analyses. Furthermore, after table discovery, another challenge is to integrate the discovered tables together to get a unified view of data, enabling queries that go beyond a single table. In this talk, I will present novel techniques for table discovery and integration tasks. First, I will overview SANTOS [1] which helps data scientists discover tables from a data lake that union with their query table and possibly extend it with more rows. Contrary to existing techniques that only use the semantics of columns to perform union search, we improve the search accuracy by also using semantic relationships between pairs of columns in a table. Second, I will cover ALITE (Align and Integrate) [2], the first proposal for scalable integration of tables that may have been discovered using join, union, or related table search. ALITE aligns the columns of discovered tables using holistic schema matching and then applies Full Disjunction, an associative version of outer join,  to get an integrated table. I will also describe DIALITE [3], a novel table discovery pipeline that allows users to discover, integrate, and analyze open data tables. DIALITE is flexible such that the user can easily add and compare additional discovery and integration algorithms.
 [1] Aamod Khatiwada, Grace Fan, Roee Shraga, Zixuan Chen, Wolfgang Gatterbauer, Renée J. Miller, Mirek Riedewald. SANTOS: Relationship-based Semantic Table Union Search. SIGMOD 2023
 [2] Aamod Khatiwada, Roee Shraga, Wolfgang Gatterbauer, Renée J. Miller. Integrating Data Lake Tables. VLDB 2023.
@@ -2159,9 +2159,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Wolfgang Gatterbauer is an Associate Professor in the Khoury College of Computer Sciences at Northeastern University. A major focus of his research is to extend the capabilities of modern data management systems in generic ways and to allow them to support novel functionalities that seem hard at first. He received an NSF Career award and, with his students and collaborators, a best paper award at EDBT 2021, best-of-conference selections for PODS 2021, SIGMOD 2017, WALCOM 2017, and VLDB 2015, and two out of three reproducibility awards for papers published at SIGMOD 2020.
 <br/><br/><a href="https://gatterbauer.name">https://gatterbauer.name</a>
 
@@ -2182,9 +2182,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													We analyze a general problem in a crowd-sourced setting where one user asks a question (also called item) and other users return answers (also called labels) for this question. Different from existing crowd sourcing work which focuses on finding the most appropriate label for the question (the "truth"), our problem is to determine a ranking of the users based on their ability to answer questions. We call this problem "ability discovery" to emphasize the connection to and duality with the more well-studied problem of "truth discovery".
 <br/><br/>To model items and their labels in a principled way, we draw upon Item Response Theory (IRT) which is the widely accepted theory behind standardized tests such as SAT and GRE. We start from an idealized setting where the relative performance of users is consistent across items and better users choose better fitting labels for each item. We posit that a principled algorithmic solution to our more general problem should solve this ideal setting correctly and observe that the response matrices in this setting obey the Consecutive Ones Property (C1P). While C1P is well understood algorithmically with various discrete algorithms, we devise a novel variant of the HITS algorithm which we call "HITSNDIFFS" (or HND), and prove that it can recover the ideal C1P-permutation in case it exists. Unlike fast combinatorial algorithms for finding the consecutive ones permutation (if it exists), HND also returns an ordering when such a permutation does not exist. Thus it provides a principled heuristic for our problem that is guaranteed to return the correct answer in the ideal setting. Our experiments show that HND produces user rankings with robustly high accuracy compared to state-of-the-art truth discovery methods. We also show that our novel variant of HITS scales better in the number of users than ABH, the only prior spectral C1P reconstruction algorithm. 
  <br/><br/>Based on joint work with Zixuan Chen, Subhodeep Mitra and R. Ravi
@@ -2228,9 +2228,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													TBA
 
 												</p>
@@ -2269,9 +2269,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													TBA
 
 												</p>
@@ -2310,9 +2310,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													TBA
 
 												</p>
@@ -2337,9 +2337,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Dan Suciu is a Microsoft Endowed Professor in the Paul G. Allen School of Computer Science and Engineering at the University of Washington. Suciu is conducting research in data management, on topics such as query optimization, probabilistic data, data pricing, parallel data processing, data security. He is a co-author of two books Data on the Web: from Relations to Semistructured Data and XML, 1999, and Probabilistic Databases, 2011. He received the ACM SIGMOD Codd Innovation Award, received several best paper awards and test of time awards, and is a Fellow of the ACM. Suciu is currently an associate editor for the Journal of the ACM. Suciu’s PhD students Gerome Miklau, Christopher Re and Paris Koutris received the ACM SIGMOD Best Dissertation Award in 2006, 2010, and 2016 respectively, and Nilesh Dalvi was a runner up in 2008.
 
 													</p>
@@ -2359,9 +2359,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Cardinality estimation is the problem of estimating the size of the output of a query, without actually evaluating the query.  The estimator has access to some limited statistics on the database, such as table cardinalities, number of distinct values in various columns, sometimes histograms, and needs to estimate the output size of complex queries, often involving many joins and filter predicates.  The cardinality estimator is a critical piece of any query optimizer, and is often the main culprit when the optimizer chooses a poor plan.  In this talk I will briefly survey existing cardinality estimation methods, discussing their pros and cons, then I will introduce a new approach to the problem, which is based on computing an upper bound instead of an estimate.  The upper bound is given by a mathematical formula, and can use the available database statistics in surprising ways.
 
 												</p>
@@ -2386,9 +2386,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Jinqi is currently a CS Master's student at BU DiSC Lab advised by Prof. Athanassoulis. He posses a wide range of interests including Database Systems, Cloud, and Networks. Currently, he is engaged in the relational memory project and also contributes to the testing of computational and zoned storage devices.
 
 													</p>
@@ -2408,9 +2408,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Modern analytical database systems predominantly rely on column-oriented storage, which offers superior compression efficiency due to the nature of the columnar layout. This compression, however, creates challenges in decoding speed during query processing. Previous research has explored predicate pushdown on encoded values to avoid decoding, but these techniques are restricted to specific encoding schemes and predicates, limiting their practical use. In this paper, we propose a generic predicate pushdown approach that supports arbitrary predicates by leveraging selection pushdown to reduce decoding costs. At the core of our approach is a fast select operator capable of directly extracting selected encoded values without decoding, by using Bit Manipulation Instructions, an instruction set extension to the X86 architecture. We empirically evaluate the proposed techniques in the context of Apache Parquet using both micro-benchmarks and the TPC-H benchmark, and show that our techniques improve the query performance of Parquet by up to one order of magnitude with representative scan queries. Further experimentation using Apache Spark demonstrates speed improvements of up to 5.5X even for end-to-end queries involving complex joins.
 
 												</p>
@@ -2435,9 +2435,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Kapil Vaidya is an Applied Scientist at Amazon Redshift in the Learned Systems Group. He recently graduated from MIT, where he completed his PhD under the guidance of Professor Tim Kraska in the Data Systems Group. His research primarily revolves around the application of machine learning to data systems, with a special focus on the data structures and algorithms integral to these systems. Before that Kapil completed his Bachelors from IIT Bombay. 
 
 													</p>
@@ -2457,9 +2457,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													We present Sparse Numerical Array-Based Range Filters (SNARF),a learned range filter that efficiently supports range queries for numerical data. SNARF creates a model of the data distribution to map the keys into a bit array which is stored in a compressed form. The model along with the compressed bit array which constitutes SNARF are used to answer membership queries. We evaluate SNARF on multiple synthetic and real-world datasets as a stand-alone filter and by integrating it into RocksDB. For range queries, SNARF provides up to 50x better false positive rate than state-of-the-art range filters, such as SuRF and Rosetta, with the same space usage. We also evaluate SNARF in RocksDB as a filter replacement for filtering requests before they access on-disk data structures. For RocksDB, SNARF can improve the execution time of the system up to 10x compared to SuRF and Rosetta for certain read-only workloads.
 
 												</p>
@@ -2481,9 +2481,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							
 								<tr>
@@ -2517,9 +2517,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Johes Bater is an assistant professor of Computer Science at Tufts University and co-director of the Tufts Security and Privacy Lab. Before that, he was a postdoctoral researcher in the Database Group at Duke University, received his Ph.D. in computer science from Northwestern University, and completed his B.S. and M.S. in electrical engineering at Stanford University. His research centers on how to balance privacy, security, and utility to build fast, accurate database systems that support privacy-preserving analytics with provable security guarantees.
 
 													</p>
@@ -2539,9 +2539,9 @@ In this talk, I will first identify a core challenge: the lack of mechanisms for
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Simply put, data security and privacy affects every single person in the world. Data breaches, where organizations compromise sensitive user data, are frighteningly common. Current approaches however, fail to properly safeguard security and privacy. Existing encrypted databases introduce data pipelines that leak enough side channel information that data breaches are an inevitability, while cryptographically secure solutions are so slow and cumbersome that they no longer serve their intended purpose. Moreover, many business models - such as targeted advertising - are predicated on their continued ability to analyze and make decisions based on private user data. Without a principled approach to protecting user privacy, it is unclear if this setup is sustainable. To address this problem, we need systems that treat security and privacy as first-class citizens in their system design.
 In this talk, I will discuss how to build secure and private database management systems that balance the trade-offs among privacy, performance, and query result accuracy. This work spans numerous disciplines of computer science, including, 1) databases: modeling query workloads to estimate and optimize their privacy properties, runtime, and result accuracy across multiple settings, 2) security: extending secure computation protocols to evaluate SQL statements over the private data of many data owners without revealing data in plaintext, and 3) privacy: rigorously modeling the end-to-end information leakage profile of a privacy-preserving DBMS. The goal of this work is to bring together these disparate research areas to create usable query processing engines with strong privacy and security guarantees.
 
@@ -2567,9 +2567,9 @@ In this talk, I will discuss how to build secure and private database management
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Viktor Leis is a Professor of Computer Science at the Technical University of Munich (TUM). His research revolves around designing high-performance data management systems and includes core database systems topics such as query processing, query optimization, transaction processing, index structures, and storage. Another major research area is designing cloud-native, cost-efficient information systems. Viktor Leis received his doctoral degree in 2016 from TUM and was a professor at the Friedrich-Schiller-Universität Jena and Friedrich-Alexander-Universität Erlangen-Nürnberg before returning to TUM in 2022. He received the ACM SIGMOD dissertation award, the IEEE TCDE Rising Star Award, best paper awards at IEEE ICDE and ACM SIGMOD, and an ERC Starting Grant.
 
 													</p>
@@ -2589,9 +2589,9 @@ In this talk, I will discuss how to build secure and private database management
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													The goal of the LeanStore project is to achieve robust performance comparable to in-memory systems when the data set fits into RAM, while being able to fully exploit the bandwidth of fast NVMe SSDs for larger data sets. To achieve these goals we had to redesign all components of the traditional DBMS stack, including buffer management, indexing, concurrency control, I/O management, logging, recovery, and page replacement. In this talk, I will give an overview of these components and the evolution of the system over the past 6 years.
 
 												</p>
@@ -2616,9 +2616,9 @@ In this talk, I will discuss how to build secure and private database management
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Xiao Hu is an incoming Assistant Professor in the Cheriton School of Computer Science at the University of Waterloo. Prior to that, she was a Visiting Faculty Scholar in the Discrete Algorithm Group at Google Research from and a postdoctoral associate within the Department of Computer Science at Duke University. She received her Ph.D. in Computer Science and Engineering from HKUST, and a BE degree in Computer Software from Tsinghua University. Her research has focused on studying fundamental problems in database theory and their implications to practical systems.
 
 													</p>
@@ -2638,9 +2638,9 @@ In this talk, I will discuss how to build secure and private database management
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Incremental view maintenance (IVM) is a critical problem in the field of database management systems. It addresses the challenge of efficiently updating materialized views in response to changes in the underlying data, reducing the computational cost and ensuring up-to-date query results. In this context, conjunctive queries, a subset of relational algebra, provide a rich framework for expressing complex queries of both theoretical and practical interest. In this talk, I will introduce a general IVM framework for conjunctive queries, such that views can be maintained efficiently while supporting enumerating full query results as well as delta query results with delay guarantee. I will describe the intrinsic relationship between the sequence of updates and the maintenance cost. At last, I will briefly discuss some interesting questions when aggregation is involved.
 
 												</p>
@@ -2665,9 +2665,9 @@ In this talk, I will discuss how to build secure and private database management
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Dr. C. Mohan is currently a Distinguished Professor of Science at Hong Kong Baptist University, a Distinguished Visiting Professor at Tsinghua University in China, and a member of the inaugural Board of Governors of Digital University Kerala. He retired in June 2020 from being an IBM Fellow at the IBM Almaden Research Center in Silicon Valley. He was an IBM researcher for 38.5 years in the database, blockchain, AI and related areas, impacting numerous IBM and non-IBM products, the research and academic communities, and standards, especially with his invention of the well-known ARIES family of database locking and recovery algorithms, and the Presumed Abort distributed commit protocol. This IBM (1997-2020), ACM (2002-) and IEEE (2002-) Fellow has also served as the IBM India Chief Scientist (2006-2009). In addition to receiving the ACM SIGMOD Edgar F. Codd Innovations Award (1996), the VLDB 10 Year Best Paper Award (1999) and numerous IBM awards, Mohan was elected to the United States and Indian National Academies of Engineering (2009), and named an IBM Master Inventor (1997). This Distinguished Alumnus of IIT Madras (1977) received his PhD at the University of Texas at Austin (1981). He is an inventor of 50 patents. During the last many years, he focused on Blockchain, AI, Big Data and Cloud technologies (<a href="https://bit.ly/sigBcP">https://bit.ly/sigBcP</a>, <a href="https://bit.ly/CMoTalks">https://bit.ly/CMoTalks</a>). Since 2017, he has been an evangelist of permissioned blockchains and the myth buster of permissionless blockchains. During 1H2021, Mohan was the Shaw Visiting Professor at the National University of Singapore. In 2019, he became an Honorary Advisor to the Tamil Nadu e-Governance Agency. In 2020, he joined the Advisory Board of the Kerala Blockchain Academy. Since 2016, Mohan has been a Distinguished Visiting Professor of China’s prestigious Tsinghua University. In 2023, he was named Distinguished Professor of Science of Hong Kong Baptist University. In 2021, he was inducted as a member of the inaugural Board of Governors of the new Indian university Digital University Kerala. Mohan has served on the advisory board of IEEE Spectrum, and on numerous conference and journal boards. During most of 2022, he was a consultant at Google with the title of Visiting Researcher. He has also been a Consultant to the Microsoft Data Team in 2020.
 
 													</p>
@@ -2687,9 +2687,9 @@ In this talk, I will discuss how to build secure and private database management
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													In this talk, using my own life as an example, I discuss the excitement of doing research and developing advanced technologies. Starting with my undergraduate days as a chemical engineering student at IIT Madras, I narrate how my academic life changed when I got introduced to an IBM mainframe which led to my ultimately doing a PhD in computer science at University of Texas at Austin. Along the way, I talk about the frustrations of the prolonged hunt for a PhD thesis topic. Then, I trace my professional career at IBM which included working on hot topics as well as what were initially thought by others to be passé topics which turned out to be not so! I deal with the difficulties of getting papers published and doing technology transfer to new products as well as old ones. Having never been a manager during my entire 38.5 years IBM career, even though as an IBM Fellow I had been an IBM executive for 23 years, I bring a unique perspective on what it takes to be on a long-term purely technical career path. I discuss the DOs and DONTs of choosing technical topics to work on, and on being successful in having impact internally and outside one’s employer. Based in general on my extensive travels across the world and in particular on my experience of working as the IBM India Chief Scientist, while based in Bangalore for almost 3 years, I also address issues that arise in being part of a multinational corporation and trying to be successful in doing deeply technical work in a developing country. I also talk about how I am keeping myself active technically and professionally since my retirement from IBM in June 2020.
 
 												</p>
@@ -2714,9 +2714,9 @@ In this talk, I will discuss how to build secure and private database management
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Dr. C. Mohan is currently a Distinguished Professor of Science at Hong Kong Baptist University, a Distinguished Visiting Professor at Tsinghua University in China, and a member of the inaugural Board of Governors of Digital University Kerala. He retired in June 2020 from being an IBM Fellow at the IBM Almaden Research Center in Silicon Valley. He was an IBM researcher for 38.5 years in the database, blockchain, AI and related areas, impacting numerous IBM and non-IBM products, the research and academic communities, and standards, especially with his invention of the well-known ARIES family of database locking and recovery algorithms, and the Presumed Abort distributed commit protocol. This IBM (1997-2020), ACM (2002-) and IEEE (2002-) Fellow has also served as the IBM India Chief Scientist (2006-2009). In addition to receiving the ACM SIGMOD Edgar F. Codd Innovations Award (1996), the VLDB 10 Year Best Paper Award (1999) and numerous IBM awards, Mohan was elected to the United States and Indian National Academies of Engineering (2009), and named an IBM Master Inventor (1997). This Distinguished Alumnus of IIT Madras (1977) received his PhD at the University of Texas at Austin (1981). He is an inventor of 50 patents. During the last many years, he focused on Blockchain, AI, Big Data and Cloud technologies (<a href="https://bit.ly/sigBcP">https://bit.ly/sigBcP</a>, <a href="https://bit.ly/CMoTalks">https://bit.ly/CMoTalks</a>). Since 2017, he has been an evangelist of permissioned blockchains and the myth buster of permissionless blockchains. During 1H2021, Mohan was the Shaw Visiting Professor at the National University of Singapore. In 2019, he became an Honorary Advisor to the Tamil Nadu e-Governance Agency. In 2020, he joined the Advisory Board of the Kerala Blockchain Academy. Since 2016, Mohan has been a Distinguished Visiting Professor of China’s prestigious Tsinghua University. In 2023, he was named Distinguished Professor of Science of Hong Kong Baptist University. In 2021, he was inducted as a member of the inaugural Board of Governors of the new Indian university Digital University Kerala. Mohan has served on the advisory board of IEEE Spectrum, and on numerous conference and journal boards. During most of 2022, he was a consultant at Google with the title of Visiting Researcher. He has also been a Consultant to the Microsoft Data Team in 2020.
 
 													</p>
@@ -2736,9 +2736,9 @@ In this talk, I will discuss how to build secure and private database management
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Based on my 4 decades long involvement in and exposure to numerous database systems, in this talk I will discuss how various factors led multiple systems to be evolved in ways that made them become more complex in terms of their design as well as their usability aspects. While simplicity of design and architecture might be a highly desirable objective, there will invariably be conflicting requirements that lead to complexity creeping in, at least with respect to the internals of such systems. Examples of such requirements relate to the cloud environment, performance, availability, heterogeneity in terms of supported hardware, operating systems and programming language environments, accommodation of multiple workload types, extensibility, etc. It is also the case that aiming for simplicity in one aspect of system design might cause complexity to be introduced in other areas. A case in point is the desire for the near elimination of the need for DBAs and tuning knobs in the cloud environment which makes the internals of such systems become much more complex so that they could dynamically detect and react to different workload types that such systems might be used for. While KISS (Keep It Simple, Stupid) might be a desirable design principle, following it mindlessly might result in the kiss of death with respect to performance and reliability!
 
 												</p>
@@ -2760,9 +2760,9 @@ In this talk, I will discuss how to build secure and private database management
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							
 								<tr>
@@ -2780,9 +2780,9 @@ In this talk, I will discuss how to build secure and private database management
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Tianru Zhang is a PhD student in Department of Information Technology at Uppsala University. He received
 his MSc degree from ENSAI (National school of statistics and information analysis of France), and his
 bachelor degree from University of Science and Technology of China. Before joining Uppsala University,
@@ -2806,9 +2806,9 @@ field including cloud computing, data management, and federated machine learning
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													With the rapid development of big data and cloud computing, data management has become increasingly
 challenging. Over the years, a number of frameworks for data management have become available. Most of them
 are highly efficient, but ultimately create data silos. It becomes difficult to move and work coherently
@@ -2845,9 +2845,9 @@ achieves significantly higher efficiency and optimal data distribution in differ
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Georgios Fakas is an Associate Professor at the Department of Information Technology, Uppsala
 University. He is currently leading the Uppsala DataBase Laboratory (UDBL) within the Department of
 Information Technology. Before joining Uppsala University, he worked as a Research Fellow at the Hong
@@ -2874,9 +2874,9 @@ from the Department of Computation, UMIST, Manchester, UK.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													More often than not, spatial objects are associated with some context, in the form of text, descriptive
 tags (e.g., points of interest, flickr photos), or linked entities in semantic graphs (e.g., Yago2,
 DBpedia). Hence, location-based retrieval should be extended to consider not only the locations but
@@ -2914,9 +2914,9 @@ diversification.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Sudeepa Roy is an Associate Professor in Computer Science at Duke University. She works broadly in
 data management, with a focus on the foundational aspects of big data analysis, which includes
 causality and explanations for big data, data repair, query optimization, probabilistic databases,
@@ -2943,9 +2943,9 @@ Duke (<a href="https://almost-matching-exactly.github.io/">https://almost-matchi
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Causal analysis – i.e., estimating the effect of a "treatment" on an "outcome" – lays the foundation of
 sound and robust policy making by providing a means to estimate the impact of a certain intervention to
 the world, and is practically indispensable in health, medicine, social sciences, and other domains.
@@ -2985,9 +2985,9 @@ analysis with causality and explanations.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Sanket Purandare is a 4th year PhD student at the Data and Systems Lab (DASLab) at Harvard
 University, advised by Prof. Stratos Idreos. His research interests lie in the area of systems for
 deep learning. In particular, he works on the characterization of deep learning training and
@@ -3014,9 +3014,9 @@ the compiler stack for distributed training.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Causal analysis – i.e., estimating the effect of a "treatment" on an "outcome" – lays the foundation of
 sound and robust policy making by providing a means to estimate the impact of a certain intervention to
 the world, and is practically indispensable in health, medicine, social sciences, and other domains.
@@ -3056,9 +3056,9 @@ analysis with causality and explanations.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Immanuel Trummer is an assistant professor at Cornell University. His papers were selected
 for “Best of VLDB”, “Best of SIGMOD”, for the ACM SIGMOD Research Highlight Award, and for
 publication in CACM as CACM Research Highlight. His online lecture introducing students to
@@ -3082,9 +3082,9 @@ multiple Google Faculty Research Awards.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Deep neural networks are becoming ever more useful for numerous applications. However, it is
 increasingly more challenging to utilize high-quality networks due to massive computational
 costs. In fact, computational costs continuously increase due to the need for ever more
@@ -3129,9 +3129,9 @@ processing and recommendation applications.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Ryan Marcus is working on using machine learning to build the next generation
 of data management tools that automatically adapt to new hardware and user
 workloads, invent novel processing strategies, and understand user intention.
@@ -3157,9 +3157,9 @@ general.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Learned index structures have been shown to achieve favorable lookup performance
 and space consumption compared to their traditional counterparts such as B-trees.
 However, most learned index studies have focused on the primary indexing setting,
@@ -3194,9 +3194,9 @@ secondary indexes while being up to 6× more space efficient.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Karan Vombatkere is a 2nd year PhD student in the Massive Data & Algorithms
 (MiDAS) research group at BU, advised by Dr. Evimaria Terzi. His research
 interests are primarily focused on algorithmic data mining and computational social science problems. His current research is on designing efficient approximation algorithms for submodular optimization problems, specifically the Team Formation problem. 
@@ -3218,9 +3218,9 @@ interests are primarily focused on algorithmic data mining and computational soc
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													In the classical team-formation problem the goal is to identify a team of experts such that the skills of these experts cover all the skills required by a given task. We deviate from this setting and propose a variant of the classical problem in which we aim to cover the skills of every task as well as possible, while also trying to minimize the maximum workload among the experts. Instead of setting the coverage constraint and minimizing the maximum load, we combine these two objectives into one. We call the corresponding assignment problem the Balanced Coverage problem, and show that it is NP-hard. We adopt a weaker notion of approximation and we show that under this notion we can design a polynomial-time approximation algorithm with provable guarantees. We also describe a set of computational speedups that we can apply to the algorithm and make it scale for reasonably large datasets. From the practical point of view, we demonstrate how the nature of the objective function allows us to efficiently tune the two parts of the objective and tailor their importance to a particular application. Our experiments with a variety of real datasets demonstrate the utility of our problem formulation as well as the efficacy and efficiency of our algorithm in practice.
 
 												</p>
@@ -3245,9 +3245,9 @@ interests are primarily focused on algorithmic data mining and computational soc
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Papon is a Ph.D candidate, part of DiSC Lab at BU, advised by Prof.
 Athanassoulis. His research interests broadly include Data Systems,
 specifically on hardware-aware data management challenges, stemming
@@ -3279,9 +3279,9 @@ embedded system techniques.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Over the past few decades, solid-state drives (SSDs) have been
 replacing hard disk drives (HDDs) due to their faster reads and writes,
 and their superior random access performance. Further, when compared to HDDs,
@@ -3332,9 +3332,9 @@ ultimately, to better device utilization.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Aneesh Raman is a PhD student at Boston University and a member of
 the DiSC Lab, working with Prof. Manos Athanassoulis. His research
 focus is on Database systems - indexing and access methods, and his
@@ -3360,9 +3360,9 @@ in Computer Science.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Indexing in data systems can be perceived as the process of adding
 structure to the incoming, otherwise unsorted data. If the data
 ingestion order matches the indexed attribute order, the index
@@ -3396,9 +3396,9 @@ workloads by exploiting data sortedness.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Juhyoung Mun is currently a postdoctoral associate in the
 Department of Computer Science at Boston University, working with
 Prof. Manos Athanassoulis. She received her Ph.D. in Electronic
@@ -3426,9 +3426,9 @@ co-design.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Analytical database systems are typically designed to use a
 column-first data layout to access only the desired fields. On the
 other hand, storing data row-first works great for accessing,
@@ -3478,9 +3478,9 @@ and accelerate the query execution.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Subhadeep Sarkar is a post-doctoral associate at Boston University.
 His current research interests are data systems, storage layouts,
 access methods, and their intersection with data privacy. Prior to
@@ -3510,9 +3510,9 @@ research scientists to attend the Heidelberg Laureate Forum.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Modern data systems are designed around the silent underlying
 assumption of perpetual data retention. Systems are designed to offer
 high performance for data ingestion and queries, while deletion of
@@ -3546,9 +3546,9 @@ operational cost.
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							
 								<tr>
@@ -3566,9 +3566,9 @@ operational cost.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Mohammed Saeed obtained a double engineering diploma from the Lebanese
 University and Télécom Paristech. Since 2019, he is a PhD Student in
 Computational Fact Checking at EURECOM (France), under the supervision
@@ -3592,9 +3592,9 @@ Language Processing, Knowledge Graphs, and Deep Learning.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Misinformation is an important problem but fact checkers are overwhelmed
 by the amount of false content that is produced online every day. To
 support fact checkers in their efforts, we are creating data driven
@@ -3631,9 +3631,9 @@ explanations.
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							
 								<tr>
@@ -3651,9 +3651,9 @@ explanations.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Oana Balmau is an Assistant Professor in the School of Computer
 Science at McGill University, where she leads the Data-Intensive
 Storage and Computer Systems Lab (DISCS Lab). Her research focuses on
@@ -3690,9 +3690,9 @@ she is leading the effort for storage benchmarking.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													As dataset sizes continue to grow, efficient storage use with low space
 amplification is increasingly important in production systems. In
 particular in key-value stores (KVs), space amplification is caused by
@@ -3742,9 +3742,9 @@ improvements in tail latency over state-of-the-art learned indexes
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Raja Appuswamy is an Assistant Professor in the Data Science
 department at EURECOM--a Grandes Écoles located in the sunny Sophia
 Antipolis tech-valley of southern France. Previously, he was as a
@@ -3775,9 +3775,9 @@ Engineering from the University of Florida, Gainesville.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Today, most, if not all, enterprises in our society are driven by data.
 For decades, we wanted fast storage devices that can quickly deliver
 data, and storage technologies evolved to meet this requirement. As
@@ -3819,9 +3819,9 @@ for data management systems.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														I am interested in understanding the economics and value of data,
 including the potential of data markets to unlock that value. The goal
 of my research is to understand how to make the best use of data
@@ -3851,9 +3851,9 @@ Enable Data-Sharing Consortia with a Data Escrow
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Pooling and sharing data increases and distributes its value. But since
 data cannot be revoked once shared, scenarios that require controlled
 release of data for regulatory, privacy, and legal reasons default to
@@ -3895,9 +3895,9 @@ data”, and “data markets”.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Venu Satuluri is a Principal ML Engineer at Twitter. He has been
 working on a variety of recommender systems and applied ML problems
 during the last 10 years at Twitter. Venu got his Ph.D. focusing on
@@ -3923,9 +3923,9 @@ in 2012.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Personalized recommendation products at Twitter target a variety of
 items: Tweets, Events, Topics, Hashtags, and users. Each of these targets
 varies in their cardinality (which affects the scale of the problem) and
@@ -3964,9 +3964,9 @@ variety of deployed applications at Twitter.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Ippokratis Pandis is a senior principal engineer at Amazon Web Services, currently working in Amazon Redshift.
 Redshift is Amazon's fully managed, petabyte-scale data warehouse service. Previously, Ippokratis has held
 positions as software engineer at Cloudera where he worked on the Impala SQL-on-Hadoop query engine, and as
@@ -3993,9 +3993,9 @@ and ICDE Industrial 2022, as well as General Chair of SIGMOD 2023.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													In 2013, eight years ago, Amazon Web Services revolutionized the data warehousing industry by launching Amazon
 Redshift, the first fully managed, petabyte-scale cloud data warehouse solution. Amazon Redshift made it simple
 and cost-effective to efficiently analyze large volumes of data using existing business intelligence tools. This
@@ -4037,9 +4037,9 @@ operational health without the need of dedicated administration resources, in an
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Pandey is a Research Scientist at VMware Research. Previously, he did
 postdocs at University of California Berkeley and Carnegie Mellon
 University. He obtained his Ph.D. in Computer Science at Stony Brook
@@ -4073,9 +4073,9 @@ Systems.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Our ability to generate, acquire, and store data has grown exponentially
 over the past decade making the scalability of data systems a major
 challenge. This talk presents my work on two techniques to tackle the
@@ -4115,9 +4115,9 @@ sacrificing sequential read/write performance.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Shay Cohen is a Reader at the University of Edinburgh (School of
 Informatics). Prior to this, he was a postdoctoral research scientist
 in the Department of Computer Science at Columbia University, and held
@@ -4145,9 +4145,9 @@ generation.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Within Natural Language Processing, document summarisation is one of the
 central problems. It has both short-term societal implications and
 long-term implications in terms of the success of AI. I will describe
@@ -4182,9 +4182,9 @@ on a "verification" model.
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							
 								<tr>
@@ -4215,9 +4215,9 @@ on a "verification" model.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													We study the problem of estimating the trace of a matrix that can only be accessed through matrix-vector multiplication. We introduce a new randomized algorithm, Hutch++, which computes a (1+epsilon) approximation to the trace of any positive semidefinite (PSD) matrix using just O(1/epsilon) matrix-vector products. This improves quadratically on the ubiquitous Hutchinson's estimator, which requires O(1/epsilon^2) matrix-vector products. Our approach is based on a simple technique for reducing the variance of Hutchinson's estimator using low-rank approximation, and is easy to implement and analyze. Moreover, we prove that up to a logarithmic factor, the complexity of Hutch++ is optimal amongst all matrix-vector query algorithms. We show that it significantly outperforms Hutchinson's method in experiments, on both PSD and non-PSD matrices arising in applications such as network analysis and Bayesian machine learning.
 
 												</p>
@@ -4242,9 +4242,9 @@ on a "verification" model.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Utku is a postdoctoral researcher at Harvard Data Systems lab working with Stratos Idreos. He has done his Ph.D. at EPFL, Switzerland advised by Anastasia Ailamaki. He is interested in hardware- and energy-efficient data systems.
 
 													</p>
@@ -4263,9 +4263,9 @@ on a "verification" model.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Traditional online transaction processing (OLTP) systems under-utilize the micro-architectural resources; more than half of the CPU cycles go to stalls, and the number of instructions retired per cycle barely reaches one on machines that are able to retire up to four. This causes large power waste, and renders the power-hungry, heavily optimized Intel Xeon processors energy-inefficient. In this talk, we firstly examine hardware utilization of OLTP workloads for state-of-the-art OLTP systems. We then proceed by examining whether and how machine learning models can be useful in improving system performance. Lastly, we compare a high-end Intel Xeon processor with a recently announced server-grade ARM processor in terms of their power, throughput, and latency characteristics when running OLTP workloads. Based on our observations, we lastly comment on power-saving and performance improvement opportunities in co-designing OLTP software and hardware.
 
 												</p>
@@ -4290,9 +4290,9 @@ on a "verification" model.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Immanuel Trummer is assistant professor at Cornell University, working towards making data analysis more efficient and more user-friendly. His papers were selected for “Best of VLDB”, “Best of SIGMOD”, for the ACM SIGMOD Research Highlight Award, and for publication in CACM as CACM Research Highlight. His current research is funded by the NSF and by multiple Google Faculty Research Awards.
 
 													</p>
@@ -4311,9 +4311,9 @@ on a "verification" model.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Recent advances in natural language processing (NLP) open up new applications in the context of database systems. In this talk, I discuss how NLP can yield useful information for various database performance tuning problems. In particular, I focus on the problem of database system parameter tuning.
 
 												</p>
@@ -4338,9 +4338,9 @@ on a "verification" model.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Xuhao Chen is a Research Scientist at MIT CSAIL, working with Prof. Arvind. Dr. Chen is broadly interested in parallel systems for AI & big-data, with a focus on emerging graph algorithms. He has built multiple software and hardware systems for data mining and machine learning on graphs. His work has been published in ISCA, MICRO, VLDB, ICS and DAC. Before joining MIT, Dr. Chen was a research fellow at UT Austin.
 
 													</p>
@@ -4359,9 +4359,9 @@ on a "verification" model.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Graph algorithms play a key role in numerous real-world applications, including social networks, e-commerce, biomedicine and cybersecurity. These algorithms process massive irregular data, which poses both performance and programmability challenges in computing system design. In this talk, I will explore system specialization approaches for an important class of graph algorithms — graph pattern mining (GPM). I will introduce a specialized software programming framework and a dedicated hardware accelerator that we built for GPM, and describe experiences creating abstractions, optimization techniques and automation methods. Overall, by specializing in both software and hardware, we can make graph algorithms easy to program and run fast at the same time.
 
 												</p>
@@ -4386,9 +4386,9 @@ on a "verification" model.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Siying Dong is a software engineer working in the Database Engineering team at Facebook, focusing on RocksDB. He also worked on Hive, HDFS, and some other data warehouse infrastructures. Before joining Facebook, Siying worked in the SQL Azure Team at Microsoft. He received a bachelor’s degree from Tsinghua University and a master’s degree from Brandeis University.
 
 													</p>
@@ -4410,9 +4410,9 @@ RocksDB: The Changing Of Optimization Targets
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													RocksDB is an embedded persistent storage engine optimized for flash-based SSD. It has been adapted to a wide range of workloads. In the talk, Siying will introduce how and why RocksDB’s resource optimization target migrated from write amplification, to space amplification, to CPU utilization, and why disaggregated storage is the current focus. Siying will also introduce RocksDB’s plan for supporting SSD/HDD hybrid, as well as challenges for it.
 
 												</p>
@@ -4437,9 +4437,9 @@ RocksDB: The Changing Of Optimization Targets
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Brian Hentschel is a Ph.D. candidate at Harvard advised by Stratos Idreos. He is interested in blending statistics and machine learning with classical techniques to improve computer systems. His research has been awarded the SIGMOD research highlight award as well a best paper from EDBT. He earned his BA in mathematics and computer science at Pomona College and has previously spent time at Microsoft, Amazon, LinkedIn, and IBM.
 
 													</p>
@@ -4458,9 +4458,9 @@ RocksDB: The Changing Of Optimization Targets
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Data systems are moving from data structures which are implicitly designed for specific data and workload characteristics towards data structures explicitly designed to exploit patterns in both. This generally leads to better expected performance but opens up questions about both the predictability of data structure performance and its robustness to workload or data shifts. In this talk, we make the case for ML-Augmented data structures, which solve these problems by using workload information and statistical modeling to redesign components of classical data structures. By keeping the core structure of classical data structures, we keep their robustness properties and provide a pathway towards arguing theoretically about their performance. In using ML for design, we transfer properties of the workload and data into the data structure and achieve better expected performance. The result is that we can argue theoretically that ML-designed data structures perform better than classical data structures and empirically show the benefits of this approach, all while maintaining many of the benefits of classical data structures. We present three applications of this approach. First, we present Stacked Filters, which uses workload skew to produce 100X lower false positive rates for filter data structures. Second, we present Entropy-Learned Hashing, which produces 10X faster hash function evaluation and 4X faster hash tables. And third, we present Column Sketches, which produces 7.5X faster database scans.
 
 												</p>
@@ -4482,9 +4482,9 @@ RocksDB: The Changing Of Optimization Targets
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							
 								<tr>
@@ -4502,9 +4502,9 @@ RocksDB: The Changing Of Optimization Targets
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Yannis is a fourth-year Ph.D. student in the Computer Sciences Department at the University of Wisconsin-Madison advised by Prof. Jignesh Patel. His research focuses on efficient data processing using modern and emerging hardware.
 
 													</p>
@@ -4524,9 +4524,9 @@ RocksDB: The Changing Of Optimization Targets
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													We are in the midst of a Cambrian hardware evolution in which a rich variety of technologies and architectures are being invented with a flurry that we havent seen in a long time. One class of hardware devices, called Processing-in-Memory (PIM), is enabling new ways of utilizing memories. PIM devices generally pack storage and computing closely together and have novel computing primitives that are built into the memory devices. Associative processors are a type of PIM device with massive data-level parallelism and single-cycle search and update capabilities. The focus of our work is on exploring how database analytic workloads can be run efficiently using an associative computing substrate. Our vehicle for this research is the Castle project in which we are building a data processing engine to run on the CAPE hardware, which is a specific implementation of an associative PIM device. Initial results show that associative PIM hardware can potentially deliver manifold performance gains over traditional von Neumann architectures; however, to fully exploit CAPEs potential, data query processing kernels and query optimization methods both have to be adapted in new ways to leverage the style of data-parallel computing that can be carried out directly inside CAPE. We experiment with both individual query processing kernels and end-to-end queries and show that the performance gains using our methods are significant, and up to 46X in some cases. Tentatively, these results point to the exciting potential in accelerating database analytic query processing workloads using associative computing.
 
 												</p>
@@ -4551,9 +4551,9 @@ RocksDB: The Changing Of Optimization Targets
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Papon is a second-year Ph.D. student, part of MiDAS group at BU, advised by Prof. Athanassoulis.
 His research interests broadly include Data Systems, specifically on hardware-aware data management challenges,
 stemming from the evolution of storage and memory devices.
@@ -4581,9 +4581,9 @@ learning and embedded system techniques.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Storage devices have evolved to offer increasingly faster read/write access, through flash-based and other solid-state storage technologies. When compared to classical rotating hard disk drives (HDDs), modern solid-state drives (SSDs) have two key differences: (i) the absence of mechanical parts, and (ii) an inherent difference between the process of reading and writing. The former removes a key performance bottleneck, enabling internal device parallelism, whereas the latter manifests as a read/write performance asymmetry. In other words, modern storage devices can serve multiple concurrent I/Os, and writes are generally slower than reads; none of which is true for HDDs.To address this mismatch, we propose a simple yet expressive storage model, termed Parametric I/O Model (PIO) that captures modern (and future) devices by parameterizing read/write asymmetry (α) and access concurrency (k). PIO enables making device-specific decisions at algorithm design time, rather than as an optimization during deployment. To showcase the benefits of algorithm design using PIO, we introduce a new family of bufferpool eviction strategies that offer performance improvements by accurately modeling the behavior of the underlying devices. We compare their performance on various synthetic traces with three state-of-the-art algorithms (LRU, CFLRU, LRU-WSR) to show that they achieve 15.9%  44.5% improvement in runtime with a negligible increase in total writes ( 0.06%) and buffer misses ( 0.004%). We further report up to 1.83x speedup for TPC-C traces on PostgreSQL.
 
 												</p>
@@ -4608,9 +4608,9 @@ learning and embedded system techniques.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Nikolaos Tziavelis is a PhD student at the Khoury College of Computer Sciences of Northeastern University.
 His research interests lie in algorithms for database query processing and distributed computing. He holds a
 MEng in Electrical and Computer Engineering from the National Technical University of Athens.
@@ -4631,9 +4631,9 @@ MEng in Electrical and Computer Engineering from the National Technical Universi
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Top-k queries have been studied intensively in the database community and they are an important means to reduce
 query cost when only the “best” or “most interesting” results are needed instead of the full output. However,
 optimality results for queries involving joins hold only in a fairly limited model of computation that does not
@@ -4666,9 +4666,9 @@ has been developed over several decades.
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							
 								<tr>
@@ -4686,9 +4686,9 @@ has been developed over several decades.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Chen Luo received his PhD from University of California, Irvine in December 2020 under the supervision of
 Professor Michael J. Carey. His research interests include storage management, indexing, and LSM-trees. In
 particular, he worked on optimizing LSM-trees for big data management systems. During his PhD studies, he
@@ -4714,9 +4714,9 @@ Bachelor’s degree from Tongji University in 2013, respectively.
 												[<a href=https://drive.google.com/file/d/1sqttrgQLfAzdMEaZtTAgYSwivaXTRJ3b/view target="_blank">Talk Recording</a>]
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													In recent years, the Log-Structured Merge-tree (LSM-tree) has been widely used in the storage layer in modern
 NoSQL systems. Different from traditional index structures that apply updates in-place, an LSM-tree first
 buffers all writes in memory and subsequently flushes them to disk and merges them using sequential I/Os. This
@@ -4752,9 +4752,9 @@ structures, minimizing write stalls via better scheduling, and adaptive memory m
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Sudhanshu Chanpuriya is a PhD student at the College of Computer and Information Sciences at UMass Amherst,
 where he is advised by Cameron Musco. His research interests lie at the intersection of machine learning and
 graph theory. Prior to joining UMass, he received his undergraduate degree at Dartmouth College.
@@ -4775,9 +4775,9 @@ graph theory. Prior to joining UMass, he received his undergraduate degree at Da
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													The node embedding task involves mapping nodes in networks to low-dimensional, continuous vectors for direct
 use in downstream machine learning algorithms, such as those for classification and clustering. This task has
 received great interest from the ML community in the past few years, and I will present some of our recent
@@ -4811,9 +4811,9 @@ algorithms based on spectral clustering.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Herodotos Herodotou is an Assistant Professor in the Department of Electrical Engineering, Computer
 Engineering and Informatics at the Cyprus University of Technology, where he is leading the Data Intensive
 Computing Research Lab. He received his Ph.D. in Computer Science from Duke University. His Ph.D.
@@ -4846,9 +4846,9 @@ nationally funded projects.
 												[<a href=https://drive.google.com/file/d/1-J1DhKjmDL6_FgelKvrtbGOIPWlGQ4-V/view target="_blank">Talk Recording</a>]
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Data-intensive platforms such as Hadoop and Spark are routinely used to process massive amounts of data
 residing on distributed file systems like HDFS. Increasing memory sizes and new hardware technologies
 (e.g., NVRAM, SSDs) have recently led to the introduction of storage tiering in such settings. However, users
@@ -4888,9 +4888,9 @@ showcases significant benefits in terms of both workload performance and cluster
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														I am a Ph.D. candidate at the Harvard John A. Paulson School of Engineering and Applied Sciences, where I am
 advised by Prof. Stratos Idreos. I design techniques to accelerate machine learning and data science pipelines,
 specifically, addressing the bottleneck of repeated data movement. Additionally, I am interested in mapping out
@@ -4916,9 +4916,9 @@ the privacy of social network graphs.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Neural network models are applied to many tasks with rising complexity and data sizes. Researchers and
 practitioners seek to scale the representational power of these models by adding more parameters. Increasing
 parameters, though, requires additional critical resources such as memory and compute time leading to increased
@@ -4953,9 +4953,9 @@ with the same total number of parameters.
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							
 								<tr>
@@ -4973,9 +4973,9 @@ with the same total number of parameters.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Zichen Zhu is a first-year PhD student at Boston University advised by Prof. Manos Athanassoulis.
 Prior to this, he received his MPhil degree in 2019 from Hong Kong University.
 Zichen's current research interests are data access methods and LSM-based NoSQL key-value stores.
@@ -4997,9 +4997,9 @@ Zichen's current research interests are data access methods and LSM-based NoSQL 
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													With rapidly growing data volume, modern query engines are required to process enormous amount of data timely.
 In order to speed up the data access, an existing data skipping-based technique is proposed as follows.
 For each block of tuples, a bit vector (also noted as feature vector) is constructed where each dimension represents whether there exists a tuple qualified for some specific filters in this block.
@@ -5031,9 +5031,9 @@ Further experiments also demonstrate the effectiveness of our algorithm in a syn
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Subhadeep Sarkar is a post-doctoral researcher at Boston University working with Prof. Manos Athanassoulis.
 Prior to this, Subhadeep spent nearly two years as a post-doctoral researcher at INRIA Rennes, France.
 He completed his Ph.D. in 2017 from Indian Institute of Technology Kharagpur.
@@ -5056,9 +5056,9 @@ Subhadeep's current research interests are NoSQL key-value stores, data access m
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Data-intensive applications fueled the evolution of log-structured merge (LSM) based key-value engines that employ the out-of-place paradigm to support high ingestion rates with low read/write interference.
 These benefits, however, come at the cost of treating deletes as a second-class citizen.
 A delete inserts a tombstone that invalidates older instances of the deleted key.
@@ -5093,9 +5093,9 @@ Our paper on Lethe is set to appear at SIGMOD 2020.
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Ju Hyoung Mun is currently a postdoctoral associate in the Department of Computer Science at Boston University, working with Prof. Manos Athanassoulis.
 She received her Ph.D. in Electronic and Electrical Engineering at Ewha w. University in Seoul, Korea, under the supervision of Prof. Hyesook Lim.
 Her doctoral research was focused on how to retrieve the data efficiently by using Bloom filters in Named Data Networking (NDN).
@@ -5118,9 +5118,9 @@ Her research interest lies in the fields of Data Systems and Networking; particu
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													The major portion of the Internet bandwidth is now being used for content distribution like  video  streaming.
 The  conventional  Internet  infrastructure,  which  is  based  on  a host-to-host communication model, is not efficient for content distribution.
 In order to accommodate  today's  communication  needs,  Named  Data  Networking  (NDN)  has been  introduced  as  a  future  Internet  architecture.
@@ -5150,9 +5150,9 @@ This  talk  presents  two  methods  of information sharing using Bloom filters i
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Papon is a first-year Ph.D. student, part of MiDAS group at BU, advised by Prof. Athanassoulis.
 His research interests broadly include Data Systems, specifically on hardware-aware data management challenges, stemming from the evolution of storage and memory devices.
 Currently, he is working on proposing a new design paradigm for interacting with durable storage that takes into account performance asymmetry between read and write operations, as well as the variable access concurrency that different devices may support.<br/>
@@ -5176,9 +5176,9 @@ He completed his MSc and BSc degree from the same department where he worked on 
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													The traditional I/O model (EM Model) was developed based on the properties of HDDs, and has not evolved accordingly while it is still widely used.
 The EM Model assumes that read and write accesses have the same cost (symmetric cost) whereas most modern flash devices and emerging non-volatile memory (NVM) technologies show asymmetric cost - writes are significantly slower compared to reads.
 In addition, these devices provide some degree of access concurrency which cannot be modeled with the EM Model because it considers only one I/O at a time.
@@ -5208,9 +5208,9 @@ In addition, we aim to propose a new database buffer pool page eviction algorith
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Subarna Chatterjee is a post-doc at the Data Systems Lab (DASLab) at Harvard University since January 2019.
 Prior to this, she was also a post-doc with the Myriads team at Inria, Rennes in France.
 She completed her Ph.D. from Indian Institute of Technology Kharagpur, India from 2013-2017.
@@ -5233,9 +5233,9 @@ Her current research interests are NoSQL storage engines and reasoning about the
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													We present a key-value storage engine, Cosine, that guarantees an optimal cost- performance trade-off, given a workload and a budget.
 Cosine creates a massive search space comprising of the entire data structure design and hardware space of (LSM-tree/B-tree) key-value stores over diverse cloud pricing policies for the top three cloud providers – AWS, GCP, and Azure.
 In order to prune configurations from this massive search space, we present distribution-aware cost models that precisely estimate I/O costs of each possible data structure design, which in turn, helps in comparing pairs of designs.
@@ -5264,9 +5264,9 @@ Cosine also enables decision makers in applications to quickly answer rich what-
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Andy is a third-year PhD student in the MiDaS group at Boston University where he is advised by Professor Manos Athanassoulis.
 His research focuses on novel design concepts in hybrid analytical/transaction processing systems.
 He is currently working on an open source column-storage called OakDB, a DBMS that focuses on auto tuning with input uncertainty.
@@ -5289,9 +5289,9 @@ Prior to Boston University Andy attended the University of Minnesota, Twin Citie
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Modern hybrid analytical/transactional processing (HTAP) systems are generally tuned with assumptions on the expected workload, however, often times workload knowledge may be inaccurate.
 Deploying systems tuned on inaccurate knowledge can result in unexpected latency increases of up to 2X from the optimal.
 Additionally expected workloads may "drift" overtime, effectively acting as uncertainty in the workload leading to frequent and unnecessary retuning.
@@ -5322,9 +5322,9 @@ Additionally we demonstrate these strategies in OakDB, an open source column sto
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Jialin Ding is a second-year PhD student in the MIT Data Systems Group, where he is advised by Prof. Tim Kraska.
 His research focuses broadly on the application of machine learning to data systems.
 He also collaborates with Umar Farooq Minhas and the Database Group at Microsoft Research on learned data structures.
@@ -5347,9 +5347,9 @@ Prior to MIT, Jialin was an undergraduate at Stanford University, where he worke
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Scanning and filtering over multi-dimensional tables are key operations in modern analytical database engines.
 To optimize the performance of these operations, databases often create clustered indexes over a single dimension or multi-dimensional indexes such as R-Trees, or use complex sort orders (e.g., Z-ordering).
 However, these schemes are often hard to tune and their performance is inconsistent across different datasets and queries.<br/>
@@ -5380,9 +5380,9 @@ I will also talk about our continuing work on extending the ideas of Flood to ad
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Ryan Marcus is a postdoc researcher at MIT, working under Tim Kraska.
 Ryan recently graduated from Brandeis University, where he studied applications of machine learning to cloud databases under Olga Papaemmanouil.
 Before that, Ryan took courses in gender studies and mathematics at the University of Arizona, while banging his head against supercomputers at Los Alamos National Laboratory.
@@ -5409,9 +5409,9 @@ Machine Learning for Query Optimization: A Few Interesting Results & Thousands o
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Query optimization is one of the most well-studied problems in database management systems.
 Because of the exponential problem space and the heuristic nature of current solutions, researchers have recently applied machine learning techniques to this challenging problem domain.
 Various approaches range from using machine learning to perform cardinality estimation to outright replacing the query optimizer with deep reinforcement learning.
@@ -5440,9 +5440,9 @@ This talk will lay out these recent advancements in a skeptical light (my own wo
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Dr. Stavros Papadopoulos is the founder and CEO of TileDB, Inc.
 Prior to founding TileDB, Inc. in February 2017, Dr. Papadopoulos was a Senior Research Scientist at the Intel Parallel Computing Lab, and a member of the Intel Science and Technology Center for Big Data at MIT CSAIL for three years.
 He also spent about two years as a Visiting Assistant Professor at the Department of Computer Science and Engineering of the Hong Kong University of Science and Technology (HKUST).
@@ -5467,9 +5467,9 @@ The TileDB array data storage engine
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													In this talk I will present TileDB, a storage engine for multi-dimensional dense and sparse arrays.
 TileDB is open-source (MIT License) and built as a C++ embeddable library.
 It comes with 6 APIs (C, C++, Python, R, Java, Go), and integrates with Spark, Dask, MariaDB, PrestoDB, PDAL and GDAL.
@@ -5499,9 +5499,9 @@ Finally, I will show a demo of our recently launched product that offers access 
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Dimitris Staratzis is a first year PhD student at the Computer Science Department of Boston University.
 He is a member of the MiDAS group@BU, advised by Professor Manos Athanassoulis.
 His research interests broadly include Database and Big Data Management.
@@ -5523,9 +5523,9 @@ Prior to joining Boston University, he received his BSc in Informatics from Athe
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Modern data systems process enormous amount of data and selecting the appropriate data structure can have major implications in the responsiveness, availability and scalability of such systems.
 Traditional systems have certain limitations and thus more advanced Key-Value systems are used in most applications today.
 During updates, inserts and deletes, LSM trees utilise the main memory of the system to achieve better performance.
@@ -5558,9 +5558,9 @@ Our method tries to reduce these I/Os by efficiently storing past results in mem
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Showan Esmail Asyabi is a research assistant and a Ph.D. student at Boston University.
 He is advised by Prof. Azer Bestavros.
 His research focuses on designing and building system software for emerging computing models (e.g., cloud computing and stream processing).
@@ -5583,9 +5583,9 @@ He is mainly interested in distributed systems, operating systems, cloud computi
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													The traffic load sent to key-value (KV) stores vary over long timescales of hours to short timescales of a few microseconds.
 Long-term variations present the opportunity to save power during low or medium periods of utilization.
 Several techniques exist to save power in servers, including feedback-based controllers that right-size the number of allocated CPU cores, dynamic voltage and frequency scaling (DVFS), and c-state (idle-state) mechanisms.
@@ -5619,9 +5619,9 @@ Our experiments demonstrate that our system outperforms state of the art approac
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Juhyoung is currently a postdoctoral associate in the Department of Computer Science at Boston University, working with Prof. Manos Athanassoulis.
 Her research interest lies in the fields of Data Systems and Networking;particularly, in enhancing the lookup performance.
 She received her Ph.D. in Electronic and Electrical Engineering at Ewha w. University in Seoul, Korea, under the supervision of Prof. Hyesook Lim.
@@ -5643,9 +5643,9 @@ Her doctoral research was focused on how to retrieve the data efficiently by usi
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													A log-structured merge-tree (LSM-tree) is widely used in modern key-value stores.
 To balance the read performance and ingestion rate, LSM-trees maintain sorted runs in multiple levels so that the lookup may require multiple I/Os.
 To accelerate the performance of point lookups, LSM-trees often employ Bloom filters in the main memory to avoid unnecessary I/Os for levels that do not contain the matching key.
@@ -5676,9 +5676,9 @@ The simulation results show that our proposal can achieve almost the same false-
 
 						<table cellspacing="0">
 							<tr>
-								<th class="text-center">Date</th>
-								<th class="text-center">Speaker</th>
-								<th class="text-center" width="600">Title and Abstract</th>
+								<th class="col-date text-center">Date</th>
+								<th class="col-speaker text-center">Speaker</th>
+								<th class="col-talk text-center">Title and Abstract</th>
 							</tr>
 							
 								<tr>
@@ -5694,9 +5694,9 @@ The simulation results show that our proposal can achieve almost the same false-
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Brian is a PhD student at Harvard University in the Data Systems Laboratory.
 His work focuses on the usage of statistics and machine learning in making better data structures and algorithms, and conversely in the creation of data management solutions for better machine learning.
 Previous work of his has won the ACM SIGMOD Research Highlight Award as well as the Best Paper Award at EDBT.
@@ -5717,9 +5717,9 @@ Previous work of his has won the ACM SIGMOD Research Highlight Award as well as 
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													To maintain the accuracy of supervised learning models in the presence of evolving data streams, we provide temporally-biased sampling schemes that weight recent data most heavily, with inclusion probabilities for a given data item decaying over time according to a specified "decay function".
 We then periodically retrain the models on the current sample.
 Time-biasing lets the models adapt to recent changes in the data while - unlike in a sliding-window approach - still keeping some old data to ensure robustness in the face of temporary fluctuations and periodicities in the data values.
@@ -5748,9 +5748,9 @@ We discuss distributed implementation strategies; experiments in Spark illuminat
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Stella is a senior distributed systems software engineer at Vertica, chair of the Vertica DataGals and a member of the Vertica patent committee.
 At Vertica, Stella builds powerful infrastructure used by big data analytics companies including Uber, Etsy, Wayfair, Philps.
 Her focus is on improving the distributed systems protocols for more efficient maintenance and transfer of metadata in both the cloud and enterprise environments.
@@ -5787,9 +5787,9 @@ In her free time she maintains a blog on distributed systems and technology at s
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Shreyas Sekar is a Postdoctoral Fellow at the Laboratory for Innovation Science at the Harvard Business School.
 Shreyas received his Ph.D. in Computer Science from Rensselaer Polytechnic Institute in 2017, where he was awarded the Robert McNaughton Prize for the best dissertation in CS.
 His dissertation was on Non-Discriminative Algorithmic Pricing.
@@ -5813,9 +5813,9 @@ Shreyas has also collaborated with industry partners such as Wayfair and Freelan
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													We consider the product ranking challenge that online retailers face when their customers typically behave as "window shoppers": they form an impression of the assortment after browsing products ranked in the initial positions and then decide whether to continue browsing.
 Further, customers' product preferences and attention spans are correlated and unknown to the retailer.
 We develop a class of online explore-then-exploit algorithms that prescribe a ranking to offer each customer, learning from preceding customers' clickstream data to offer better rankings to subsequent customers.
@@ -5843,9 +5843,9 @@ Finally, we partner with Wayfair - a multi-billion dollar home goods online reta
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Leo is a 4th year PhD student at the Network Science Institute at Northeastern University, under the advisement of Tina Eliassi-Rad.
 He is broadly interested in the intersection of Network Science, Machine Learning, and Mathematics, focusing on metric aspects of complex networks and graph mining.
 He specializes in introducing novel mathematical and computational tools to the network science toolbox, usually coming from differential geometry, algebraic topology, spectral linear algebra, and unsupervised techniques.
@@ -5869,9 +5869,9 @@ He has taught mathematics and Spanish at the undergraduate level and he was a Re
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													Two basic tasks in graph analysis are: (1) computing the distance between two graphs and (2) embedding of the graph elements (i.e., nodes or links) into a lower-dimensional space.
 The former task has numerous applications from k-nearest neighbor search, to clustering a collection of graphs, to transfer learning.
 Unfortunately, there exists no canonical way of computing the distance between two finite graphs because the dissimilarity problem is ill-defined.
@@ -5907,9 +5907,9 @@ We showcase the usefulness of both NBD and NBED in experiments on synthetic and 
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Matteo Riondato is an assistant professor of computer science at Amherst College, and a visiting faculty at Brown University.
 Previously he was a research scientist at Two Sigma, and a postdoc at Stanford and Brown.
 He obtained his PhD in computer science from Brown.
@@ -5934,9 +5934,9 @@ He tweets @teorionda and lives at <a href="http://matteo.rionda.to">http://matte
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													We present SPuManTE, an efficient algorithm for mining significant patterns from a transactional dataset.
 SPuManTE controls the Family-wise Error Rate: it ensures that the probability of reporting one or more false discoveries is less than an user-specified threshold.
 A key ingredient of SPuManTE is UT, our novel unconditional statistical test for evaluating the significance of a pattern, that requires fewer assumptions on the data generation process and is more appropriate for a knowledge discovery setting than classical conditional tests, such as the widely used Fisher's exact test.
@@ -5964,9 +5964,9 @@ Joint work with Leonardo Pellegrina (UniPD) and Fabio Vandin (UniPD), presented 
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Kiran Garimella is the Michael Hammer postdoc at the MIT Institute for Data, Systems, and Society (IDSS).
 Before joining MIT, he was a postdoc at EPFL, Switzerland.
 His research focuses on using digital data for social good, including areas like polarization, misinformation and human migration.
@@ -5990,9 +5990,9 @@ Prior to his PhD, he worked as a Research Engineer at Yahoo Research, Barcelona,
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													In this work, I will talk about our on going efforts to collect and analyze large amounts of public Whatsapp data from political groups in Brazil, India, and Indonesia.
 I will discuss our efforts in monitoring a large number of whatsapp groups and provide insights on various problems arising from such data.
 I will specifically give examples of novel ways in which misinformation, hate speech and coordination are being spread through whatsapp.
@@ -6019,9 +6019,9 @@ Finally, I will mention our efforts on collecting data across platforms for the 
 											
 
 											
-												<details>
-													<summary> <u> Bio </u> </summary>
-													<p class="text-justify">
+												<details class="seminar-details seminar-bio">
+													<summary>Bio</summary>
+													<p>
 														Loqman is a Master student in mathematics at Sorbonne University.
 His main interests lie at the crossroad between Complex Networks, Differential Geometry and Optimal Transport.
 He is currently working at CAIDA on understanding the topology of the Internet and its relationship with geography.
@@ -6042,9 +6042,9 @@ He is currently working at CAIDA on understanding the topology of the Internet a
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													In this work, we tackle the problem of real-time monitoring of dynamic variations of global Internet using topology changes information provided by combining several BGP feeds.
 We develop a geometric approach that leverages notions of geometric curvature and recent development in graph embedding using Ollivier-Ricci curvature.
 In particular, we use our method to detect major events and changes via the geometry of the embedding of the graph, where a major event is defined as an incident that either impacts a substantial number of prefixes or can be observed by numerous route monitors within a given period of time.
@@ -6089,9 +6089,9 @@ We finally evaluate this system in operational setting.
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													We consider the following problem, which is useful in applications such as joint image and shape alignment.
 The goal is to recover \( n \) discrete variables \( g_i \in \{0, \ldots, k-1\} \) (up to some global offset) given noisy observations of a set of their pairwise differences \( \{g_i - g_j \bmod k\} \); specifically, with probability \( \frac{1}{k}+\delta \) for some \( \delta > 0 \) one obtains the correct answer, and with the remaining probability one obtains a uniformly random incorrect answer.
 We consider a learning-based formulation where one can perform a query to observe a pairwise difference, and the goal is to perform as few queries as possible while obtaining the exact joint alignment.
@@ -6135,9 +6135,9 @@ Finally, experimentally our algorithm performs well compared to the algorithm of
 											
 											
 											
-											<details>
-												<summary> <u>Click for abstract</u></summary>
-												<p class="text-justify">
+											<details class="seminar-details">
+												<summary>Abstract</summary>
+												<p>
 													<b>Novel Dense Subgraph Discovery Primitives: Risk Aversion and Exclusion Queries.</b>
 In the densest subgraph problem, given an undirected graph \( G(V;E;w) \) with non-negative edge weights we are asked to find a subset of nodes \( S \) from \( V \) that maximizes the degree density \( w(S)=|S| \).
 This problem is solvable in polynomial time, and in general is well studied.
